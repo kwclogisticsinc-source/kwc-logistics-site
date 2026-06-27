@@ -22,44 +22,31 @@ const colors = [
 export default function BrandPage() {
   return (
     <>
-      <PageHero eyebrow="Brand Guidelines" title="KWC Logistics Inc. identity system">
-        <p>
-          A modern Canadian logistics brand with local roots and serious delivery capability:
-          a blue horse mark for speed, strength, and reliability, connected to route lines that
-          signal freight movement and dispatch.
-        </p>
-      </PageHero>
+      <PageHero eyebrow="Brand Guidelines" title="KWC Logistics Inc. identity system" />
 
-      <Section title="Primary logo" intro="Use the full lockup where there is enough horizontal room: website header, invoices, business cards, social banners, and truck doors.">
-        <div className="grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl border border-line bg-white p-6 text-center">
-            <div className="mx-auto max-w-xs">
+      <Section title="Primary logo">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-line bg-white p-8 text-center">
+            <div className="mx-auto max-w-2xl">
               <FullLogo />
             </div>
-            <p className="mt-5 text-sm leading-6 text-muted">
-              Primary logo: supplied blue horse KWC Logistics artwork, used for customer-facing brand placements.
-            </p>
           </div>
-          <div className="rounded-2xl bg-brand-navy p-6 text-center">
-            <div className="mx-auto max-w-xs rounded-xl bg-white px-4 py-3">
+          <div className="rounded-2xl bg-brand-navy p-8 text-center">
+            <div className="mx-auto max-w-2xl rounded-xl bg-white px-6 py-5">
               <FullLogo />
             </div>
-            <p className="mt-5 text-sm leading-6 text-blue-100">
-              On dark or truck surfaces, place the logo on a white panel for legibility.
-            </p>
           </div>
         </div>
       </Section>
 
-      <Section title="Compact logo/icon" intro="Use the compact blue horse mark for favicons, app icons, social avatars, uniform patches, and small truck-door placements.">
+      <Section title="Compact logo/icon">
         <div className="flex flex-wrap justify-center gap-5">
-          <div className="rounded-2xl border border-line bg-white p-6 text-center">
+          <div className="rounded-2xl border border-line bg-white p-8 text-center">
             <div className="flex justify-center">
               <LogoMark />
             </div>
-            <p className="mt-4 text-sm leading-6 text-muted">Horse-only crop for compact spaces.</p>
           </div>
-          <div className="rounded-2xl bg-brand-navy p-6">
+          <div className="rounded-2xl bg-brand-navy p-8">
             <div className="flex justify-center">
               <LogoMark />
             </div>
