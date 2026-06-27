@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LogoLockup, LogoMark } from "@/components/Logo";
+import { FullLogo, LogoMark } from "@/components/Logo";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 
@@ -33,14 +33,16 @@ export default function BrandPage() {
       <Section title="Primary logo" intro="Use the full lockup where there is enough horizontal room: website header, invoices, business cards, social banners, and truck doors.">
         <div className="grid gap-5 md:grid-cols-2">
           <div className="rounded-2xl border border-line bg-white p-6">
-            <LogoLockup />
+            <div className="max-w-xs">
+              <FullLogo />
+            </div>
             <p className="mt-5 text-sm leading-6 text-muted">
-              Primary lockup: blue horse logistics mark plus strong KWC wordmark and Logistics Inc. descriptor.
+              Primary logo: supplied blue horse KWC Logistics artwork, used for customer-facing brand placements.
             </p>
           </div>
           <div className="rounded-2xl bg-brand-navy p-6">
-            <div className="inline-flex rounded-xl bg-white px-4 py-3">
-              <LogoLockup />
+            <div className="max-w-xs rounded-xl bg-white px-4 py-3">
+              <FullLogo />
             </div>
             <p className="mt-5 text-sm leading-6 text-blue-100">
               On dark or truck surfaces, place the logo on a white panel for legibility.
@@ -53,6 +55,7 @@ export default function BrandPage() {
         <div className="flex flex-wrap gap-5">
           <div className="rounded-2xl border border-line bg-white p-6">
             <LogoMark />
+            <p className="mt-4 text-sm leading-6 text-muted">Horse-only crop for compact spaces.</p>
           </div>
           <div className="rounded-2xl bg-brand-navy p-6">
             <LogoMark />

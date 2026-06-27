@@ -1,38 +1,16 @@
-function HorseLogoSvg() {
-  return (
-    <svg viewBox="0 0 56 44" aria-hidden="true" className="h-11 w-14">
-      <defs>
-        <linearGradient id="kwcHorseGradient" x1="13" x2="48" y1="37" y2="8" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#12b7ff" />
-          <stop offset="1" stopColor="#1f5eff" />
-        </linearGradient>
-      </defs>
-      <rect width="56" height="44" rx="12" fill="#0b1f38" />
-      <path d="M9 31h17.5c7.5 0 13.6-3.2 18.2-9.6" fill="none" stroke="#ffffff" strokeWidth="2.7" strokeLinecap="round" />
-      <path d="M10 36h13c9.8 0 17.7-4 23.8-12.1" fill="none" stroke="#12b7ff" strokeWidth="2.8" strokeLinecap="round" />
-      <path
-        d="M18.2 35.2c1.3-5.4 3.2-9.8 5.8-13.2l-2.5-9 7.3 4.5c2.4-1.6 5.4-2.4 9-2.2 5.5.3 9.4 2.7 11.6 7.2l-5.8.8 4.5 3.1c-1.2 2.8-3.5 4.4-6.8 4.8l-7.8.8c-2.4.3-4.5 1.5-6.2 3.7l-2.4 3.1H17l1.2-3.6Z"
-        fill="url(#kwcHorseGradient)"
-      />
-      <path
-        d="M28.7 18.5c-3.9 3.6-6.3 8.6-7.2 15"
-        fill="none"
-        stroke="#ffffff"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path d="M27.9 21.1l-4.7 1.2 3 2.2-4.2 1.4 2.9 2.2-4 1.6" fill="none" stroke="#0b1f38" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity=".5" />
-      <path d="M39.4 22.1h.1" fill="none" stroke="#ffffff" strokeWidth="2.7" strokeLinecap="round" />
-      <path d="M44.9 24.8h3.7" fill="none" stroke="#ffffff" strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M43.3 10.1l.7 1.7 1.9-.5-.9 1.6 1.6 1-1.9.4.1 1.9-1.5-1.1-1.6 1.1.1-1.9-1.8-.4 1.6-1-.9-1.6 1.9.5.7-1.7Z" fill="#d91f2d" />
-    </svg>
-  );
-}
+import Image from "next/image";
 
 export function LogoMark() {
   return (
-    <span className="grid h-11 w-14 shrink-0 place-items-center rounded-xl bg-brand-navy shadow-sm ring-1 ring-brand-blue/20">
-      <HorseLogoSvg />
+    <span className="flex h-12 w-[74px] shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-line">
+      <Image
+        src="/kwc-logo-horse.png"
+        alt="KWC Logistics blue horse"
+        width={148}
+        height={96}
+        className="h-11 w-[68px] object-contain"
+        priority
+      />
     </span>
   );
 }
@@ -52,5 +30,18 @@ export function LogoLockup() {
         </span>
       </span>
     </span>
+  );
+}
+
+export function FullLogo({ className = "" }: { className?: string }) {
+  return (
+    <Image
+      src="/kwc-logo-full.png"
+      alt="KWC Logistics logo"
+      width={332}
+      height={299}
+      className={`h-auto w-full object-contain ${className}`}
+      priority
+    />
   );
 }

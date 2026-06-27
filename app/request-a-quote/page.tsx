@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LogoLockup } from "@/components/Logo";
+import { FullLogo } from "@/components/Logo";
 import { PageHero } from "@/components/PageHero";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
@@ -25,8 +25,8 @@ export default function RequestQuotePage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.45fr] lg:px-8">
           <QuoteForm />
           <aside className="rounded-md bg-brand-pale p-6">
-            <div className="mb-6 inline-flex rounded-xl bg-white px-3 py-2 shadow-sm">
-              <LogoLockup />
+            <div className="mb-6 max-w-[180px] rounded-xl bg-white px-3 py-2 shadow-sm">
+              <FullLogo />
             </div>
             <h2 className="text-2xl font-bold text-ink">Helpful quote details</h2>
             <ul className="mt-5 space-y-3 text-sm leading-6 text-muted">
