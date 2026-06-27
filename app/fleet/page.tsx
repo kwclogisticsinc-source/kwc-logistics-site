@@ -46,7 +46,7 @@ export default function FleetPage() {
       <Section
         title="Built for the freight local businesses actually move"
         intro="Straight truck, reefer, flatbed, and cargo van options help KWC support commercial freight without pretending to be a giant carrier."
-        className="bg-brand-charcoal"
+        className="bg-brand-navy"
       >
         <div className="grid gap-5 lg:grid-cols-4">
           {equipment.map((item) => (

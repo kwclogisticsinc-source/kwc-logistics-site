@@ -29,7 +29,7 @@ export function VisualCard({ src, title, description, tags = [], className = "" 
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           />
         ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(41,168,255,0.55),transparent_28%),linear-gradient(135deg,#06152E,#0A2B5F_50%,#111827)] logistics-grid">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(18,183,255,0.52),transparent_28%),linear-gradient(135deg,#061A3A,#073B86_50%,#061A3A)] logistics-grid">
             <div className="motion-lines absolute inset-x-0 bottom-8 h-24 opacity-70" />
             <div className="absolute bottom-8 left-6 right-6 h-16 rounded-lg border border-white/25 bg-white/10 backdrop-blur">
               <div className="absolute left-5 top-5 h-6 w-28 rounded bg-white/25" />

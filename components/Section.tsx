@@ -9,7 +9,7 @@ type SectionProps = {
 };
 
 export function Section({ eyebrow, title, intro, children, className = "" }: SectionProps) {
-  const isDark = className.includes("bg-brand-navy") || className.includes("bg-brand-charcoal");
+  const isDark = className.includes("bg-brand-navy");
 
   return (
     <section className={`py-14 sm:py-16 ${className}`}>

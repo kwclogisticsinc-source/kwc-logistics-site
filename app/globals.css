@@ -16,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  background: #f5f8fc;
-  color: #17212f;
+  background: #f1f7ff;
+  color: #061a3a;
 }
 
 a {
@@ -25,22 +25,22 @@ a {
 }
 
 ::selection {
-  background: #006dff;
+  background: #087cff;
   color: #ffffff;
 }
 
 .logistics-grid {
   background-image:
-    linear-gradient(rgba(41, 168, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(41, 168, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(18, 183, 255, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 183, 255, 0.10) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
 .motion-lines {
   background-image: repeating-linear-gradient(
     115deg,
-    rgba(41, 168, 255, 0.18) 0,
-    rgba(41, 168, 255, 0.18) 2px,
+    rgba(18, 183, 255, 0.18) 0,
+    rgba(18, 183, 255, 0.18) 2px,
     transparent 2px,
     transparent 18px
   );

@@ -15,7 +15,7 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/95 text-white shadow-lg shadow-brand-navy/10 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-brand-blue/20 bg-brand-navy/95 text-white shadow-lg shadow-brand-navy/10 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="shrink-0 rounded-xl bg-white px-2 py-1" aria-label="KWC Logistics Inc. home">
           <HeaderLogo />
@@ -36,7 +36,7 @@ export function Header() {
           </ButtonLink>
         </div>
       </div>
-      <nav className="border-t border-white/10 bg-brand-charcoal lg:hidden" aria-label="Mobile navigation">
+      <nav className="border-t border-brand-blue/20 bg-brand-navy lg:hidden" aria-label="Mobile navigation">
         <div className="mx-auto flex max-w-7xl gap-4 overflow-x-auto px-4 py-3 text-sm font-semibold text-blue-50 sm:px-6">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="shrink-0 hover:text-brand-cyan">

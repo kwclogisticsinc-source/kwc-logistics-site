@@ -78,10 +78,10 @@ const whyKwc = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-brand-navy text-white">
+      <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_18%_16%,rgba(18,183,255,0.24),transparent_28%),linear-gradient(135deg,#061A3A_0%,#082B66_54%,#061A3A_100%)] text-white">
         <div className="absolute inset-0 logistics-grid opacity-70" />
         <div className="motion-lines absolute -right-24 top-24 h-64 w-[44rem] rotate-[-8deg] opacity-50" />
-        <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-canada via-brand-blue to-brand-cyan" />
+        <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-20">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl rounded-3xl border border-white/10 bg-white px-6 py-5 shadow-glow">
@@ -141,7 +141,7 @@ export default function HomePage() {
         eyebrow="Available Equipment"
         title="Built for Regional Freight"
         intro="KWC focuses on practical fleet solutions and available equipment for final mile, LTL, B2B, D2B, B2C, and specialized regional delivery work."
-        className="bg-brand-charcoal text-white"
+        className="bg-brand-navy text-white"
       >
         <div className="grid gap-5 lg:grid-cols-4">
           {fleetCards.map((card) => (
@@ -181,7 +181,7 @@ export default function HomePage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {specialized.map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/10 p-5 font-bold text-white">
-                <span className="mr-3 inline-block h-2 w-8 rounded-full bg-brand-canada" />
+                <span className="mr-3 inline-block h-2 w-8 rounded-full bg-brand-cyan" />
                 {item}
               </div>
             ))}
@@ -232,14 +232,14 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-5">
           {whyKwc.map((item) => (
             <div key={item} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-              <div className="mb-4 h-2 w-12 rounded-full bg-gradient-to-r from-brand-canada to-brand-blue" />
+              <div className="mb-4 h-2 w-12 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan" />
               <p className="text-lg font-black text-ink">{item}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      <section className="bg-brand-charcoal py-14 text-white sm:py-16">
+      <section className="bg-brand-navy py-14 text-white sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Request a Quote</p>

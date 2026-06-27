@@ -9,21 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#17212f",
-        muted: "#5b6675",
-        line: "#d9e2ec",
+        ink: "#061A3A",
+        muted: "#516174",
+        line: "#D5E4F5",
         brand: {
-          blue: "#006DFF",
-          cyan: "#29A8FF",
-          canada: "#D71920",
-          navy: "#06152E",
-          charcoal: "#111827",
-          pale: "#F5F8FC"
+          blue: "#087CFF",
+          cyan: "#12B7FF",
+          canada: "#087CFF",
+          navy: "#061A3A",
+          charcoal: "#08234F",
+          pale: "#F1F7FF"
         }
       },
       boxShadow: {
-        soft: "0 18px 45px rgba(15, 31, 56, 0.08)",
-        glow: "0 24px 80px rgba(0, 109, 255, 0.24)"
+        soft: "0 18px 45px rgba(6, 26, 58, 0.10)",
+        glow: "0 24px 80px rgba(8, 124, 255, 0.22)"
       }
     }
   },
