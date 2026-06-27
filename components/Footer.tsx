@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <p className="text-lg font-bold">{site.name}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Serving businesses, families, and everyday customers across Waterloo Region,
+            Serving businesses, homeowners, seniors, and everyday customers across Waterloo Region,
             Southwestern Ontario, Canada, and U.S. lanes.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>

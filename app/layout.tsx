@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "Family-run Canadian logistics company in Kitchener serving businesses, families, and everyday customers across Ontario, Canada, and U.S. lanes.",
+    "Canadian logistics company in Kitchener serving businesses, homeowners, seniors, and everyday customers across Ontario, Canada, and U.S. lanes.",
   keywords: [
     "Kitchener logistics company",
     "Waterloo Region delivery",

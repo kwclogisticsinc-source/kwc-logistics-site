@@ -16,7 +16,7 @@ export default function ServiceAreasPage() {
     <>
       <PageHero eyebrow="Service Areas" title="Local, regional, Canada-wide, and U.S. freight lanes">
         <p>
-          KWC Logistics Inc. is based in Kitchener and supports businesses, families, and
+          KWC Logistics Inc. is based in Kitchener and supports businesses, homeowners, seniors, and
           everyday customers across Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes.
         </p>
       </PageHero>

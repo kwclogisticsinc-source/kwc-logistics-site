@@ -21,7 +21,7 @@ export default function ServicesPage() {
           KWC keeps the process direct: we answer, we communicate, we get it moved.
         </p>
       </PageHero>
-      <Section title="Service categories" intro="KWC supports businesses, families, and everyday customers with local accountability and practical freight planning.">
+      <Section title="Service categories" intro="KWC supports businesses, homeowners, seniors, and everyday customers with local accountability and practical freight planning.">
         <div className="grid gap-5 lg:grid-cols-4">
           {serviceCategories.map((category) => (
             <article key={category.title} className="rounded-2xl border border-line bg-white p-5">

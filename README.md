@@ -1,6 +1,6 @@
 # KWC Logistics Inc. Website
 
-Professional marketing website for KWC Logistics Inc., a family-run logistics company based in Kitchener, Ontario.
+Professional marketing website for KWC Logistics Inc., a Canadian logistics company based in Kitchener, Ontario.
 
 Built with:
 

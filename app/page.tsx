@@ -12,7 +12,7 @@ import {
 
 const trustPoints = [
   "Proudly Canadian",
-  "Family-Run Reliability",
+  "Local Accountability",
   "Local Dispatch",
   "Canada & U.S. Freight Solutions"
 ];
@@ -43,14 +43,14 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-16">
           <div className="flex flex-col justify-center">
             <p className="text-sm font-bold uppercase tracking-wider text-brand-red">
-              Family-run Canadian logistics
+              Canadian logistics and local dispatch
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-ink sm:text-6xl">
               Driven by Canadian Values. Built for Local Freight.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
               From small deliveries to cross-border freight, KWC Logistics Inc. helps businesses,
-              families, and everyday customers move what matters across Ontario, Canada, and the U.S.
+              homeowners, seniors, and everyday customers move what matters across Ontario, Canada, and the U.S.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
@@ -89,7 +89,7 @@ export default function HomePage() {
       <Section
         eyebrow="No Customer Too Small"
         title="One box, one pallet, one truckload — call KWC."
-        intro="KWC Logistics Inc. is built for small businesses, families, growing companies, and everyday customers who need a real person to help get something moved."
+        intro="KWC Logistics Inc. is built for small businesses, homeowners, seniors, growing companies, and everyday customers who need a real person to help get something moved."
       >
         <div className="rounded-2xl bg-brand-navy p-6 text-white sm:p-8">
           <h2 className="text-3xl font-bold">No customer too small. No freight too complicated.</h2>
@@ -125,7 +125,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Industries" title="Built for businesses, families, and everyday customers" intro="KWC works with the people who need practical delivery help: stores, warehouses, homeowners, contractors, suppliers, families, and growing companies.">
+      <Section eyebrow="Industries" title="Built for businesses, homeowners, and everyday customers" intro="KWC works with the people who need practical delivery help: stores, warehouses, homeowners, contractors, suppliers, seniors, and growing companies.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry) => (
             <Link key={industry.slug} href={`/industries/${industry.slug}`} className="rounded-lg border border-line bg-white p-4 text-sm font-semibold text-ink transition hover:border-brand-red hover:text-brand-red">

@@ -5,7 +5,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "Family-run Canadian logistics for businesses, families, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
+    "Canadian logistics for businesses, homeowners, seniors, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
 };
 
 export type ItemPage = {
@@ -81,7 +81,7 @@ export const serviceCategories = [
   {
     title: "Home & Specialty Moves",
     description:
-      "Help for families, seniors, homeowners, and customers moving items that need extra care.",
+      "Help for seniors, homeowners, renters, and customers moving items that need extra care.",
     items: homeSpecialty
   },
   {
@@ -149,7 +149,7 @@ export const services: ItemPage[] = [
     slug: "senior-moving-assistance",
     title: "Senior Moving Assistance",
     description:
-      "Support for seniors and families moving furniture, boxes, apartment items, and specialty pieces with careful communication."
+      "Support for seniors, homeowners, and caregivers moving furniture, boxes, apartment items, and specialty pieces with careful communication."
   },
   {
     slug: "meal-kit-delivery",
@@ -181,7 +181,7 @@ export const industries: ItemPage[] = [
   { slug: "retail-stores", title: "Retail Stores", description: "Retail delivery, store transfers, final mile, and commercial delivery support." },
   { slug: "medical-suppliers", title: "Medical Suppliers", description: "Practical supply delivery support for medical suppliers and commercial customers." },
   { slug: "furniture-stores", title: "Furniture Stores", description: "Furniture delivery, white glove delivery, and specialty item delivery support." },
-  { slug: "seniors-families", title: "Seniors & Families", description: "Moving help and one-time delivery options for seniors, families, homeowners, and everyday customers." },
+  { slug: "seniors-homeowners", title: "Seniors & Homeowners", description: "Moving help and one-time delivery options for seniors, homeowners, renters, and everyday customers." },
   { slug: "e-commerce-companies", title: "E-commerce Companies", description: "Final mile, local courier, and regional delivery support for e-commerce operations." },
   { slug: "contractors", title: "Contractors", description: "Delivery support for tools, materials, supplies, and job-site freight." },
   { slug: "homeowners", title: "Homeowners", description: "One-time moves, furniture delivery, appliance delivery, and residential freight help." }
@@ -189,7 +189,7 @@ export const industries: ItemPage[] = [
 
 export const serviceAreas: ItemPage[] = [
   { slug: "kitchener-logistics", title: "Kitchener Logistics", description: "Kitchener logistics, courier, final mile, B2B delivery, warehouse transfer, and freight support from a local company." },
-  { slug: "waterloo-logistics", title: "Waterloo Logistics", description: "Waterloo logistics and delivery support for businesses, families, students, stores, and local freight." },
+  { slug: "waterloo-logistics", title: "Waterloo Logistics", description: "Waterloo logistics and delivery support for businesses, students, homeowners, stores, and local freight." },
   { slug: "cambridge-logistics", title: "Cambridge Logistics", description: "Cambridge logistics for B2B delivery, palletized freight, courier work, and regional distribution." },
   { slug: "guelph-logistics", title: "Guelph Logistics", description: "Guelph delivery and freight support for business shipments, same-day work, and local routes." },
   { slug: "brantford-logistics", title: "Brantford Logistics", description: "Brantford logistics for freight, business delivery, warehouse transfers, and scheduled routes." },
@@ -208,7 +208,7 @@ export const faqs = [
   {
     question: "Does KWC work with both businesses and regular customers?",
     answer:
-      "Yes. KWC serves businesses, families, seniors, homeowners, and everyday customers who need something moved."
+      "Yes. KWC serves businesses, seniors, homeowners, and everyday customers who need something moved."
   },
   {
     question: "Do you handle Canada and U.S. freight?",

@@ -37,7 +37,7 @@ export default function ServiceDetailPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-ink">How KWC helps</h2>
             <p className="mt-4 text-base leading-7 text-muted">
               We answer the phone. We show up. We communicate. We get it moved. KWC works with
-              businesses, families, and everyday customers using available capacity, trusted
+              businesses, homeowners, seniors, and everyday customers using available capacity, trusted
               transportation partners, and local dispatch accountability.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">

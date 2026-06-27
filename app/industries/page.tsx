@@ -7,7 +7,7 @@ import { industries } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "KWC Logistics supports meal kit companies, florists, small businesses, warehouses, manufacturers, retail stores, medical suppliers, furniture stores, seniors and families, e-commerce companies, contractors, and homeowners.",
+    "KWC Logistics supports meal kit companies, florists, small businesses, warehouses, manufacturers, retail stores, medical suppliers, furniture stores, seniors, e-commerce companies, contractors, and homeowners.",
   alternates: { canonical: "/industries" }
 };
 
@@ -16,7 +16,7 @@ export default function IndustriesPage() {
     <>
       <PageHero eyebrow="Industries" title="Delivery and freight support for real customers">
         <p>
-          Built for small businesses, families, growing companies, and local operators that need
+          Built for small businesses, homeowners, seniors, growing companies, and local operators that need
           practical logistics help from someone who answers the phone.
         </p>
       </PageHero>
