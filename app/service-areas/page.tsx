@@ -7,21 +7,20 @@ import { serviceAreas } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Service Areas",
   description:
-    "KWC Logistics serves Kitchener, Waterloo, Cambridge, Guelph, Brantford, London, Hamilton, Mississauga, Ottawa, Windsor, Niagara, the 401 and 403 corridor, and partner-managed Canada-wide and North America lanes.",
+    "KWC Logistics serves Kitchener, Waterloo, Cambridge, Guelph, Brantford, London, Hamilton, Mississauga, the GTA, Niagara, and the Southern Ontario 401 and 403 corridor.",
   alternates: { canonical: "/service-areas" }
 };
 
 export default function ServiceAreasPage() {
   return (
     <>
-      <PageHero eyebrow="Service Areas" title="Ontario freight coverage from Kitchener across the 401 and 403 corridor">
+      <PageHero eyebrow="Service Areas" title="Southern Ontario coverage from Kitchener.">
         <p>
-          KWC Logistics Inc. is based in Kitchener and mainly moves freight on our Ontario assets,
-          covering Waterloo Region, the GTA, Ottawa, Windsor, Niagara, London, Hamilton, and the
-          401 and 403 corridor.
+          KWC Logistics Inc. services Kitchener-Waterloo, Cambridge, Guelph, Brantford, London,
+          Hamilton, Mississauga, the GTA, Niagara, and regional lanes across the 401 and 403 corridor.
         </p>
       </PageHero>
-      <Section title="Ontario lanes and local service areas" intro="Choose a city page for local logistics, freight, hot shot, warehousing transfer, and partner-managed long-distance support.">
+      <Section title="Regional lanes and local service areas" intro="City coverage is planned around pickup windows, receiver hours, dock access, route density, and freight type.">
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {serviceAreas.map((area) => (
             <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">

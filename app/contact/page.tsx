@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact KWC Logistics Inc. in Kitchener, Ontario for Ontario freight, hot shot cargo vans, warehousing transfers, and partner-managed Canada-wide or North America logistics.",
+    "Contact KWC Logistics Inc. in Kitchener, Ontario for LTL freight, final mile delivery, personal freight, warehouse transfers, dedicated routes, and regional delivery across Southern Ontario.",
   alternates: { canonical: "/contact" }
 };
 
@@ -15,8 +15,8 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Talk to KWC Logistics">
         <p>
-          For Ontario freight, hot shot cargo vans, straight truck work, reefer, flatbed,
-          warehouse transfers, or Canada-wide and North America logistics, contact KWC Logistics Inc. directly.
+          For final mile delivery, LTL freight, personal freight, cargo van work, straight truck work,
+          warehouse transfers, dedicated routes, or regional delivery, contact KWC Logistics Inc. directly.
         </p>
       </PageHero>
       <Section title="Contact details" intro="No full street address is published yet. KWC is based in Kitchener, Ontario.">

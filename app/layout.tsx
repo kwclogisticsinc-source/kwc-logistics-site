@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc. provides final mile, LTL, B2B, D2B, B2C, and specialized regional delivery solutions for businesses across Kitchener-Waterloo, Cambridge, and Southwestern Ontario.",
+    "KWC Logistics Inc. is a personal professional LTL and final mile carrier using hub-based Southern Ontario coverage, consolidation, and direct dispatch to move freight simply and affordably.",
   keywords: [
     "Kitchener logistics company",
     "Waterloo Region delivery",
@@ -19,22 +19,23 @@ export const metadata: Metadata = {
     "B2B delivery Kitchener",
     "LTL freight Kitchener",
     "warehouse transfers Ontario",
-    "Southwestern Ontario logistics",
+    "Southern Ontario logistics",
     "final mile and regional delivery",
-    "D2B delivery Ontario",
-    "B2C delivery Ontario",
+    "final mile logistics Cambridge",
     "meal kit delivery support",
+    "personal freight delivery Ontario",
+    "LTL consolidation Ontario",
+    "direct freight carrier Ontario",
     "Ontario freight",
-    "North America freight",
+    "owner operator opportunities Ontario",
     "401 corridor freight",
     "403 corridor freight",
     "courier services Kitchener",
-    "senior moving assistance Kitchener",
     "auto parts delivery Kitchener"
   ],
   openGraph: {
     title: "KWC Logistics Inc.",
-    description: "Final mile, LTL, B2B, D2B, B2C, and specialized regional delivery across Southwestern Ontario.",
+    description: "Personal professional LTL, final mile, consolidation, and regional delivery across Southern Ontario.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

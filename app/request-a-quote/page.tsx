@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request a quote from KWC Logistics for final mile, LTL, B2B, D2B, B2C, specialized delivery, warehouse transfers, reefer freight, flatbed, or regional delivery across Southwestern Ontario.",
+    "Request a quote from KWC Logistics for LTL freight, final mile delivery, personal freight, warehouse transfers, dedicated routes, and regional delivery across Southern Ontario.",
   alternates: { canonical: "/request-a-quote" }
 };
 
@@ -16,8 +16,8 @@ export default function RequestQuotePage() {
     <>
       <PageHero eyebrow="Request a Quote" title="Send the shipment details">
         <p>
-          Include pickup and delivery cities, freight details, timing, liftgate needs, reefer needs,
-          and whether the stop is dock, commercial, or residential. For urgent jobs, call dispatch at{" "}
+          Keep it simple: pickup city, delivery city, what is moving, approximate size and weight,
+          timing, and whether pickup or delivery is dock, commercial, or residential. For urgent jobs, call dispatch at{" "}
           <a className="font-semibold text-brand-blue" href={`tel:${site.phone}`}>{site.phone}</a>.
         </p>
       </PageHero>
@@ -36,6 +36,7 @@ export default function RequestQuotePage() {
               <li>Same-day, scheduled, or flexible timing.</li>
               <li>Liftgate and reefer requirements.</li>
               <li>Dock, commercial, or residential stop details.</li>
+              <li>Any flexibility that could help consolidate and reduce cost.</li>
             </ul>
             <div className="mt-6 border-t border-line pt-5 text-sm leading-6 text-muted">
               <p className="font-semibold text-ink">Dispatch</p>

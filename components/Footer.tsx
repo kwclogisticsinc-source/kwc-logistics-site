@@ -11,8 +11,8 @@ export function Footer() {
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-run Canadian logistics based in Kitchener. Final mile, LTL, B2B, D2B,
-            B2C, and specialized regional delivery solutions across Southwestern Ontario.
+            Family-run Canadian LTL and final mile carrier based in Kitchener. Direct dispatch,
+            consolidation, personal freight, warehouse transfers, and regional delivery across Southern Ontario.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -35,7 +35,7 @@ export function Footer() {
         <div>
           <p className="font-semibold">Service Areas</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
-            {serviceAreas.map((area) => area.title.replace(" Logistics", "")).join(", ")}, the 401/403 corridor, Canada-wide, and North America lanes
+            Kitchener, London, Windsor, Toronto, Kingston, the GTA, and the 401/403 corridor
           </p>
         </div>
       </div>

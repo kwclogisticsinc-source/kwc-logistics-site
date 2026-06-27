@@ -5,7 +5,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "KWC Logistics Inc. provides final mile, LTL, B2B, D2B, B2C, and specialized regional delivery solutions for businesses across Kitchener-Waterloo, Cambridge, and Southwestern Ontario."
+    "KWC Logistics Inc. is a personal professional LTL and final mile carrier using hub-based Southern Ontario coverage, consolidation, and direct dispatch to move freight simply and affordably."
 };
 
 export type ItemPage = {
@@ -17,55 +17,56 @@ export type ItemPage = {
 
 export const serviceCategories = [
   {
-    title: "Final Mile & Regional Delivery",
+    title: "Final Mile Delivery",
     description:
-      "Local and regional freight movement across Kitchener-Waterloo, Cambridge, Southwestern Ontario, and the 401/403 corridor.",
+      "Store, business, warehouse, and customer deliveries handled with clear communication from pickup to proof of delivery.",
     items: [
-      "Final mile delivery",
-      "B2B, D2B, and B2C delivery",
+      "Retail and commercial delivery",
+      "Business-to-business freight",
+      "Business-to-customer delivery",
       "Store replenishment",
-      "Commercial orders",
-      "Same-day and scheduled options",
-      "Recurring local routes"
+      "Scheduled delivery windows",
+      "Proof-of-delivery communication"
     ]
   },
   {
-    title: "LTL & Palletized Freight",
+    title: "LTL & Pallet Freight",
     description:
-      "Practical LTL freight support for skids, pallets, partial loads, warehouse transfers, and regional business shipments.",
+      "Regional LTL service for pallets, skids, partial loads, and commercial shipments moving through Southern Ontario with consolidation where it saves time and cost.",
     items: [
       "Palletized freight",
-      "Warehouse transfers",
-      "Cross-docking support",
-      "Retail freight",
+      "Partial loads",
+      "Dock-to-dock freight",
       "Dock-to-dock deliveries",
-      "Liftgate coordination"
+      "Liftgate coordination",
+      "Retail freight",
+      "Commercial orders"
     ]
   },
   {
-    title: "Specialized Local Freight",
+    title: "Warehousing & Cross-Dock",
     description:
-      "Some freight does not fit into a standard courier box. KWC helps businesses move the awkward, urgent, recurring, and time-sensitive work.",
+      "Support for freight that needs staging, sorting, consolidation, transfer, or local distribution through dock and hub operations.",
     items: [
-      "Meal kit delivery support",
-      "Auto parts delivery",
-      "Equipment and supplies",
-      "Medical and wellness supplies",
-      "Food and beverage orders",
-      "Hot shot delivery"
+      "Warehouse transfers",
+      "Cross-docking",
+      "Pallet staging",
+      "Route loading",
+      "Distribution support",
+      "Short-term handling"
     ]
   },
   {
-    title: "Regional Freight Network",
+    title: "Dedicated & Expedited",
     description:
-      "KWC focuses on Ontario regional delivery while coordinating trusted partner support for wider Canada and North America lanes when needed.",
+      "Dedicated routes, recurring delivery work, and urgent same-day movement for businesses that need dependable capacity.",
     items: [
-      "Straight truck solutions",
-      "Reefer options",
-      "Small flatbed options",
+      "Dedicated routes",
+      "Same-day options",
       "Cargo van hot shot",
-      "401 and 403 corridor",
-      "Partner-managed long lanes"
+      "Auto parts runs",
+      "Meal kit support",
+      "Time-sensitive freight"
     ]
   }
 ];
@@ -75,44 +76,35 @@ export const services: ItemPage[] = [
     slug: "final-mile-delivery",
     title: "Final Mile Delivery",
     description:
-      "Final mile delivery in Kitchener and Waterloo Region for businesses, stores, suppliers, and local customers who need the last stretch handled properly.",
+      "Final mile delivery for retailers, suppliers, warehouses, e-commerce brands, and local businesses across Kitchener-Waterloo, Cambridge, and Southern Ontario.",
     keywords: ["final mile delivery Kitchener", "last mile delivery Waterloo Region"]
   },
   {
     slug: "b2b-delivery",
     title: "B2B Delivery",
     description:
-      "Business-to-business delivery between warehouses, offices, retail stores, suppliers, and job sites across Southwestern Ontario.",
+      "Business-to-business delivery between docks, warehouses, stores, suppliers, service locations, and commercial customers.",
     keywords: ["B2B delivery Kitchener", "Waterloo Region delivery"]
-  },
-  { slug: "d2b-delivery", title: "D2B Delivery", description: "Direct-to-business delivery for commercial orders, supplier shipments, store replenishment, and regional business routes." },
-  { slug: "b2c-delivery", title: "B2C Delivery", description: "Business-to-customer final mile delivery for local brands, retailers, e-commerce operations, and specialty deliveries." },
-  {
-    slug: "auto-parts-delivery",
-    title: "Auto Parts Delivery",
-    description:
-      "Fast auto parts delivery for shops, dealers, mechanics, suppliers, and customers who need parts moved without delay.",
-    keywords: ["auto parts delivery Kitchener", "same-day auto parts delivery"]
   },
   {
     slug: "ltl-freight",
     title: "LTL Freight",
     description:
-      "LTL freight support for palletized shipments, partial loads, and regional freight moving through Ontario lanes.",
+      "LTL freight support for palletized shipments, partial loads, consolidation, and regional freight moving through Southern Ontario lanes.",
     keywords: ["LTL freight Kitchener", "palletized freight Ontario"]
-  },
-  {
-    slug: "reefer-transportation",
-    title: "Reefer Freight",
-    description:
-      "Temperature-aware reefer freight options for food, beverage, meal kit, and commercial shipments when available."
   },
   {
     slug: "warehouse-transfers",
     title: "Warehouse Transfers",
     description:
-      "Warehouse transfers, cross-docking support, and practical freight movement between storage, fulfillment, and distribution points.",
+      "Warehouse transfers, cross-dock support, dock-to-dock freight, and practical movement between storage, fulfillment, and distribution points.",
     keywords: ["warehouse transfers Ontario"]
+  },
+  {
+    slug: "dedicated-routes",
+    title: "Dedicated Routes",
+    description:
+      "Scheduled route support for businesses that need consistent pickup, delivery, store replenishment, or regional distribution coverage."
   },
   {
     slug: "same-day-delivery",
@@ -121,10 +113,11 @@ export const services: ItemPage[] = [
       "Same-day delivery for urgent local shipments, business orders, auto parts, supplies, and time-sensitive freight."
   },
   {
-    slug: "dedicated-routes",
-    title: "Dedicated Routes",
+    slug: "auto-parts-delivery",
+    title: "Auto Parts Delivery",
     description:
-      "Scheduled and dedicated route support for businesses that need repeat pickup and delivery coverage."
+      "Fast auto parts delivery for dealers, parts suppliers, repair shops, service departments, and commercial customers.",
+    keywords: ["auto parts delivery Kitchener", "same-day auto parts delivery"]
   },
   {
     slug: "meal-kit-delivery",
@@ -133,61 +126,55 @@ export const services: ItemPage[] = [
       "Delivery support for meal kit companies and food-related businesses that need reliable local distribution."
   },
   { slug: "retail-delivery", title: "Retail Delivery", description: "Retail delivery, store replenishment, local customer delivery, and recurring commercial delivery support." },
-  { slug: "small-flatbed-delivery", title: "Small Flatbed Delivery", description: "Small flatbed delivery options for equipment, materials, commercial freight, and regional specialty loads." },
-  {
-    slug: "canada-us-freight",
-    title: "Partner-Managed Canada & North America Freight",
-    description:
-      "Canada-wide and North America freight solutions managed by KWC's logistics team through trusted transportation partners beyond our core Ontario asset network.",
-    keywords: ["Southwestern Ontario logistics", "Canada freight", "North America freight"]
-  }
+  { slug: "personal-freight-delivery", title: "Personal Freight Delivery", description: "Practical delivery support for regular customers moving boxed goods, furniture, equipment, parts, or items that need more care than a parcel courier." }
 ];
 
 export const industries: ItemPage[] = [
   { slug: "meal-kit-companies", title: "Meal Kit Companies", description: "Delivery support for meal kit companies that need dependable local and regional distribution." },
   { slug: "food-beverage-brands", title: "Food and Beverage Brands", description: "Regional delivery support for food and beverage businesses that need timing, communication, and care." },
-  { slug: "e-commerce-businesses", title: "E-commerce Businesses", description: "Final mile, B2C, local courier, and regional delivery support for e-commerce operations." },
+  { slug: "e-commerce-businesses", title: "E-commerce Businesses", description: "Final mile, customer delivery, local courier, and regional delivery support for e-commerce operations." },
   { slug: "retail-stores", title: "Retail Stores", description: "Retail delivery, store transfers, replenishment, final mile, and commercial delivery support." },
   { slug: "furniture-appliance-companies", title: "Furniture and Appliance Companies", description: "Delivery support for bulky items, specialty local freight, and scheduled regional deliveries." },
   { slug: "warehouses-distribution-centres", title: "Warehouses and Distribution Centres", description: "Warehouse transfers, cross-docking, route support, and pallet movement for warehouse teams." },
-  { slug: "manufacturers", title: "Manufacturers", description: "Regional freight and B2B delivery support for manufacturers across Southwestern Ontario." },
+  { slug: "manufacturers", title: "Manufacturers", description: "Regional freight and B2B delivery support for manufacturers across Southern Ontario." },
   { slug: "auto-parts-suppliers", title: "Auto Parts Suppliers", description: "Fast auto parts delivery for shops, suppliers, dealers, mechanics, and commercial customers." },
   { slug: "medical-wellness-suppliers", title: "Medical and Wellness Suppliers", description: "Practical supply delivery support for medical, wellness, and commercial customers." },
-  { slug: "local-businesses", title: "Local Businesses Needing Recurring Deliveries", description: "Recurring B2B, D2B, B2C, and specialized local delivery routes for growing businesses." }
+  { slug: "local-businesses", title: "Local Businesses With Recurring Deliveries", description: "Recurring B2B, final mile, retail, and specialized local delivery routes for growing businesses." },
+  { slug: "personal-customers", title: "Personal Customers", description: "Delivery help for regular customers who need an item moved simply, clearly, and without getting lost in a carrier system." }
 ];
 
 export const serviceAreas: ItemPage[] = [
   { slug: "kitchener-logistics", title: "Kitchener Logistics", description: "Kitchener logistics, courier, final mile, B2B delivery, warehouse transfer, and freight support from a local company." },
-  { slug: "waterloo-logistics", title: "Waterloo Logistics", description: "Waterloo logistics and delivery support for businesses, students, homeowners, stores, and local freight." },
-  { slug: "cambridge-logistics", title: "Cambridge Logistics", description: "Cambridge logistics for B2B delivery, palletized freight, courier work, and regional distribution." },
+  { slug: "waterloo-logistics", title: "Waterloo Logistics", description: "Waterloo logistics and delivery support for businesses, stores, personal freight, and local LTL shipments." },
+  { slug: "cambridge-logistics", title: "Cambridge Logistics", description: "Final mile logistics in Cambridge for B2B delivery, palletized freight, warehouse transfers, and regional distribution." },
   { slug: "guelph-logistics", title: "Guelph Logistics", description: "Guelph delivery and freight support for business shipments, same-day work, and local routes." },
   { slug: "brantford-logistics", title: "Brantford Logistics", description: "Brantford logistics for freight, business delivery, warehouse transfers, and scheduled routes." },
   { slug: "london-logistics", title: "London Logistics", description: "London Ontario logistics support for regional freight, dedicated routes, and long-distance moves." },
   { slug: "hamilton-logistics", title: "Hamilton Logistics", description: "Hamilton logistics, freight, delivery, and commercial transport support from a Kitchener-based team." },
   { slug: "mississauga-logistics", title: "Mississauga Logistics", description: "Mississauga delivery and freight support connecting Waterloo Region with the GTA." },
-  { slug: "southwestern-ontario-logistics", title: "Southwestern Ontario Logistics", description: "Southwestern Ontario logistics across the 401 and 403 corridor, with Ontario asset-based freight and partner-managed Canada-wide coverage." }
+  { slug: "southwestern-ontario-logistics", title: "Southern Ontario Logistics", description: "Southern Ontario logistics across the 401 and 403 corridor, with regional final mile, LTL, warehouse transfer, and commercial delivery support." }
 ];
 
 export const faqs = [
   {
     question: "What size shipment can KWC Logistics help with?",
     answer:
-      "KWC focuses on final mile, LTL, palletized freight, commercial orders, meal kits, auto parts, store replenishment, and specialized regional deliveries."
+      "KWC focuses on final mile, LTL, palletized freight, commercial orders, warehouse transfers, meal kit support, auto parts, recurring routes, and personal freight that is too much for parcel courier."
   },
   {
-    question: "Does KWC work with B2B and B2C deliveries?",
+    question: "Does KWC handle both B2B and final mile delivery?",
     answer:
-      "Yes. KWC supports B2B, D2B, and B2C deliveries for local businesses, retailers, suppliers, warehouses, and e-commerce operations."
+      "Yes. KWC supports B2B, retail, e-commerce, warehouse, supplier, and final mile deliveries for businesses across Southern Ontario."
   },
   {
     question: "What makes KWC different?",
     answer:
-      "Quick communication, affordability, and service. With 30 years of logistics experience, KWC understands freight costs and keeps the process direct."
+      "Direct dispatch, consolidation where it makes sense, fewer unnecessary broker layers, and 30 years of logistics experience behind the planning."
   },
   {
-    question: "Do you handle freight outside Ontario?",
+    question: "How does KWC help control freight costs?",
     answer:
-      "Ontario regional freight is the main focus. For Canada-wide and North America lanes, KWC can coordinate partner-managed options where it makes sense."
+      "KWC looks at lane, timing, equipment, route density, and consolidation options before quoting. The goal is to move freight properly without adding avoidable layers."
   },
   {
     question: "Can KWC handle same-day delivery?",

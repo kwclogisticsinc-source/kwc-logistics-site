@@ -8,21 +8,20 @@ import { serviceCategories, services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides final mile, LTL, B2B, D2B, B2C, meal kit delivery support, retail delivery, warehouse transfers, recurring routes, and specialized regional delivery across Southwestern Ontario.",
+    "KWC Logistics provides final mile, LTL freight, dedicated routes, warehouse transfers, cross-dock support, same-day delivery, and regional freight services across Southern Ontario.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Final mile, LTL, and specialized regional delivery.">
+      <PageHero eyebrow="Services" title="Final mile, LTL, and regional freight services.">
         <p>
-          KWC Logistics Inc. provides final mile, LTL, B2B, D2B, B2C, and specialized
-          regional delivery solutions for businesses across Kitchener-Waterloo, Cambridge,
-          and Southwestern Ontario.
+          KWC Logistics Inc. supports businesses that need freight moved reliably through
+          Kitchener-Waterloo, Cambridge, the GTA, Hamilton, London, and Southern Ontario.
         </p>
       </PageHero>
-      <Section title="What KWC focuses on" intro="Clean, practical freight movement for local businesses: final mile, LTL, recurring routes, warehouse transfers, and specialized deliveries.">
+      <Section title="What KWC focuses on" intro="Clean, practical freight movement for local businesses: final mile delivery, LTL and pallet freight, warehouse transfers, cross-dock support, dedicated routes, and expedited local work.">
         <div className="grid gap-5 lg:grid-cols-4">
           {serviceCategories.map((category) => (
             <article key={category.title} className="rounded-2xl border border-line bg-white p-5">
@@ -32,7 +31,7 @@ export default function ServicesPage() {
           ))}
         </div>
       </Section>
-      <Section title="Service capabilities" intro="These pages explain the common shipment types customers ask about." className="bg-brand-pale">
+      <Section title="Service capabilities" intro="Pick the closest shipment type. If the freight is unusual, send the details and dispatch can help classify it properly." className="bg-brand-pale">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">
@@ -41,7 +40,7 @@ export default function ServicesPage() {
             </Link>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl bg-brand-pale p-6">
+        <div className="mt-10 rounded-2xl bg-white p-6 shadow-soft">
           <h2 className="text-2xl font-bold text-ink">Need a quote?</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
             Send the pickup city, delivery city, freight type, item count, weight, dimensions,

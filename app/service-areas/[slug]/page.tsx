@@ -31,9 +31,9 @@ export default function AreaDetailPage({ params }: Props) {
       <PageHero eyebrow="Local Logistics" title={area.title}>
         <p>{area.description}</p>
       </PageHero>
-      <Section title="Ontario freight, warehousing support, and partner logistics" intro="KWC is based in Kitchener and mainly serves Ontario on our own assets, with partner-managed Canada-wide and North America logistics when the lane goes further.">
+      <Section title="Final mile, LTL, and warehouse transfer support" intro="KWC is based in Kitchener and serves Southern Ontario with practical regional delivery services for businesses.">
         <div className="grid gap-5 md:grid-cols-3">
-          {["Ontario asset freight", "Hot shot cargo vans", "Warehousing and partner network"].map((item) => (
+          {["Final mile delivery", "LTL and pallet freight", "Warehouse transfers"].map((item) => (
             <article key={item} className="rounded-2xl border border-line bg-white p-5">
               <h2 className="text-lg font-bold text-ink">{item}</h2>
               <p className="mt-3 text-sm leading-6 text-muted">
