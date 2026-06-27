@@ -12,23 +12,25 @@ import {
 
 const trustPoints = [
   "Proudly Canadian",
-  "Local Accountability",
-  "Local Dispatch",
+  "Family-Run Business",
+  "30 Years of Logistics Experience",
+  "Quick Communication",
+  "Affordable Options",
   "Canada & U.S. Freight Solutions"
 ];
 
 const whyChoose = [
   {
     title: "We answer the phone.",
-    copy: "Local service starts with being reachable. KWC keeps communication direct and practical."
+    copy: "Fast replies matter when something needs to move. KWC keeps communication direct and practical."
   },
   {
-    title: "We show up.",
-    copy: "From one box to one truckload, the job gets treated like it matters because it does."
+    title: "We understand the cost.",
+    copy: "Logistics can get expensive fast. With 30 years of experience, we help customers find practical, affordable options."
   },
   {
-    title: "We communicate.",
-    copy: "Pickup city, delivery city, timing, freight type, access needs, and updates stay clear."
+    title: "We do the small jobs too.",
+    copy: "One box, auto parts, a few items, one pallet, one room, or one truckload. If it needs to move, call KWC."
   },
   {
     title: "We get it moved.",
@@ -43,7 +45,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-16">
           <div className="flex flex-col justify-center">
             <p className="text-sm font-bold uppercase tracking-wider text-brand-red">
-              Canadian logistics and local dispatch
+              Family-run Canadian logistics
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-ink sm:text-6xl">
               Driven by Canadian Values. Built for Local Freight.
@@ -51,6 +53,8 @@ export default function HomePage() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
               From small deliveries to cross-border freight, KWC Logistics Inc. helps businesses,
               homeowners, seniors, and everyday customers move what matters across Ontario, Canada, and the U.S.
+              Backed by 30 years of logistics experience, we focus on quick communication,
+              affordability, and service.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
@@ -89,22 +93,23 @@ export default function HomePage() {
       <Section
         eyebrow="No Customer Too Small"
         title="One box, one pallet, one truckload — call KWC."
-        intro="KWC Logistics Inc. is built for small businesses, homeowners, seniors, growing companies, and everyday customers who need a real person to help get something moved."
+        intro="KWC Logistics Inc. is built for small businesses, homeowners, seniors, growing companies, and everyday customers who need a real person to help get something moved without getting overcharged or ignored."
       >
         <div className="rounded-2xl bg-brand-navy p-6 text-white sm:p-8">
           <h2 className="text-3xl font-bold">No customer too small. No freight too complicated.</h2>
           <p className="mt-4 max-w-4xl text-base leading-7 text-blue-100">
             We do not pretend to be a giant corporation. We focus on local service with real
-            accountability, clear freight details, trusted transportation partners, and direct
-            dispatch communication.
+            accountability, fair pricing, clear freight details, trusted transportation partners,
+            and direct dispatch communication. We know logistics can be expensive, and we know
+            people can take advantage when customers do not know the freight world. KWC keeps it honest.
           </p>
         </div>
       </Section>
 
       <Section
         eyebrow="Services"
-        title="Four ways KWC helps move freight, items, and people’s plans forward"
-        intro="Use KWC for business delivery, freight and trucking, home and specialty moves, and Canada or U.S. transport options."
+        title="We move almost everything that needs a practical logistics answer"
+        intro="Use KWC for business delivery, auto parts, courier work, freight and trucking, home and specialty moves, and Canada or U.S. transport options."
         className="bg-slate-50"
       >
         <div className="grid gap-5 lg:grid-cols-4">
@@ -125,7 +130,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Industries" title="Built for businesses, homeowners, and everyday customers" intro="KWC works with the people who need practical delivery help: stores, warehouses, homeowners, contractors, suppliers, seniors, and growing companies.">
+      <Section eyebrow="Industries" title="Built for businesses, homeowners, and everyday customers" intro="KWC works with the people who need practical delivery help: auto parts suppliers, stores, warehouses, homeowners, contractors, suppliers, seniors, and growing companies.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry) => (
             <Link key={industry.slug} href={`/industries/${industry.slug}`} className="rounded-lg border border-line bg-white p-4 text-sm font-semibold text-ink transition hover:border-brand-red hover:text-brand-red">

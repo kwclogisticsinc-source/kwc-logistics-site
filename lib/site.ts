@@ -5,7 +5,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "Canadian logistics for businesses, homeowners, seniors, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
+    "Family-run Canadian logistics backed by 30 years of experience, serving businesses, homeowners, seniors, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
 };
 
 export type ItemPage = {
@@ -27,6 +27,7 @@ export const businessDelivery = [
   "Meal kit delivery",
   "Medical and supply delivery",
   "E-commerce delivery",
+  "Auto parts delivery",
   "Small business delivery"
 ];
 
@@ -69,13 +70,13 @@ export const serviceCategories = [
   {
     title: "Business Delivery",
     description:
-      "Daily delivery work for businesses that need someone reachable, local, and accountable.",
+      "Daily delivery work for businesses that need quick communication, fair pricing, and someone accountable.",
     items: businessDelivery
   },
   {
     title: "Freight & Trucking",
     description:
-      "Available capacity through a practical fleet and carrier network for pallets, routes, and truckload moves.",
+      "Available capacity through a practical fleet and carrier network for pallets, routes, auto parts, and truckload moves.",
     items: freightTrucking
   },
   {
@@ -114,6 +115,13 @@ export const services: ItemPage[] = [
       "Local courier services for one box, time-sensitive packages, commercial deliveries, and small business delivery work."
   },
   {
+    slug: "auto-parts-delivery",
+    title: "Auto Parts Delivery",
+    description:
+      "Fast auto parts delivery for shops, dealers, mechanics, suppliers, and customers who need parts moved without delay.",
+    keywords: ["auto parts delivery Kitchener", "same-day auto parts delivery"]
+  },
+  {
     slug: "ltl-freight",
     title: "LTL Freight",
     description:
@@ -137,7 +145,7 @@ export const services: ItemPage[] = [
     slug: "same-day-delivery",
     title: "Same-Day Delivery",
     description:
-      "Same-day delivery for urgent local shipments, business orders, parts, supplies, and time-sensitive freight."
+      "Same-day delivery for urgent local shipments, business orders, auto parts, supplies, and time-sensitive freight."
   },
   {
     slug: "dedicated-routes",
@@ -180,6 +188,7 @@ export const industries: ItemPage[] = [
   { slug: "manufacturers", title: "Manufacturers", description: "Regional freight and B2B delivery support for manufacturers across Southwestern Ontario." },
   { slug: "retail-stores", title: "Retail Stores", description: "Retail delivery, store transfers, final mile, and commercial delivery support." },
   { slug: "medical-suppliers", title: "Medical Suppliers", description: "Practical supply delivery support for medical suppliers and commercial customers." },
+  { slug: "auto-parts-suppliers", title: "Auto Parts Suppliers", description: "Fast auto parts delivery for shops, suppliers, dealers, mechanics, and commercial customers." },
   { slug: "furniture-stores", title: "Furniture Stores", description: "Furniture delivery, white glove delivery, and specialty item delivery support." },
   { slug: "seniors-homeowners", title: "Seniors & Homeowners", description: "Moving help and one-time delivery options for seniors, homeowners, renters, and everyday customers." },
   { slug: "e-commerce-companies", title: "E-commerce Companies", description: "Final mile, local courier, and regional delivery support for e-commerce operations." },
@@ -209,6 +218,11 @@ export const faqs = [
     question: "Does KWC work with both businesses and regular customers?",
     answer:
       "Yes. KWC serves businesses, seniors, homeowners, and everyday customers who need something moved."
+  },
+  {
+    question: "What makes KWC different?",
+    answer:
+      "Quick communication, affordable options, and service. With 30 years of logistics experience, we understand freight costs and help customers avoid being taken advantage of."
   },
   {
     question: "Do you handle Canada and U.S. freight?",

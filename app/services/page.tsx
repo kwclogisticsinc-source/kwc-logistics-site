@@ -18,10 +18,11 @@ export default function ServicesPage() {
       <PageHero eyebrow="Services" title="Delivery, freight, moving help, and Canada-U.S. transport">
         <p>
           One box, one pallet, one room, one truckload, or one cross-border shipment.
-          KWC keeps the process direct: we answer, we communicate, we get it moved.
+          KWC keeps the process direct: we answer, we communicate, we keep pricing practical,
+          and we get it moved.
         </p>
       </PageHero>
-      <Section title="Service categories" intro="KWC supports businesses, homeowners, seniors, and everyday customers with local accountability and practical freight planning.">
+      <Section title="Service categories" intro="KWC supports businesses, auto parts suppliers, homeowners, seniors, and everyday customers with local accountability and practical freight planning.">
         <div className="grid gap-5 lg:grid-cols-4">
           {serviceCategories.map((category) => (
             <article key={category.title} className="rounded-2xl border border-line bg-white p-5">

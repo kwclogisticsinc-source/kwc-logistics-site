@@ -38,7 +38,8 @@ export default function ServiceDetailPage({ params }: Props) {
             <p className="mt-4 text-base leading-7 text-muted">
               We answer the phone. We show up. We communicate. We get it moved. KWC works with
               businesses, homeowners, seniors, and everyday customers using available capacity, trusted
-              transportation partners, and local dispatch accountability.
+              transportation partners, and local dispatch accountability. With 30 years of logistics
+              experience, we understand cost pressure and work to keep options fair.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
               Share pickup city, delivery city, freight type, pallets or items, weight,
