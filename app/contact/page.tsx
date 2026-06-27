@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact KWC Logistics Inc. in Kitchener, Ontario for final mile delivery, B2B delivery, LTL freight, warehouse transfers, and regional distribution.",
+    "Contact KWC Logistics Inc. in Kitchener, Ontario for local delivery, freight, moving help, and Canada or U.S. transport options.",
   alternates: { canonical: "/contact" }
 };
 
@@ -15,8 +15,8 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Talk to KWC Logistics">
         <p>
-          For quotes, dispatch questions, dedicated route work, or urgent freight, contact KWC
-          Logistics Inc. directly.
+          For quotes, dispatch questions, local delivery, dedicated route work, moving help,
+          Canada or U.S. freight, or urgent shipments, contact KWC Logistics Inc. directly.
         </p>
       </PageHero>
       <Section title="Contact details" intro="No full street address is published yet. KWC is based in Kitchener, Ontario.">

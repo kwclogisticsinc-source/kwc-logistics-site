@@ -5,110 +5,224 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "Family-run logistics company in Kitchener serving Waterloo Region, the GTA, and Southwestern Ontario."
+    "Family-run Canadian logistics for businesses, families, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
 };
 
-export const services = [
+export type ItemPage = {
+  slug: string;
+  title: string;
+  description: string;
+  keywords?: string[];
+};
+
+export const businessDelivery = [
+  "Final mile delivery",
+  "Last mile delivery",
+  "B2B delivery",
+  "Courier services",
+  "Same-day delivery",
+  "Scheduled routes",
+  "Retail deliveries",
+  "Floral delivery",
+  "Meal kit delivery",
+  "Medical and supply delivery",
+  "E-commerce delivery",
+  "Small business delivery"
+];
+
+export const freightTrucking = [
+  "LTL freight",
+  "Full truckload",
+  "Reefer transportation",
+  "Dry van",
+  "Box truck",
+  "Dedicated routes",
+  "Hot shot delivery",
+  "Warehouse transfers",
+  "Cross-docking",
+  "Palletized freight",
+  "Regional distribution"
+];
+
+export const homeSpecialty = [
+  "Senior moving assistance",
+  "Furniture delivery",
+  "Appliance delivery",
+  "White glove delivery",
+  "Small residential freight",
+  "Apartment and condo moves",
+  "Specialty item delivery",
+  "One-time moves for regular customers"
+];
+
+export const canadaUsTransport = [
+  "Ontario freight",
+  "Canada-wide transportation",
+  "U.S. transportation lanes",
+  "Florida moving and freight options",
+  "Cross-border freight support",
+  "Long-distance freight",
+  "Partner carrier network"
+];
+
+export const serviceCategories = [
   {
-    title: "Final Mile Delivery",
+    title: "Business Delivery",
     description:
-      "Local delivery for commercial orders, retail freight, and customer-facing shipments that need careful handling."
+      "Daily delivery work for businesses that need someone reachable, local, and accountable.",
+    items: businessDelivery
   },
   {
-    title: "B2B Delivery",
+    title: "Freight & Trucking",
     description:
-      "Reliable business-to-business delivery between warehouses, offices, stores, suppliers, and job sites."
+      "Available capacity through a practical fleet and carrier network for pallets, routes, and truckload moves.",
+    items: freightTrucking
   },
   {
-    title: "LTL Freight",
+    title: "Home & Specialty Moves",
     description:
-      "Less-than-truckload moves for palletized freight across Kitchener, Waterloo Region, and nearby Ontario lanes."
+      "Help for families, seniors, homeowners, and customers moving items that need extra care.",
+    items: homeSpecialty
   },
   {
-    title: "Same-Day Delivery",
+    title: "Canada & U.S. Transport",
     description:
-      "Time-sensitive pickups and deliveries when your shipment cannot sit until tomorrow."
-  },
-  {
-    title: "Dedicated Routes",
-    description:
-      "Scheduled route support for businesses that need consistent pickup and delivery coverage."
-  },
-  {
-    title: "Warehouse Transfers",
-    description:
-      "Practical transfers between warehouses, storage sites, cross-docks, and distribution points."
-  },
-  {
-    title: "Cross-Docking",
-    description:
-      "Move freight through quickly with handling support for onward delivery and regional distribution."
-  },
-  {
-    title: "Hot Shot Delivery",
-    description:
-      "Direct, urgent delivery for freight that needs a vehicle and driver focused on one job."
-  },
-  {
-    title: "Retail and Commercial Deliveries",
-    description:
-      "Deliveries for stores, contractors, suppliers, offices, and commercial customers across Southwestern Ontario."
-  },
-  {
-    title: "Palletized Freight",
-    description:
-      "Pallet moves handled with clear details on weight, dimensions, liftgate needs, and delivery timing."
-  },
-  {
-    title: "Regional Distribution",
-    description:
-      "Multi-stop and regional delivery coverage for companies serving Ontario customers from a local base."
+      "Trusted transportation partners for Ontario, Canada-wide, and U.S. freight lanes.",
+    items: canadaUsTransport
   }
 ];
 
-export const serviceAreas = [
-  "Kitchener",
-  "Waterloo",
-  "Cambridge",
-  "Guelph",
-  "Brantford",
-  "London",
-  "Hamilton",
-  "Mississauga",
-  "GTA",
-  "Southwestern Ontario"
+export const services: ItemPage[] = [
+  {
+    slug: "final-mile-delivery",
+    title: "Final Mile Delivery",
+    description:
+      "Final mile delivery in Kitchener and Waterloo Region for businesses, stores, suppliers, and local customers who need the last stretch handled properly.",
+    keywords: ["final mile delivery Kitchener", "last mile delivery Waterloo Region"]
+  },
+  {
+    slug: "b2b-delivery",
+    title: "B2B Delivery",
+    description:
+      "Business-to-business delivery between warehouses, offices, retail stores, suppliers, and job sites across Southwestern Ontario.",
+    keywords: ["B2B delivery Kitchener", "Waterloo Region delivery"]
+  },
+  {
+    slug: "courier-services",
+    title: "Courier Services",
+    description:
+      "Local courier services for one box, time-sensitive packages, commercial deliveries, and small business delivery work."
+  },
+  {
+    slug: "ltl-freight",
+    title: "LTL Freight",
+    description:
+      "LTL freight support for palletized shipments, partial loads, and regional freight moving through Ontario lanes.",
+    keywords: ["LTL freight Kitchener", "palletized freight Ontario"]
+  },
+  {
+    slug: "reefer-transportation",
+    title: "Reefer Transportation",
+    description:
+      "Temperature-aware reefer transportation options through available capacity and trusted carrier partners."
+  },
+  {
+    slug: "warehouse-transfers",
+    title: "Warehouse Transfers",
+    description:
+      "Warehouse transfers, cross-docking support, and practical freight movement between storage, fulfillment, and distribution points.",
+    keywords: ["warehouse transfers Ontario"]
+  },
+  {
+    slug: "same-day-delivery",
+    title: "Same-Day Delivery",
+    description:
+      "Same-day delivery for urgent local shipments, business orders, parts, supplies, and time-sensitive freight."
+  },
+  {
+    slug: "dedicated-routes",
+    title: "Dedicated Routes",
+    description:
+      "Scheduled and dedicated route support for businesses that need repeat pickup and delivery coverage."
+  },
+  {
+    slug: "senior-moving-assistance",
+    title: "Senior Moving Assistance",
+    description:
+      "Support for seniors and families moving furniture, boxes, apartment items, and specialty pieces with careful communication."
+  },
+  {
+    slug: "meal-kit-delivery",
+    title: "Meal Kit Delivery",
+    description:
+      "Delivery support for meal kit companies and food-related businesses that need reliable local distribution."
+  },
+  {
+    slug: "floral-delivery",
+    title: "Floral Delivery",
+    description:
+      "Floral delivery support for florists and event suppliers that need careful handling and local accountability."
+  },
+  {
+    slug: "canada-us-freight",
+    title: "Canada & U.S. Freight",
+    description:
+      "Canada and U.S. freight solutions through a fleet and carrier network, including Ontario, long-distance, Florida, and cross-border lanes.",
+    keywords: ["Southwestern Ontario logistics", "Canada U.S. freight"]
+  }
 ];
 
-export const industries = [
-  "Manufacturing",
-  "Retail",
-  "Wholesale",
-  "Construction supply",
-  "Warehousing",
-  "Commercial offices",
-  "Local distributors",
-  "E-commerce operations"
+export const industries: ItemPage[] = [
+  { slug: "meal-kit-companies", title: "Meal Kit Companies", description: "Delivery support for meal kit companies that need dependable local and regional distribution." },
+  { slug: "florists", title: "Florists", description: "Careful local delivery support for florists, event work, and commercial floral orders." },
+  { slug: "small-businesses", title: "Small Businesses", description: "Courier, B2B, and freight support for small businesses that need a logistics partner who answers." },
+  { slug: "warehouses", title: "Warehouses", description: "Warehouse transfers, cross-docking, route support, and pallet movement for warehouse teams." },
+  { slug: "manufacturers", title: "Manufacturers", description: "Regional freight and B2B delivery support for manufacturers across Southwestern Ontario." },
+  { slug: "retail-stores", title: "Retail Stores", description: "Retail delivery, store transfers, final mile, and commercial delivery support." },
+  { slug: "medical-suppliers", title: "Medical Suppliers", description: "Practical supply delivery support for medical suppliers and commercial customers." },
+  { slug: "furniture-stores", title: "Furniture Stores", description: "Furniture delivery, white glove delivery, and specialty item delivery support." },
+  { slug: "seniors-families", title: "Seniors & Families", description: "Moving help and one-time delivery options for seniors, families, homeowners, and everyday customers." },
+  { slug: "e-commerce-companies", title: "E-commerce Companies", description: "Final mile, local courier, and regional delivery support for e-commerce operations." },
+  { slug: "contractors", title: "Contractors", description: "Delivery support for tools, materials, supplies, and job-site freight." },
+  { slug: "homeowners", title: "Homeowners", description: "One-time moves, furniture delivery, appliance delivery, and residential freight help." }
+];
+
+export const serviceAreas: ItemPage[] = [
+  { slug: "kitchener-logistics", title: "Kitchener Logistics", description: "Kitchener logistics, courier, final mile, B2B delivery, warehouse transfer, and freight support from a local company." },
+  { slug: "waterloo-logistics", title: "Waterloo Logistics", description: "Waterloo logistics and delivery support for businesses, families, students, stores, and local freight." },
+  { slug: "cambridge-logistics", title: "Cambridge Logistics", description: "Cambridge logistics for B2B delivery, palletized freight, courier work, and regional distribution." },
+  { slug: "guelph-logistics", title: "Guelph Logistics", description: "Guelph delivery and freight support for business shipments, same-day work, and local routes." },
+  { slug: "brantford-logistics", title: "Brantford Logistics", description: "Brantford logistics for freight, business delivery, warehouse transfers, and scheduled routes." },
+  { slug: "london-logistics", title: "London Logistics", description: "London Ontario logistics support for regional freight, dedicated routes, and long-distance moves." },
+  { slug: "hamilton-logistics", title: "Hamilton Logistics", description: "Hamilton logistics, freight, delivery, and commercial transport support from a Kitchener-based team." },
+  { slug: "mississauga-logistics", title: "Mississauga Logistics", description: "Mississauga delivery and freight support connecting Waterloo Region with the GTA." },
+  { slug: "southwestern-ontario-logistics", title: "Southwestern Ontario Logistics", description: "Southwestern Ontario logistics across local, regional, Canada-wide, and U.S. lanes." }
 ];
 
 export const faqs = [
   {
-    question: "What areas does KWC Logistics serve?",
+    question: "What size shipment can KWC Logistics help with?",
     answer:
-      "We are based in Kitchener and serve Waterloo Region, Guelph, Brantford, London, Hamilton, Mississauga, the GTA, and Southwestern Ontario."
+      "One box, one pallet, one room, one truckload, or a cross-border shipment. No customer too small. No freight too complicated."
   },
   {
-    question: "Can you handle same-day deliveries?",
+    question: "Does KWC work with both businesses and regular customers?",
     answer:
-      "Yes. Same-day and hot shot delivery are available depending on pickup time, freight details, and lane availability."
+      "Yes. KWC serves businesses, families, seniors, homeowners, and everyday customers who need something moved."
   },
   {
-    question: "Do you move palletized freight?",
+    question: "Do you handle Canada and U.S. freight?",
     answer:
-      "Yes. Share the number of pallets, weight, dimensions, pickup city, delivery city, and whether a liftgate is required."
+      "Yes. KWC can help with Canada and U.S. freight solutions through available capacity and trusted transportation partners."
   },
   {
-    question: "Do you offer dedicated routes?",
+    question: "Can KWC handle same-day delivery?",
     answer:
-      "Yes. We can discuss scheduled route work for businesses that need regular delivery coverage in Ontario."
+      "Yes. Same-day options depend on pickup time, freight details, lane, and available capacity."
+  },
+  {
+    question: "Do you publish a full address?",
+    answer:
+      "Not yet. The site lists KWC as based in Kitchener, Ontario, and provides phone and email contact details."
   }
 ];

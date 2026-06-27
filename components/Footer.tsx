@@ -8,8 +8,8 @@ export function Footer() {
         <div>
           <p className="text-lg font-bold">{site.name}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-run logistics across Southwestern Ontario. Final mile delivery, B2B freight,
-            LTL, dedicated routes, hot shot delivery, and warehouse transfers.
+            Serving businesses, families, and everyday customers across Waterloo Region,
+            Southwestern Ontario, Canada, and U.S. lanes.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -31,7 +31,9 @@ export function Footer() {
         </div>
         <div>
           <p className="font-semibold">Service Areas</p>
-          <p className="mt-3 text-sm leading-6 text-blue-100">{serviceAreas.join(", ")}</p>
+          <p className="mt-3 text-sm leading-6 text-blue-100">
+            {serviceAreas.map((area) => area.title.replace(" Logistics", "")).join(", ")}, Canada, and U.S. lanes
+          </p>
         </div>
       </div>
       <div className="border-t border-white/10">

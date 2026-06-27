@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "Family-run logistics company in Kitchener, Ontario serving Waterloo Region, the GTA, and Southwestern Ontario with final mile delivery, B2B delivery, LTL freight, warehouse transfers, and dedicated routes.",
+    "Family-run Canadian logistics company in Kitchener serving businesses, families, and everyday customers across Ontario, Canada, and U.S. lanes.",
   keywords: [
     "Kitchener logistics company",
     "Waterloo Region delivery",
@@ -19,11 +19,14 @@ export const metadata: Metadata = {
     "B2B delivery Kitchener",
     "LTL freight Kitchener",
     "warehouse transfers Ontario",
-    "Southwestern Ontario logistics"
+    "Southwestern Ontario logistics",
+    "Canada U.S. freight",
+    "courier services Kitchener",
+    "senior moving assistance Kitchener"
   ],
   openGraph: {
     title: "KWC Logistics Inc.",
-    description: "Family-run logistics across Southwestern Ontario.",
+    description: "No customer too small. No freight too complicated.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

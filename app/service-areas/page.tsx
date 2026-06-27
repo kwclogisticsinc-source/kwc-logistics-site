@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { serviceAreas } from "@/lib/site";
@@ -6,28 +7,26 @@ import { serviceAreas } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Service Areas",
   description:
-    "KWC Logistics serves Kitchener, Waterloo, Cambridge, Guelph, Brantford, London, Hamilton, Mississauga, the GTA, and Southwestern Ontario.",
+    "KWC Logistics serves Kitchener, Waterloo, Cambridge, Guelph, Brantford, London, Hamilton, Mississauga, Southwestern Ontario, Canada, and U.S. lanes.",
   alternates: { canonical: "/service-areas" }
 };
 
 export default function ServiceAreasPage() {
   return (
     <>
-      <PageHero eyebrow="Service Areas" title="Ontario delivery coverage from a Kitchener base">
+      <PageHero eyebrow="Service Areas" title="Local, regional, Canada-wide, and U.S. freight lanes">
         <p>
-          KWC Logistics Inc. is based in Kitchener and supports freight movement across Waterloo
-          Region, the GTA, and Southwestern Ontario.
+          KWC Logistics Inc. is based in Kitchener and supports businesses, families, and
+          everyday customers across Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes.
         </p>
       </PageHero>
-      <Section title="Cities and regions served" intro="For lanes outside this list, send the shipment details and KWC can confirm availability.">
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <Section title="Local SEO service areas" intro="Choose a city page for local logistics, courier, freight, delivery, and moving support.">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {serviceAreas.map((area) => (
-            <article key={area} className="rounded-md border border-line bg-white p-5">
-              <h2 className="text-lg font-bold text-ink">{area}</h2>
-              <p className="mt-3 text-sm leading-6 text-muted">
-                Delivery, freight, transfer, or route support for commercial shipments.
-              </p>
-            </article>
+            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-red">
+              <h2 className="text-lg font-bold text-ink">{area.title}</h2>
+              <p className="mt-3 text-sm leading-6 text-muted">{area.description}</p>
+            </Link>
           ))}
         </div>
       </Section>
