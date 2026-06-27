@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request a logistics quote from KWC Logistics for local delivery, freight, moving help, reefer transportation, or Canada and U.S. freight.",
+    "Request a logistics quote from KWC Logistics for Ontario freight, hot shot cargo vans, reefer transportation, flatbed, warehouse transfers, or Canada-wide and North America logistics.",
   alternates: { canonical: "/request-a-quote" }
 };
 

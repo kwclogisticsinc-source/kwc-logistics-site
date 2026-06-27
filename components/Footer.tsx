@@ -8,9 +8,9 @@ export function Footer() {
         <div>
           <p className="text-lg font-bold">{site.name}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-run Canadian logistics backed by 30 years of experience. Serving businesses,
-            homeowners, seniors, auto parts customers, and everyday customers across Waterloo
-            Region, Southwestern Ontario, Canada, and U.S. lanes.
+            Family-run Canadian logistics backed by 30 years of experience. Ontario freight on
+            straight trucks, reefers, flatbeds, box trucks, and cargo vans, with Canada-wide and
+            North America logistics managed through trusted partners.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -33,7 +33,7 @@ export function Footer() {
         <div>
           <p className="font-semibold">Service Areas</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
-            {serviceAreas.map((area) => area.title.replace(" Logistics", "")).join(", ")}, Canada, and U.S. lanes
+            {serviceAreas.map((area) => area.title.replace(" Logistics", "")).join(", ")}, the 401/403 corridor, Canada-wide, and North America lanes
           </p>
         </div>
       </div>

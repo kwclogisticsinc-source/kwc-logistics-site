@@ -5,7 +5,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "Family-run Canadian logistics backed by 30 years of experience, serving businesses, homeowners, seniors, and everyday customers across Kitchener, Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes."
+    "Family-run Canadian logistics backed by 30 years of experience, moving freight mainly across Ontario with straight trucks, reefers, flatbeds, cargo vans, warehousing hubs, and partner-managed Canada-wide and North America coverage."
 };
 
 export type ItemPage = {
@@ -15,81 +15,58 @@ export type ItemPage = {
   keywords?: string[];
 };
 
-export const businessDelivery = [
-  "Final mile delivery",
-  "Last mile delivery",
-  "B2B delivery",
-  "Courier services",
-  "Same-day delivery",
-  "Scheduled routes",
-  "Retail deliveries",
-  "Floral delivery",
-  "Meal kit delivery",
-  "Medical and supply delivery",
-  "E-commerce delivery",
-  "Auto parts delivery",
-  "Small business delivery"
-];
-
-export const freightTrucking = [
-  "LTL freight",
-  "Full truckload",
-  "Reefer transportation",
-  "Dry van",
-  "Box truck",
-  "Dedicated routes",
-  "Hot shot delivery",
-  "Warehouse transfers",
-  "Cross-docking",
-  "Palletized freight",
-  "Regional distribution"
-];
-
-export const homeSpecialty = [
-  "Senior moving assistance",
-  "Furniture delivery",
-  "Appliance delivery",
-  "White glove delivery",
-  "Small residential freight",
-  "Apartment and condo moves",
-  "Specialty item delivery",
-  "One-time moves for regular customers"
-];
-
-export const canadaUsTransport = [
-  "Ontario freight",
-  "Canada-wide transportation",
-  "U.S. transportation lanes",
-  "Florida moving and freight options",
-  "Cross-border freight support",
-  "Long-distance freight",
-  "Partner carrier network"
-];
-
 export const serviceCategories = [
   {
-    title: "Business Delivery",
+    title: "Ontario Asset-Based Freight",
     description:
-      "Daily delivery work for businesses that need quick communication, fair pricing, and someone accountable.",
-    items: businessDelivery
+      "Our main lane strength is Ontario freight moved on our assets: straight trucks, reefer trucks, flatbeds, and box trucks.",
+    items: [
+      "Kitchener to Ottawa",
+      "Kitchener to Windsor",
+      "Kitchener to Niagara",
+      "401 and 403 corridor coverage",
+      "LTL, pallets, skids, retail freight",
+      "Reefer and flatbed options"
+    ]
   },
   {
-    title: "Freight & Trucking",
+    title: "Cargo Van & Hot Shot",
     description:
-      "Available capacity through a practical fleet and carrier network for pallets, routes, auto parts, and truckload moves.",
-    items: freightTrucking
+      "Fast local and regional moves when parts, boxes, small freight, or urgent shipments need quick communication.",
+    items: [
+      "Auto parts delivery",
+      "Same-day and rush work",
+      "Courier and small freight",
+      "Commercial deliveries",
+      "Direct point-to-point runs",
+      "After-hours options when available"
+    ]
   },
   {
-    title: "Home & Specialty Moves",
+    title: "Warehousing & Transfer Support",
     description:
-      "Help for seniors, homeowners, renters, and customers moving items that need extra care.",
-    items: homeSpecialty
+      "A strong Ontario network supported by warehousing hubs, cross-dock options, transfers, and distribution planning.",
+    items: [
+      "Warehouse transfers",
+      "Cross-docking",
+      "Regional distribution",
+      "Dedicated routes",
+      "Retail replenishment",
+      "Palletized freight"
+    ]
   },
   {
-    title: "Canada & U.S. Transport",
+    title: "Canada & North America Logistics",
     description:
-      "Trusted transportation partners for Ontario, Canada-wide, and U.S. freight lanes.",
-    items: canadaUsTransport
+      "When freight goes beyond our Ontario assets, our logistics team works with trusted partners to manage the move.",
+    items: [
+      "Canada-wide transportation",
+      "North America freight options",
+      "Cross-border support",
+      "Long-distance freight",
+      "North America home moving",
+      "Partner carrier network"
+    ]
   }
 ];
 
@@ -173,10 +150,10 @@ export const services: ItemPage[] = [
   },
   {
     slug: "canada-us-freight",
-    title: "Canada & U.S. Freight",
+    title: "Canada & North America Freight",
     description:
-      "Canada and U.S. freight solutions through a fleet and carrier network, including Ontario, long-distance, Florida, and cross-border lanes.",
-    keywords: ["Southwestern Ontario logistics", "Canada U.S. freight"]
+      "Canada-wide and North America freight solutions managed by KWC's logistics team through trusted transportation partners beyond our core Ontario asset network.",
+    keywords: ["Southwestern Ontario logistics", "Canada freight", "North America freight"]
   }
 ];
 
@@ -205,7 +182,7 @@ export const serviceAreas: ItemPage[] = [
   { slug: "london-logistics", title: "London Logistics", description: "London Ontario logistics support for regional freight, dedicated routes, and long-distance moves." },
   { slug: "hamilton-logistics", title: "Hamilton Logistics", description: "Hamilton logistics, freight, delivery, and commercial transport support from a Kitchener-based team." },
   { slug: "mississauga-logistics", title: "Mississauga Logistics", description: "Mississauga delivery and freight support connecting Waterloo Region with the GTA." },
-  { slug: "southwestern-ontario-logistics", title: "Southwestern Ontario Logistics", description: "Southwestern Ontario logistics across local, regional, Canada-wide, and U.S. lanes." }
+  { slug: "southwestern-ontario-logistics", title: "Southwestern Ontario Logistics", description: "Southwestern Ontario logistics across the 401 and 403 corridor, with Ontario asset-based freight and partner-managed Canada-wide coverage." }
 ];
 
 export const faqs = [
@@ -225,9 +202,9 @@ export const faqs = [
       "Quick communication, affordable options, and service. With 30 years of logistics experience, we understand freight costs and help customers avoid being taken advantage of."
   },
   {
-    question: "Do you handle Canada and U.S. freight?",
+    question: "Do you handle Canada-wide and North America freight?",
     answer:
-      "Yes. KWC can help with Canada and U.S. freight solutions through available capacity and trusted transportation partners."
+      "Yes. Our main asset-based freight coverage is Ontario, and our logistics team works with trusted partners for Canada-wide and North America freight."
   },
   {
     question: "Can KWC handle same-day delivery?",

@@ -5,7 +5,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "KWC Logistics Inc. is a family-run Canadian logistics company based in Kitchener, Ontario with 30 years of logistics experience.",
+    "KWC Logistics Inc. is a family-run Canadian logistics company based in Kitchener, Ontario moving freight mainly across Ontario with partner-managed Canada-wide and North America coverage.",
   alternates: { canonical: "/about" }
 };
 
@@ -23,11 +23,11 @@ export default function AboutPage() {
           <article className="rounded-md border border-line bg-white p-6 lg:col-span-2">
             <h2 className="text-2xl font-bold text-ink">How KWC works</h2>
             <p className="mt-4 text-base leading-7 text-muted">
-              KWC focuses on final mile delivery, B2B delivery, courier services, auto parts
-              delivery, LTL freight, reefer transportation, dedicated routes, warehouse transfers, senior moving
-              assistance, home and specialty moves, and Canada or U.S. transport options.
-              The goal is simple: collect the right shipment details, confirm the lane, and get
-              it moved.
+              KWC mainly moves freight across Ontario on our assets: straight trucks, reefer
+              trucks, flatbeds, box trucks, and cargo vans for hot shot services. We are based in
+              Kitchener and cover the lanes customers actually use: Ottawa, Windsor, Niagara, the
+              GTA, London, Hamilton, Mississauga, Cambridge, Guelph, Brantford, and the 401 and
+              403 corridor in between.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
               With 30 years of logistics experience behind the business, KWC understands how
@@ -36,9 +36,10 @@ export default function AboutPage() {
               the centre of the job.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
-              Based in Kitchener, Ontario, KWC serves Waterloo Region, Southwestern Ontario,
-              Canada, and U.S. lanes through available capacity, a practical fleet and carrier
-              network, and trusted transportation partners.
+              When a shipment goes beyond our Ontario asset network, KWC&apos;s logistics team works
+              with trusted partners to manage Canada-wide and North America freight, including
+              North America home moving options. The customer still gets quick communication,
+              practical pricing, and one team helping coordinate the move.
             </p>
           </article>
           <aside className="rounded-md bg-brand-pale p-6">
@@ -47,8 +48,9 @@ export default function AboutPage() {
               <li>Clear shipment details before pickup.</li>
               <li>Quick communication for quotes and dispatch.</li>
               <li>Affordable options explained plainly.</li>
-              <li>Business, residential, and commercial delivery support.</li>
-              <li>Local, regional, Canada-wide, and U.S. freight options.</li>
+              <li>Ontario freight moved mainly on KWC assets.</li>
+              <li>Canada-wide and North America logistics through trusted partners.</li>
+              <li>Warehousing hubs, cross-dock options, and transfer support.</li>
               <li>No full street address shown until the business is ready to publish it.</li>
             </ul>
           </aside>

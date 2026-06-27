@@ -50,8 +50,8 @@ export default function ServiceDetailPage({ params }: Props) {
           <aside className="rounded-2xl bg-brand-pale p-6">
             <h2 className="text-xl font-bold text-ink">One shipment or repeat work</h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              KWC can help with one-time jobs, scheduled routes, regional lanes, and Canada or U.S.
-              freight options through a fleet and carrier network.
+              KWC can help with one-time jobs, scheduled routes, Ontario regional lanes, and
+              partner-managed Canada-wide or North America freight options.
             </p>
             <div className="mt-5">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>

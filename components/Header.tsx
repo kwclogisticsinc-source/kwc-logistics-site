@@ -21,7 +21,7 @@ export function Header() {
           <LogoLockup />
           <span className="hidden border-l border-line pl-3 leading-tight sm:block">
             <span className="block text-xs font-semibold text-ink">Kitchener dispatch</span>
-            <span className="block text-xs font-medium text-muted">Canada & U.S. lanes</span>
+            <span className="block text-xs font-medium text-muted">Ontario assets. North America network.</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-ink lg:flex">

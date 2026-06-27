@@ -15,8 +15,8 @@ const trustPoints = [
   "Family-Run Business",
   "30 Years of Logistics Experience",
   "Quick Communication",
-  "Affordable Options",
-  "Canada & U.S. Freight Solutions"
+  "Ontario Asset-Based Freight",
+  "Canada & North America Logistics"
 ];
 
 const whyChoose = [
@@ -51,10 +51,10 @@ export default function HomePage() {
               Driven by Canadian Values. Built for Local Freight.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-              From small deliveries to cross-border freight, KWC Logistics Inc. helps businesses,
-              homeowners, seniors, and everyday customers move what matters across Ontario, Canada, and the U.S.
-              Backed by 30 years of logistics experience, we focus on quick communication,
-              affordability, and service.
+              KWC Logistics Inc. mainly moves freight across Ontario on straight trucks, reefer
+              trucks, flatbeds, box trucks, and cargo vans for hot shot work. Backed by 30 years
+              of logistics experience, we also manage Canada-wide and North America freight
+              through trusted partners when the lane goes beyond our assets.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
@@ -93,7 +93,7 @@ export default function HomePage() {
       <Section
         eyebrow="No Customer Too Small"
         title="One box, one pallet, one truckload — call KWC."
-        intro="KWC Logistics Inc. is built for small businesses, homeowners, seniors, growing companies, and everyday customers who need a real person to help get something moved without getting overcharged or ignored."
+        intro="KWC Logistics Inc. is built for customers who need a real person to answer, explain the freight options, and get the shipment moving without getting overcharged or ignored."
       >
         <div className="rounded-2xl bg-brand-navy p-6 text-white sm:p-8">
           <h2 className="text-3xl font-bold">No customer too small. No freight too complicated.</h2>
@@ -108,8 +108,8 @@ export default function HomePage() {
 
       <Section
         eyebrow="Services"
-        title="We move almost everything that needs a practical logistics answer"
-        intro="Use KWC for business delivery, auto parts, courier work, freight and trucking, home and specialty moves, and Canada or U.S. transport options."
+        title="Ontario freight is the main lane. The partner network handles the rest."
+        intro="We keep the service list simple: asset-based Ontario freight, cargo van hot shot, warehousing and transfer support, and logistics coordination for Canada-wide or North America lanes."
         className="bg-slate-50"
       >
         <div className="grid gap-5 lg:grid-cols-4">
@@ -154,31 +154,58 @@ export default function HomePage() {
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">Canada & U.S. Transport</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">Ontario First, North America When Needed</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-              Freight options beyond the local route.
+              Strong coverage across the 401 and 403 corridor.
             </h2>
             <p className="mt-4 text-base leading-7 text-muted">
-              KWC supports Ontario freight, Canada-wide transportation, U.S. transportation lanes,
-              Florida moving and freight options, cross-border freight support, and long-distance
-              freight through available capacity and trusted transportation partners.
+              Our main work is Ontario freight: Kitchener to Ottawa, Windsor, Niagara, the GTA,
+              Hamilton, London, Mississauga, Cambridge, Guelph, Brantford, and anywhere along the
+              401 and 403 corridor. We move freight on our assets where it makes sense, supported
+              by warehousing hubs, cross-dock options, and a strong logistics team.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {["Ontario freight", "Canada-wide transportation", "U.S. transportation lanes", "Florida moving and freight options"].map((item) => (
+            {["Straight trucks", "Reefer trucks", "Flatbeds", "Cargo vans for hot shot"].map((item) => (
               <div key={item} className="rounded-2xl border border-line bg-slate-50 p-5">
                 <p className="text-lg font-bold text-ink">{item}</p>
-                <p className="mt-2 text-sm leading-6 text-muted">Call KWC with lane, timing, freight type, and access details.</p>
+                <p className="mt-2 text-sm leading-6 text-muted">Call KWC with lane, timing, freight type, access details, and urgency.</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <section className="border-y border-line bg-white py-14 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">Partner-Managed Logistics</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              Canada-wide and North America moves, managed by people who understand freight.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted">
+              KWC mainly moves freight on our own Ontario assets. When a customer needs a lane
+              across Canada, into the U.S., or a North America home moving option, our logistics
+              team works with trusted transportation partners to manage the service, communication,
+              and pricing.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-brand-pale p-6">
+            <h3 className="text-2xl font-bold text-ink">What this means for customers</h3>
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-muted">
+              <li>Ontario freight handled mainly through KWC assets.</li>
+              <li>Partner network used for Canada-wide and North America coverage.</li>
+              <li>Quick communication and honest options before the move is booked.</li>
+              <li>Warehousing hubs and cross-dock support where the freight plan needs it.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <Section
         eyebrow="Service Areas"
-        title="Serving Waterloo Region, Southwestern Ontario, Canada, and U.S. lanes"
-        intro="KWC is based in Kitchener and helps customers move freight and items across local, regional, and long-distance routes."
+        title="Ontario coverage from Kitchener across the 401 and 403 corridor"
+        intro="KWC is based in Kitchener and moves freight across Ontario: Ottawa, Windsor, Niagara, the GTA, London, Hamilton, Mississauga, Cambridge, Guelph, Brantford, and the lanes in between."
         className="bg-slate-50"
       >
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
