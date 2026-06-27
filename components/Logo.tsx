@@ -14,6 +14,7 @@ export function LogoMark() {
         <path d="M14.5 12v20h4.6v-7.2l6.3 7.2h5.9L23 22.8 30.8 12h-5.5l-6.2 8.7V12h-4.6Z" fill="#fff" />
         <path d="M45.7 15.7c-2.1-2-4.9-3.2-8-3.2-6.1 0-10.2 4.1-10.2 9.7s4.2 9.6 10.3 9.6c3.2 0 5.9-1.1 8-3.1" fill="none" stroke="url(#kwcMarkGradient)" strokeWidth="4.1" strokeLinecap="round" />
         <path d="M39.8 21.8h8.1l-3.1-3.1" fill="none" stroke="#12b7ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M42.8 8.2l.8 1.8 2-.5-1 1.7 1.7 1-1.9.4.1 2-1.7-1.2-1.6 1.2.1-2-2-.4 1.7-1-1-1.7 2 .5.8-1.8Z" fill="#d91f2d" />
       </svg>
     </span>
   );

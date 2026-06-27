@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
+import { LogoLockup } from "@/components/Logo";
 import { Section } from "@/components/Section";
 import {
   faqs,
@@ -82,6 +83,9 @@ export default function HomePage() {
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
+            <div className="absolute left-5 top-5 rounded-xl bg-white/95 px-3 py-2 shadow-soft backdrop-blur">
+              <LogoLockup />
+            </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/90 to-transparent p-5 text-white">
               <p className="text-sm font-semibold text-blue-100">Fleet and carrier network</p>
               <p className="mt-1 text-xl font-bold">Available capacity for local, regional, and cross-border shipments.</p>

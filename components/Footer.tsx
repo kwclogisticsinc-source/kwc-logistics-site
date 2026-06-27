@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { serviceAreas, site } from "@/lib/site";
+import { LogoLockup } from "./Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-line bg-brand-navy text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
         <div>
-          <p className="text-lg font-bold">{site.name}</p>
+          <div className="inline-flex rounded-xl bg-white px-3 py-2">
+            <LogoLockup />
+          </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
             Family-run Canadian logistics backed by 30 years of experience. Ontario freight on
             straight trucks, reefers, flatbeds, box trucks, and cargo vans, with Canada-wide and
@@ -42,6 +45,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/services" className="hover:text-white">Services</Link>
+            <Link href="/brand" className="hover:text-white">Brand</Link>
             <Link href="/request-a-quote" className="hover:text-white">Quote</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </div>

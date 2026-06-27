@@ -38,6 +38,15 @@ export function Header() {
           <ButtonLink href="/request-a-quote">Quote</ButtonLink>
         </div>
       </div>
+      <nav className="border-t border-line bg-white lg:hidden" aria-label="Mobile navigation">
+        <div className="mx-auto flex max-w-7xl gap-4 overflow-x-auto px-4 py-3 text-sm font-semibold text-ink sm:px-6">
+          {nav.map((item) => (
+            <Link key={item.href} href={item.href} className="shrink-0 hover:text-brand-blue">
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }

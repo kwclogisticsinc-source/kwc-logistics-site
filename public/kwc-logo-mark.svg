@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 44" role="img" aria-labelledby="title desc">
+  <title id="title">KWC Logistics compact logo</title>
+  <desc id="desc">Modern navy KWC logistics icon with blue route lines and a small Canadian red accent.</desc>
   <defs>
     <linearGradient id="kwcMarkGradient" x1="10" x2="48" y1="34" y2="10" gradientUnits="userSpaceOnUse">
       <stop stop-color="#12b7ff"/>
