@@ -1,19 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" role="img" aria-labelledby="title desc">
   <title id="title">KWC Logistics Inc. blue horse primary logo</title>
-  <desc id="desc">Primary KWC Logistics Inc. logo with blue horse logistics mark and wordmark.</desc>
+  <desc id="desc">Primary KWC Logistics Inc. logo with a clear blue horse logistics mark and wordmark.</desc>
   <defs>
-    <linearGradient id="kwcPrimaryHorseGradient" x1="16" x2="49" y1="42" y2="16" gradientUnits="userSpaceOnUse">
+    <linearGradient id="kwcPrimaryHorseGradient" x1="17" x2="52" y1="45" y2="16" gradientUnits="userSpaceOnUse">
       <stop stop-color="#12b7ff"/>
       <stop offset="1" stop-color="#1f5eff"/>
     </linearGradient>
   </defs>
   <rect x="4" y="8" width="56" height="44" rx="12" fill="#0b1f38"/>
-  <path d="M16 40h18.4c7.2 0 12.9-3.4 17.1-10.3" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
-  <path d="M17 44h12.5c9.4 0 16.9-4.2 22.5-12.5" fill="none" stroke="#12b7ff" stroke-width="2.9" stroke-linecap="round"/>
-  <path d="M24.3 37.8c2.4-4.6 4.7-8.4 7.1-11.3l-3.2-6.6 7.1 2.4c2.8-1.7 6.2-2.3 10.2-1.8 3.8.5 6.1 2.1 6.9 4.7-2.3-.7-4.3-.7-6 .1 2.7 2.3 3.7 5.2 3.1 8.6-1.5-2.2-3.5-3.3-5.9-3.3h-5.7c-2.2 0-4 1.1-5.3 3.2l-3.9 6.4h-5.3l.9-2.4Z" fill="url(#kwcPrimaryHorseGradient)"/>
-  <path d="M34.8 24.2c-3.7 2.5-6.5 6.7-8.5 12.7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M41.7 26.8h.1" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
-  <path d="M45.5 19.2l.7 1.6 1.8-.5-.9 1.5 1.5.9-1.7.4.1 1.8-1.5-1.1-1.5 1.1.1-1.8-1.7-.4 1.5-.9-.9-1.5 1.8.5.7-1.6Z" fill="#d91f2d"/>
+  <path d="M13 39h17.5c7.5 0 13.6-3.2 18.2-9.6" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round"/>
+  <path d="M14 44h13c9.8 0 17.7-4 23.8-12.1" fill="none" stroke="#12b7ff" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M22.2 43.2c1.3-5.4 3.2-9.8 5.8-13.2l-2.5-9 7.3 4.5c2.4-1.6 5.4-2.4 9-2.2 5.5.3 9.4 2.7 11.6 7.2l-5.8.8 4.5 3.1c-1.2 2.8-3.5 4.4-6.8 4.8l-7.8.8c-2.4.3-4.5 1.5-6.2 3.7l-2.4 3.1H21l1.2-3.6Z" fill="url(#kwcPrimaryHorseGradient)"/>
+  <path d="M32.7 26.5c-3.9 3.6-6.3 8.6-7.2 15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M31.9 29.1l-4.7 1.2 3 2.2-4.2 1.4 2.9 2.2-4 1.6" fill="none" stroke="#0b1f38" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+  <path d="M43.4 30.1h.1" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round"/>
+  <path d="M48.9 32.8h3.7" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M47.3 18.1l.7 1.7 1.9-.5-.9 1.6 1.6 1-1.9.4.1 1.9-1.5-1.1-1.6 1.1.1-1.9-1.8-.4 1.6-1-.9-1.6 1.9.5.7-1.7Z" fill="#d91f2d"/>
   <text x="76" y="35" fill="#0b1f38" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="-1">KW<tspan fill="#1f5eff">C</tspan></text>
   <text x="77" y="51" fill="#5b6675" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="3">LOGISTICS INC.</text>
 </svg>
