@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { ButtonLink } from "./ButtonLink";
-import { LogoMark } from "./Logo";
+import { LogoLockup } from "./Logo";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -18,10 +18,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="KWC Logistics Inc. home">
-          <LogoMark />
-          <span className="leading-tight">
-            <span className="block text-base font-extrabold tracking-tight text-ink">{site.name}</span>
-            <span className="hidden text-xs font-medium text-muted sm:block">Kitchener dispatch. Canada & U.S. lanes.</span>
+          <LogoLockup />
+          <span className="hidden border-l border-line pl-3 leading-tight sm:block">
+            <span className="block text-xs font-semibold text-ink">Kitchener dispatch</span>
+            <span className="block text-xs font-medium text-muted">Canada & U.S. lanes</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-ink lg:flex">
