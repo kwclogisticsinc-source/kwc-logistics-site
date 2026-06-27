@@ -13,15 +13,17 @@ const config: Config = {
         muted: "#5b6675",
         line: "#d9e2ec",
         brand: {
-          blue: "#1f5eff",
-          cyan: "#12b7ff",
-          canada: "#d91f2d",
-          navy: "#0b1f38",
-          pale: "#eef5ff"
+          blue: "#006DFF",
+          cyan: "#29A8FF",
+          canada: "#D71920",
+          navy: "#06152E",
+          charcoal: "#111827",
+          pale: "#F5F8FC"
         }
       },
       boxShadow: {
-        soft: "0 18px 45px rgba(15, 31, 56, 0.08)"
+        soft: "0 18px 45px rgba(15, 31, 56, 0.08)",
+        glow: "0 24px 80px rgba(0, 109, 255, 0.24)"
       }
     }
   },

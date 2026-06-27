@@ -36,7 +36,7 @@ export function LogoLockup() {
 export function FullLogo({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/kwc-logo-full.png"
+      src="/images/kwc-logo.png"
       alt="KWC Logistics logo"
       width={332}
       height={299}
@@ -49,11 +49,11 @@ export function FullLogo({ className = "" }: { className?: string }) {
 export function HeaderLogo() {
   return (
     <Image
-      src="/kwc-logo-full.png"
+      src="/images/kwc-logo.png"
       alt="KWC Logistics logo"
       width={420}
       height={420}
-      className="h-24 w-44 object-contain sm:h-28 sm:w-52"
+      className="h-14 w-28 object-contain sm:h-16 sm:w-32"
       priority
     />
   );

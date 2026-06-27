@@ -8,21 +8,21 @@ import { serviceCategories, services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics mainly moves freight across Ontario with straight trucks, reefers, flatbeds, box trucks, and cargo vans, with partner-managed Canada-wide and North America logistics.",
+    "KWC Logistics provides final mile, LTL, B2B, D2B, B2C, meal kit delivery support, retail delivery, warehouse transfers, recurring routes, and specialized regional delivery across Southwestern Ontario.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Ontario freight on our assets. Partner logistics beyond that.">
+      <PageHero eyebrow="Services" title="Final mile, LTL, and specialized regional delivery.">
         <p>
-          KWC mainly moves freight in Ontario on straight trucks, reefer trucks, flatbeds,
-          box trucks, and cargo vans for hot shot work. For Canada-wide and North America lanes,
-          our logistics team works with trusted partners to manage the move.
+          KWC Logistics Inc. provides final mile, LTL, B2B, D2B, B2C, and specialized
+          regional delivery solutions for businesses across Kitchener-Waterloo, Cambridge,
+          and Southwestern Ontario.
         </p>
       </PageHero>
-      <Section title="What KWC actually focuses on" intro="We keep services practical: Ontario asset-based freight, hot shot vans, warehousing and transfers, and partner-managed logistics for longer lanes.">
+      <Section title="What KWC focuses on" intro="Clean, practical freight movement for local businesses: final mile, LTL, recurring routes, warehouse transfers, and specialized deliveries.">
         <div className="grid gap-5 lg:grid-cols-4">
           {serviceCategories.map((category) => (
             <article key={category.title} className="rounded-2xl border border-line bg-white p-5">
@@ -32,7 +32,7 @@ export default function ServicesPage() {
           ))}
         </div>
       </Section>
-      <Section title="Detailed service pages" intro="These pages explain the common shipment types customers ask about. The main operating model stays Ontario-first." className="bg-slate-50">
+      <Section title="Service capabilities" intro="These pages explain the common shipment types customers ask about." className="bg-brand-pale">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">

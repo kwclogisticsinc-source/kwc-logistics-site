@@ -11,9 +11,8 @@ export function Footer() {
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-run Canadian logistics backed by 30 years of experience. Ontario freight on
-            straight trucks, reefers, flatbeds, box trucks, and cargo vans, with Canada-wide and
-            North America logistics managed through trusted partners.
+            Family-run Canadian logistics based in Kitchener. Final mile, LTL, B2B, D2B,
+            B2C, and specialized regional delivery solutions across Southwestern Ontario.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -45,7 +44,8 @@ export function Footer() {
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/services" className="hover:text-white">Services</Link>
-            <Link href="/brand" className="hover:text-white">Brand</Link>
+            <Link href="/fleet" className="hover:text-white">Fleet</Link>
+            <Link href="/industries" className="hover:text-white">Who We Help</Link>
             <Link href="/request-a-quote" className="hover:text-white">Quote</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </div>

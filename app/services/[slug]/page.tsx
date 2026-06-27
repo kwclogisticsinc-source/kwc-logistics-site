@@ -37,9 +37,9 @@ export default function ServiceDetailPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-ink">How KWC helps</h2>
             <p className="mt-4 text-base leading-7 text-muted">
               We answer the phone. We show up. We communicate. We get it moved. KWC works with
-              businesses, homeowners, seniors, and everyday customers using available capacity, trusted
-              transportation partners, and local dispatch accountability. With 30 years of logistics
-              experience, we understand cost pressure and work to keep options fair.
+              local businesses, retailers, suppliers, warehouses, e-commerce operators, and commercial
+              customers using available capacity, practical fleet solutions, trusted transportation
+              partners, and local dispatch accountability.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
               Share pickup city, delivery city, freight type, pallets or items, weight,
@@ -50,8 +50,8 @@ export default function ServiceDetailPage({ params }: Props) {
           <aside className="rounded-2xl bg-brand-pale p-6">
             <h2 className="text-xl font-bold text-ink">One shipment or repeat work</h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              KWC can help with one-time jobs, scheduled routes, Ontario regional lanes, and
-              partner-managed Canada-wide or North America freight options.
+              KWC can help with one-time commercial deliveries, scheduled routes, Ontario regional
+              lanes, and partner-managed Canada-wide or North America freight options.
             </p>
             <div className="mt-5">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>

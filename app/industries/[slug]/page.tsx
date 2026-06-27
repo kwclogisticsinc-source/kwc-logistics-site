@@ -27,15 +27,15 @@ export default function IndustryDetailPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow="Industry Support" title={industry.title}>
+      <PageHero eyebrow="Who We Help" title={industry.title}>
         <p>{industry.description}</p>
       </PageHero>
-      <Section title="Local service with clear communication" intro="KWC supports customers who need practical delivery and freight help without call-centre runaround.">
+      <Section title="Local service with clear communication" intro="KWC supports businesses that need practical delivery and freight help without call-centre runaround.">
         <div className="rounded-2xl border border-line bg-white p-6">
           <p className="max-w-4xl text-base leading-7 text-muted">
-            Whether it is one box, one pallet, one room, one truckload, or a cross-border shipment,
-            KWC helps plan the move around real details: location, timing, freight type, access,
-            handling needs, and available capacity.
+            Whether it is meal kit delivery support, palletized freight, store replenishment,
+            auto parts, warehouse transfers, or recurring routes, KWC helps plan the move around
+            real details: location, timing, freight type, access, handling needs, and available capacity.
           </p>
           <div className="mt-6">
             <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>

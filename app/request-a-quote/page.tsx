@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request a logistics quote from KWC Logistics for Ontario freight, hot shot cargo vans, reefer transportation, flatbed, warehouse transfers, or Canada-wide and North America logistics.",
+    "Request a quote from KWC Logistics for final mile, LTL, B2B, D2B, B2C, specialized delivery, warehouse transfers, reefer freight, flatbed, or regional delivery across Southwestern Ontario.",
   alternates: { canonical: "/request-a-quote" }
 };
 
@@ -17,14 +17,14 @@ export default function RequestQuotePage() {
       <PageHero eyebrow="Request a Quote" title="Send the shipment details">
         <p>
           Include pickup and delivery cities, freight details, timing, liftgate needs, reefer needs,
-          and whether the stop is residential or commercial. For urgent jobs, call dispatch at{" "}
+          and whether the stop is dock, commercial, or residential. For urgent jobs, call dispatch at{" "}
           <a className="font-semibold text-brand-blue" href={`tel:${site.phone}`}>{site.phone}</a>.
         </p>
       </PageHero>
       <section className="py-14 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.45fr] lg:px-8">
           <QuoteForm />
-          <aside className="rounded-md bg-brand-pale p-6">
+          <aside className="rounded-2xl bg-brand-pale p-6">
             <div className="mb-6 max-w-[180px] rounded-xl bg-white px-3 py-2 shadow-sm">
               <FullLogo />
             </div>
@@ -35,7 +35,7 @@ export default function RequestQuotePage() {
               <li>Total weight and dimensions.</li>
               <li>Same-day, scheduled, or flexible timing.</li>
               <li>Liftgate and reefer requirements.</li>
-              <li>Residential or commercial stop details.</li>
+              <li>Dock, commercial, or residential stop details.</li>
             </ul>
             <div className="mt-6 border-t border-line pt-5 text-sm leading-6 text-muted">
               <p className="font-semibold text-ink">Dispatch</p>
