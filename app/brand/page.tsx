@@ -32,16 +32,16 @@ export default function BrandPage() {
 
       <Section title="Primary logo" intro="Use the full lockup where there is enough horizontal room: website header, invoices, business cards, social banners, and truck doors.">
         <div className="grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl border border-line bg-white p-6">
-            <div className="max-w-xs">
+          <div className="rounded-2xl border border-line bg-white p-6 text-center">
+            <div className="mx-auto max-w-xs">
               <FullLogo />
             </div>
             <p className="mt-5 text-sm leading-6 text-muted">
               Primary logo: supplied blue horse KWC Logistics artwork, used for customer-facing brand placements.
             </p>
           </div>
-          <div className="rounded-2xl bg-brand-navy p-6">
-            <div className="max-w-xs rounded-xl bg-white px-4 py-3">
+          <div className="rounded-2xl bg-brand-navy p-6 text-center">
+            <div className="mx-auto max-w-xs rounded-xl bg-white px-4 py-3">
               <FullLogo />
             </div>
             <p className="mt-5 text-sm leading-6 text-blue-100">
@@ -52,13 +52,17 @@ export default function BrandPage() {
       </Section>
 
       <Section title="Compact logo/icon" intro="Use the compact blue horse mark for favicons, app icons, social avatars, uniform patches, and small truck-door placements.">
-        <div className="flex flex-wrap gap-5">
-          <div className="rounded-2xl border border-line bg-white p-6">
-            <LogoMark />
+        <div className="flex flex-wrap justify-center gap-5">
+          <div className="rounded-2xl border border-line bg-white p-6 text-center">
+            <div className="flex justify-center">
+              <LogoMark />
+            </div>
             <p className="mt-4 text-sm leading-6 text-muted">Horse-only crop for compact spaces.</p>
           </div>
           <div className="rounded-2xl bg-brand-navy p-6">
-            <LogoMark />
+            <div className="flex justify-center">
+              <LogoMark />
+            </div>
           </div>
         </div>
       </Section>
