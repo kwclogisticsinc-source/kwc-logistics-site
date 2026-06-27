@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 const colors = [
   { name: "KWC Navy", value: "#0b1f38", note: "Primary background, logo base, truck decal contrast." },
-  { name: "Freight Blue", value: "#1f5eff", note: "Primary action color and digital accent." },
-  { name: "Signal Cyan", value: "#12b7ff", note: "Tech-forward motion accent for routes and highlights." },
-  { name: "Canadian Red", value: "#d91f2d", note: "Small national accent only. Use sparingly." },
+  { name: "Freight Blue", value: "#1f5eff", note: "Primary action color, horse mark, and digital accent." },
+  { name: "Signal Cyan", value: "#12b7ff", note: "Route-line accent for speed, dispatch, and motion." },
+  { name: "Canadian Red", value: "#d91f2d", note: "Small Canadian detail only. Use sparingly." },
   { name: "Charcoal Ink", value: "#17212f", note: "Main text color." },
   { name: "Ice Blue", value: "#eef5ff", note: "Soft backgrounds and quote panels." }
 ];
@@ -25,7 +25,8 @@ export default function BrandPage() {
       <PageHero eyebrow="Brand Guidelines" title="KWC Logistics Inc. identity system">
         <p>
           A modern Canadian logistics brand with local roots and serious delivery capability:
-          clean, technical, practical, and trustworthy.
+          a blue horse mark for speed, strength, and reliability, connected to route lines that
+          signal freight movement and dispatch.
         </p>
       </PageHero>
 
@@ -34,7 +35,7 @@ export default function BrandPage() {
           <div className="rounded-2xl border border-line bg-white p-6">
             <LogoLockup />
             <p className="mt-5 text-sm leading-6 text-muted">
-              Primary lockup: compact motion mark plus strong KWC wordmark and Logistics Inc. descriptor.
+              Primary lockup: blue horse logistics mark plus strong KWC wordmark and Logistics Inc. descriptor.
             </p>
           </div>
           <div className="rounded-2xl bg-brand-navy p-6">
@@ -48,7 +49,7 @@ export default function BrandPage() {
         </div>
       </Section>
 
-      <Section title="Compact logo/icon" intro="Use the compact mark for favicons, app icons, social avatars, uniform patches, and small truck-door placements.">
+      <Section title="Compact logo/icon" intro="Use the compact blue horse mark for favicons, app icons, social avatars, uniform patches, and small truck-door placements.">
         <div className="flex flex-wrap gap-5">
           <div className="rounded-2xl border border-line bg-white p-6">
             <LogoMark />
