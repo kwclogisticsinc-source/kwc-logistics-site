@@ -14,8 +14,8 @@ const config: Config = {
         line: "#d9e2ec",
         brand: {
           blue: "#1f5eff",
+          cyan: "#12b7ff",
           navy: "#0b1f38",
-          red: "#d91f2d",
           pale: "#eef5ff"
         }
       },

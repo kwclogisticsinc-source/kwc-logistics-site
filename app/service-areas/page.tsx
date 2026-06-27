@@ -24,7 +24,7 @@ export default function ServiceAreasPage() {
       <Section title="Ontario lanes and local service areas" intro="Choose a city page for local logistics, freight, hot shot, warehousing transfer, and partner-managed long-distance support.">
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {serviceAreas.map((area) => (
-            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-red">
+            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">
               <h2 className="text-lg font-bold text-ink">{area.title}</h2>
               <p className="mt-3 text-sm leading-6 text-muted">{area.description}</p>
             </Link>

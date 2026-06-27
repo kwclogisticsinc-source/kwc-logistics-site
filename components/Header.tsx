@@ -26,13 +26,13 @@ export function Header() {
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-ink lg:flex">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-brand-red">
+            <Link key={item.href} href={item.href} className="hover:text-brand-blue">
               {item.label}
             </Link>
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <a className="text-sm font-semibold text-brand-navy hover:text-brand-red" href={`tel:${site.phone}`}>
+          <a className="text-sm font-semibold text-brand-navy hover:text-brand-blue" href={`tel:${site.phone}`}>
             {site.phone}
           </a>
           <ButtonLink href="/request-a-quote">Quote</ButtonLink>

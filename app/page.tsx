@@ -44,7 +44,7 @@ export default function HomePage() {
       <section className="overflow-hidden border-b border-line bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-16">
           <div className="flex flex-col justify-center">
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-blue">
               Family-run Canadian logistics
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-ink sm:text-6xl">
@@ -60,7 +60,7 @@ export default function HomePage() {
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
               <a
                 href={`tel:${site.phone}`}
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-pale focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2"
+                className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-pale focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
               >
                 Call Dispatch
               </a>
@@ -120,7 +120,7 @@ export default function HomePage() {
               <ul className="mt-5 space-y-2 text-sm text-ink">
                 {category.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -133,7 +133,7 @@ export default function HomePage() {
       <Section eyebrow="Industries" title="Built for businesses, homeowners, and everyday customers" intro="KWC works with the people who need practical delivery help: auto parts suppliers, stores, warehouses, homeowners, contractors, suppliers, seniors, and growing companies.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry) => (
-            <Link key={industry.slug} href={`/industries/${industry.slug}`} className="rounded-lg border border-line bg-white p-4 text-sm font-semibold text-ink transition hover:border-brand-red hover:text-brand-red">
+            <Link key={industry.slug} href={`/industries/${industry.slug}`} className="rounded-lg border border-line bg-white p-4 text-sm font-semibold text-ink transition hover:border-brand-blue hover:text-brand-blue">
               {industry.title}
             </Link>
           ))}
@@ -154,7 +154,7 @@ export default function HomePage() {
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">Ontario First, North America When Needed</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-blue">Ontario First, North America When Needed</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               Strong coverage across the 401 and 403 corridor.
             </h2>
@@ -179,7 +179,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-white py-14 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-red">Partner-Managed Logistics</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-blue">Partner-Managed Logistics</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               Canada-wide and North America moves, managed by people who understand freight.
             </h2>
@@ -210,7 +210,7 @@ export default function HomePage() {
       >
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {serviceAreas.map((area) => (
-            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-lg border border-line bg-white p-4 font-bold text-ink transition hover:border-brand-red hover:text-brand-red">
+            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="rounded-lg border border-line bg-white p-4 font-bold text-ink transition hover:border-brand-blue hover:text-brand-blue">
               {area.title}
             </Link>
           ))}
@@ -220,7 +220,7 @@ export default function HomePage() {
       <section className="bg-brand-navy py-14 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-red-200">Request a Quote</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-blue-200">Request a Quote</p>
             <h2 className="mt-2 text-3xl font-bold">Tell us what needs to move.</h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-blue-100">
               Pickup city, delivery city, freight type, item count, weight, dimensions, timing, and any liftgate or reefer needs.

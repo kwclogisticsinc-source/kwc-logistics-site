@@ -90,7 +90,7 @@ export function QuoteForm() {
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2"
+          className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-blue px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
         >
           Send Quote Request
         </button>

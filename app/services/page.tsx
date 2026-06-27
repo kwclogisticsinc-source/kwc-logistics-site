@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <Section title="Detailed service pages" intro="These pages explain the common shipment types customers ask about. The main operating model stays Ontario-first." className="bg-slate-50">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-red">
+            <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">
               <h2 className="text-xl font-bold text-ink">{service.title}</h2>
               <p className="mt-3 text-sm leading-6 text-muted">{service.description}</p>
             </Link>
