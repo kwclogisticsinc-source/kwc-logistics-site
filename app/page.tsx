@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CoverageMap } from "@/components/CoverageMap";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
 import { VisualCard } from "@/components/VisualCard";
@@ -35,8 +36,8 @@ const fleetCards = [
   {
     src: "/images/kwc-yard-fleet.png",
     title: "Regional Fleet Network",
-    description: "Coverage built around Kitchener-Waterloo, Cambridge, the GTA, Hamilton, London, and the 401/403 corridor.",
-    tags: ["Southern Ontario", "401/403", "Regional"]
+    description: "Coverage built around Kitchener-Waterloo, Cambridge, Toronto, London, Windsor, Kingston, and nearby lanes.",
+    tags: ["Southern Ontario", "Hub lanes", "Regional"]
   }
 ];
 
@@ -91,7 +92,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-100">
               KWC Logistics Inc. provides final mile, LTL, dedicated route, warehouse transfer,
               and regional delivery services for businesses across Kitchener-Waterloo, Cambridge,
-              London, Windsor, Toronto, Kingston, and the 401/403 corridor.
+              London, Windsor, Toronto, Kingston, and surrounding Southern Ontario lanes.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/request-a-quote" className="bg-brand-blue hover:bg-blue-500">
@@ -144,7 +145,7 @@ export default function HomePage() {
             </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/95 to-transparent p-6">
               <p className="text-sm font-bold uppercase tracking-wider text-brand-cyan">Regional delivery network</p>
-              <p className="mt-2 max-w-xl text-2xl font-black">Local dispatch, branded equipment, and dock-ready freight planning.</p>
+              <p className="mt-2 max-w-xl text-2xl font-black">Direct dispatch, hub-based routing, and freight that keeps moving.</p>
             </div>
           </div>
         </div>
@@ -180,11 +181,11 @@ export default function HomePage() {
       </Section>
 
       <section className="bg-white py-14 sm:py-16">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.78fr_1.22fr] lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-blue">Hub-Based Coverage</p>
             <h2 className="mt-3 text-4xl font-black tracking-tight text-ink sm:text-5xl">
-              Kitchener, London, Windsor, Toronto, and Kingston lanes.
+              Kitchener, London, Windsor, Toronto, and Kingston coverage.
             </h2>
             <p className="mt-5 text-base leading-7 text-muted">
               KWC works from a Kitchener base with a hub-style approach to Southern Ontario freight.
@@ -192,14 +193,7 @@ export default function HomePage() {
               layers, and route shipments through lanes that keep service practical and pricing fair.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {["Kitchener-Waterloo dispatch", "London and Windsor lanes", "Toronto and GTA coverage", "Kingston eastern lane support"].map((item) => (
-              <div key={item} className="rounded-2xl border border-line bg-brand-pale p-5">
-                <div className="mb-4 h-2 w-12 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan" />
-                <p className="text-lg font-black text-ink">{item}</p>
-              </div>
-            ))}
-          </div>
+          <CoverageMap />
         </div>
       </section>
 
@@ -255,8 +249,9 @@ export default function HomePage() {
         <div className="rounded-3xl bg-brand-navy p-5 text-white shadow-glow sm:p-8">
           <p className="max-w-4xl text-base leading-7 text-blue-100">
             Based in Kitchener, KWC services Kitchener-Waterloo, Cambridge, Guelph, Brantford,
-            London, Hamilton, Mississauga, the GTA, Niagara, and the main 401/403 freight corridor.
-            Local lanes are planned around pickup windows, receiver hours, equipment needs, and route density.
+            London, Windsor, Hamilton, Mississauga, Toronto, Kingston, the GTA, Niagara, and nearby
+            Southern Ontario lanes. Local routes are planned around pickup windows, receiver hours,
+            equipment needs, and route density.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {serviceAreas.map((area) => (

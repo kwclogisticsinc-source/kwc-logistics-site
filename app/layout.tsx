@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     "direct freight carrier Ontario",
     "Ontario freight",
     "owner operator opportunities Ontario",
-    "401 corridor freight",
-    "403 corridor freight",
+    "Southern Ontario LTL carrier",
+    "Ontario hub freight lanes",
     "courier services Kitchener",
     "auto parts delivery Kitchener"
   ],

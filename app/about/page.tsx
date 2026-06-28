@@ -25,7 +25,7 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-7 text-muted">
               KWC moves freight through the lanes customers actually use: Kitchener-Waterloo,
               Cambridge, London, Windsor, Toronto, Kingston, Hamilton, Mississauga, the GTA, and
-              the 401 and 403 corridor. Work includes final mile delivery, LTL and pallet freight,
+              surrounding Southern Ontario lanes. Work includes final mile delivery, LTL and pallet freight,
               warehouse transfers, cross-dock support, dedicated routes, and expedited local work.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">

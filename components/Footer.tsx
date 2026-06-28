@@ -35,7 +35,7 @@ export function Footer() {
         <div>
           <p className="font-semibold">Service Areas</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
-            Kitchener, London, Windsor, Toronto, Kingston, the GTA, and the 401/403 corridor
+            Kitchener, London, Windsor, Toronto, Kingston, the GTA, Niagara, and surrounding lanes
           </p>
         </div>
       </div>

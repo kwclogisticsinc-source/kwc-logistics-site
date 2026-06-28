@@ -152,7 +152,7 @@ export const serviceAreas: ItemPage[] = [
   { slug: "london-logistics", title: "London Logistics", description: "London Ontario logistics support for regional freight, dedicated routes, and long-distance moves." },
   { slug: "hamilton-logistics", title: "Hamilton Logistics", description: "Hamilton logistics, freight, delivery, and commercial transport support from a Kitchener-based team." },
   { slug: "mississauga-logistics", title: "Mississauga Logistics", description: "Mississauga delivery and freight support connecting Waterloo Region with the GTA." },
-  { slug: "southwestern-ontario-logistics", title: "Southern Ontario Logistics", description: "Southern Ontario logistics across the 401 and 403 corridor, with regional final mile, LTL, warehouse transfer, and commercial delivery support." }
+  { slug: "southwestern-ontario-logistics", title: "Southern Ontario Logistics", description: "Southern Ontario logistics through Kitchener, London, Windsor, Toronto, Kingston, and surrounding regional lanes, with final mile, LTL, warehouse transfer, and commercial delivery support." }
 ];
 
 export const faqs = [

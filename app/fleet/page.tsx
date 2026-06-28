@@ -29,7 +29,7 @@ const equipment = [
   {
     src: "/images/kwc-yard-fleet.png",
     title: "Regional Freight Network",
-    description: "Southern Ontario coverage built around Kitchener-Waterloo, Cambridge, the GTA, Hamilton, London, and the 401/403 corridor."
+    description: "Southern Ontario coverage built around Kitchener-Waterloo, Cambridge, Toronto, London, Windsor, Kingston, and nearby lanes."
   }
 ];
 
