@@ -5,14 +5,15 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { serviceAreas } from "@/lib/site";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return serviceAreas.map((area) => ({ slug: area.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const area = serviceAreas.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const area = serviceAreas.find((item) => item.slug === slug);
   if (!area) return {};
   return {
     title: area.title,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function AreaDetailPage({ params }: Props) {
-  const area = serviceAreas.find((item) => item.slug === params.slug);
+export default async function AreaDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const area = serviceAreas.find((item) => item.slug === slug);
   if (!area) notFound();
 
   return (

@@ -5,14 +5,15 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { industries } from "@/lib/site";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const industry = industries.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const industry = industries.find((item) => item.slug === slug);
   if (!industry) return {};
   return {
     title: industry.title,
@@ -21,8 +22,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function IndustryDetailPage({ params }: Props) {
-  const industry = industries.find((item) => item.slug === params.slug);
+export default async function IndustryDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const industry = industries.find((item) => item.slug === slug);
   if (!industry) notFound();
 
   return (

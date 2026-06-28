@@ -8,7 +8,8 @@ Built with:
 - TypeScript
 - Tailwind CSS
 - SEO metadata, sitemap, and robots routes
-- Responsive pages ready for Vercel
+- Responsive pages ready for Cloudflare Workers
+- OpenNext for Cloudflare
 
 ## Pages
 
@@ -24,13 +25,13 @@ Built with:
 Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open `http://localhost:3000`.
@@ -38,14 +39,57 @@ Open `http://localhost:3000`.
 ## Production Build
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Start the production server locally:
 
 ```bash
-npm run start
+pnpm run start
 ```
+
+## Cloudflare Workers Build
+
+This project is configured for Cloudflare Workers using OpenNext for Cloudflare.
+
+Build the Worker output locally:
+
+```bash
+pnpm run build:cloudflare
+```
+
+Preview the Worker locally with Wrangler:
+
+```bash
+pnpm run preview:cloudflare
+```
+
+Deploy with Wrangler:
+
+```bash
+pnpm run deploy:cloudflare
+```
+
+Cloudflare dashboard settings:
+
+- Framework preset: `None`
+- Build command: `pnpm run build:cloudflare`
+- Output directory: `.open-next/assets`
+- Worker entrypoint: `.open-next/worker.js` from `wrangler.jsonc`
+
+Required Cloudflare config files:
+
+- `open-next.config.ts`
+- `wrangler.jsonc`
+
+## Deploy to Cloudflare
+
+1. Push this repository to GitHub.
+2. In Cloudflare, create a new Workers project from the repository.
+3. Use the build settings listed above.
+4. Deploy.
+5. Add `kwclogistics.ca` as a custom domain or route for the Worker.
+6. Update DNS records at the domain registrar to point to Cloudflare.
 
 ## Deploy to Vercel
 

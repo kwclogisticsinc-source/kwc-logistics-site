@@ -5,14 +5,15 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { services, site } from "@/lib/site";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const service = services.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
   if (!service) return {};
   return {
     title: service.title,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ServiceDetailPage({ params }: Props) {
-  const service = services.find((item) => item.slug === params.slug);
+export default async function ServiceDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
 
   return (

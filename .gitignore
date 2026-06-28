@@ -1,9 +1,13 @@
 node_modules
 .pnpm-store
 .next
+.open-next
 out
 dist
+outputs/
 .env
 .env.local
 .vercel
+.wrangler
 *.log
+.DS_Store
