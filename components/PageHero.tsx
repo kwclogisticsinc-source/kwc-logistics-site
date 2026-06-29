@@ -16,10 +16,10 @@ export function PageHero({ eyebrow, title, children, image = "/images/kwc-yard-f
         alt=""
         fill
         priority={false}
-        className="object-cover opacity-28"
+        className="object-cover opacity-55"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/92 to-brand-navy/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/82 to-brand-navy/35" />
       <div className="absolute inset-0 logistics-grid opacity-30" />
       <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue" />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">

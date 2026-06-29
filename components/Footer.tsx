@@ -34,7 +34,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-semibold">Service Areas</p>
+          <p className="font-semibold">Coverage</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
             Kitchener, Waterloo, Cambridge, Guelph, Brantford, Hamilton, London, Mississauga,
             Toronto, the GTA, and Ontario-wide service.
@@ -45,12 +45,10 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-blue-100 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <div className="flex gap-4">
+            <Link href="/about" className="hover:text-white">About</Link>
             <Link href="/services" className="hover:text-white">Services</Link>
-            <Link href="/warehousing" className="hover:text-white">Warehousing</Link>
-            <Link href="/fleet" className="hover:text-white">Fleet</Link>
-            <Link href="/safety" className="hover:text-white">Safety</Link>
-            <Link href="/request-a-quote" className="hover:text-white">Quote</Link>
-            <Link href="/contact" className="hover:text-white">Contact</Link>
+            <Link href="/resources" className="hover:text-white">Resources</Link>
+            <Link href="/contact" className="hover:text-white">Contact Us</Link>
           </div>
         </div>
       </div>

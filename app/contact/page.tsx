@@ -78,7 +78,7 @@ export default function ContactPage() {
               matter. We will respond with the practical freight questions that keep the job organized.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
+              <ButtonLink href="/contact">Contact Us</ButtonLink>
               <a
                 href={`tel:${site.phone}`}
                 className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-pale focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"

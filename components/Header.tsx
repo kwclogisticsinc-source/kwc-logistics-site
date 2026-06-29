@@ -7,12 +7,8 @@ const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/warehousing", label: "Warehousing" },
-  { href: "/fleet", label: "Fleet" },
-  { href: "/service-areas", label: "Service Areas" },
-  { href: "/safety", label: "Safety" },
-  { href: "/request-a-quote", label: "Request Quote" },
-  { href: "/contact", label: "Contact" }
+  { href: "/resources", label: "Resources" },
+  { href: "/contact", label: "Contact Us" }
 ];
 
 export function Header() {
@@ -33,8 +29,8 @@ export function Header() {
           <a className="text-sm font-semibold text-blue-100 hover:text-white" href={`tel:${site.phone}`}>
             {site.phone}
           </a>
-          <ButtonLink href="/request-a-quote" className="bg-brand-blue hover:bg-blue-500">
-            Request a Quote
+          <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">
+            Get a Quote
           </ButtonLink>
         </div>
       </div>

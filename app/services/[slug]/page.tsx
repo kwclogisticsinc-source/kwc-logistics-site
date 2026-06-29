@@ -56,7 +56,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               warehouse transfers, cross-docking, and expedited transportation.
             </p>
             <div className="mt-5">
-              <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>
+              <ButtonLink href="/contact">Contact Us</ButtonLink>
             </div>
           </aside>
         </div>
