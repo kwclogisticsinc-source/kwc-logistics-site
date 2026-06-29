@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function LogoMark() {
   return (
-    <span className="flex h-16 w-24 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-line">
+    <span className="flex h-16 w-24 shrink-0 items-center justify-center overflow-hidden">
       <Image
         src="/kwc-logo-horse.png"
         alt="KWC Logistics blue horse"
@@ -40,7 +40,7 @@ export function FullLogo({ className = "" }: { className?: string }) {
       alt="KWC Logistics logo"
       width={332}
       height={299}
-      className={`h-auto w-full object-contain ${className}`}
+      className={`h-auto w-full object-contain mix-blend-screen drop-shadow-[0_12px_28px_rgba(18,183,255,0.30)] ${className}`}
       priority
     />
   );
@@ -53,7 +53,7 @@ export function HeaderLogo() {
       alt="KWC Logistics logo"
       width={420}
       height={420}
-      className="h-14 w-28 object-contain sm:h-16 sm:w-32"
+      className="h-14 w-28 object-contain mix-blend-screen drop-shadow-[0_10px_22px_rgba(18,183,255,0.35)] sm:h-16 sm:w-32"
       priority
     />
   );

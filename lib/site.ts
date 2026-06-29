@@ -5,7 +5,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "KWC Logistics Inc provides dependable LTL freight, expedited transportation, warehousing, cross-docking, and straight truck delivery throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario."
+    "KWC Logistics Inc specializes in dependable LTL freight, warehousing, cross-docking, and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario."
 };
 
 export type ItemPage = {
@@ -30,7 +30,7 @@ export const serviceCategories = [
     description:
       "Time-sensitive freight for businesses that need fast pickup, direct communication, and dependable delivery planning.",
     icon: "EXP",
-    items: ["Priority pickup", "Time-sensitive freight", "Cargo van options", "Straight truck capacity"]
+    items: ["Priority pickup", "Time-sensitive freight", "Direct communication", "Regional coverage"]
   },
   {
     slug: "warehousing",
@@ -49,12 +49,12 @@ export const serviceCategories = [
     items: ["Inbound receiving", "Outbound loading", "Route loading", "Consolidation"]
   },
   {
-    slug: "straight-truck-delivery",
-    title: "Straight Truck Delivery",
+    slug: "regional-freight",
+    title: "Regional Freight",
     description:
-      "Professional straight truck solutions for dock freight, commercial deliveries, skids, equipment, and regional LTL movement.",
-    icon: "ST",
-    items: ["Freightliner straight trucks", "Commercial stops", "Liftgate coordination", "Regional lanes"]
+      "Ontario freight support for businesses moving skids, commercial freight, warehouse freight, and recurring regional shipments.",
+    icon: "REG",
+    items: ["Commercial freight", "Skid freight", "Warehouse freight", "Ontario lanes"]
   }
 ];
 
@@ -88,11 +88,11 @@ export const services: ItemPage[] = [
     keywords: ["cross docking Kitchener", "cross dock Ontario", "freight consolidation Ontario"]
   },
   {
-    slug: "straight-truck-delivery",
-    title: "Straight Truck Delivery",
+    slug: "regional-freight",
+    title: "Regional Freight",
     description:
-      "Straight truck delivery for commercial freight, skids, equipment, dock deliveries, liftgate requirements, and regional business shipments.",
-    keywords: ["straight truck delivery Kitchener", "straight truck freight Ontario"]
+      "Regional freight support for commercial shipments, skids, warehouse freight, and Ontario business lanes.",
+    keywords: ["regional freight Kitchener", "Ontario freight support"]
   }
 ];
 
@@ -101,7 +101,7 @@ export const serviceAreas: ItemPage[] = [
     slug: "kitchener-logistics",
     title: "Kitchener Logistics",
     description:
-      "LTL freight, expedited transportation, warehousing, cross-docking, and straight truck delivery for Kitchener businesses."
+      "LTL freight, expedited transportation, warehousing, and cross-docking for Kitchener businesses."
   },
   {
     slug: "waterloo-logistics",
@@ -113,7 +113,7 @@ export const serviceAreas: ItemPage[] = [
     slug: "cambridge-logistics",
     title: "Cambridge Logistics",
     description:
-      "Cambridge LTL freight, warehouse transfers, cross-dock support, and straight truck delivery from a Waterloo Region carrier."
+      "Cambridge LTL freight, warehouse transfers, cross-dock support, and regional freight from a Waterloo Region carrier."
   },
   {
     slug: "guelph-logistics",
@@ -125,7 +125,7 @@ export const serviceAreas: ItemPage[] = [
     slug: "brantford-logistics",
     title: "Brantford Logistics",
     description:
-      "Brantford freight service for commercial shipments, warehouse movement, skids, and straight truck delivery."
+      "Brantford freight service for commercial shipments, warehouse movement, skids, and regional freight."
   },
   {
     slug: "hamilton-logistics",
@@ -137,7 +137,7 @@ export const serviceAreas: ItemPage[] = [
     slug: "london-logistics",
     title: "London Logistics",
     description:
-      "London Ontario freight lanes for LTL, expedited, straight truck, and commercial transportation needs."
+      "London Ontario freight lanes for LTL, expedited, warehouse, and commercial transportation needs."
   },
   {
     slug: "mississauga-logistics",
@@ -168,7 +168,7 @@ export const faqs = [
   {
     question: "What freight services does KWC provide?",
     answer:
-      "KWC focuses on LTL freight, expedited transportation, warehousing, cross-docking, and straight truck delivery for commercial freight."
+      "KWC focuses on LTL freight, warehousing, cross-docking, expedited freight support, and regional commercial freight."
   },
   {
     question: "Does KWC provide Ontario-wide service?",

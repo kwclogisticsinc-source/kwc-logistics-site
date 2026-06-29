@@ -13,7 +13,7 @@ const serviceTypes = [
   "Expedited transportation",
   "Warehousing",
   "Cross-docking",
-  "Straight truck delivery"
+  "Regional freight"
 ];
 
 export function CoverageMap() {

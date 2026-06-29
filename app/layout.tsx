@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc provides LTL freight, expedited transportation, warehousing, cross-docking and straight truck delivery services throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
+    "KWC Logistics Inc specializes in LTL freight, warehousing, cross-docking and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
   keywords: [
     "Kitchener logistics company",
     "Kitchener-Waterloo-Cambridge logistics",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "expedited freight Kitchener",
     "cross docking Kitchener",
     "warehousing Kitchener",
-    "straight truck delivery Kitchener",
+    "regional freight Kitchener",
     "warehouse transfers Ontario",
     "Ontario freight",
     "Southern Ontario LTL carrier"
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KWC Logistics Inc | Kitchener-Waterloo-Cambridge LTL & Expedited Freight",
     description:
-      "LTL freight, expedited transportation, warehousing, cross-docking and straight truck delivery throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
+      "LTL freight, warehousing, cross-docking and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-blue/20 bg-brand-navy/95 text-white shadow-lg shadow-brand-navy/10 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="shrink-0 rounded-xl bg-white px-2 py-1" aria-label="KWC Logistics Inc. home">
+        <Link href="/" className="shrink-0 rounded-xl border border-brand-cyan/20 bg-white/5 px-2 py-1 backdrop-blur" aria-label="KWC Logistics Inc. home">
           <HeaderLogo />
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-semibold text-blue-50 lg:flex">

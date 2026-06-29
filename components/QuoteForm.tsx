@@ -37,7 +37,7 @@ export function QuoteForm() {
           <option>Expedited Freight</option>
           <option>Warehousing</option>
           <option>Cross Docking</option>
-          <option>Straight Truck Delivery</option>
+          <option>Regional Freight</option>
         </select>
       </label>
       <label htmlFor="additional-notes" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">

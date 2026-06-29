@@ -33,7 +33,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <PageHero eyebrow="KWC Service" title={service.title}>
         <p>{service.description}</p>
       </PageHero>
-      <Section title={`Practical ${service.title.toLowerCase()} support`} intro="KWC keeps the details simple and clear: what is moving, where it starts, where it needs to go, and what timing or equipment matters.">
+      <Section title={`Practical ${service.title.toLowerCase()} support`} intro="KWC keeps the details simple and clear: what is moving, where it starts, where it needs to go, and what timing, warehouse, or dock details matter.">
         <div className="grid gap-5 lg:grid-cols-[1fr_0.45fr]">
           <article className="rounded-2xl border border-line bg-white p-6">
             <h2 className="text-2xl font-bold text-ink">How KWC helps</h2>

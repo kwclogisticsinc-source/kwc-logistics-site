@@ -7,13 +7,12 @@ export function Footer() {
     <footer className="border-t border-line bg-brand-navy text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
         <div>
-          <div className="max-w-[190px] rounded-xl bg-white px-3 py-2">
+          <div className="max-w-[190px] rounded-xl border border-brand-cyan/20 bg-white/5 px-3 py-2">
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
             Family-operated freight company based in Kitchener and built for Waterloo Region
-            businesses that need dependable LTL, expedited, warehousing, cross-dock, and straight
-            truck delivery support.
+            businesses that need dependable LTL, warehousing, cross-dock, and expedited freight support.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>

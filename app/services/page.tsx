@@ -8,18 +8,18 @@ import { serviceCategories, services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides LTL freight, expedited freight, warehousing, cross-docking, and straight truck delivery throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario.",
+    "KWC Logistics specializes in LTL freight, warehousing, cross-docking, expedited freight support, and regional freight throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="LTL, expedited, warehousing, and straight truck freight.">
+      <PageHero eyebrow="Services" title="LTL freight and warehousing support for Ontario businesses.">
         <p>
           KWC Logistics Inc focuses on the freight services Waterloo Region businesses need most:
           organized LTL, responsive expedited transportation, clean warehousing support,
-          cross-docking, and professional straight truck delivery.
+          cross-docking, and regional freight support.
         </p>
       </PageHero>
 

@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CoverageMap } from "@/components/CoverageMap";
 import { Section } from "@/components/Section";
 import { VisualCard } from "@/components/VisualCard";
-import { serviceCategories, site } from "@/lib/site";
+import { serviceAreas, serviceCategories, site } from "@/lib/site";
 
 const servicePhotos = [
   {
     src: "/images/kwc-straight-trucks-dock.png",
-    title: "LTL & Straight Truck Freight",
-    description: "Palletized freight, skids, commercial deliveries, and regional straight truck service.",
-    tags: ["LTL", "Straight trucks"]
+    title: "LTL Freight",
+    description: "Palletized freight, skids, partial loads, warehouse freight, and recurring commercial shipments.",
+    tags: ["LTL", "Skids"]
   },
   {
     src: "/images/kwc-warehouse-crossdock.png",
@@ -35,7 +36,7 @@ const quickLinks = [
   {
     href: "/services",
     title: "Services without the noise",
-    text: "See the freight services KWC is focused on: LTL, expedited, warehousing, cross-docking, and straight trucks."
+    text: "See the freight services KWC is focused on: LTL, warehousing, cross-docking, expedited support, and regional freight."
   },
   {
     href: "/resources",
@@ -64,11 +65,11 @@ export default function HomePage() {
           <div>
             <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Kitchener • Waterloo • Cambridge</p>
             <h1 className="mt-5 max-w-5xl text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
-              Practical LTL and expedited freight for Waterloo Region businesses.
+              LTL freight and warehousing built for Waterloo Region businesses.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-blue-100">
-              KWC Logistics Inc provides dependable LTL freight, expedited transportation,
-              warehousing, cross-docking, and straight truck delivery throughout Kitchener,
+              KWC Logistics Inc specializes in dependable LTL freight, warehousing,
+              cross-docking, and expedited freight support throughout Kitchener,
               Waterloo, Cambridge, the GTA, and Ontario.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -81,9 +82,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/15 bg-white/12 p-6 shadow-glow backdrop-blur">
-            <div className="rounded-2xl bg-white p-4">
-              <Image src="/images/kwc-logo.png" alt="KWC Logistics logo" width={420} height={320} className="h-auto w-full" />
+          <div className="rounded-3xl border border-brand-cyan/20 bg-brand-navy/45 p-6 shadow-glow backdrop-blur">
+            <div className="rounded-2xl border border-brand-cyan/20 bg-white/5 p-4">
+              <Image src="/images/kwc-logo.png" alt="KWC Logistics logo" width={420} height={320} className="h-auto w-full object-contain mix-blend-screen drop-shadow-[0_18px_36px_rgba(18,183,255,0.35)]" />
             </div>
             <div className="mt-6 grid gap-3">
               {["Local dispatch", "Professional equipment", "Clear freight communication"].map((item) => (
@@ -116,7 +117,7 @@ export default function HomePage() {
       <Section
         eyebrow="Freight Services"
         title="Clean categories for quoting and dispatch."
-        intro="Inspired by professional LTL carrier sites, KWC keeps the service offer easy to scan and easy to act on."
+        intro="KWC is built around LTL and warehousing first. Other services can be added later once you confirm the final service list."
         className="bg-brand-pale"
       >
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -133,6 +134,32 @@ export default function HomePage() {
       <Section eyebrow="Photos & Operations" title="Show the equipment, docks, and freight environment clearly.">
         <div className="grid gap-5 lg:grid-cols-3">
           {servicePhotos.map((card) => <VisualCard key={card.title} {...card} />)}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Service Area"
+        title="Built in KWC. Delivering across Ontario."
+        intro="The map section is now part of the homepage layout. We can refine exact cities, lanes, warehouse wording, and service claims once you confirm the details."
+        className="bg-brand-pale"
+      >
+        <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="rounded-3xl bg-brand-navy p-6 text-white shadow-glow">
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-cyan">Ontario coverage</p>
+            <h3 className="mt-3 text-3xl font-black tracking-tight">KWC warehouse base. Ontario freight reach.</h3>
+            <p className="mt-4 text-sm leading-6 text-blue-100">
+              From our home base in Kitchener-Waterloo-Cambridge, KWC supports LTL freight,
+              warehousing, cross-docking, and expedited freight needs across key Ontario markets.
+            </p>
+            <div className="mt-6 grid gap-2">
+              {serviceAreas.slice(0, 8).map((area) => (
+                <div key={area.slug} className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-bold">
+                  {area.title.replace(" Logistics", "")}
+                </div>
+              ))}
+            </div>
+          </div>
+          <CoverageMap />
         </div>
       </Section>
 

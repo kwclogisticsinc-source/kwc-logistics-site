@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact KWC Logistics Inc. in Kitchener, Ontario for LTL freight, expedited transportation, warehousing, cross-docking, and straight truck delivery.",
+    "Contact KWC Logistics Inc. in Kitchener, Ontario for LTL freight, warehousing, cross-docking, expedited freight support, and Ontario warehouse freight.",
   alternates: { canonical: "/contact" }
 };
 
@@ -40,8 +40,8 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact KWC" title="Talk directly with a freight team that understands Waterloo Region." image="/images/kwc-straight-trucks-dock.png">
         <p>
-          For LTL freight, expedited transportation, warehousing, cross-docking, straight truck
-          delivery, or Ontario freight support, contact KWC Logistics Inc. directly.
+          For LTL freight, warehousing, cross-docking, expedited freight support, or Ontario
+          warehouse freight, contact KWC Logistics Inc. directly.
         </p>
       </PageHero>
 
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 sizes="(min-width: 1024px) 45vw, 100vw"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy via-brand-navy/75 to-transparent p-6 text-white">
-                <div className="max-w-[220px] rounded-2xl bg-white px-4 py-3">
+                <div className="max-w-[220px] rounded-2xl border border-brand-cyan/20 bg-brand-navy/45 px-4 py-3 backdrop-blur">
                   <FullLogo />
                 </div>
                 <p className="mt-5 text-2xl font-black tracking-tight">
