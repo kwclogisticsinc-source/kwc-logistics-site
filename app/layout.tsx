@@ -7,35 +7,28 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
   title: {
-    default: "KWC Logistics Inc. | Kitchener Logistics Company",
+    default: "KWC Logistics Inc | Kitchener-Waterloo-Cambridge LTL & Expedited Freight",
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc. is a personal professional LTL and final mile carrier using hub-based Southern Ontario coverage, consolidation, and direct dispatch to move freight simply and affordably.",
+    "KWC Logistics Inc provides LTL freight, expedited transportation, warehousing, cross-docking and straight truck delivery services throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
   keywords: [
     "Kitchener logistics company",
-    "Waterloo Region delivery",
-    "final mile delivery Kitchener",
-    "B2B delivery Kitchener",
+    "Kitchener-Waterloo-Cambridge logistics",
+    "Waterloo Region freight",
     "LTL freight Kitchener",
+    "expedited freight Kitchener",
+    "cross docking Kitchener",
+    "warehousing Kitchener",
+    "straight truck delivery Kitchener",
     "warehouse transfers Ontario",
-    "Southern Ontario logistics",
-    "final mile and regional delivery",
-    "final mile logistics Cambridge",
-    "meal kit delivery support",
-    "personal freight delivery Ontario",
-    "LTL consolidation Ontario",
-    "direct freight carrier Ontario",
     "Ontario freight",
-    "owner operator opportunities Ontario",
-    "Southern Ontario LTL carrier",
-    "Ontario hub freight lanes",
-    "courier services Kitchener",
-    "auto parts delivery Kitchener"
+    "Southern Ontario LTL carrier"
   ],
   openGraph: {
-    title: "KWC Logistics Inc.",
-    description: "Personal professional LTL, final mile, consolidation, and regional delivery across Southern Ontario.",
+    title: "KWC Logistics Inc | Kitchener-Waterloo-Cambridge LTL & Expedited Freight",
+    description:
+      "LTL freight, expedited transportation, warehousing, cross-docking and straight truck delivery throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

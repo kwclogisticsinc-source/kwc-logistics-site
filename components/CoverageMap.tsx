@@ -1,17 +1,19 @@
 const hubs = [
-  { name: "Windsor", x: 14, y: 72 },
-  { name: "London", x: 27, y: 61 },
-  { name: "Kitchener", x: 42, y: 52, primary: true },
-  { name: "Toronto / GTA", x: 58, y: 45 },
-  { name: "Kingston", x: 84, y: 30 }
+  { name: "London", x: 20, y: 63 },
+  { name: "Kitchener", x: 36, y: 53, primary: true },
+  { name: "Guelph", x: 43, y: 48 },
+  { name: "Hamilton", x: 49, y: 58 },
+  { name: "Mississauga", x: 56, y: 49 },
+  { name: "Toronto / GTA", x: 64, y: 43 },
+  { name: "Kingston", x: 86, y: 28 }
 ];
 
 const serviceTypes = [
-  "Final mile",
-  "LTL consolidation",
-  "Warehouse transfers",
-  "Dedicated routes",
-  "Personal freight"
+  "LTL freight",
+  "Expedited transportation",
+  "Warehousing",
+  "Cross-docking",
+  "Straight truck delivery"
 ];
 
 export function CoverageMap() {
@@ -19,7 +21,7 @@ export function CoverageMap() {
     <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
       <div className="border-b border-line bg-brand-pale px-5 py-4 sm:px-6">
         <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-blue">Coverage Map</p>
-        <h3 className="mt-1 text-2xl font-black tracking-tight text-ink">Southern Ontario hub-style freight lanes</h3>
+        <h3 className="mt-1 text-2xl font-black tracking-tight text-ink">Waterloo Region first. Ontario-wide reach.</h3>
       </div>
       <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
         <div className="relative min-h-[360px] bg-[radial-gradient(circle_at_50%_45%,rgba(18,183,255,0.16),transparent_34%),linear-gradient(135deg,#F8FBFF,#EAF4FF)] p-4 sm:p-6">
@@ -40,14 +42,14 @@ export function CoverageMap() {
             </defs>
 
             <path
-              d="M7 68 C17 57 25 60 34 50 C43 39 50 44 60 37 C70 30 78 28 93 22"
+              d="M9 70 C19 60 29 59 36 53 C46 44 55 47 64 43 C75 35 81 31 93 23"
               fill="none"
               stroke="#C7DDF6"
               strokeWidth="16"
               strokeLinecap="round"
             />
             <path
-              d="M7 68 C17 57 25 60 34 50 C43 39 50 44 60 37 C70 30 78 28 93 22"
+              d="M9 70 C19 60 29 59 36 53 C46 44 55 47 64 43 C75 35 81 31 93 23"
               fill="none"
               stroke="url(#kwcRoute)"
               strokeWidth="3.2"
@@ -86,11 +88,11 @@ export function CoverageMap() {
               </g>
             ))}
 
-            <text x="42" y="66" textAnchor="middle" className="fill-brand-blue text-[3.4px] font-bold">
-              KWC dispatch base
+            <text x="36" y="67" textAnchor="middle" className="fill-brand-blue text-[3.4px] font-bold">
+              Kitchener dispatch base
             </text>
             <text x="61" y="18" textAnchor="middle" className="fill-muted text-[3.2px] font-bold">
-              Routed lanes, consolidation, final mile
+              Kitchener • Waterloo • Cambridge • GTA • Ontario
             </text>
           </svg>
         </div>
@@ -98,8 +100,8 @@ export function CoverageMap() {
         <div className="bg-brand-navy p-6 text-white">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-cyan">How Coverage Works</p>
           <p className="mt-4 text-sm leading-6 text-blue-100">
-            KWC plans Southern Ontario freight around hub-style lanes, direct dispatch, and
-            consolidation opportunities that can reduce empty miles and unnecessary handoffs.
+            KWC is built in Waterloo Region and plans freight around Kitchener, Waterloo, Cambridge,
+            nearby commercial markets, and Ontario-wide lanes supported by trusted carrier partners.
           </p>
           <div className="mt-6 grid gap-2">
             {serviceTypes.map((item) => (
@@ -110,7 +112,7 @@ export function CoverageMap() {
           </div>
           <p className="mt-6 text-xs leading-5 text-blue-100">
             Coverage depends on freight size, timing, pickup access, receiver hours, lane density,
-            and available equipment.
+            warehousing requirements, and available equipment.
           </p>
         </div>
       </div>

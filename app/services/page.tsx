@@ -8,43 +8,53 @@ import { serviceCategories, services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides final mile, LTL freight, dedicated routes, warehouse transfers, cross-dock support, same-day delivery, and regional freight services across Southern Ontario.",
+    "KWC Logistics provides LTL freight, expedited freight, warehousing, cross-docking, and straight truck delivery throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Final mile, LTL, and regional freight services.">
+      <PageHero eyebrow="Services" title="LTL, expedited, warehousing, and straight truck freight.">
         <p>
-          KWC Logistics Inc. supports businesses that need freight moved reliably through
-          Kitchener-Waterloo, Cambridge, the GTA, Hamilton, London, and Southern Ontario.
+          KWC Logistics Inc focuses on the freight services Waterloo Region businesses need most:
+          organized LTL, responsive expedited transportation, clean warehousing support,
+          cross-docking, and professional straight truck delivery.
         </p>
       </PageHero>
-      <Section title="What KWC focuses on" intro="Clean, practical freight movement for local businesses: final mile delivery, LTL and pallet freight, warehouse transfers, cross-dock support, dedicated routes, and expedited local work.">
-        <div className="grid gap-5 lg:grid-cols-4">
+
+      <Section title="Five clear service lines" intro="Simple categories make it easier to quote, plan, dispatch, and deliver freight without confusion.">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
           {serviceCategories.map((category) => (
-            <article key={category.title} className="rounded-2xl border border-line bg-white p-5">
-              <h2 className="text-xl font-bold text-ink">{category.title}</h2>
+            <article key={category.title} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-navy text-sm font-black text-brand-cyan">
+                {category.icon}
+              </div>
+              <h2 className="mt-5 text-xl font-black text-ink">{category.title}</h2>
               <p className="mt-3 text-sm leading-6 text-muted">{category.description}</p>
+              <ul className="mt-5 space-y-2 text-sm font-semibold text-muted">
+                {category.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
             </article>
           ))}
         </div>
       </Section>
-      <Section title="Service capabilities" intro="Pick the closest shipment type. If the freight is unusual, send the details and dispatch can help classify it properly." className="bg-brand-pale">
+
+      <Section title="Service details" intro="Choose the service closest to your shipment type and send the freight details. KWC will confirm the right equipment, timing, and route plan." className="bg-brand-pale">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:border-brand-blue">
-              <h2 className="text-xl font-bold text-ink">{service.title}</h2>
+            <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:-translate-y-1 hover:border-brand-blue hover:shadow-soft">
+              <h2 className="text-xl font-black text-ink">{service.title}</h2>
               <p className="mt-3 text-sm leading-6 text-muted">{service.description}</p>
+              <span className="mt-5 inline-flex text-sm font-bold text-brand-blue">Learn More</span>
             </Link>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl bg-white p-6 shadow-soft">
-          <h2 className="text-2xl font-bold text-ink">Need a quote?</h2>
+        <div className="mt-10 rounded-3xl bg-white p-6 shadow-soft">
+          <h2 className="text-2xl font-black text-ink">Need a freight quote?</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-            Send the pickup city, delivery city, freight type, item count, weight, dimensions,
-            timing, and access details.
+            Send pickup location, delivery location, freight type, number of skids, weight,
+            service required, and notes about access or timing.
           </p>
           <div className="mt-5">
             <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>

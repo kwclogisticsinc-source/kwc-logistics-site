@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request a quote from KWC Logistics for LTL freight, final mile delivery, personal freight, warehouse transfers, dedicated routes, and regional delivery across Southern Ontario.",
+    "Request a quote from KWC Logistics for LTL freight, expedited transportation, warehousing, cross-docking, and straight truck delivery across Ontario.",
   alternates: { canonical: "/request-a-quote" }
 };
 
@@ -16,8 +16,8 @@ export default function RequestQuotePage() {
     <>
       <PageHero eyebrow="Request a Quote" title="Send the shipment details">
         <p>
-          Keep it simple: pickup city, delivery city, what is moving, approximate size and weight,
-          timing, and whether pickup or delivery is dock, commercial, or residential. For urgent jobs, call dispatch at{" "}
+          Keep it simple: pickup location, delivery location, freight type, number of skids,
+          weight, service required, and any special handling notes. For urgent jobs, call dispatch at{" "}
           <a className="font-semibold text-brand-blue" href={`tel:${site.phone}`}>{site.phone}</a>.
         </p>
       </PageHero>
@@ -30,12 +30,11 @@ export default function RequestQuotePage() {
             </div>
             <h2 className="text-2xl font-bold text-ink">Helpful quote details</h2>
             <ul className="mt-5 space-y-3 text-sm leading-6 text-muted">
-              <li>Pickup city and delivery city.</li>
-              <li>Freight type and pallet or item count.</li>
-              <li>Total weight and dimensions.</li>
-              <li>Same-day, scheduled, or flexible timing.</li>
-              <li>Liftgate and reefer requirements.</li>
-              <li>Dock, commercial, or residential stop details.</li>
+              <li>Pickup location and delivery location.</li>
+              <li>Freight type and number of skids.</li>
+              <li>Total weight and handling notes.</li>
+              <li>LTL, expedited, warehousing, cross-docking, or straight truck delivery.</li>
+              <li>Dock, warehouse, commercial, or job-site access details.</li>
               <li>Any flexibility that could help consolidate and reduce cost.</li>
             </ul>
             <div className="mt-6 border-t border-line pt-5 text-sm leading-6 text-muted">

@@ -4,53 +4,62 @@ import { Section } from "@/components/Section";
 import { VisualCard } from "@/components/VisualCard";
 
 export const metadata: Metadata = {
-  title: "Fleet Solutions",
+  title: "Fleet",
   description:
-    "KWC Logistics fleet solutions for cargo van final mile, straight truck LTL, reefer freight, warehouse transfers, and regional delivery across Southern Ontario.",
+    "KWC Logistics fleet and trusted carrier network provide access to professionally maintained modern transportation equipment for LTL, expedited, and straight truck freight.",
   alternates: { canonical: "/fleet" }
 };
 
 const equipment = [
   {
     src: "/images/kwc-straight-trucks-dock.png",
-    title: "Straight Trucks & Reefer Units",
-    description: "Regional LTL, palletized freight, retail replenishment, dock-to-dock work, and food-related shipments."
+    title: "Freightliner Straight Trucks",
+    description: "Commercial freight, skids, dock deliveries, liftgate coordination, and regional straight truck movement."
   },
   {
     src: "/images/kwc-cargo-van-dock.png",
-    title: "Cargo Vans",
-    description: "Final mile, parts runs, small freight, cartons, urgent local deliveries, and same-day work."
-  },
-  {
-    src: "/images/kwc-warehouse-crossdock.png",
-    title: "Warehouse & Cross-Dock Support",
-    description: "Dock coordination, staged freight, pallet handling, route loading, warehouse transfers, and distribution support."
+    title: "Cargo Van & Expedited Equipment",
+    description: "Smaller time-sensitive shipments, parts, cartons, and priority freight where speed and communication matter."
   },
   {
     src: "/images/kwc-yard-fleet.png",
-    title: "Regional Freight Network",
-    description: "Southern Ontario coverage built around Kitchener-Waterloo, Cambridge, Toronto, London, Windsor, Kingston, and nearby lanes."
+    title: "LTL Equipment Access",
+    description: "Equipment options for palletized freight, partial loads, commercial lanes, and Ontario-wide transportation needs."
+  },
+  {
+    src: "/images/kwc-warehouse-crossdock.png",
+    title: "Warehouse & Dock Capability",
+    description: "Freight staging, cross-dock handling, route loading, warehouse transfers, and organized dock coordination."
   }
 ];
 
 export default function FleetPage() {
   return (
     <>
-      <PageHero eyebrow="Fleet Solutions" title="Equipment and partners for regional freight.">
+      <PageHero eyebrow="Fleet" title="Professional equipment standards for dependable freight.">
         <p>
-          KWC focuses on practical equipment for final mile, LTL freight, warehouse transfers,
-          dedicated routes, and regional delivery across Southern Ontario.
+          Our fleet and trusted carrier network provide access to professionally maintained modern
+          transportation equipment that meets our operating standards.
         </p>
       </PageHero>
 
       <Section
-        title="Built for the freight local businesses actually move"
-        intro="Cargo vans, straight trucks, reefer units, dock operations, and partner capacity help KWC support commercial freight with a practical regional model."
+        title="Clean, maintained, and freight-ready"
+        intro="KWC focuses on equipment quality, professional presentation, safety, and dependability without making claims that can become inaccurate over time."
         className="bg-brand-navy"
       >
         <div className="grid gap-5 lg:grid-cols-4">
-          {equipment.map((item) => (
-            <VisualCard key={item.title} {...item} />
+          {equipment.map((item) => <VisualCard key={item.title} {...item} />)}
+        </div>
+      </Section>
+
+      <Section title="Fleet standards" intro="Transportation equipment should reflect the quality of the customer freight it carries.">
+        <div className="grid gap-5 md:grid-cols-3">
+          {["Professionally maintained equipment", "Modern operating standards", "Clean presentation", "Dependable transportation", "Preventative maintenance", "Safety-focused inspections"].map((item) => (
+            <article key={item} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+              <div className="mb-4 h-2 w-12 rounded-full bg-brand-blue" />
+              <h2 className="text-xl font-black text-ink">{item}</h2>
+            </article>
           ))}
         </div>
       </Section>

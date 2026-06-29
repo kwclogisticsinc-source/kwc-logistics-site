@@ -1,13 +1,12 @@
 import type { MetadataRoute } from "next";
-import { industries, serviceAreas, services, site } from "@/lib/site";
+import { serviceAreas, services, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/services", "/fleet", "/service-areas", "/industries", "/about", "/brand", "/request-a-quote", "/contact"];
+  const staticRoutes = ["", "/about", "/services", "/warehousing", "/fleet", "/service-areas", "/safety", "/request-a-quote", "/contact"];
   const serviceRoutes = services.map((item) => `/services/${item.slug}`);
-  const industryRoutes = industries.map((item) => `/industries/${item.slug}`);
   const areaRoutes = serviceAreas.map((item) => `/service-areas/${item.slug}`);
 
-  return [...staticRoutes, ...serviceRoutes, ...industryRoutes, ...areaRoutes].map((route) => ({
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes].map((route) => ({
     url: `https://${site.domain}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",

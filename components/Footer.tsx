@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { serviceAreas, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { FullLogo } from "./Logo";
 
 export function Footer() {
@@ -11,8 +11,9 @@ export function Footer() {
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-run Canadian LTL and final mile carrier based in Kitchener. Direct dispatch,
-            consolidation, personal freight, warehouse transfers, and regional delivery across Southern Ontario.
+            Family-operated freight company based in Kitchener and built for Waterloo Region
+            businesses that need dependable LTL, expedited, warehousing, cross-dock, and straight
+            truck delivery support.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -35,7 +36,8 @@ export function Footer() {
         <div>
           <p className="font-semibold">Service Areas</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
-            Kitchener, London, Windsor, Toronto, Kingston, the GTA, Niagara, and surrounding lanes
+            Kitchener, Waterloo, Cambridge, Guelph, Brantford, Hamilton, London, Mississauga,
+            Toronto, the GTA, and Ontario-wide service.
           </p>
         </div>
       </div>
@@ -44,8 +46,9 @@ export function Footer() {
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/services" className="hover:text-white">Services</Link>
+            <Link href="/warehousing" className="hover:text-white">Warehousing</Link>
             <Link href="/fleet" className="hover:text-white">Fleet</Link>
-            <Link href="/industries" className="hover:text-white">Who We Help</Link>
+            <Link href="/safety" className="hover:text-white">Safety</Link>
             <Link href="/request-a-quote" className="hover:text-white">Quote</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </div>

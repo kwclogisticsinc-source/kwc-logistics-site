@@ -39,21 +39,21 @@ export default async function ServiceDetailPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-ink">How KWC helps</h2>
             <p className="mt-4 text-base leading-7 text-muted">
               We answer the phone. We show up. We communicate. We get it moved. KWC works with
-              local businesses, retailers, suppliers, warehouses, e-commerce operators, and commercial
+              manufacturers, distributors, retailers, suppliers, warehouses, and commercial
               customers using practical fleet solutions, consolidation where it makes sense,
-              direct dispatch communication, and local accountability.
+              clear dispatch communication, and local accountability.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
               Share pickup city, delivery city, freight type, pallets or items, weight,
               dimensions, timing, liftgate needs, receiver details, and whether the stop is
-              dock, commercial, or residential.
+              dock, commercial, warehouse, or job-site freight.
             </p>
           </article>
           <aside className="rounded-2xl bg-brand-pale p-6">
             <h2 className="text-xl font-bold text-ink">One shipment or repeat work</h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              KWC can help with one-time deliveries, recurring route work, LTL freight,
-              warehouse transfers, and personal freight that needs more care than parcel courier.
+              KWC can help with one-time shipments, recurring freight work, LTL freight,
+              warehouse transfers, cross-docking, and expedited transportation.
             </p>
             <div className="mt-5">
               <ButtonLink href="/request-a-quote">Request a Quote</ButtonLink>

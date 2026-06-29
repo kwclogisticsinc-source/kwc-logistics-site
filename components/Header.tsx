@@ -5,11 +5,12 @@ import { HeaderLogo } from "./Logo";
 
 const nav = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/warehousing", label: "Warehousing" },
   { href: "/fleet", label: "Fleet" },
   { href: "/service-areas", label: "Service Areas" },
-  { href: "/about", label: "About" },
-  { href: "/#owner-operators", label: "Drive with KWC" },
+  { href: "/safety", label: "Safety" },
   { href: "/request-a-quote", label: "Request Quote" },
   { href: "/contact", label: "Contact" }
 ];

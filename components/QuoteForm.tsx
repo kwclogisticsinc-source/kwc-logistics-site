@@ -1,14 +1,13 @@
 const fields = [
   { id: "name", label: "Name", type: "text", required: true },
   { id: "company", label: "Company", type: "text" },
-  { id: "phone", label: "Phone", type: "tel", required: true },
   { id: "email", label: "Email", type: "email", required: true },
-  { id: "pickup-city", label: "Pickup city", type: "text", required: true },
-  { id: "delivery-city", label: "Delivery city", type: "text", required: true },
+  { id: "phone", label: "Phone", type: "tel", required: true },
+  { id: "pickup-location", label: "Pickup Location", type: "text", required: true },
+  { id: "delivery-location", label: "Delivery Location", type: "text", required: true },
   { id: "freight-type", label: "Freight type", type: "text" },
-  { id: "pallets-items", label: "Pallets/items", type: "text" },
-  { id: "weight", label: "Weight", type: "text" },
-  { id: "dimensions", label: "Dimensions", type: "text" }
+  { id: "number-of-skids", label: "Number of Skids", type: "text" },
+  { id: "weight", label: "Weight", type: "text" }
 ];
 
 export function QuoteForm() {
@@ -26,63 +25,26 @@ export function QuoteForm() {
           />
         </label>
       ))}
-      <label htmlFor="timing" className="grid gap-2 text-sm font-semibold text-ink">
-        Same-day or scheduled?
+      <label htmlFor="service-required" className="grid gap-2 text-sm font-semibold text-ink">
+        Service Required
         <select
-          id="timing"
-          name="timing"
+          id="service-required"
+          name="service-required"
           className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
         >
           <option value="">Select one</option>
-          <option>Same-day</option>
-          <option>Scheduled</option>
-          <option>Flexible</option>
+          <option>LTL Freight</option>
+          <option>Expedited Freight</option>
+          <option>Warehousing</option>
+          <option>Cross Docking</option>
+          <option>Straight Truck Delivery</option>
         </select>
       </label>
-      <label htmlFor="liftgate" className="grid gap-2 text-sm font-semibold text-ink">
-        Is liftgate required?
-        <select
-          id="liftgate"
-          name="liftgate"
-          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
-        >
-          <option value="">Select one</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Not sure</option>
-        </select>
-      </label>
-      <label htmlFor="reefer" className="grid gap-2 text-sm font-semibold text-ink">
-        Reefer required?
-        <select
-          id="reefer"
-          name="reefer"
-          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
-        >
-          <option value="">Select one</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Not sure</option>
-        </select>
-      </label>
-      <label htmlFor="delivery-type" className="grid gap-2 text-sm font-semibold text-ink">
-        Stop type
-        <select
-          id="delivery-type"
-          name="delivery-type"
-          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
-        >
-          <option value="">Select one</option>
-          <option>Residential</option>
-          <option>Commercial</option>
-          <option>Both</option>
-        </select>
-      </label>
-      <label htmlFor="notes" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
-        Notes
+      <label htmlFor="additional-notes" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
+        Additional Notes
         <textarea
-          id="notes"
-          name="notes"
+          id="additional-notes"
+          name="additional-notes"
           rows={5}
           className="rounded-lg border border-line bg-brand-pale px-3 py-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
         />
