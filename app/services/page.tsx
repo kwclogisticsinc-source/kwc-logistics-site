@@ -4,27 +4,75 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { StockPhoto, stock } from "@/components/StockPhoto";
-import { serviceCategories } from "@/lib/site";
+import { localLtlOptions, serviceCategories } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides B2B freight, LTL, FTL, warehousing, cross-docking, final mile, retail distribution, scheduled routes, expedited freight, reverse logistics, and customized Ontario transportation services.",
+    "KWC Logistics provides local LTL services, Kitchener cartage freight, LTL Direct, LTL Rush, LTL Sameday, FTL, warehousing, cross-docking, final mile, and Southern Ontario freight.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Transportation, warehousing, distribution, and delivery solutions." image={stock.dock}>
+      <PageHero eyebrow="Services" title="Local LTL, cartage freight, and Ontario logistics services." image={stock.dock}>
         <p>
-          KWC supports businesses with focused logistics programs across B2B freight,
-          LTL, FTL, scheduled routes, expedited freight, final mile, warehousing,
-          cross-docking, retail distribution, reverse logistics, and specialty freight.
+          KWC supports businesses in Kitchener, the GTA, and Southern Ontario with fast
+          local LTL freight, cartage, truckload support, warehousing, cross-docking,
+          final mile, and scheduled route programs.
         </p>
       </PageHero>
 
-      <Section title="Service portfolio" intro="Each service can be tailored to the customer, freight profile, delivery promise, and long-term business goals.">
+      <Section
+        eyebrow="Main Service Focus"
+        title="Local LTL Services in Kitchener"
+        intro="Fast freight delivery within Kitchener, the GTA, and Southern Ontario for businesses that need pallets, skids, parts, supplies, and commercial freight moved without broker runaround."
+      >
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr]">
+          <div className="overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
+            <div className="relative h-[420px]">
+              <StockPhoto src={stock.pallets} alt="Local LTL freight and palletized shipments" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/82 via-brand-navy/18 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-cyan">Kitchener Cartage Freight</p>
+                <h2 className="mt-2 max-w-2xl text-4xl font-black tracking-tight">Get a local cartage freight quote for the Kitchener area.</h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid content-center gap-4">
+            <p className="text-base leading-7 text-muted">
+              For businesses in the Kitchener area seeking dependable and professional shipping
+              solutions, KWC Logistics provides practical local LTL service backed by 15+ years
+              of transportation and logistics experience. We handle freight moving from industrial
+              parks, warehouses, manufacturers, suppliers, and commercial receivers across Kitchener,
+              the GTA, and Southern Ontario.
+            </p>
+            <p className="text-base leading-7 text-muted">
+              When freight requires planning beyond standard cartage, KWC can help coordinate
+              truckload, flatbed, refrigerated, and container requirements through trusted carrier
+              partners while keeping communication simple and direct.
+            </p>
+            <div className="grid gap-3">
+              {localLtlOptions.map((option) => (
+                <article key={option.name} className="rounded-2xl border border-line bg-brand-pale p-5">
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="text-xl font-black text-ink">{option.name}</h3>
+                    <span className="rounded-full bg-brand-blue px-3 py-1 text-xs font-black uppercase tracking-wide text-white">{option.time}</span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-muted">{option.description}</p>
+                </article>
+              ))}
+            </div>
+            <div className="pt-2">
+              <ButtonLink href="/contact">Get a Local LTL Quote</ButtonLink>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Service portfolio" intro="Focused logistics services built around local LTL, commercial freight, warehousing, distribution, and Southern Ontario coverage.">
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {serviceCategories.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`} className="group overflow-hidden rounded-[1.75rem] border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:border-brand-blue hover:shadow-soft">

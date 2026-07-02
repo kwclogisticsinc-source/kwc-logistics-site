@@ -11,7 +11,10 @@ const fields = [
 ];
 
 const serviceOptions = [
-  "LTL Freight",
+  "Local LTL Services",
+  "LTL Direct (2 hrs)",
+  "LTL Rush (4 hrs)",
+  "LTL Sameday (by 5PM)",
   "FTL Freight",
   "Warehouse Distribution",
   "Cross Docking",

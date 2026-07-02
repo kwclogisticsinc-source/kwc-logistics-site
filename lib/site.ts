@@ -21,7 +21,35 @@ export type ItemPage = {
   keywords?: string[];
 };
 
+export const localLtlOptions = [
+  {
+    name: "LTL Direct",
+    time: "2 hrs",
+    description: "Priority local cartage for freight that needs the fastest practical pickup and delivery window."
+  },
+  {
+    name: "LTL Rush",
+    time: "4 hrs",
+    description: "Expedited LTL movement for time-sensitive pallets, parts, skids, and commercial freight."
+  },
+  {
+    name: "LTL Sameday",
+    time: "By 5PM",
+    description: "Same-day local LTL service for scheduled freight that needs to move before close of business."
+  }
+];
+
 export const serviceCategories: ItemPage[] = [
+  {
+    slug: "ltl-freight",
+    title: "Local LTL Services",
+    description: "Fast local LTL and cartage freight service for Kitchener, the GTA, and Southern Ontario, including Direct, Rush, and Sameday options.",
+    image: stock.pallets,
+    benefits: ["LTL Direct: 2 hrs", "LTL Rush: 4 hrs", "LTL Sameday: by 5PM", "Kitchener-area freight quotes"],
+    industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
+    customers: ["Warehouses", "Distributors", "Manufacturers", "Retailers"],
+    keywords: ["LTL freight Kitchener", "local cartage Kitchener", "same day LTL Kitchener", "Southern Ontario LTL"]
+  },
   {
     slug: "business-to-business-b2b",
     title: "B2B Freight & Commercial Delivery",
@@ -31,16 +59,6 @@ export const serviceCategories: ItemPage[] = [
     industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
     customers: ["Suppliers", "Warehouses", "Distributors", "Retail operations"],
     keywords: ["B2B delivery Ontario", "commercial freight Kitchener"]
-  },
-  {
-    slug: "ltl-freight",
-    title: "LTL Freight",
-    description: "Less-than-truckload freight for skids, pallets, partial loads, and consolidated Ontario lanes.",
-    image: stock.pallets,
-    benefits: ["Consolidation", "Cost control", "Dock coordination", "Regional lane planning"],
-    industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
-    customers: ["Warehouses", "Distributors", "Manufacturers", "Retailers"],
-    keywords: ["LTL freight Kitchener", "Ontario LTL carrier", "Waterloo Region freight"]
   },
   {
     slug: "ftl-freight",

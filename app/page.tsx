@@ -4,7 +4,7 @@ import { CoverageMap } from "@/components/CoverageMap";
 import { Section } from "@/components/Section";
 import { StockPhoto, stock } from "@/components/StockPhoto";
 import { VisualCard } from "@/components/VisualCard";
-import { industries, serviceCategories, site, trustBuilders, workSteps } from "@/lib/site";
+import { industries, localLtlOptions, serviceCategories, site, trustBuilders, workSteps } from "@/lib/site";
 
 const featuredServices = serviceCategories.slice(0, 8);
 
@@ -44,7 +44,8 @@ export default function HomePage() {
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-blue-100">
               KWC Logistics Inc. provides customized transportation, warehousing, distribution,
-              final mile, LTL, FTL, expedited, and cross-docking solutions for businesses across Ontario.
+              local LTL, FTL, expedited, and cross-docking solutions for businesses across Kitchener,
+              the GTA, and Southern Ontario.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact" className="bg-brand-blue px-7 hover:bg-blue-500">
@@ -77,10 +78,41 @@ export default function HomePage() {
       </section>
 
       <Section
-        eyebrow="Solutions"
-        title="Premium logistics services built around how your business moves."
-        intro="KWC supports businesses with practical, scalable logistics solutions across commercial freight, LTL, FTL, warehousing, distribution, final mile, and expedited freight programs."
+        eyebrow="Main Service Focus"
+        title="Local LTL freight for Kitchener, the GTA, and Southern Ontario."
+        intro="Fast cartage freight service for pallets, skids, parts, supplies, and commercial shipments that need direct communication and practical timelines."
         className="bg-white"
+      >
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="rounded-[2rem] bg-brand-navy p-6 text-white shadow-glow sm:p-8">
+            <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Kitchener Area Freight Quote</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Get local cartage freight moving today.</h2>
+            <p className="mt-5 text-base leading-7 text-blue-100">
+              KWC provides cost-effective local LTL service from Kitchener into the GTA and
+              Southern Ontario. Built for businesses that need freight picked up, communicated,
+              and delivered without unnecessary layers.
+            </p>
+            <div className="mt-7">
+              <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">Get a Local LTL Quote</ButtonLink>
+            </div>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {localLtlOptions.map((option) => (
+              <article key={option.name} className="rounded-[1.5rem] border border-line bg-brand-pale p-6 shadow-sm">
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-brand-blue">{option.time}</p>
+                <h3 className="mt-3 text-2xl font-black text-ink">{option.name}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted">{option.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Solutions"
+        title="Focused logistics services built around how your business moves."
+        intro="KWC supports businesses with practical, scalable logistics solutions across local LTL, commercial freight, FTL, warehousing, distribution, final mile, and expedited freight programs."
+        className="bg-brand-pale"
       >
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {featuredServices.map((service) => (
