@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { StockPhoto, stock } from "@/components/StockPhoto";
-import { localLtlOptions, serviceCategories } from "@/lib/site";
+import { localLtlOptions, serviceCategories, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -12,6 +12,43 @@ export const metadata: Metadata = {
     "KWC Logistics provides local LTL services, Kitchener cartage freight, LTL Direct, LTL Rush, LTL Sameday, FTL, warehousing, cross-docking, final mile, and Southern Ontario freight.",
   alternates: { canonical: "/services" }
 };
+
+const freightPrograms = [
+  {
+    title: "Local LTL",
+    tags: ["Direct", "Rush", "Sameday"],
+    description: "Kitchener-area cartage and Southern Ontario LTL service for pallets, skids, parts, and commercial freight."
+  },
+  {
+    title: "Domestic Freight",
+    tags: ["LTL", "FTL", "Expedited"],
+    description: "Standard and expedited freight planning for Ontario and broader Canadian transportation requirements."
+  },
+  {
+    title: "Specialty Equipment",
+    tags: ["Flatbed", "Reefer", "Container"],
+    description: "Special equipment can be coordinated through trusted carrier partners when freight requires more than standard dry van movement."
+  },
+  {
+    title: "Dedicated Routes",
+    tags: ["Recurring", "Fleet", "Distribution"],
+    description: "Planned routes for manufacturers, warehouses, distributors, retailers, and businesses with repeat delivery needs."
+  }
+];
+
+const localServiceAreas = [
+  "Kitchener",
+  "Waterloo",
+  "Cambridge",
+  "Guelph",
+  "Milton",
+  "Mississauga",
+  "Brampton",
+  "Toronto",
+  "Hamilton",
+  "London",
+  "Southern Ontario"
+];
 
 export default function ServicesPage() {
   return (
@@ -23,6 +60,23 @@ export default function ServicesPage() {
           final mile, and scheduled route programs.
         </p>
       </PageHero>
+
+      <section className="border-b border-line bg-white py-5">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-brand-blue">Freight Desk</p>
+            <p className="mt-1 text-sm font-semibold text-muted">
+              Send pickup, delivery, pallet count, weight, dimensions, and timing for a cleaner local LTL quote.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <ButtonLink href="/contact">Get a Freight Quote</ButtonLink>
+            <a href={`tel:${site.phone}`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-bold text-brand-navy transition hover:bg-brand-pale">
+              Call {site.phone}
+            </a>
+          </div>
+        </div>
+      </section>
 
       <Section
         eyebrow="Main Service Focus"
@@ -68,6 +122,38 @@ export default function ServicesPage() {
             <div className="pt-2">
               <ButtonLink href="/contact">Get a Local LTL Quote</ButtonLink>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Freight programs with clear service lanes."
+        intro="KWC keeps the service menu simple: local LTL for urgent regional freight, domestic freight planning for larger moves, specialty equipment coordination when needed, and dedicated route support for repeat business."
+        className="bg-brand-pale"
+      >
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {freightPrograms.map((program) => (
+            <article key={program.title} className="rounded-[1.5rem] border border-line bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-black text-ink">{program.title}</h2>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {program.tags.map((tag) => (
+                  <span key={tag} className="rounded-full bg-brand-pale px-3 py-1 text-xs font-black uppercase tracking-wide text-brand-blue">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-6 text-muted">{program.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 rounded-[2rem] border border-line bg-white p-6 shadow-sm">
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-blue">Common Local Coverage</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {localServiceAreas.map((area) => (
+              <span key={area} className="rounded-full border border-line bg-white px-4 py-2 text-sm font-bold text-brand-navy">
+                {area}
+              </span>
+            ))}
           </div>
         </div>
       </Section>
