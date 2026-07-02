@@ -3,11 +3,28 @@ const fields = [
   { id: "company", label: "Company", type: "text" },
   { id: "email", label: "Email", type: "email", required: true },
   { id: "phone", label: "Phone", type: "tel", required: true },
-  { id: "pickup-location", label: "Pickup Location", type: "text", required: true },
-  { id: "delivery-location", label: "Delivery Location", type: "text", required: true },
+  { id: "pickup-city", label: "Pickup city", type: "text", required: true },
+  { id: "delivery-city", label: "Delivery city", type: "text", required: true },
   { id: "freight-type", label: "Freight type", type: "text" },
-  { id: "number-of-skids", label: "Number of Skids", type: "text" },
+  { id: "pallets-items", label: "Number of pallets/items", type: "text" },
   { id: "weight", label: "Weight", type: "text" }
+];
+
+const serviceOptions = [
+  "LTL Freight",
+  "FTL Freight",
+  "Warehouse Distribution",
+  "Cross Docking",
+  "Final Mile Delivery",
+  "Same Day Delivery",
+  "Next Day Delivery",
+  "Courier Services",
+  "Medical Deliveries",
+  "White Glove Delivery",
+  "Dedicated Fleet",
+  "Reverse Logistics",
+  "Route Optimization",
+  "Custom Logistics Plan"
 ];
 
 export function QuoteForm() {
@@ -33,11 +50,46 @@ export function QuoteForm() {
           className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
         >
           <option value="">Select one</option>
-          <option>LTL Freight</option>
-          <option>Expedited Freight</option>
-          <option>Warehousing</option>
-          <option>Cross Docking</option>
-          <option>Regional Freight</option>
+          {serviceOptions.map((option) => (
+            <option key={option}>{option}</option>
+          ))}
+        </select>
+      </label>
+      <label htmlFor="dimensions" className="grid gap-2 text-sm font-semibold text-ink">
+        Dimensions
+        <input
+          id="dimensions"
+          name="dimensions"
+          type="text"
+          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
+        />
+      </label>
+      <label htmlFor="liftgate" className="grid gap-2 text-sm font-semibold text-ink">
+        Liftgate required?
+        <select
+          id="liftgate"
+          name="liftgate"
+          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
+        >
+          <option value="">Select one</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not sure</option>
+        </select>
+      </label>
+      <label htmlFor="timing" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
+        Same-day or scheduled?
+        <select
+          id="timing"
+          name="timing"
+          className="min-h-12 rounded-lg border border-line bg-brand-pale px-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
+        >
+          <option value="">Select one</option>
+          <option>Same-day</option>
+          <option>Next-day</option>
+          <option>Scheduled</option>
+          <option>Recurring route</option>
+          <option>Need help planning</option>
         </select>
       </label>
       <label htmlFor="additional-notes" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">

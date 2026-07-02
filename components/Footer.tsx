@@ -11,8 +11,9 @@ export function Footer() {
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Family-operated freight company based in Kitchener and built for Waterloo Region
-            businesses that need dependable LTL, warehousing, cross-dock, and expedited freight support.
+            Ontario logistics partner based in Kitchener and built for businesses that need
+            dependable transportation, warehousing, distribution, courier, final mile, LTL,
+            FTL, cross-docking, and customized delivery support.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
@@ -36,7 +37,8 @@ export function Footer() {
           <p className="font-semibold">Coverage</p>
           <p className="mt-3 text-sm leading-6 text-blue-100">
             Kitchener, Waterloo, Cambridge, Guelph, Brantford, Hamilton, London, Mississauga,
-            Toronto, the GTA, and Ontario-wide service.
+            Toronto, Windsor, Niagara, Barrie, Ottawa, Kingston, Sudbury, Thunder Bay, and
+            customized Ontario-wide service.
           </p>
         </div>
       </div>

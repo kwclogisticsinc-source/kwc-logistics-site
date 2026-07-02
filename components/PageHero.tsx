@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { StockPhoto, stock } from "./StockPhoto";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -8,17 +9,25 @@ type PageHeroProps = {
   image?: string;
 };
 
-export function PageHero({ eyebrow, title, children, image = "/images/kwc-yard-fleet.png" }: PageHeroProps) {
+export function PageHero({ eyebrow, title, children, image = stock.warehouse }: PageHeroProps) {
+  const isRemote = image.startsWith("http");
+
   return (
     <section className="relative isolate overflow-hidden border-b border-brand-blue/20 bg-brand-navy text-white">
-      <Image
-        src={image}
-        alt=""
-        fill
-        priority={false}
-        className="object-cover opacity-55"
-        sizes="100vw"
-      />
+      {isRemote ? (
+        <div className="absolute inset-0 opacity-55">
+          <StockPhoto src={image} alt="" />
+        </div>
+      ) : (
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority={false}
+          className="object-cover opacity-55"
+          sizes="100vw"
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/82 to-brand-navy/35" />
       <div className="absolute inset-0 logistics-grid opacity-30" />
       <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue" />

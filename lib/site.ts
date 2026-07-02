@@ -1,3 +1,5 @@
+import { stock } from "@/components/StockPhoto";
+
 export const site = {
   name: "KWC Logistics Inc.",
   domain: "kwclogistics.ca",
@@ -5,189 +7,311 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener, Ontario",
   description:
-    "KWC Logistics Inc specializes in dependable LTL freight, warehousing, cross-docking, and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario."
+    "KWC Logistics Inc provides customized transportation, warehousing, distribution, courier, final mile, LTL, FTL, and cross-docking solutions across Ontario."
 };
 
 export type ItemPage = {
   slug: string;
   title: string;
   description: string;
+  image: string;
+  benefits: string[];
+  industries: string[];
+  customers: string[];
   keywords?: string[];
 };
 
-export const serviceCategories = [
+export const serviceCategories: ItemPage[] = [
+  {
+    slug: "business-to-business-b2b",
+    title: "Business-to-Business (B2B)",
+    description: "Reliable commercial transportation between suppliers, warehouses, offices, retail locations, and business customers.",
+    image: stock.dock,
+    benefits: ["Scheduled pickups", "Dock coordination", "Proof of delivery", "Clear dispatch communication"],
+    industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
+    customers: ["Suppliers", "Warehouses", "Distributors", "Retail operations"],
+    keywords: ["B2B delivery Ontario", "commercial freight Kitchener"]
+  },
+  {
+    slug: "business-to-consumer-b2c",
+    title: "Business-to-Consumer (B2C)",
+    description: "Customer-facing delivery programs for brands that need dependable communication and careful delivery execution.",
+    image: stock.pallets,
+    benefits: ["Customer delivery windows", "Delivery updates", "Careful handling", "Return coordination"],
+    industries: ["E-commerce", "Furniture", "Appliances", "Retail"],
+    customers: ["Online retailers", "Stores", "Local brands", "Service businesses"]
+  },
+  {
+    slug: "direct-to-consumer-d2c",
+    title: "Direct-to-Consumer (D2C)",
+    description: "Direct movement from warehouse, manufacturer, or brand facility to end customers across Ontario.",
+    image: stock.fleet,
+    benefits: ["Brand-controlled experience", "Flexible routing", "Proof of delivery", "Reverse logistics support"],
+    industries: ["E-commerce", "Medical", "Technology", "Consumer goods"],
+    customers: ["D2C brands", "Fulfillment teams", "Manufacturers", "Retailers"]
+  },
+  {
+    slug: "distributor-to-business-d2b",
+    title: "Distributor-to-Business (D2B)",
+    description: "Distribution support for businesses moving regular freight from distribution centres to commercial receivers.",
+    image: stock.warehouse,
+    benefits: ["Route planning", "Store replenishment", "Dock scheduling", "Consolidated freight"],
+    industries: ["Wholesale", "Automotive", "Food & Beverage", "Retail"],
+    customers: ["Distributors", "Multi-location operators", "Wholesale suppliers", "Parts networks"]
+  },
+  {
+    slug: "consumer-to-consumer-c2c",
+    title: "Consumer-to-Consumer (C2C)",
+    description: "Practical transportation support for larger items that need more care than parcel shipping.",
+    image: stock.pallets,
+    benefits: ["Clear pickup details", "Careful handling", "Flexible scheduling", "Simple communication"],
+    industries: ["Furniture", "Appliances", "Marketplace sellers", "Professional services"],
+    customers: ["Local sellers", "Private customers", "Small businesses", "Resellers"]
+  },
+  {
+    slug: "business-to-government-b2g",
+    title: "Business-to-Government (B2G)",
+    description: "Structured delivery support for businesses serving public-sector, municipal, and institutional receivers.",
+    image: stock.dispatch,
+    benefits: ["Appointment coordination", "Documentation", "Reliable communication", "Compliance-minded handling"],
+    industries: ["Government", "Medical", "Professional Services", "Technology"],
+    customers: ["Contractors", "Suppliers", "Institutions", "Public-sector vendors"]
+  },
+  {
+    slug: "manufacturer-to-business-m2b",
+    title: "Manufacturer-to-Business (M2B)",
+    description: "Freight movement from production environments to business receivers, warehouses, retailers, and job sites.",
+    image: stock.warehouse,
+    benefits: ["Pallet handling", "Production-friendly scheduling", "Dock-to-dock movement", "Regional distribution"],
+    industries: ["Manufacturing", "Construction", "Industrial", "Automotive"],
+    customers: ["Manufacturers", "Fabricators", "Suppliers", "Industrial operators"]
+  },
+  {
+    slug: "manufacturer-to-consumer-m2c",
+    title: "Manufacturer-to-Consumer (M2C)",
+    description: "Delivery programs that connect manufacturers directly with end customers while protecting the brand experience.",
+    image: stock.fleet,
+    benefits: ["Direct shipment planning", "Customer communication", "Reduced handoffs", "Delivery confirmation"],
+    industries: ["Furniture", "Appliances", "Technology", "Consumer goods"],
+    customers: ["Manufacturers", "D2C brands", "Specialty producers", "Local factories"]
+  },
   {
     slug: "ltl-freight",
     title: "LTL Freight",
-    description:
-      "Palletized freight, skids, partial loads, and recurring commercial shipments planned with practical routing and clear communication.",
-    icon: "LTL",
-    items: ["Palletized freight", "Partial loads", "Dock-to-dock moves", "Regional consolidation"]
+    description: "Less-than-truckload freight for skids, pallets, partial loads, and consolidated Ontario lanes.",
+    image: stock.pallets,
+    benefits: ["Consolidation", "Cost control", "Dock coordination", "Regional lane planning"],
+    industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
+    customers: ["Warehouses", "Distributors", "Manufacturers", "Retailers"],
+    keywords: ["LTL freight Kitchener", "Ontario LTL carrier", "Waterloo Region freight"]
   },
   {
-    slug: "expedited-freight",
-    title: "Expedited Freight",
-    description:
-      "Time-sensitive freight for businesses that need fast pickup, direct communication, and dependable delivery planning.",
-    icon: "EXP",
-    items: ["Priority pickup", "Time-sensitive freight", "Direct communication", "Regional coverage"]
+    slug: "ftl-freight",
+    title: "FTL Freight",
+    description: "Full-truckload coordination for larger shipments, recurring lanes, and dedicated freight requirements.",
+    image: stock.fleet,
+    benefits: ["Dedicated capacity", "Fewer handoffs", "Direct routing", "Operational planning"],
+    industries: ["Manufacturing", "Agriculture", "Industrial", "Food & Beverage"],
+    customers: ["High-volume shippers", "Factories", "Distributors", "Project freight teams"]
   },
   {
-    slug: "warehousing",
-    title: "Warehousing",
-    description:
-      "Short-term freight handling, staging, sorting, storage coordination, and warehouse transfer support for growing businesses.",
-    icon: "WH",
-    items: ["Freight staging", "Warehouse transfers", "Pallet handling", "Inventory movement"]
+    slug: "scheduled-deliveries",
+    title: "Scheduled Deliveries",
+    description: "Recurring pickup and delivery programs built around customer hours, receiver windows, and route density.",
+    image: stock.dispatch,
+    benefits: ["Predictable schedules", "Better planning", "Reduced delays", "Dedicated communication"],
+    industries: ["Retail", "Medical", "Automotive", "Wholesale"],
+    customers: ["Multi-location businesses", "Service providers", "Retailers", "Recurring shippers"]
+  },
+  {
+    slug: "same-day-delivery",
+    title: "Same Day Delivery",
+    description: "Responsive same-day movement for time-sensitive freight, documents, parts, supplies, and business-critical shipments.",
+    image: stock.fleet,
+    benefits: ["Fast response", "Priority dispatch", "Direct updates", "Flexible vehicle matching"],
+    industries: ["Medical", "Automotive", "Technology", "Professional Services"],
+    customers: ["Repair networks", "Medical suppliers", "Offices", "Urgent freight shippers"]
+  },
+  {
+    slug: "next-day-delivery",
+    title: "Next Day Delivery",
+    description: "Next-day delivery programs for businesses that need speed without the cost of urgent same-day movement.",
+    image: stock.dock,
+    benefits: ["Balanced speed and cost", "Route planning", "Delivery confirmation", "Customer updates"],
+    industries: ["Retail", "E-commerce", "Wholesale", "Medical"],
+    customers: ["Retailers", "Suppliers", "Warehouses", "Brands"]
+  },
+  {
+    slug: "courier-services",
+    title: "Courier Services",
+    description: "Courier support for smaller commercial shipments, cartons, samples, supplies, and business documents.",
+    image: stock.driver,
+    benefits: ["Fast pickup", "Clear communication", "Flexible routing", "Professional delivery"],
+    industries: ["Professional Services", "Medical", "Technology", "Retail"],
+    customers: ["Offices", "Clinics", "Small businesses", "Service teams"]
+  },
+  {
+    slug: "final-mile-delivery",
+    title: "Final Mile Delivery",
+    description: "Customer-facing final mile delivery for businesses that need freight delivered cleanly, carefully, and with reliable communication.",
+    image: stock.driver,
+    benefits: ["Customer coordination", "Delivery windows", "Proof of delivery", "Careful handling"],
+    industries: ["Retail", "E-commerce", "Furniture", "Appliances"],
+    customers: ["Retailers", "D2C brands", "Furniture stores", "Home delivery programs"],
+    keywords: ["final mile delivery Kitchener", "final mile delivery Ontario"]
+  },
+  {
+    slug: "document-delivery",
+    title: "Document Delivery",
+    description: "Professional document delivery for offices, institutions, legal, financial, and business clients.",
+    image: stock.dispatch,
+    benefits: ["Time-sensitive handling", "Professional presentation", "Delivery confirmation", "Simple dispatch"],
+    industries: ["Professional Services", "Government", "Medical", "Financial"],
+    customers: ["Law offices", "Accounting firms", "Institutions", "Business offices"]
+  },
+  {
+    slug: "medical-deliveries",
+    title: "Medical Deliveries",
+    description: "Careful delivery support for medical suppliers, clinics, wellness businesses, and healthcare-related shipments.",
+    image: stock.driver,
+    benefits: ["Careful handling", "Reliable communication", "Scheduled service", "Delivery confirmation"],
+    industries: ["Medical", "Wellness", "Professional Services", "Technology"],
+    customers: ["Clinics", "Suppliers", "Labs", "Wellness businesses"]
+  },
+  {
+    slug: "retail-distribution",
+    title: "Retail Distribution",
+    description: "Store replenishment, retail freight, promotional material movement, and multi-location delivery support.",
+    image: stock.pallets,
+    benefits: ["Store-ready delivery", "Scheduled routes", "Warehouse coordination", "Receiver communication"],
+    industries: ["Retail", "E-commerce", "Furniture", "Appliances"],
+    customers: ["Retailers", "Store networks", "Brands", "Distribution centres"]
+  },
+  {
+    slug: "warehouse-distribution",
+    title: "Warehouse Distribution",
+    description: "Warehouse-to-business and warehouse-to-customer distribution for freight moving through Ontario.",
+    image: stock.warehouse,
+    benefits: ["Staging", "Route loading", "Inventory movement", "Consolidated distribution"],
+    industries: ["Wholesale", "Manufacturing", "Retail", "E-commerce"],
+    customers: ["Warehouses", "3PLs", "Distributors", "Fulfillment operations"]
   },
   {
     slug: "cross-docking",
     title: "Cross Docking",
-    description:
-      "Inbound freight received, organized, consolidated, and moved outbound with fewer delays and fewer unnecessary handoffs.",
-    icon: "XD",
-    items: ["Inbound receiving", "Outbound loading", "Route loading", "Consolidation"]
+    description: "Inbound freight received, sorted, consolidated, and moved outbound with fewer storage delays.",
+    image: stock.dock,
+    benefits: ["Fewer touches", "Faster outbound movement", "Better route density", "Lower storage dependency"],
+    industries: ["Retail", "Wholesale", "Manufacturing", "Food & Beverage"],
+    customers: ["Warehouses", "Distributors", "Retail networks", "Regional shippers"]
   },
   {
-    slug: "regional-freight",
-    title: "Regional Freight",
-    description:
-      "Ontario freight support for businesses moving skids, commercial freight, warehouse freight, and recurring regional shipments.",
-    icon: "REG",
-    items: ["Commercial freight", "Skid freight", "Warehouse freight", "Ontario lanes"]
+    slug: "reverse-logistics",
+    title: "Reverse Logistics",
+    description: "Returns, exchanges, pickup programs, failed-delivery recovery, and product movement back through the network.",
+    image: stock.warehouse,
+    benefits: ["Return coordination", "Customer communication", "Inventory recovery", "Reduced waste"],
+    industries: ["E-commerce", "Retail", "Furniture", "Appliances"],
+    customers: ["Retailers", "Brands", "Distributors", "Service teams"]
+  },
+  {
+    slug: "white-glove-delivery",
+    title: "White Glove Delivery",
+    description: "Premium handling for freight that needs appointment coordination, care, communication, and a higher-touch delivery experience.",
+    image: stock.driver,
+    benefits: ["Appointment windows", "Careful handling", "Customer communication", "Professional presentation"],
+    industries: ["Furniture", "Appliances", "Technology", "Medical"],
+    customers: ["Premium retailers", "Specialty brands", "Healthcare suppliers", "Business customers"]
+  },
+  {
+    slug: "dedicated-fleet",
+    title: "Dedicated Fleet",
+    description: "Dedicated capacity planning for businesses with recurring routes, high service expectations, or growth-stage delivery needs.",
+    image: stock.fleet,
+    benefits: ["Consistent capacity", "Brand-aligned service", "Route familiarity", "Long-term planning"],
+    industries: ["Retail", "Medical", "Automotive", "Food & Beverage"],
+    customers: ["Growing businesses", "Recurring shippers", "Store networks", "Distributors"]
+  },
+  {
+    slug: "specialized-freight",
+    title: "Specialized Freight",
+    description: "Customized freight solutions for shipments that need planning beyond standard parcel or pallet movement.",
+    image: stock.pallets,
+    benefits: ["Custom planning", "Handling notes", "Equipment matching", "Dedicated communication"],
+    industries: ["Construction", "Industrial", "Technology", "Agriculture"],
+    customers: ["Project teams", "Specialty suppliers", "Manufacturers", "Contractors"]
+  },
+  {
+    slug: "route-optimization",
+    title: "Route Optimization",
+    description: "Route planning that helps consolidate shipments, reduce empty miles, improve delivery speed, and control transportation costs.",
+    image: stock.technology,
+    benefits: ["Reduced empty miles", "Better route density", "Lower avoidable costs", "Improved delivery visibility"],
+    industries: ["Retail", "Wholesale", "E-commerce", "Manufacturing"],
+    customers: ["Multi-stop shippers", "Distributors", "Growing brands", "Recurring freight programs"]
   }
 ];
 
-export const services: ItemPage[] = [
-  {
-    slug: "ltl-freight",
-    title: "LTL Freight",
-    description:
-      "LTL freight for palletized shipments, partial loads, dock-to-dock freight, and regional consolidation throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario.",
-    keywords: ["LTL freight Kitchener", "Waterloo Region LTL", "palletized freight Ontario"]
-  },
-  {
-    slug: "expedited-freight",
-    title: "Expedited Freight",
-    description:
-      "Expedited transportation for time-sensitive commercial freight that needs fast response, clear dispatch communication, and dependable equipment.",
-    keywords: ["expedited freight Kitchener", "hot shot freight Ontario", "same day freight Waterloo Region"]
-  },
-  {
-    slug: "warehousing",
-    title: "Warehousing",
-    description:
-      "Warehousing support for freight staging, warehouse transfers, pallet handling, storage coordination, and distribution planning.",
-    keywords: ["warehousing Kitchener", "warehouse transfers Ontario", "freight staging Waterloo Region"]
-  },
-  {
-    slug: "cross-docking",
-    title: "Cross Docking",
-    description:
-      "Cross-docking services for inbound freight, outbound loading, consolidation, route loading, and efficient regional distribution.",
-    keywords: ["cross docking Kitchener", "cross dock Ontario", "freight consolidation Ontario"]
-  },
-  {
-    slug: "regional-freight",
-    title: "Regional Freight",
-    description:
-      "Regional freight support for commercial shipments, skids, warehouse freight, and Ontario business lanes.",
-    keywords: ["regional freight Kitchener", "Ontario freight support"]
-  }
+export const industries = [
+  "Retail",
+  "Manufacturing",
+  "Medical",
+  "Automotive",
+  "Construction",
+  "Food & Beverage",
+  "Industrial",
+  "Technology",
+  "E-Commerce",
+  "Government",
+  "Wholesale",
+  "Agriculture",
+  "Professional Services",
+  "Furniture",
+  "Appliances"
 ];
 
-export const serviceAreas: ItemPage[] = [
-  {
-    slug: "kitchener-logistics",
-    title: "Kitchener Logistics",
-    description:
-      "LTL freight, expedited transportation, warehousing, and cross-docking for Kitchener businesses."
-  },
-  {
-    slug: "waterloo-logistics",
-    title: "Waterloo Logistics",
-    description:
-      "Professional freight support for Waterloo manufacturers, warehouses, distributors, retailers, and commercial operations."
-  },
-  {
-    slug: "cambridge-logistics",
-    title: "Cambridge Logistics",
-    description:
-      "Cambridge LTL freight, warehouse transfers, cross-dock support, and regional freight from a Waterloo Region carrier."
-  },
-  {
-    slug: "guelph-logistics",
-    title: "Guelph Logistics",
-    description:
-      "Guelph freight, skids, expedited transportation, and regional LTL service connected to Waterloo Region."
-  },
-  {
-    slug: "brantford-logistics",
-    title: "Brantford Logistics",
-    description:
-      "Brantford freight service for commercial shipments, warehouse movement, skids, and regional freight."
-  },
-  {
-    slug: "hamilton-logistics",
-    title: "Hamilton Logistics",
-    description:
-      "Hamilton LTL freight, expedited transportation, commercial delivery, and warehouse transfer support."
-  },
-  {
-    slug: "london-logistics",
-    title: "London Logistics",
-    description:
-      "London Ontario freight lanes for LTL, expedited, warehouse, and commercial transportation needs."
-  },
-  {
-    slug: "mississauga-logistics",
-    title: "Mississauga Logistics",
-    description:
-      "Mississauga and GTA freight connections for LTL, warehousing, cross-docking, and business shipments."
-  },
-  {
-    slug: "toronto-gta-logistics",
-    title: "Toronto and GTA Logistics",
-    description:
-      "GTA freight support for businesses moving skids, commercial freight, and expedited shipments across Ontario."
-  },
-  {
-    slug: "ontario-wide-logistics",
-    title: "Ontario-Wide Logistics",
-    description:
-      "Ontario-wide service supported by KWC assets, dispatch knowledge, and trusted carrier relationships."
-  }
+export const serviceAreas = [
+  "Kitchener",
+  "Waterloo",
+  "Cambridge",
+  "Guelph",
+  "Milton",
+  "Mississauga",
+  "Brampton",
+  "Hamilton",
+  "Burlington",
+  "Toronto",
+  "London",
+  "Windsor",
+  "Niagara",
+  "Barrie",
+  "Owen Sound",
+  "Ottawa",
+  "Kingston",
+  "Sudbury",
+  "North Bay",
+  "Thunder Bay"
 ];
 
-export const faqs = [
-  {
-    question: "What does KWC stand for?",
-    answer:
-      "KWC stands for Kitchener, Waterloo, and Cambridge. KWC Logistics is proudly built in Waterloo Region and focused on supporting local businesses first."
-  },
-  {
-    question: "What freight services does KWC provide?",
-    answer:
-      "KWC focuses on LTL freight, warehousing, cross-docking, expedited freight support, and regional commercial freight."
-  },
-  {
-    question: "Does KWC provide Ontario-wide service?",
-    answer:
-      "Yes. KWC is based in Kitchener and supports Kitchener, Waterloo, Cambridge, Guelph, Brantford, Hamilton, London, Mississauga, Toronto, the GTA, and Ontario-wide freight needs."
-  },
-  {
-    question: "How does KWC approach pricing?",
-    answer:
-      "KWC looks at freight size, timing, pickup and delivery access, lane density, equipment needs, and consolidation opportunities before quoting."
-  },
-  {
-    question: "What details should I send for a quote?",
-    answer:
-      "Send pickup location, delivery location, freight type, number of skids, weight, dimensions, timing, service required, and any special handling notes."
-  },
-  {
-    question: "Do you publish a full street address?",
-    answer:
-      "Not yet. The site lists KWC as based in Kitchener, Ontario, and provides phone and email contact details."
-  }
+export const trustBuilders = [
+  "Professional Dispatch Team",
+  "Experienced Drivers",
+  "Shipment Tracking",
+  "Reliable Communication",
+  "Fast Quotes",
+  "Custom Logistics Plans",
+  "Dedicated Account Managers",
+  "Safe Handling",
+  "Flexible Scheduling",
+  "Transparent Pricing"
+];
+
+export const workSteps = [
+  "Consultation",
+  "Business Analysis",
+  "Route Planning",
+  "Technology Integration",
+  "Pickup",
+  "Transportation",
+  "Proof of Delivery"
 ];

@@ -1,6 +1,7 @@
 import { existsSync } from "fs";
 import { join } from "path";
 import Image from "next/image";
+import { StockPhoto } from "./StockPhoto";
 
 type VisualCardProps = {
   src: string;
@@ -11,6 +12,7 @@ type VisualCardProps = {
 };
 
 function publicFileExists(src: string) {
+  if (src.startsWith("http")) return true;
   return existsSync(join(process.cwd(), "public", src.replace(/^\//, "")));
 }
 
@@ -20,7 +22,9 @@ export function VisualCard({ src, title, description, tags = [], className = "" 
   return (
     <article className={`group overflow-hidden rounded-2xl border border-white/10 bg-white shadow-soft ${className}`}>
       <div className="relative min-h-[260px] overflow-hidden bg-brand-navy">
-        {hasImage ? (
+        {hasImage && src.startsWith("http") ? (
+          <StockPhoto src={src} alt={title} className="transition duration-500 group-hover:scale-105" />
+        ) : hasImage ? (
           <Image
             src={src}
             alt={title}

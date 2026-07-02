@@ -3,17 +3,18 @@ import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { services, site } from "@/lib/site";
+import { StockPhoto } from "@/components/StockPhoto";
+import { serviceCategories, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return serviceCategories.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const service = services.find((item) => item.slug === slug);
+  const service = serviceCategories.find((item) => item.slug === slug);
   if (!service) return {};
   return {
     title: service.title,
@@ -25,40 +26,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ServiceDetailPage({ params }: Props) {
   const { slug } = await params;
-  const service = services.find((item) => item.slug === slug);
+  const service = serviceCategories.find((item) => item.slug === slug);
   if (!service) notFound();
 
   return (
     <>
-      <PageHero eyebrow="KWC Service" title={service.title}>
+      <PageHero eyebrow="KWC Service" title={service.title} image={service.image}>
         <p>{service.description}</p>
       </PageHero>
-      <Section title={`Practical ${service.title.toLowerCase()} support`} intro="KWC keeps the details simple and clear: what is moving, where it starts, where it needs to go, and what timing, warehouse, or dock details matter.">
-        <div className="grid gap-5 lg:grid-cols-[1fr_0.45fr]">
-          <article className="rounded-2xl border border-line bg-white p-6">
-            <h2 className="text-2xl font-bold text-ink">How KWC helps</h2>
-            <p className="mt-4 text-base leading-7 text-muted">
-              We answer the phone. We show up. We communicate. We get it moved. KWC works with
-              manufacturers, distributors, retailers, suppliers, warehouses, and commercial
-              customers using practical fleet solutions, consolidation where it makes sense,
-              clear dispatch communication, and local accountability.
-            </p>
-            <p className="mt-4 text-base leading-7 text-muted">
-              Share pickup city, delivery city, freight type, pallets or items, weight,
-              dimensions, timing, liftgate needs, receiver details, and whether the stop is
-              dock, commercial, warehouse, or job-site freight.
-            </p>
-          </article>
-          <aside className="rounded-2xl bg-brand-pale p-6">
-            <h2 className="text-xl font-bold text-ink">One shipment or repeat work</h2>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              KWC can help with one-time shipments, recurring freight work, LTL freight,
-              warehouse transfers, cross-docking, and expedited transportation.
-            </p>
-            <div className="mt-5">
-              <ButtonLink href="/contact">Contact Us</ButtonLink>
+
+      <Section title={`A professional ${service.title.toLowerCase()} program`} intro="KWC builds each solution around shipment profile, service level, customer expectations, communication requirements, and long-term operational goals.">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="overflow-hidden rounded-[2rem] shadow-soft">
+            <div className="h-[460px]">
+              <StockPhoto src={service.image} alt={service.title} />
             </div>
-          </aside>
+          </div>
+          <div className="grid gap-5">
+            <article className="rounded-[2rem] border border-line bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-black text-ink">Benefits</h2>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {service.benefits.map((benefit) => (
+                  <div key={benefit} className="rounded-xl bg-brand-pale px-4 py-3 text-sm font-bold text-brand-navy">{benefit}</div>
+                ))}
+              </div>
+            </article>
+            <article className="rounded-[2rem] border border-line bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-black text-ink">Industries served</h2>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {service.industries.map((industry) => (
+                  <span key={industry} className="rounded-full border border-line px-4 py-2 text-sm font-bold text-muted">{industry}</span>
+                ))}
+              </div>
+            </article>
+            <article className="rounded-[2rem] bg-brand-navy p-6 text-white shadow-glow">
+              <h2 className="text-2xl font-black">Typical customers</h2>
+              <p className="mt-3 text-sm leading-6 text-blue-100">{service.customers.join(", ")}.</p>
+              <div className="mt-6">
+                <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">Request a Quote</ButtonLink>
+              </div>
+            </article>
+          </div>
         </div>
       </Section>
     </>

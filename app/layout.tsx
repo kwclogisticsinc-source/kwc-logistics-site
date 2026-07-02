@@ -7,16 +7,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
   title: {
-    default: "KWC Logistics Inc | Kitchener-Waterloo-Cambridge LTL & Expedited Freight",
+    default: "KWC Logistics Inc | Smarter Ontario Logistics & Transportation",
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc specializes in LTL freight, warehousing, cross-docking and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
+    "KWC Logistics Inc provides customized transportation, warehousing, distribution, courier, final mile, LTL, FTL and cross-docking solutions across Ontario.",
   keywords: [
     "Kitchener logistics company",
+    "Ontario logistics company",
     "Kitchener-Waterloo-Cambridge logistics",
     "Waterloo Region freight",
+    "final mile delivery Ontario",
+    "courier services Kitchener",
+    "warehouse distribution Ontario",
     "LTL freight Kitchener",
+    "FTL freight Ontario",
     "expedited freight Kitchener",
     "cross docking Kitchener",
     "warehousing Kitchener",
@@ -26,9 +31,9 @@ export const metadata: Metadata = {
     "Southern Ontario LTL carrier"
   ],
   openGraph: {
-    title: "KWC Logistics Inc | Kitchener-Waterloo-Cambridge LTL & Expedited Freight",
+    title: "KWC Logistics Inc | Smarter Ontario Logistics & Transportation",
     description:
-      "LTL freight, warehousing, cross-docking and expedited freight support throughout Kitchener, Waterloo, Cambridge, the GTA and Ontario.",
+      "Customized transportation, warehousing, distribution, courier, final mile, LTL, FTL and cross-docking solutions across Ontario.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

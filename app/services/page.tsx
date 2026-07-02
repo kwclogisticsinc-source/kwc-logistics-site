@@ -3,64 +3,74 @@ import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { serviceCategories, services } from "@/lib/site";
+import { StockPhoto, stock } from "@/components/StockPhoto";
+import { serviceCategories } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics specializes in LTL freight, warehousing, cross-docking, expedited freight support, and regional freight throughout Kitchener, Waterloo, Cambridge, the GTA, and Ontario.",
+    "KWC Logistics provides B2B, B2C, D2C, LTL, FTL, warehousing, cross-docking, courier, final mile, distribution, reverse logistics, and customized Ontario transportation services.",
   alternates: { canonical: "/services" }
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="LTL freight and warehousing support for Ontario businesses.">
+      <PageHero eyebrow="Services" title="Transportation, warehousing, distribution, and delivery solutions." image={stock.dock}>
         <p>
-          KWC Logistics Inc focuses on the freight services Waterloo Region businesses need most:
-          organized LTL, responsive expedited transportation, clean warehousing support,
-          cross-docking, and regional freight support.
+          KWC supports businesses with flexible logistics programs across B2B, B2C, D2C,
+          LTL, FTL, courier, warehousing, cross-docking, reverse logistics, and specialty freight.
         </p>
       </PageHero>
 
-      <Section title="Five clear service lines" intro="Simple categories make it easier to quote, plan, dispatch, and deliver freight without confusion.">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
-          {serviceCategories.map((category) => (
-            <article key={category.title} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-navy text-sm font-black text-brand-cyan">
-                {category.icon}
+      <Section title="Service portfolio" intro="Each service can be tailored to the customer, freight profile, delivery promise, and long-term business goals.">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {serviceCategories.map((service) => (
+            <Link key={service.slug} href={`/services/${service.slug}`} className="group overflow-hidden rounded-[1.75rem] border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:border-brand-blue hover:shadow-soft">
+              <div className="relative h-64 overflow-hidden">
+                <StockPhoto src={service.image} alt={service.title} className="transition duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/88 via-brand-navy/20 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-cyan">KWC Service</p>
+                  <h2 className="mt-2 text-2xl font-black text-white">{service.title}</h2>
+                </div>
               </div>
-              <h2 className="mt-5 text-xl font-black text-ink">{category.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-muted">{category.description}</p>
-              <ul className="mt-5 space-y-2 text-sm font-semibold text-muted">
-                {category.items.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </article>
+              <div className="p-6">
+                <p className="text-sm leading-6 text-muted">{service.description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {service.benefits.slice(0, 3).map((benefit) => (
+                    <span key={benefit} className="rounded-full bg-brand-pale px-3 py-1 text-xs font-bold text-brand-navy">{benefit}</span>
+                  ))}
+                </div>
+                <span className="mt-6 inline-flex text-sm font-bold text-brand-blue">Learn More</span>
+              </div>
+            </Link>
           ))}
         </div>
       </Section>
 
-      <Section title="Service details" intro="Choose the service closest to your shipment type and send the freight details. KWC will confirm the right equipment, timing, and route plan." className="bg-brand-pale">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-2xl border border-line bg-white p-5 transition hover:-translate-y-1 hover:border-brand-blue hover:shadow-soft">
-              <h2 className="text-xl font-black text-ink">{service.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-muted">{service.description}</p>
-              <span className="mt-5 inline-flex text-sm font-bold text-brand-blue">Learn More</span>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-10 rounded-3xl bg-white p-6 shadow-soft">
-          <h2 className="text-2xl font-black text-ink">Need a freight quote?</h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-            Send pickup location, delivery location, freight type, number of skids, weight,
-            service required, and notes about access or timing.
-          </p>
-          <div className="mt-5">
-            <ButtonLink href="/contact">Contact Us</ButtonLink>
+      <section className="bg-brand-navy py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Custom Plans</p>
+            <h2 className="mt-3 text-4xl font-black tracking-tight">One shipment or thousands of pallets every month.</h2>
+            <p className="mt-5 text-base leading-7 text-blue-100">
+              KWC builds logistics programs around your customers, operations, routes,
+              warehouses, service expectations, and cost targets.
+            </p>
+          </div>
+          <div className="rounded-[2rem] bg-white p-6 text-brand-navy shadow-glow">
+            <h3 className="text-2xl font-black">Need a quote or service plan?</h3>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              Send the lane, freight type, volume, timing, pickup details, delivery details,
+              and any service requirements. We will help define the right solution.
+            </p>
+            <div className="mt-6">
+              <ButtonLink href="/contact">Request a Quote</ButtonLink>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }
