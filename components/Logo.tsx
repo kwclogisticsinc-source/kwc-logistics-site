@@ -53,7 +53,7 @@ export function HeaderLogo() {
       alt="KWC Logistics logo"
       width={420}
       height={420}
-      className="h-14 w-32 object-contain drop-shadow-[0_10px_22px_rgba(18,183,255,0.35)] sm:h-16 sm:w-36"
+      className="h-14 w-36 object-contain drop-shadow-[0_10px_20px_rgba(6,26,58,0.12)] sm:h-16 sm:w-44"
       priority
     />
   );

@@ -9,7 +9,7 @@ import { serviceCategories } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides B2B, B2C, D2C, LTL, FTL, warehousing, cross-docking, courier, final mile, distribution, reverse logistics, and customized Ontario transportation services.",
+    "KWC Logistics provides B2B freight, LTL, FTL, warehousing, cross-docking, final mile, retail distribution, scheduled routes, expedited freight, reverse logistics, and customized Ontario transportation services.",
   alternates: { canonical: "/services" }
 };
 
@@ -18,8 +18,9 @@ export default function ServicesPage() {
     <>
       <PageHero eyebrow="Services" title="Transportation, warehousing, distribution, and delivery solutions." image={stock.dock}>
         <p>
-          KWC supports businesses with flexible logistics programs across B2B, B2C, D2C,
-          LTL, FTL, courier, warehousing, cross-docking, reverse logistics, and specialty freight.
+          KWC supports businesses with focused logistics programs across B2B freight,
+          LTL, FTL, scheduled routes, expedited freight, final mile, warehousing,
+          cross-docking, retail distribution, reverse logistics, and specialty freight.
         </p>
       </PageHero>
 

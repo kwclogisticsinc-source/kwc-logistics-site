@@ -10,7 +10,7 @@ const featuredServices = serviceCategories.slice(0, 8);
 
 const heroStats = [
   ["Ontario", "service coverage"],
-  ["24+", "service capabilities"],
+  ["13", "core logistics services"],
   ["KWC", "Waterloo Region roots"]
 ];
 
@@ -44,7 +44,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-blue-100">
               KWC Logistics Inc. provides customized transportation, warehousing, distribution,
-              courier, final mile, LTL, FTL, and cross-docking solutions for businesses across Ontario.
+              final mile, LTL, FTL, expedited, and cross-docking solutions for businesses across Ontario.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact" className="bg-brand-blue px-7 hover:bg-blue-500">
@@ -79,7 +79,7 @@ export default function HomePage() {
       <Section
         eyebrow="Solutions"
         title="Premium logistics services built around how your business moves."
-        intro="KWC supports businesses with practical, scalable logistics solutions across commercial freight, distribution, courier, warehousing, and customer delivery programs."
+        intro="KWC supports businesses with practical, scalable logistics solutions across commercial freight, LTL, FTL, warehousing, distribution, final mile, and expedited freight programs."
         className="bg-white"
       >
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -205,7 +205,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-blue-100">
               Call or email KWC Logistics. We will help define the right transportation,
-              warehousing, distribution, or courier strategy for your business.
+              warehousing, distribution, final mile, or freight strategy for your business.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

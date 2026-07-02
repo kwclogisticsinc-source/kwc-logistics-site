@@ -16,13 +16,12 @@ const serviceOptions = [
   "Warehouse Distribution",
   "Cross Docking",
   "Final Mile Delivery",
-  "Same Day Delivery",
-  "Next Day Delivery",
-  "Courier Services",
-  "Medical Deliveries",
-  "White Glove Delivery",
-  "Dedicated Fleet",
+  "Expedited & Same-Day Freight",
+  "Scheduled Routes",
+  "Retail Distribution",
   "Reverse Logistics",
+  "Dedicated Fleet & Route Support",
+  "Specialized Freight",
   "Route Optimization",
   "Custom Logistics Plan"
 ];

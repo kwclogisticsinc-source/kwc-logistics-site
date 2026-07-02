@@ -11,14 +11,13 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc provides customized transportation, warehousing, distribution, courier, final mile, LTL, FTL and cross-docking solutions across Ontario.",
+    "KWC Logistics Inc provides family-run Ontario transportation, warehousing, distribution, final mile, LTL, FTL, expedited freight and cross-docking solutions.",
   keywords: [
     "Kitchener logistics company",
     "Ontario logistics company",
     "Kitchener-Waterloo-Cambridge logistics",
     "Waterloo Region freight",
     "final mile delivery Ontario",
-    "courier services Kitchener",
     "warehouse distribution Ontario",
     "LTL freight Kitchener",
     "FTL freight Ontario",
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KWC Logistics Inc | Smarter Ontario Logistics & Transportation",
     description:
-      "Customized transportation, warehousing, distribution, courier, final mile, LTL, FTL and cross-docking solutions across Ontario.",
+      "Family-run Ontario transportation, warehousing, distribution, final mile, LTL, FTL, expedited freight and cross-docking solutions.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",

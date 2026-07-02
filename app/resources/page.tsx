@@ -8,7 +8,7 @@ import { StockPhoto, stock } from "@/components/StockPhoto";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "KWC Logistics resources and FAQs for Ontario transportation, LTL freight, FTL freight, warehousing, courier, final mile delivery, cross-docking, and quote preparation.",
+    "KWC Logistics resources and FAQs for Ontario transportation, LTL freight, FTL freight, warehousing, final mile delivery, cross-docking, expedited freight, and quote preparation.",
   alternates: { canonical: "/resources" }
 };
 
@@ -34,7 +34,7 @@ const resourceCards = [
 ];
 
 const faqs = [
-  ["What does KWC Logistics Inc. do?", "KWC provides transportation, warehousing, distribution, courier, final mile, LTL, FTL, cross-docking, reverse logistics, and customized delivery programs for businesses across Ontario."],
+  ["What does KWC Logistics Inc. do?", "KWC provides transportation, warehousing, distribution, final mile, LTL, FTL, expedited freight, cross-docking, reverse logistics, and customized delivery programs for businesses across Ontario."],
   ["Where is KWC Logistics based?", "KWC Logistics is based in Kitchener, Ontario, with service coverage across Waterloo Region and throughout Ontario."],
   ["What areas do you service?", "KWC supports Kitchener, Waterloo, Cambridge, Guelph, Milton, Mississauga, Brampton, Hamilton, Burlington, Toronto, London, Windsor, Niagara, Barrie, Owen Sound, Ottawa, Kingston, Sudbury, North Bay, Thunder Bay, and other Ontario lanes by request."],
   ["Do you provide service outside Ontario?", "Ontario is the core service area. Broader Canadian transportation requirements can be reviewed and planned based on lane, volume, timing, and shipment profile."],
@@ -43,22 +43,18 @@ const faqs = [
   ["Can KWC help reduce transportation costs?", "Yes. The team looks for opportunities to consolidate freight, improve route density, reduce empty miles, plan recurring movement, and choose the right service level for the shipment."],
   ["Do you offer same-day delivery?", "Yes. Same-day options depend on pickup location, delivery location, freight size, vehicle availability, and timing."],
   ["Do you offer next-day delivery?", "Yes. Next-day service is available for many Ontario lanes and can be a strong option when speed matters but urgent same-day pricing is not required."],
-  ["Do you offer scheduled delivery programs?", "Yes. KWC can plan recurring pickup and delivery schedules for retailers, manufacturers, distributors, medical suppliers, offices, and multi-location businesses."],
+  ["Do you offer scheduled delivery programs?", "Yes. KWC can plan recurring pickup and delivery schedules for retailers, manufacturers, distributors, warehouses, suppliers, and multi-location businesses."],
   ["Can KWC manage final mile deliveries?", "Yes. Final mile programs can be planned for customer-facing deliveries where timing, communication, handling, and proof of delivery matter."],
-  ["Do you provide courier services?", "Yes. Courier support is available for smaller commercial shipments, documents, cartons, samples, supplies, and time-sensitive business deliveries."],
-  ["Do you handle document delivery?", "Yes. KWC can support professional document delivery for offices, institutions, legal, financial, medical, and business customers."],
-  ["Can you handle medical deliveries?", "KWC can review medical-related delivery requirements and plan appropriate service for suppliers, clinics, labs, and healthcare-adjacent businesses."],
   ["Do you offer warehousing?", "KWC supports warehouse distribution, freight staging, inventory movement, and related logistics planning. Exact warehouse services can be confirmed during the quote process."],
   ["What is cross-docking?", "Cross-docking moves inbound freight through a facility with limited storage time. Freight is received, sorted, consolidated, and moved outbound to reduce delays and extra handling."],
   ["Do you help with reverse logistics?", "Yes. Reverse logistics can include returns, exchanges, product pickups, failed-delivery recovery, and movement back through a warehouse or distribution network."],
-  ["What is white glove delivery?", "White glove delivery is a higher-touch service for freight that needs appointment coordination, extra care, customer communication, and professional presentation."],
   ["Can KWC provide a dedicated fleet solution?", "Yes. Dedicated fleet planning is available for businesses with recurring routes, predictable volume, high service expectations, or growth-stage delivery needs."],
   ["What industries does KWC serve?", "KWC supports retail, manufacturing, medical, automotive, construction, food and beverage, industrial, technology, e-commerce, government, wholesale, agriculture, professional services, furniture, and appliances."],
   ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, service timing, dock or liftgate details, appointment requirements, and any handling notes."],
   ["How fast can I get a quote?", "Fast quotes are a priority. Response time depends on shipment complexity, lane, service level, equipment needs, and whether all shipment details are available."],
   ["Do you work with manufacturers?", "Yes. KWC can move freight from manufacturers to warehouses, distributors, retailers, businesses, job sites, and end customers."],
   ["Do you work with retailers?", "Yes. KWC supports store replenishment, retail distribution, final mile delivery, reverse logistics, warehouse transfers, and scheduled delivery programs."],
-  ["Can KWC support e-commerce brands?", "Yes. KWC can support direct-to-consumer, business-to-consumer, returns, warehouse distribution, and delivery programs for growing e-commerce companies."],
+  ["Can KWC support e-commerce brands?", "Yes. KWC can support e-commerce brands with final mile delivery, returns, warehouse distribution, and scheduled delivery programs."],
   ["Can KWC help if carriers keep refusing difficult freight?", "KWC reviews the shipment details, access limitations, handling needs, and delivery expectations to build a practical plan instead of forcing every shipment into a generic process."],
   ["Do you provide proof of delivery?", "Proof of delivery can be included in the service workflow so shippers have confirmation and accountability after delivery."],
   ["Do you provide shipment tracking?", "Shipment visibility and communication can be built into the logistics plan depending on the service type, route, and customer requirements."],

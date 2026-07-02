@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact KWC Logistics Inc. for Ontario logistics, LTL freight, FTL freight, warehousing, courier services, final mile delivery, route optimization, and custom transportation plans.",
+    "Contact KWC Logistics Inc. for Ontario logistics, LTL freight, FTL freight, warehousing, final mile delivery, route optimization, expedited freight, and custom transportation plans.",
   alternates: { canonical: "/contact" }
 };
 
@@ -120,7 +120,7 @@ export default function ContactPage() {
               Need help choosing the right service?
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-blue-100">
-              KWC can help compare LTL, FTL, courier, final mile, warehousing,
+              KWC can help compare LTL, FTL, final mile, expedited freight, warehousing,
               cross-docking, dedicated routes, and custom logistics programs.
             </p>
           </div>

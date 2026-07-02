@@ -7,15 +7,16 @@ import { serviceCategories, trustBuilders, workSteps } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "KWC Logistics Inc is a growth-focused Ontario logistics partner providing transportation, warehousing, route optimization, distribution, courier, final mile, LTL, FTL and cross-docking solutions.",
+    "KWC Logistics Inc is a family-run Ontario logistics partner with 15+ years of transportation and logistics experience across freight, warehousing, distribution, LTL, FTL and cross-docking.",
   alternates: { canonical: "/about" }
 };
 
 const metrics = [
-  ["Ontario-wide", "customized transportation support"],
-  ["24+", "logistics service capabilities"],
+  ["15+ years", "transportation and logistics experience"],
+  ["Family-run", "direct communication and accountability"],
+  ["13 core", "serious logistics service categories"],
   ["KWC", "built in Kitchener-Waterloo-Cambridge"],
-  ["Long-term", "partnership-driven planning"]
+  ["Ontario-wide", "customized freight planning"]
 ];
 
 export default function AboutPage() {
@@ -23,13 +24,14 @@ export default function AboutPage() {
     <>
       <PageHero eyebrow="About KWC" title="More Than a Logistics Company. A Partner in Your Growth." image={stock.dispatch}>
         <p>
-          At KWC Logistics Inc., we believe logistics should not be complicated, expensive, or impersonal.
-          Our mission is to provide dependable transportation solutions at competitive rates while building
-          long-term partnerships based on trust, communication, and results.
+          KWC Logistics Inc. is a family-run logistics company based in Kitchener, Ontario, with
+          more than 15 years of transportation and logistics experience behind the operation.
+          We believe freight should not be complicated, overpriced, or handled by people who do
+          not understand what the shipment means to your business.
         </p>
       </PageHero>
 
-      <Section title="Smarter, simpler logistics for businesses ready to grow." intro="Our approach is different. Instead of sending half-empty trucks across Ontario, KWC intelligently consolidates shipments using route optimization, dispatch planning, and customized logistics strategies.">
+      <Section title="Family-run, experienced, and built for real freight problems." intro="KWC combines hands-on logistics experience with practical route planning, direct communication, and a family-business standard of accountability.">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="overflow-hidden rounded-[2rem] shadow-soft">
             <div className="h-[520px]">
@@ -38,13 +40,16 @@ export default function AboutPage() {
           </div>
           <div className="grid content-center gap-5">
             <p className="text-lg leading-8 text-muted">
-              Every client receives a customized logistics strategy based on their operations,
-              customers, freight profile, and long-term goals. Whether you are shipping one package
-              or thousands of pallets every month, KWC is built to grow alongside your business.
+              Our mission is simple: provide dependable transportation solutions at competitive
+              rates while building long-term partnerships based on trust, communication, and
+              results. We know how expensive logistics can become when freight is pushed through
+              unnecessary layers, unclear handoffs, and poor planning.
             </p>
             <p className="text-lg leading-8 text-muted">
-              Our goal is not simply to move freight. Our goal is to become the logistics partner
-              your business relies on for years.
+              Every client receives a customized logistics strategy based on their operation,
+              customers, freight profile, timing requirements, and long-term goals. Whether you
+              are moving recurring pallets, warehouse freight, retail replenishment, or urgent
+              commercial shipments, KWC is built to keep the process simple and accountable.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {metrics.map(([value, label]) => (
@@ -58,7 +63,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section title="What KWC provides" intro="The company supports a wide range of business models, freight profiles, and customer delivery requirements." className="bg-brand-pale">
+      <Section title="Core logistics services" intro="A tighter service lineup focused on the work businesses actually need: freight, warehousing, distribution, dedicated routes, and planned Ontario coverage." className="bg-brand-pale">
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {serviceCategories.map((service) => (
             <div key={service.slug} className="rounded-2xl border border-line bg-white p-4 text-sm font-bold text-brand-navy shadow-sm">
@@ -74,8 +79,9 @@ export default function AboutPage() {
             <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Operating Model</p>
             <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Consolidate smarter. Reduce empty miles. Improve speed.</h2>
             <p className="mt-5 text-base leading-7 text-blue-100">
-              KWC uses business analysis, routing, and communication to maximize every route,
-              reduce avoidable transportation costs, and improve delivery performance.
+              With 15+ years of logistics experience, KWC uses business analysis, routing,
+              consolidation, and communication to maximize every route, reduce avoidable
+              transportation costs, and improve delivery performance.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
