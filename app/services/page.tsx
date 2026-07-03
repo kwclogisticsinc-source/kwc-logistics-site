@@ -9,7 +9,7 @@ import { localLtlOptions, serviceCategories, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "KWC Logistics provides local LTL services, Kitchener cartage freight, LTL Direct, LTL Rush, LTL Sameday, FTL, warehousing, cross-docking, final mile, and Southern Ontario freight.",
+    "KWC Logistics provides local LTL services, Kitchener cartage freight, LTL Direct, LTL Rush, LTL Sameday, FTL, warehousing, cross-docking, dedicated routes, and expedited freight.",
   alternates: { canonical: "/services" }
 };
 
@@ -57,7 +57,7 @@ export default function ServicesPage() {
         <p>
           KWC supports businesses in Kitchener, the GTA, and Southern Ontario with fast
           local LTL freight, cartage, truckload support, warehousing, cross-docking,
-          final mile, and scheduled route programs.
+          dedicated route, and expedited freight programs.
         </p>
       </PageHero>
 

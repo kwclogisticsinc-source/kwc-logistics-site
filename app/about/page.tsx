@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const metrics = [
   ["15+ years", "transportation and logistics experience"],
   ["Family-run", "direct communication and accountability"],
-  ["13 core", "serious logistics service categories"],
+  ["5 core", "serious logistics service categories"],
   ["KWC", "built in Kitchener-Waterloo-Cambridge"],
   ["Ontario-wide", "customized freight planning"]
 ];

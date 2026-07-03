@@ -8,7 +8,7 @@ import { StockPhoto, stock } from "@/components/StockPhoto";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "KWC Logistics resources and FAQs for Ontario transportation, LTL freight, FTL freight, warehousing, final mile delivery, cross-docking, expedited freight, and quote preparation.",
+    "KWC Logistics resources and FAQs for Ontario local LTL, FTL, warehousing, cross-docking, dedicated routes, expedited freight, and quote preparation.",
   alternates: { canonical: "/resources" }
 };
 
@@ -33,8 +33,29 @@ const resourceCards = [
   }
 ];
 
+const downloads = [
+  {
+    title: "Bill of Lading",
+    description: "Use this KWC-branded BOL for pickup details, shipper/consignee information, freight description, weight, and handling notes.",
+    href: "/resources/kwc-bill-of-lading.pdf",
+    type: "PDF"
+  },
+  {
+    title: "Credit Application",
+    description: "Customer account setup form for businesses requesting credit terms with KWC Logistics Inc.",
+    href: "/resources/kwc-credit-application.docx",
+    type: "DOCX"
+  },
+  {
+    title: "Customs Paperwork",
+    description: "KWC-branded customs paperwork for shipments that require commercial invoice or cross-border documentation support.",
+    href: "/resources/kwc-customs-paperwork.pdf",
+    type: "PDF"
+  }
+];
+
 const faqs = [
-  ["What does KWC Logistics Inc. do?", "KWC provides transportation, warehousing, distribution, final mile, LTL, FTL, expedited freight, cross-docking, reverse logistics, and customized delivery programs for businesses across Ontario."],
+  ["What does KWC Logistics Inc. do?", "KWC provides local LTL, FTL, warehousing, cross-docking, dedicated route, and expedited freight programs for businesses across Ontario."],
   ["Where is KWC Logistics based?", "KWC Logistics is based in Kitchener, Ontario, with service coverage across Waterloo Region and throughout Ontario."],
   ["What areas do you service?", "KWC supports Kitchener, Waterloo, Cambridge, Guelph, Milton, Mississauga, Brampton, Hamilton, Burlington, Toronto, London, Windsor, Niagara, Barrie, Owen Sound, Ottawa, Kingston, Sudbury, North Bay, Thunder Bay, and other Ontario lanes by request."],
   ["Do you provide service outside Ontario?", "Ontario is the core service area. Broader Canadian transportation requirements can be reviewed and planned based on lane, volume, timing, and shipment profile."],
@@ -44,21 +65,19 @@ const faqs = [
   ["Do you offer same-day delivery?", "Yes. Same-day options depend on pickup location, delivery location, freight size, vehicle availability, and timing."],
   ["Do you offer next-day delivery?", "Yes. Next-day service is available for many Ontario lanes and can be a strong option when speed matters but urgent same-day pricing is not required."],
   ["Do you offer scheduled delivery programs?", "Yes. KWC can plan recurring pickup and delivery schedules for retailers, manufacturers, distributors, warehouses, suppliers, and multi-location businesses."],
-  ["Can KWC manage final mile deliveries?", "Yes. Final mile programs can be planned for customer-facing deliveries where timing, communication, handling, and proof of delivery matter."],
   ["Do you offer warehousing?", "KWC supports warehouse distribution, freight staging, inventory movement, and related logistics planning. Exact warehouse services can be confirmed during the quote process."],
   ["What is cross-docking?", "Cross-docking moves inbound freight through a facility with limited storage time. Freight is received, sorted, consolidated, and moved outbound to reduce delays and extra handling."],
-  ["Do you help with reverse logistics?", "Yes. Reverse logistics can include returns, exchanges, product pickups, failed-delivery recovery, and movement back through a warehouse or distribution network."],
   ["Can KWC provide a dedicated fleet solution?", "Yes. Dedicated fleet planning is available for businesses with recurring routes, predictable volume, high service expectations, or growth-stage delivery needs."],
   ["What industries does KWC serve?", "KWC supports retail, manufacturing, medical, automotive, construction, food and beverage, industrial, technology, e-commerce, government, wholesale, agriculture, professional services, furniture, and appliances."],
   ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, service timing, dock or liftgate details, appointment requirements, and any handling notes."],
   ["How fast can I get a quote?", "Fast quotes are a priority. Response time depends on shipment complexity, lane, service level, equipment needs, and whether all shipment details are available."],
   ["Do you work with manufacturers?", "Yes. KWC can move freight from manufacturers to warehouses, distributors, retailers, businesses, job sites, and end customers."],
-  ["Do you work with retailers?", "Yes. KWC supports store replenishment, retail distribution, final mile delivery, reverse logistics, warehouse transfers, and scheduled delivery programs."],
-  ["Can KWC support e-commerce brands?", "Yes. KWC can support e-commerce brands with final mile delivery, returns, warehouse distribution, and scheduled delivery programs."],
+  ["Do you work with retailers?", "Yes. KWC supports store replenishment, warehouse transfers, scheduled routes, LTL freight, and dedicated delivery programs."],
+  ["Can KWC support e-commerce brands?", "Yes. KWC can support e-commerce brands with warehouse distribution, local LTL, scheduled routes, and freight planning."],
   ["Can KWC help if carriers keep refusing difficult freight?", "KWC reviews the shipment details, access limitations, handling needs, and delivery expectations to build a practical plan instead of forcing every shipment into a generic process."],
   ["Do you provide proof of delivery?", "Proof of delivery can be included in the service workflow so shippers have confirmation and accountability after delivery."],
   ["Do you provide shipment tracking?", "Shipment visibility and communication can be built into the logistics plan depending on the service type, route, and customer requirements."],
-  ["How does route optimization help customers?", "Route optimization helps combine compatible freight, reduce empty miles, plan better delivery sequences, improve speed, and reduce avoidable transportation costs."],
+  ["How does route planning help customers?", "Route planning helps combine compatible freight, reduce empty miles, plan better delivery sequences, improve speed, and reduce avoidable transportation costs."],
   ["Can KWC create a custom logistics plan?", "Yes. KWC builds plans around each customer's operations, freight profile, customer promises, timing requirements, cost targets, and long-term growth goals."],
   ["Is KWC only for large businesses?", "No. KWC can support customers shipping one package, a few skids, recurring pallets, retail routes, warehouse freight, or thousands of pallets each month."],
   ["How do I start working with KWC?", "Use the contact form, call dispatch, or email shipment details. KWC will review the lane, freight, timing, service requirements, and next steps."]
@@ -85,6 +104,31 @@ export default function ResourcesPage() {
                 <h2 className="text-2xl font-black text-ink">{card.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-muted">{card.description}</p>
               </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        title="Download customer forms"
+        intro="Use these forms when setting up an account or preparing freight paperwork. If you are not sure which form applies, send the shipment details to dispatch and KWC will guide you."
+        className="bg-brand-pale"
+      >
+        <div className="grid gap-5 md:grid-cols-3">
+          {downloads.map((item) => (
+            <article key={item.title} className="rounded-[1.5rem] border border-line bg-white p-6 shadow-sm">
+              <div className="flex items-start justify-between gap-4">
+                <h2 className="text-2xl font-black text-ink">{item.title}</h2>
+                <span className="rounded-full bg-brand-blue px-3 py-1 text-xs font-black text-white">{item.type}</span>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-muted">{item.description}</p>
+              <a
+                href={item.href}
+                download
+                className="mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-blue"
+              >
+                Download {item.type}
+              </a>
             </article>
           ))}
         </div>

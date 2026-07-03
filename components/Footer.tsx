@@ -12,8 +12,8 @@ export function Footer() {
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
             Ontario logistics partner based in Kitchener and built for businesses that need
-            dependable transportation, warehousing, distribution, final mile, LTL,
-            FTL, cross-docking, and customized delivery support.
+            dependable local LTL, FTL, warehousing, cross-docking, dedicated route,
+            and expedited freight support.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>

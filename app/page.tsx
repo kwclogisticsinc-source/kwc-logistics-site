@@ -10,14 +10,14 @@ const featuredServices = serviceCategories.slice(0, 8);
 
 const heroStats = [
   ["Ontario", "service coverage"],
-  ["13", "core logistics services"],
+  ["5", "main freight services"],
   ["KWC", "Waterloo Region roots"]
 ];
 
 const whyChoose = [
   "Competitive Pricing",
   "Fast Response Times",
-  "Route Optimization Technology",
+  "Route Planning",
   "Same-Day & Next-Day Capabilities",
   "Professional Drivers",
   "Reliable Communication",
@@ -44,7 +44,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-blue-100">
               KWC Logistics Inc. provides customized transportation, warehousing, distribution,
-              local LTL, FTL, expedited, and cross-docking solutions for businesses across Kitchener,
+              local LTL, FTL, warehousing, expedited, and cross-docking solutions for businesses across Kitchener,
               the GTA, and Southern Ontario.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -110,8 +110,8 @@ export default function HomePage() {
 
       <Section
         eyebrow="Solutions"
-        title="Focused logistics services built around how your business moves."
-        intro="KWC supports businesses with practical, scalable logistics solutions across local LTL, commercial freight, FTL, warehousing, distribution, final mile, and expedited freight programs."
+        title="Five focused services built around how your freight moves."
+        intro="KWC supports businesses with practical, scalable logistics solutions across local LTL, FTL, warehousing, cross-docking, dedicated distribution routes, and expedited freight."
         className="bg-brand-pale"
       >
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -237,7 +237,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-blue-100">
               Call or email KWC Logistics. We will help define the right transportation,
-              warehousing, distribution, final mile, or freight strategy for your business.
+              local LTL, FTL, warehousing, dedicated route, or expedited freight strategy for your business.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

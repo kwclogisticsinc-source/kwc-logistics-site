@@ -41,7 +41,7 @@ const coverageGroups = [
 
 const networkStats = [
   ["KWC", "Primary dispatch hub"],
-  ["13", "Core logistics services"],
+  ["5", "Core freight services"],
   ["Ontario", "Main operating network"]
 ];
 
@@ -52,12 +52,11 @@ export function CoverageMap() {
         <aside className="bg-brand-navy p-6 text-white sm:p-8 lg:p-10">
           <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Ontario Service Network</p>
           <h3 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl">
-            Built in KWC. Connected across Ontario.
+            LTL & FTL lanes across Ontario.
           </h3>
           <p className="mt-6 text-base leading-7 text-blue-100">
-            KWC plans freight from a Kitchener-Waterloo-Cambridge base with coverage across
-            major Ontario markets, regional business lanes, warehouse nodes, and custom
-            transportation requirements.
+            KWC plans LTL and FTL freight from a Kitchener-Waterloo-Cambridge base across
+            Windsor to Ottawa, Niagara to Barrie, and the Ontario business lanes in between.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
@@ -72,7 +71,7 @@ export function CoverageMap() {
           <div className="mt-8 grid gap-4">
             {[
               ["Primary Hub", "Kitchener-Waterloo-Cambridge operations and dispatch planning."],
-              ["Core Lanes", "Waterloo Region, GTA, Golden Horseshoe, Southwestern Ontario, Eastern Ontario, and Northern Ontario by plan."],
+              ["Core Lanes", "Windsor-Ottawa, Niagara-Barrie, Waterloo Region, GTA, Golden Horseshoe, and Southern Ontario."],
               ["Custom Reach", "Ontario-wide service programs with broader Canadian requirements reviewed by lane, timing, and volume."]
             ].map(([title, text]) => (
               <div key={title} className="rounded-2xl border border-white/10 bg-white/8 p-5">
@@ -92,7 +91,7 @@ export function CoverageMap() {
                 <h4 className="mt-2 text-3xl font-black tracking-tight text-ink">Ontario freight coverage</h4>
               </div>
               <div className="rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-brand-navy">
-                KWC Hub + Regional Lanes
+                LTL / FTL Ontario Lanes
               </div>
             </div>
 
@@ -153,9 +152,9 @@ export function CoverageMap() {
                 strokeWidth="14"
                 strokeLinecap="round"
               />
-              <text x="8" y="84" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Southwestern Ontario</text>
+              <text x="8" y="84" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Windsor / London</text>
               <text x="68" y="33" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Eastern Ontario</text>
-              <text x="39" y="8" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Northern Ontario</text>
+              <text x="39" y="8" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Barrie / North</text>
               <text x="55" y="76" className="fill-brand-blue text-[2.4px] font-black uppercase tracking-widest">Golden Horseshoe</text>
 
               {corridors.map((route) => (
@@ -200,7 +199,7 @@ export function CoverageMap() {
                 <circle cx="8" cy="8.5" r="1.3" fill="#061A3A" />
                 <text x="11" y="9.4" className="fill-brand-navy text-[2.1px] font-bold">KWC hub</text>
                 <line x1="6.7" y1="13.2" x2="10.2" y2="13.2" stroke="#087CFF" strokeWidth="1.1" strokeLinecap="round" />
-                <text x="11" y="14.1" className="fill-brand-navy text-[2.1px] font-bold">Planned freight lane</text>
+                <text x="11" y="14.1" className="fill-brand-navy text-[2.1px] font-bold">LTL / FTL lane</text>
                 <line x1="6.7" y1="17" x2="10.2" y2="17" stroke="#12B7FF" strokeWidth="0.7" strokeDasharray="1 1.5" />
                 <text x="11" y="17.9" className="fill-brand-navy text-[2.1px] font-bold">Custom route planning</text>
               </g>

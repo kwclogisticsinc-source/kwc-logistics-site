@@ -16,16 +16,9 @@ const serviceOptions = [
   "LTL Rush (4 hrs)",
   "LTL Sameday (by 5PM)",
   "FTL Freight",
-  "Warehouse Distribution",
-  "Cross Docking",
-  "Final Mile Delivery",
-  "Expedited & Same-Day Freight",
-  "Scheduled Routes",
-  "Retail Distribution",
-  "Reverse Logistics",
-  "Dedicated Fleet & Route Support",
-  "Specialized Freight",
-  "Route Optimization",
+  "Warehousing & Cross-Docking",
+  "Dedicated Routes & Distribution",
+  "Expedited & Specialized Freight",
   "Custom Logistics Plan"
 ];
 
