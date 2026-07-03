@@ -55,32 +55,11 @@ const downloads = [
 ];
 
 const faqs = [
-  ["What does KWC Logistics Inc. do?", "KWC provides local LTL, FTL, warehousing, cross-docking, dedicated route, and expedited freight programs for businesses across Ontario."],
-  ["Where is KWC Logistics based?", "KWC Logistics is based in Kitchener, Ontario, with service coverage across Waterloo Region and throughout Ontario."],
-  ["What areas do you service?", "KWC supports Kitchener, Waterloo, Cambridge, Guelph, Milton, Mississauga, Brampton, Hamilton, Burlington, Toronto, London, Windsor, Niagara, Barrie, Owen Sound, Ottawa, Kingston, Sudbury, North Bay, Thunder Bay, and other Ontario lanes by request."],
-  ["Do you provide service outside Ontario?", "Ontario is the core service area. Broader Canadian transportation requirements can be reviewed and planned based on lane, volume, timing, and shipment profile."],
-  ["Do you handle LTL freight?", "Yes. KWC supports less-than-truckload freight for pallets, skids, partial loads, recurring lanes, warehouse freight, and commercial distribution."],
-  ["Do you handle full truckload freight?", "Yes. FTL solutions can be planned for larger shipments, dedicated lanes, project freight, and customers with higher volume requirements."],
-  ["Can KWC help reduce transportation costs?", "Yes. The team looks for opportunities to consolidate freight, improve route density, reduce empty miles, plan recurring movement, and choose the right service level for the shipment."],
-  ["Do you offer same-day delivery?", "Yes. Same-day options depend on pickup location, delivery location, freight size, vehicle availability, and timing."],
-  ["Do you offer next-day delivery?", "Yes. Next-day service is available for many Ontario lanes and can be a strong option when speed matters but urgent same-day pricing is not required."],
-  ["Do you offer scheduled delivery programs?", "Yes. KWC can plan recurring pickup and delivery schedules for retailers, manufacturers, distributors, warehouses, suppliers, and multi-location businesses."],
-  ["Do you offer warehousing?", "KWC supports warehouse distribution, freight staging, inventory movement, and related logistics planning. Exact warehouse services can be confirmed during the quote process."],
-  ["What is cross-docking?", "Cross-docking moves inbound freight through a facility with limited storage time. Freight is received, sorted, consolidated, and moved outbound to reduce delays and extra handling."],
-  ["Can KWC provide a dedicated fleet solution?", "Yes. Dedicated fleet planning is available for businesses with recurring routes, predictable volume, high service expectations, or growth-stage delivery needs."],
-  ["What industries does KWC serve?", "KWC supports retail, manufacturing, medical, automotive, construction, food and beverage, industrial, technology, e-commerce, government, wholesale, agriculture, professional services, furniture, and appliances."],
-  ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, service timing, dock or liftgate details, appointment requirements, and any handling notes."],
-  ["How fast can I get a quote?", "Fast quotes are a priority. Response time depends on shipment complexity, lane, service level, equipment needs, and whether all shipment details are available."],
-  ["Do you work with manufacturers?", "Yes. KWC can move freight from manufacturers to warehouses, distributors, retailers, businesses, job sites, and end customers."],
-  ["Do you work with retailers?", "Yes. KWC supports store replenishment, warehouse transfers, scheduled routes, LTL freight, and dedicated delivery programs."],
-  ["Can KWC support e-commerce brands?", "Yes. KWC can support e-commerce brands with warehouse distribution, local LTL, scheduled routes, and freight planning."],
-  ["Can KWC help if carriers keep refusing difficult freight?", "KWC reviews the shipment details, access limitations, handling needs, and delivery expectations to build a practical plan instead of forcing every shipment into a generic process."],
-  ["Do you provide proof of delivery?", "Proof of delivery can be included in the service workflow so shippers have confirmation and accountability after delivery."],
-  ["Do you provide shipment tracking?", "Shipment visibility and communication can be built into the logistics plan depending on the service type, route, and customer requirements."],
-  ["How does route planning help customers?", "Route planning helps combine compatible freight, reduce empty miles, plan better delivery sequences, improve speed, and reduce avoidable transportation costs."],
-  ["Can KWC create a custom logistics plan?", "Yes. KWC builds plans around each customer's operations, freight profile, customer promises, timing requirements, cost targets, and long-term growth goals."],
-  ["Is KWC only for large businesses?", "No. KWC can support customers shipping one package, a few skids, recurring pallets, retail routes, warehouse freight, or thousands of pallets each month."],
-  ["How do I start working with KWC?", "Use the contact form, call dispatch, or email shipment details. KWC will review the lane, freight, timing, service requirements, and next steps."]
+  ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, timing, dock or liftgate details, and any special handling notes."],
+  ["Where does KWC provide LTL and FTL service?", "KWC focuses on Ontario freight lanes from Windsor to Ottawa, Niagara to Barrie, and the cities in between, with Kitchener-Waterloo-Cambridge as the home base."],
+  ["Can KWC help reduce transportation costs?", "Yes. KWC looks for practical ways to consolidate compatible freight, improve route planning, reduce wasted miles, and match the shipment to the right service level."],
+  ["Do you offer warehousing and cross-docking?", "Yes. KWC supports warehouse movement, freight staging, cross-docking, sorting, and distribution planning for customers that need freight moving through Ontario efficiently."],
+  ["How do I start working with KWC?", "Use the contact form, call dispatch, or email the shipment details. KWC will review the lane, freight, timing, paperwork, and next steps."]
 ];
 
 export default function ResourcesPage() {
@@ -125,9 +104,11 @@ export default function ResourcesPage() {
               <a
                 href={item.href}
                 download
+                target="_blank"
+                rel="noreferrer"
                 className="mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-blue"
               >
-                Download {item.type}
+                Open / Download {item.type}
               </a>
             </article>
           ))}
@@ -140,8 +121,8 @@ export default function ResourcesPage() {
             <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Customer FAQ</p>
             <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Questions customers ask before they ship.</h2>
             <p className="mt-5 text-base leading-7 text-blue-100">
-              Use these answers to understand how KWC thinks about freight, cost, timing,
-              communication, service coverage, and custom logistics planning.
+              The most important details customers usually need before requesting a quote,
+              setting up an account, or preparing freight paperwork.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">Request a Quote</ButtonLink>
