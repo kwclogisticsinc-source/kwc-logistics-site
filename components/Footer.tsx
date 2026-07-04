@@ -3,43 +3,49 @@ import { site } from "@/lib/site";
 import { FullLogo } from "./Logo";
 
 export function Footer() {
+  const columns = [
+    ["Services", "LTL Distribution", "Final Mile", "Dedicated Routes", "Warehousing", "Freight Brokerage"],
+    ["Industries", "Manufacturing", "Automotive", "Retail", "E-commerce", "Food"],
+    ["Company", "About", "Resources", "Quote", "Privacy", "Terms"]
+  ];
+
   return (
     <footer className="border-t border-line bg-brand-navy text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_1.35fr_0.9fr] lg:px-8">
         <div>
-          <div className="max-w-[190px] rounded-xl border border-brand-cyan/20 bg-white/5 px-3 py-2">
+          <div className="max-w-[220px]">
             <FullLogo />
           </div>
           <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Ontario logistics partner based in Kitchener and built for businesses that need
-            dependable local LTL, FTL, warehousing, cross-docking, dedicated route,
-            and expedited freight support.
+            Technology-driven logistics from Kitchener-Waterloo. Built around communication,
+            trust, transparent pricing, and freight movement that feels simple.
           </p>
           <p className="mt-4 text-sm text-blue-100">{site.location}</p>
         </div>
         <div>
-          <p className="font-semibold">Contact</p>
-          <div className="mt-3 space-y-2 text-sm text-blue-100">
-            <p>
-              <a href={`tel:${site.phone}`} className="hover:text-white">
-                {site.phone}
-              </a>
-            </p>
-            <p>
-              <a href={`mailto:${site.email}`} className="hover:text-white">
-                {site.email}
-              </a>
-            </p>
-            <p>No full street address listed yet.</p>
+          <div className="grid gap-7 sm:grid-cols-3">
+            {columns.map(([title, ...items]) => (
+              <div key={title}>
+                <p className="font-semibold">{title}</p>
+                <div className="mt-3 space-y-2 text-sm text-blue-100">
+                  {items.map((item) => (
+                    <p key={item}>{item}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <div>
-          <p className="font-semibold">Coverage</p>
-          <p className="mt-3 text-sm leading-6 text-blue-100">
-            Kitchener, Waterloo, Cambridge, Guelph, Brantford, Hamilton, London, Mississauga,
-            Toronto, Windsor, Niagara, Barrie, Ottawa, Kingston, Sudbury, Thunder Bay, and
-            customized Ontario-wide service.
-          </p>
+          <p className="font-semibold">Quote</p>
+          <div className="mt-3 space-y-2 text-sm text-blue-100">
+            <p><a href={`tel:${site.phone}`} className="hover:text-white">{site.phone}</a></p>
+            <p><a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a></p>
+            <p>No full street address listed yet.</p>
+          </div>
+          <Link href="/contact" className="mt-5 inline-flex rounded-md bg-brand-blue px-5 py-3 text-sm font-black text-white transition hover:bg-blue-500">
+            Get a Quote
+          </Link>
         </div>
       </div>
       <div className="border-t border-white/10">

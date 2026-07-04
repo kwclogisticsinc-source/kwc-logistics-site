@@ -5,9 +5,9 @@ export const site = {
   domain: "kwclogistics.ca",
   phone: "416-300-8473",
   email: "dispatch@kwclogistics.ca",
-  location: "Based in Kitchener, Ontario",
+  location: "Based in Kitchener-Waterloo, Ontario",
   description:
-    "KWC Logistics Inc is a family-run Ontario logistics company providing local LTL, FTL, warehousing, cross-docking, dedicated routes, and expedited freight."
+    "KWC Logistics Inc. is a technology-driven Ontario logistics company built around communication, trust, transparent pricing, and simpler freight movement."
 };
 
 export type ItemPage = {
@@ -41,70 +41,97 @@ export const localLtlOptions = [
 
 export const serviceCategories: ItemPage[] = [
   {
-    slug: "ltl-freight",
-    title: "Local LTL Services",
-    description: "Fast local LTL and cartage freight service for Kitchener, the GTA, and Southern Ontario, including Direct, Rush, and Sameday options.",
+    slug: "ltl-distribution",
+    title: "LTL Distribution",
+    description: "Consolidated pallet, skid, and partial-load freight across Ontario with practical communication and route planning.",
     image: stock.pallets,
-    benefits: ["LTL Direct: 2 hrs", "LTL Rush: 4 hrs", "LTL Sameday: by 5PM", "Kitchener-area freight quotes"],
+    benefits: ["Local LTL", "Consolidation", "Dock-to-dock freight", "Ontario lanes"],
     industries: ["Manufacturing", "Wholesale", "Retail", "Industrial"],
     customers: ["Warehouses", "Distributors", "Manufacturers", "Retailers"],
-    keywords: ["LTL freight Kitchener", "local cartage Kitchener", "same day LTL Kitchener", "Southern Ontario LTL"]
+    keywords: ["LTL freight Kitchener", "Ontario LTL distribution", "Waterloo Region freight"]
   },
   {
-    slug: "ftl-freight",
-    title: "FTL Freight",
-    description: "Full-truckload coordination for larger shipments, recurring lanes, and dedicated freight requirements.",
-    image: stock.fleet,
-    benefits: ["Dedicated capacity", "Fewer handoffs", "Direct routing", "Operational planning"],
-    industries: ["Manufacturing", "Agriculture", "Industrial", "Food & Beverage"],
-    customers: ["High-volume shippers", "Factories", "Distributors", "Project freight teams"]
+    slug: "final-mile-b2c",
+    title: "Final Mile, B2C & D2C",
+    description: "Customer-facing delivery programs for retail, e-commerce, home delivery, scheduled deliveries, and white-glove freight.",
+    image: stock.cargoVan,
+    benefits: ["Final mile", "B2C and D2C", "Scheduled delivery", "White glove"],
+    industries: ["Retail", "E-commerce", "Furniture", "Technology"],
+    customers: ["Online brands", "Retailers", "Showrooms", "End customers"]
   },
   {
-    slug: "warehousing-cross-docking",
-    title: "Warehousing & Cross-Docking",
-    description: "Warehouse transfers, freight staging, cross-docking, consolidation, and dock-to-dock movement for Ontario freight.",
-    image: stock.warehouse,
-    benefits: ["Freight staging", "Cross-dock transfers", "Warehouse distribution", "Fewer storage delays"],
+    slug: "b2b-dedicated-routes",
+    title: "B2B & Dedicated Routes",
+    description: "Recurring business delivery, route programs, retail replenishment, vendor pickups, and dedicated distribution support.",
+    image: stock.straightTruck,
+    benefits: ["B2B freight", "Dedicated routes", "Retail distribution", "Recurring schedules"],
+    industries: ["Automotive", "Medical", "Food", "Packaging"],
+    customers: ["Multi-location businesses", "Suppliers", "Retail networks", "Route customers"]
+  },
+  {
+    slug: "warehousing-cross-dock",
+    title: "Warehouse Distribution & Cross-Dock",
+    description: "Inbound staging, cross-docking, warehouse transfers, sorting, consolidation, and outbound distribution planning.",
+    image: stock.crossdock,
+    benefits: ["Cross-dock", "Warehouse distribution", "Staging", "Transfers"],
     industries: ["Wholesale", "Manufacturing", "Retail", "E-commerce"],
     customers: ["Warehouses", "3PLs", "Distributors", "Fulfillment operations"]
   },
   {
-    slug: "dedicated-routes-distribution",
-    title: "Dedicated Routes & Distribution",
-    description: "Recurring route planning, regional distribution, retail replenishment, and dedicated delivery programs for growing businesses.",
-    image: stock.fleet,
-    benefits: ["Recurring routes", "Retail replenishment", "Consistent capacity", "Long-term planning"],
-    industries: ["Retail", "Medical", "Automotive", "Food & Beverage"],
-    customers: ["Growing businesses", "Recurring shippers", "Store networks", "Distributors"]
+    slug: "expedited-courier",
+    title: "Expedited & Courier",
+    description: "Time-sensitive freight for urgent parts, production support, commercial courier work, and fast Ontario movement.",
+    image: stock.dock,
+    benefits: ["Expedited", "Courier", "Rush freight", "Fast dispatch"],
+    industries: ["Automotive", "Medical", "Industrial", "Technology"],
+    customers: ["Operations teams", "Service departments", "Suppliers", "Manufacturers"]
   },
   {
-    slug: "expedited-specialized-freight",
-    title: "Expedited & Specialized Freight",
-    description: "Urgent freight, same-day movement, flatbed, reefer, container, and specialized equipment coordination through trusted carrier partners.",
-    image: stock.dock,
-    benefits: ["Same-day options", "Special equipment coordination", "Flatbed and reefer support", "Direct communication"],
-    industries: ["Construction", "Industrial", "Technology", "Agriculture"],
-    customers: ["Project teams", "Specialty suppliers", "Manufacturers", "Contractors"],
-    keywords: ["expedited freight Kitchener", "flatbed freight Ontario", "reefer freight Ontario"]
+    slug: "specialized-freight",
+    title: "Specialized Freight",
+    description: "Flatbed, refrigerated, oversized, sensitive, and non-standard freight coordinated through the right equipment plan.",
+    image: stock.containers,
+    benefits: ["Flatbed", "Refrigerated", "Special handling", "Equipment planning"],
+    industries: ["Construction", "Food", "Industrial", "Agriculture"],
+    customers: ["Project teams", "Specialty suppliers", "Contractors", "Food shippers"],
+    keywords: ["flatbed freight Ontario", "refrigerated freight Ontario", "specialized transportation Kitchener"]
+  },
+  {
+    slug: "freight-brokerage",
+    title: "Freight Brokerage",
+    description: "Partner-carrier coordination for lanes, capacity, equipment, or Canadian transportation needs outside direct asset coverage.",
+    image: stock.yard,
+    benefits: ["Partner network", "Capacity planning", "Canada-wide future", "Single point of contact"],
+    industries: ["Manufacturing", "Distribution", "Retail", "Industrial"],
+    customers: ["Growing shippers", "Multi-lane customers", "Regional distributors", "Procurement teams"]
   }
 ];
 
 export const industries = [
-  "Retail",
   "Manufacturing",
-  "Medical",
   "Automotive",
-  "Construction",
-  "Food & Beverage",
+  "Medical",
   "Industrial",
-  "Technology",
-  "E-Commerce",
-  "Government",
+  "Construction",
+  "Retail",
+  "E-commerce",
+  "Food",
+  "Meal Kits",
   "Wholesale",
-  "Agriculture",
-  "Professional Services",
+  "Distribution",
+  "Government",
+  "Technology",
   "Furniture",
-  "Appliances"
+  "Printing",
+  "Packaging"
+];
+
+export const fleetTypes = [
+  ["Cargo Van", "Fast local movement, courier work, parts, parcels, and smaller commercial freight."],
+  ["Sprinter Van", "Expedited freight, B2B movement, D2C deliveries, and flexible urban access."],
+  ["26' Straight Truck", "Palletized freight, LTL distribution, retail replenishment, and dock-to-dock movement."],
+  ["26' Flatbed", "Construction, industrial, equipment, and non-standard freight that needs open-deck capability."],
+  ["26' Refrigerated Truck", "Temperature-sensitive freight programs for food, medical, and specialty shippers."]
 ];
 
 export const serviceAreas = [
@@ -122,33 +149,41 @@ export const serviceAreas = [
   "Windsor",
   "Niagara",
   "Barrie",
-  "Owen Sound",
   "Ottawa",
-  "Kingston",
-  "Sudbury",
-  "North Bay",
-  "Thunder Bay"
+  "Kingston"
 ];
 
 export const trustBuilders = [
-  "Professional Dispatch Team",
-  "Experienced Drivers",
-  "Shipment Tracking",
-  "Reliable Communication",
-  "Fast Quotes",
-  "Custom Logistics Plans",
-  "Dedicated Account Managers",
-  "Safe Handling",
-  "Flexible Scheduling",
-  "Transparent Pricing"
+  "Fast Communication",
+  "Technology Driven",
+  "Competitive Pricing",
+  "Smarter Route Planning",
+  "Flexible Fleet",
+  "Reliable Drivers",
+  "Dedicated Support",
+  "Transparent Service",
+  "Family Values",
+  "Local Knowledge",
+  "Scalable Solutions"
 ];
 
 export const workSteps = [
-  "Consultation",
-  "Business Analysis",
-  "Route Planning",
-  "Technology Integration",
+  "Request Quote",
+  "Plan",
+  "Dispatch",
   "Pickup",
-  "Transportation",
-  "Proof of Delivery"
+  "Track",
+  "Delivered"
+];
+
+export const technologyPillars = [
+  "Route Planning",
+  "Live Communication",
+  "Digital Proof of Delivery",
+  "Shipment Visibility",
+  "Fast Dispatch",
+  "Modern Logistics Software",
+  "Data-Driven Decisions",
+  "Scalable Systems",
+  "Future AI Integration"
 ];

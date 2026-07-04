@@ -51,9 +51,9 @@ export function HeaderLogo() {
     <Image
       src="/images/kwc-logo-transparent.png"
       alt="KWC Logistics logo"
-      width={420}
-      height={420}
-      className="h-14 w-36 object-contain drop-shadow-[0_10px_20px_rgba(6,26,58,0.12)] sm:h-16 sm:w-44"
+      width={720}
+      height={512}
+      className="h-20 w-56 object-contain drop-shadow-[0_14px_26px_rgba(6,26,58,0.16)] sm:h-24 sm:w-72 lg:h-28 lg:w-80"
       priority
     />
   );

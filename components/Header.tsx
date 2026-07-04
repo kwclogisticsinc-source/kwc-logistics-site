@@ -13,21 +13,20 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white text-brand-navy shadow-lg shadow-brand-navy/8">
+    <header className="sticky top-0 z-50 border-b border-white/70 bg-white/90 text-brand-navy shadow-lg shadow-brand-navy/5 backdrop-blur-xl">
       <div className="bg-brand-navy text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>Family-run Ontario logistics • 15+ years transportation and logistics experience</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-blue-100">
-            <span>{site.location}</span>
-            <a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a>
-            <a href={`tel:${site.phone}`} className="hover:text-white">{site.phone}</a>
+        <div className="mx-auto flex max-w-7xl justify-center px-4 py-1.5 text-xs font-semibold sm:justify-end sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-blue-100 sm:justify-end">
+            <a href={`mailto:${site.email}`} className="hover:text-white">
+              <span className="text-white">Email:</span> {site.email}
+            </a>
+            <a href={`tel:${site.phone}`} className="hover:text-white">
+              <span className="text-white">Phone:</span> {site.phone}
+            </a>
           </div>
         </div>
       </div>
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="shrink-0 rounded-2xl border border-line bg-white px-3 py-2 shadow-sm" aria-label="KWC Logistics Inc. home">
-          <HeaderLogo />
-        </Link>
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-4 px-4 py-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
         <nav className="hidden items-center gap-6 text-sm font-bold text-brand-navy lg:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-brand-blue">
@@ -35,7 +34,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
+        <Link href="/" className="mx-auto flex shrink-0 flex-col items-center justify-center transition hover:scale-[1.02]" aria-label="KWC Logistics Inc. home">
+          <HeaderLogo />
+          <span className="-mt-3 text-center text-[11px] font-black uppercase tracking-[0.24em] text-brand-blue sm:text-xs">
+            Make logistics simple • Ontario first • Canada-wide future
+          </span>
+        </Link>
+        <div className="hidden items-center justify-end gap-3 md:flex">
           <a className="text-sm font-bold text-brand-navy hover:text-brand-blue" href={`tel:${site.phone}`}>
             Call {site.phone}
           </a>
