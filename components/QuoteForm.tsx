@@ -2,14 +2,16 @@
 
 import { useState, type FormEvent } from "react";
 
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 const fields = [
   { id: "name", label: "Name", name: "Name", type: "text", required: true },
-  { id: "company", label: "Company", name: "Company", type: "text" },
+  { id: "company-name", label: "Company Name", name: "Company Name", type: "text" },
   { id: "phone", label: "Phone", name: "Phone", type: "tel", required: true },
   { id: "email", label: "Email", name: "Email", type: "email", required: true },
-  { id: "pickup-location", label: "Pickup location", name: "Pickup Location", type: "text", required: true },
-  { id: "delivery-location", label: "Delivery location", name: "Delivery Location", type: "text", required: true },
-  { id: "requested-pickup-date", label: "Requested pickup date", name: "Requested Pickup Date", type: "date", required: true }
+  { id: "pickup-location", label: "Pickup Location", name: "Pickup Location", type: "text", required: true },
+  { id: "delivery-location", label: "Delivery Location", name: "Delivery Location", type: "text", required: true },
+  { id: "preferred-date", label: "Preferred Date", name: "Preferred Date", type: "date", required: true }
 ];
 
 export function QuoteForm() {
@@ -18,7 +20,7 @@ export function QuoteForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    const accessKey = web3FormsAccessKey;
 
     if (!accessKey) {
       setStatus("missing-key");
@@ -31,6 +33,7 @@ export function QuoteForm() {
     formData.append("access_key", accessKey);
     formData.append("subject", "New quote request from KWC Logistics website");
     formData.append("from_name", "KWC Logistics Website");
+    formData.append("Destination Email", "kwclogisticsinc@gmail.com");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -67,13 +70,22 @@ export function QuoteForm() {
           />
         </label>
       ))}
-      <label htmlFor="freight-details" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
-        Freight details
+      <label htmlFor="shipment-details" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
+        Shipment Details
         <textarea
-          id="freight-details"
-          name="Freight Details"
+          id="shipment-details"
+          name="Shipment Details"
           required
           rows={5}
+          className="rounded-lg border border-line bg-brand-pale px-3 py-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
+        />
+      </label>
+      <label htmlFor="message" className="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">
+        Message
+        <textarea
+          id="message"
+          name="Message"
+          rows={4}
           className="rounded-lg border border-line bg-brand-pale px-3 py-3 text-base font-normal text-ink outline-none transition focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20"
         />
       </label>
@@ -87,7 +99,7 @@ export function QuoteForm() {
         </button>
         {status === "success" ? (
           <p className="mt-3 text-sm font-semibold leading-6 text-emerald-700">
-            Thank you. Your quote request has been received. KWC Logistics will contact you shortly.
+            Thank you. Your quote request has been sent. KWC Logistics will contact you shortly.
           </p>
         ) : null}
         {status === "error" ? (
