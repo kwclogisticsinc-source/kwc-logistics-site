@@ -2,8 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 
-const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-
 const fields = [
   { id: "name", label: "Name", name: "Name", type: "text", required: true },
   { id: "company-name", label: "Company Name", name: "Company Name", type: "text" },
@@ -15,28 +13,16 @@ const fields = [
 ];
 
 export function QuoteForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error" | "missing-key">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    const accessKey = web3FormsAccessKey;
-
-    if (!accessKey) {
-      setStatus("missing-key");
-      return;
-    }
-
     setStatus("submitting");
 
     const formData = new FormData(event.currentTarget);
-    formData.append("access_key", accessKey);
-    formData.append("subject", "New quote request from KWC Logistics website");
-    formData.append("from_name", "KWC Logistics Website");
-    formData.append("Destination Email", "kwclogisticsinc@gmail.com");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/quote", {
         method: "POST",
         body: formData
       });
@@ -105,11 +91,6 @@ export function QuoteForm() {
         {status === "error" ? (
           <p className="mt-3 text-sm font-semibold leading-6 text-red-700">
             Something went wrong. Please call dispatch or email dispatch@kwclogistics.ca.
-          </p>
-        ) : null}
-        {status === "missing-key" ? (
-          <p className="mt-3 text-sm font-semibold leading-6 text-red-700">
-            Quote form setup is missing the Web3Forms access key.
           </p>
         ) : null}
       </div>
