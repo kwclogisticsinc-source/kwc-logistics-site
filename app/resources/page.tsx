@@ -33,27 +33,6 @@ const resourceCards = [
   }
 ];
 
-const downloads = [
-  {
-    title: "Bill of Lading",
-    description: "Use this KWC-branded BOL for pickup details, shipper/consignee information, freight description, weight, and handling notes.",
-    href: "/resources/kwc-bill-of-lading.pdf",
-    type: "PDF"
-  },
-  {
-    title: "Credit Application",
-    description: "Customer account setup form for businesses requesting credit terms with KWC Logistics Inc.",
-    href: "/resources/kwc-credit-application.docx",
-    type: "DOCX"
-  },
-  {
-    title: "Customs Paperwork",
-    description: "KWC-branded customs paperwork for shipments that require commercial invoice or cross-border documentation support.",
-    href: "/resources/kwc-customs-paperwork.pdf",
-    type: "PDF"
-  }
-];
-
 const faqs = [
   ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, timing, dock or liftgate details, and any special handling notes."],
   ["Where does KWC provide LTL and FTL service?", "KWC focuses on Ontario freight lanes from Windsor to Ottawa, Niagara to Barrie, and the cities in between, with Kitchener-Waterloo-Cambridge as the home base."],
@@ -83,33 +62,6 @@ export default function ResourcesPage() {
                 <h2 className="text-2xl font-black text-ink">{card.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-muted">{card.description}</p>
               </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        title="Download customer forms"
-        intro="Use these forms when setting up an account or preparing freight paperwork. If you are not sure which form applies, send the shipment details to dispatch and KWC will guide you."
-        className="bg-brand-pale"
-      >
-        <div className="grid gap-5 md:grid-cols-3">
-          {downloads.map((item) => (
-            <article key={item.title} className="rounded-[1.5rem] border border-line bg-white p-6 shadow-sm">
-              <div className="flex items-start justify-between gap-4">
-                <h2 className="text-2xl font-black text-ink">{item.title}</h2>
-                <span className="rounded-full bg-brand-blue px-3 py-1 text-xs font-black text-white">{item.type}</span>
-              </div>
-              <p className="mt-4 text-sm leading-6 text-muted">{item.description}</p>
-              <a
-                href={item.href}
-                download
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-blue"
-              >
-                Open / Download {item.type}
-              </a>
             </article>
           ))}
         </div>
