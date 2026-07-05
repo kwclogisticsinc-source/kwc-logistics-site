@@ -36,23 +36,21 @@ async function getWeb3FormsAccessKey() {
 }
 
 function createWeb3FormsPayload(accessKey: string, quote: QuotePayload) {
-  const payload = new FormData();
-
-  payload.append("access_key", accessKey);
-  payload.append("subject", "New quote request from KWC Logistics website");
-  payload.append("from_name", "KWC Logistics Website");
-  payload.append("name", quote.name);
-  payload.append("Company Name", quote.companyName);
-  payload.append("Phone", quote.phone);
-  payload.append("email", quote.email);
-  payload.append("Pickup Location", quote.pickupLocation);
-  payload.append("Delivery Location", quote.deliveryLocation);
-  payload.append("Shipment Details", quote.shipmentDetails);
-  payload.append("Preferred Date", quote.preferredDate);
-  payload.append("Message", quote.message);
-  payload.append("Send To", "kwclogisticsinc@gmail.com");
-
-  return payload;
+  return {
+    access_key: accessKey,
+    subject: "New quote request from KWC Logistics website",
+    from_name: "KWC Logistics Website",
+    name: quote.name,
+    email: quote.email,
+    "Company Name": quote.companyName,
+    Phone: quote.phone,
+    "Pickup Location": quote.pickupLocation,
+    "Delivery Location": quote.deliveryLocation,
+    "Shipment Details": quote.shipmentDetails,
+    "Preferred Date": quote.preferredDate,
+    Message: quote.message,
+    "Send To": "kwclogisticsinc@gmail.com"
+  };
 }
 
 export async function POST(request: Request) {
@@ -97,7 +95,11 @@ export async function POST(request: Request) {
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: createWeb3FormsPayload(accessKey, quote)
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(createWeb3FormsPayload(accessKey, quote))
     });
     const result = (await response.json()) as { success?: boolean; message?: string };
 
