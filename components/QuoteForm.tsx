@@ -14,10 +14,12 @@ const fields = [
 
 export function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
+    setErrorMessage("");
 
     const formData = new FormData(event.currentTarget);
 
@@ -34,8 +36,10 @@ export function QuoteForm() {
         return;
       }
 
+      setErrorMessage(result.error ?? "Something went wrong. Please call dispatch or email dispatch@kwclogistics.ca.");
       setStatus("error");
     } catch {
+      setErrorMessage("Something went wrong. Please call dispatch or email dispatch@kwclogistics.ca.");
       setStatus("error");
     }
   }
@@ -44,6 +48,7 @@ export function QuoteForm() {
     <form onSubmit={handleSubmit} className="grid gap-5 rounded-2xl border border-white/10 bg-white p-5 shadow-glow sm:grid-cols-2 sm:p-6">
       <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" />
       <input type="hidden" name="Service" value="LTL Freight" />
+      <input type="hidden" name="Form Version" value="server-route-v2" />
       {fields.map((field) => (
         <label key={field.id} htmlFor={field.id} className="grid gap-2 text-sm font-semibold text-ink">
           {field.label}
@@ -90,7 +95,7 @@ export function QuoteForm() {
         ) : null}
         {status === "error" ? (
           <p className="mt-3 text-sm font-semibold leading-6 text-red-700">
-            Something went wrong. Please call dispatch or email dispatch@kwclogistics.ca.
+            {errorMessage}
           </p>
         ) : null}
       </div>
