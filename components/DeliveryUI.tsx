@@ -126,9 +126,6 @@ export function ContactCTA() {
         <Link href="/contact#quote" className="btn light">
           Get a Quote <Icon name="arrow" />
         </Link>
-        <a href={`tel:${contact.tel}`} className="cta-phone">
-          {contact.phone}
-        </a>
         <a href={`mailto:${contact.email}`} className="cta-email">
           {contact.email}
         </a>

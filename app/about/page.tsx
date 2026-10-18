@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
-import { contact } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About KWC",
   description:
-    "KWC Logistics Inc. is based in Kitchener, Ontario, connecting local delivery with broader road freight coordination.",
+    "Meet KWC Logistics, founded by Jay Sandhu in Kitchener to help businesses grow through practical transportation plans.",
   alternates: { canonical: "/about" },
 };
 export default function About() {
@@ -16,25 +15,68 @@ export default function About() {
         title="Local people. A wider view of logistics."
       >
         <p>
-          KWC Logistics Inc. helps individuals and businesses move packages,
-          pallets and recurring deliveries—with a practical plan and a person to
-          talk to.
+          Packages, pallets and recurring deliveries—with a practical plan and a
+          person to talk to.
         </p>
       </PageIntro>
       <section className="wrap content-section">
+        <div className="article-copy story-copy">
+          <h2>Our story</h2>
+          <p>
+            KWC Logistics started with a simple belief: smaller businesses
+            should have access to transportation that helps them grow.
+          </p>
+          <p>
+            Our founder, <strong>Jay Sandhu</strong>, built his experience in
+            traditional transportation, working with companies across dry van,
+            refrigerated and flatbed freight. He later worked with a
+            technology-based final mile delivery company, gaining a different
+            perspective on how local delivery networks can help businesses reach
+            more customers.
+          </p>
+          <p>
+            Through that experience, Jay saw a gap. Smaller businesses often
+            have the products, demand and ambition to expand, but organizing
+            deliveries beyond their existing market can be costly and difficult.
+            They need a logistics partner who understands their operation and
+            can help make that next step practical.
+          </p>
+          <p>
+            <strong>KWC Logistics was created to help close that gap.</strong>{" "}
+            Based in Kitchener, we help businesses connect supplier pickups,
+            freight movements and final mile deliveries into a plan that fits
+            their needs. Through direct service and carrier partnerships, our
+            goal is to help customers expand their delivery network without
+            having to build a fleet of their own.
+          </p>
+          <p>
+            From a single shipment to a recurring delivery route, we start by
+            understanding your business—and where you want to take it.
+          </p>
+        </div>
+        <div className="article-copy">
+          <h2>Built around your next step.</h2>
+          <p>
+            Whether you’re collecting from suppliers, delivering to stores or
+            reaching customers in a new region, KWC helps you put the
+            transportation pieces together. We work through your locations,
+            shipment volumes and delivery requirements to develop a practical
+            plan.
+          </p>
+        </div>
         <div className="capability-grid">
           {[
             [
-              "Local knowledge",
-              "We start with Kitchener, Waterloo and Cambridge, then work through suitable Ontario delivery arrangements.",
+              "Start small",
+              "Arrange a single shipment or discuss a recurring route.",
             ],
             [
-              "Broader connections",
-              "When a shipment needs a wider lane or different equipment, we coordinate suitable carrier partners for Canada/U.S. road freight.",
+              "Reach further",
+              "Explore delivery options beyond your current service area.",
             ],
             [
-              "Clear before committed",
-              "The route, handling, capacity, price and booking details are agreed with you before the shipment is confirmed.",
+              "Keep your focus",
+              "Grow your business while we help coordinate the movement.",
             ],
           ].map(([title, text]) => (
             <article key={title}>
@@ -43,31 +85,9 @@ export default function About() {
             </article>
           ))}
         </div>
-        <div className="article-copy">
-          <h2>{contact.slogan}</h2>
-          <p>
-            To us, a useful logistics conversation starts with the actual
-            shipment: what it is, who is waiting for it and what needs to happen
-            at each end. That could mean a single supplier pickup, a pallet
-            delivery without a dock or an ongoing distribution program.
-          </p>
-          <p>
-            Suitable Ontario movements can be handled directly by KWC. Broader
-            road freight and specialist requirements can be arranged with
-            third-party carriers. We explain the arrangement when we quote, so
-            you understand who is moving the shipment.
-          </p>
-          <h2>A first delivery should feel straightforward.</h2>
-          <p>
-            Request a quote without creating an account. We review your details
-            and contact you to confirm the service and price. If you need
-            recurring deliveries, we can discuss frequency, receiving
-            requirements and a suitable operating plan.
-          </p>
-          <Link className="text-link" href="/contact">
-            Talk to KWC →
-          </Link>
-        </div>
+        <Link className="btn" href="/contact">
+          Let’s Talk About Your Deliveries →
+        </Link>
       </section>
       <ContactCTA />
     </>

@@ -39,7 +39,7 @@ export default function Resources() {
           ))}
         </div>
         <div className="article-copy">
-          <h2>Before collection</h2>
+          <h2>Before you ship</h2>
           <p>
             Package items suitably for road movement. Tell us about fragile
             items, unusual dimensions, stairs, loading restrictions and any
@@ -55,7 +55,7 @@ export default function Resources() {
             between the truck and ground level when there is no dock.
           </p>
           <Link className="text-link" href="/forms">
-            Forms & documents →
+            Shipment checklist & downloadable forms →
           </Link>
           <h2>Common questions</h2>
           <FAQ />

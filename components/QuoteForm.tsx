@@ -8,7 +8,6 @@ import {
   type QuoteKind,
 } from "@/lib/quote";
 import { contact } from "@/lib/content";
-import { previewOnly } from "@/lib/release";
 import { Icon } from "./DeliveryUI";
 const idFor = (name: string) =>
   `quote-${name.toLowerCase().replaceAll(" ", "-")}`;
@@ -58,7 +57,7 @@ export function QuoteForm({
       const raw = current.get(field.name);
       if (typeof raw === "string") captured[field.name] = raw;
     }
-    setValues(previous => ({ ...previous, ...captured }));
+    setValues((previous) => ({ ...previous, ...captured }));
     return { ...values, ...captured };
   }
   function data() {
@@ -165,12 +164,6 @@ export function QuoteForm({
       aria-busy={submitting}
     >
       <p className="eyebrow">REQUEST A QUOTE · NO ACCOUNT NEEDED</p>
-      {previewOnly && (
-        <p className="preview-note">
-          Design preview: explore the form freely. Submission will not send an
-          email or book a shipment.
-        </p>
-      )}
       <div className="quote-service-options" aria-label="Delivery type">
         {quoteKinds.map((item) => (
           <button
@@ -398,7 +391,7 @@ export function QuoteForm({
       <details className="manual-help">
         <summary>Prefer a person? Your entered details will stay here.</summary>
         <p style={{ marginTop: 12 }}>
-          Call <a href={`tel:${contact.tel}`}>{contact.phone}</a> or{" "}
+          You can also{" "}
           <a href={mail}>open an email to {contact.email} with these details</a>
           . Review and send it in your email app.
         </p>
@@ -417,8 +410,8 @@ export function QuoteForm({
       </details>
       <noscript>
         <p className="noscript">
-          Please enable JavaScript for this form, or call {contact.phone} /
-          email {contact.email} for a quote.
+          Please enable JavaScript for this form, or email {contact.email} for a
+          quote.
         </p>
       </noscript>
     </form>

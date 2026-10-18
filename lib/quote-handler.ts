@@ -78,7 +78,11 @@ export async function handleQuote(
       error: "Unable to read the form. Please reload and try again.",
     });
   }
-  if (form.get("botcheck")) return reply(200, { success: true });
+  if (form.get("botcheck"))
+    return reply(400, {
+      success: false,
+      error: "Unable to submit this request.",
+    });
   const { values, errors } = validateQuote(form);
   if (Object.keys(errors).length)
     return reply(400, {

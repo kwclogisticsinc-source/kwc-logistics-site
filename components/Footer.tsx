@@ -32,7 +32,6 @@ export function Footer() {
         </nav>
         <div className="footer-contact">
           <strong>A real conversation starts here.</strong>
-          <a href={`tel:${contact.tel}`}>{contact.phone}</a>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <p>Kitchener, Ontario</p>
           <Link href="/contact#quote" className="text-link">

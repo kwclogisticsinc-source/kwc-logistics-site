@@ -31,8 +31,8 @@ export default function Home() {
             <Link href="/contact#quote" className="btn">
               Get a Quote <Icon name="arrow" size={20} />
             </Link>
-            <a href={`tel:${contact.tel}`} className="btn secondary">
-              Talk to Us <Icon name="phone" size={18} />
+            <a href={`mailto:${contact.email}`} className="btn secondary">
+              Email Us <Icon name="mail" size={18} />
             </a>
           </div>
           <div className="hero-note">
@@ -130,34 +130,37 @@ export default function Home() {
         </div>
         <div className="split-copy">
           <p className="eyebrow">YOU GROW. WE HELP YOU GO.</p>
-          <h2>
-            Reach more customers.
-            <br />
-            Keep your own identity.
-          </h2>
-          <p className="lead">
-            Reach more customers without building your own delivery fleet.
-          </p>
+          <h2>More customers. A delivery plan to reach them.</h2>
           <p>
-            Take orders through your website, phone or usual sales channels. We
-            can help organize pickup, movement between regions and the final
-            delivery—while you keep the customer relationship.
+            You handle your products and customer relationships. We help
+            organize supplier pickups, store deliveries and customer delivery
+            routes around your business.
           </p>
           <ul className="check-list">
             <li>
               <Icon name="check" />
-              Scheduled pickups and multi-stop routes
+              <span>
+                <strong>Supplier pickups</strong> — Collect orders from vendors
+                and bring them to your business.
+              </span>
             </li>
             <li>
               <Icon name="check" />
-              Supplier collections and store replenishment
+              <span>
+                <strong>Store replenishment</strong> — Arrange recurring
+                deliveries to retail locations.
+              </span>
             </li>
             <li>
-              <Icon name="check" />A delivery plan built around your volume
+              <Icon name="check" />
+              <span>
+                <strong>Customer deliveries</strong> — Get orders from your
+                business to your customers’ doors.
+              </span>
             </li>
           </ul>
           <Link href="/contact?service=regular#quote" className="text-link">
-            Let’s plan your regular deliveries <Icon name="arrow" />
+            Plan My Regular Deliveries <Icon name="arrow" />
           </Link>
         </div>
       </section>

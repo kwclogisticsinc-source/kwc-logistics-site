@@ -172,7 +172,7 @@ for (const [name, send] of [
       /private provider detail|test-only/,
     );
   });
-test("honeypot never sends mail", async () => {
+test("honeypot never sends mail or claims a successful submission", async () => {
   assert.equal(
     (
       await handleQuote(
@@ -180,13 +180,44 @@ test("honeypot never sends mail", async () => {
         deps({ send: async () => assert.fail() }),
       )
     ).status,
-    200,
+    400,
   );
 });
 test("cross-origin posts are rejected", async () => {
   const r = req();
   r.headers.set("origin", "https://other.example");
   assert.equal((await handleQuote(r, deps())).status, 403);
+});
+
+test("regular deliveries retain stops, windows and handling without known measurements", async () => {
+  let sent;
+  const response = await handleQuote(
+    req({
+      ...valid,
+      Service: "Regular deliveries",
+      Weight: "Not sure",
+      Dimensions: "Not sure",
+      "Number of Stops": "Not sure",
+      "Approximate Volume": "20 orders weekly",
+      Frequency: "Not sure",
+      "Route Schedule": "Tuesdays 9-12",
+      "Handling Requirements": "Fragile packages; ambient temperature",
+    }),
+    deps({
+      send: async (_, options) => {
+        sent = JSON.parse(options.body);
+        return Response.json({ success: true });
+      },
+    }),
+  );
+  assert.equal(response.status, 200);
+  assert.equal(sent["Number of Stops"], "Not sure");
+  assert.equal(sent["Route Schedule"], "Tuesdays 9-12");
+  assert.equal(
+    sent["Handling Requirements"],
+    "Fragile packages; ambient temperature",
+  );
+  assert.equal(sent.Weight, "Not sure");
 });
 test("duplicate required fields are rejected", async () => {
   const body = new FormData();

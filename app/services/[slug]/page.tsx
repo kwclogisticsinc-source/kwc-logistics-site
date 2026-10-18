@@ -57,15 +57,6 @@ const details = {
         ],
       ],
       [
-        "Beyond the loading dock",
-        [
-          "Door-to-door and tailgate/liftgate options",
-          "Inside delivery and two-person handling where available",
-          "Placement, setup assistance and packaging removal when specifically arranged",
-          "Wrapping, palletizing and shipment preparation",
-        ],
-      ],
-      [
         "Plan for the exceptions",
         [
           "Appointment windows, multiple delivery points and no-dock locations",
@@ -75,8 +66,8 @@ const details = {
         ],
       ],
     ],
-    outcome: "No dock? Narrow receiving window? Start with the details.",
-    body: "Tell us about the freight and the receiving location. We review the required vehicle, unloading method, access and handling together. Setup assistance means agreed delivery handling; installation and equipment commissioning are not offered as part of standard delivery.",
+    outcome: "Need more than dock-to-dock delivery?",
+    body: "Tell us what needs to happen at pickup and delivery so we can confirm the right equipment and assistance.",
     quote: "freight",
   },
   logistics: {
@@ -183,6 +174,26 @@ export default async function ServicePage({
         <div className="article-copy">
           <h2>{detail.outcome}</h2>
           <p>{detail.body}</p>
+          {slug === "freight" && (
+            <>
+              <ul>
+                {[
+                  "Tailgate / liftgate service",
+                  "Locations without a loading dock",
+                  "Door-to-door and inside delivery",
+                  "Wrapping and palletizing",
+                  "Additional offload or setup assistance",
+                  "Delivery appointments and access requirements",
+                ].map((text) => (
+                  <li key={text}>{text}</li>
+                ))}
+              </ul>
+              <p className="fine">
+                Availability and service details are confirmed with your quote.
+              </p>
+            </>
+          )}
+
           <Link href="/contact?service=regular#quote" className="text-link">
             Discuss recurring deliveries <Icon name="arrow" />
           </Link>

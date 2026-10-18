@@ -1,7 +1,5 @@
 export const contact = {
   email: "ship@kwclogistics.ca",
-  phone: "416-300-8473",
-  tel: "+14163008473",
   slogan: "Driven by Excellence. Defined by Reliability.",
 };
 export const categories = [

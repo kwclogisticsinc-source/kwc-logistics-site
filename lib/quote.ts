@@ -108,9 +108,10 @@ export function fieldsFor(
           name: "Weight",
           label: "Total weight (include kg or lb)",
           max: 100,
-          help: "Approximate is fine. Tell us if you need help measuring.",
+          help: "Approximate is fine, or enter Not sure.",
         },
         {
+          help: "Approximate is fine, or enter Not sure.",
           name: "Dimensions",
           label: freight
             ? "Dimensions per pallet / piece (include units)"
@@ -120,11 +121,23 @@ export function fieldsFor(
         ...(recurring
           ? [
               {
+                name: "Number of Stops",
+                label: "Approximate number of stops",
+                max: 100,
+                help: "Per route or day. Enter Not sure if still planning.",
+              },
+              {
+                name: "Handling Requirements",
+                label: "Handling or temperature requirements",
+                max: 500,
+                help: "Tell us about fragile items, unloading, food handling or a required temperature range. Suitability is confirmed before booking.",
+              },
+              {
                 name: "Approximate Volume",
                 label: "Approximate volume",
                 required: true,
                 max: 200,
-                help: "e.g. about 20 orders per collection, with seasonal peaks",
+                help: "e.g. about 20 orders per collection, or Not sure",
               },
             ]
           : []),
@@ -239,11 +252,12 @@ export function fieldsFor(
                   "Weekly",
                   "Monthly",
                   "Varies / let’s discuss",
+                  "Not sure",
                 ],
               },
               {
                 name: "Route Schedule",
-                label: "Pickup windows, stops and timing notes",
+                label: "Preferred days or delivery windows",
                 max: 500,
               },
             ]

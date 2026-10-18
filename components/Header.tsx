@@ -41,9 +41,9 @@ export function Header() {
             ))}
           </nav>
           <div className="header-actions">
-            <a href={`tel:${contact.tel}`} className="header-phone">
-              <Icon name="phone" size={17} />
-              {contact.phone}
+            <a href={`mailto:${contact.email}`} className="header-phone">
+              <Icon name="mail" size={17} />
+              {contact.email}
             </a>
             <Link href="/contact#quote" className="btn small">
               Get a Quote <Icon name="arrow" size={18} />
@@ -76,8 +76,8 @@ export function Header() {
         )}
       </header>
       <div className="mobile-actions">
-        <a href={`tel:${contact.tel}`}>
-          <Icon name="phone" size={18} /> Call KWC
+        <a href={`mailto:${contact.email}`}>
+          <Icon name="mail" size={18} /> Email KWC
         </a>
         <Link href="/contact#quote">
           Get a Quote <Icon name="arrow" size={18} />

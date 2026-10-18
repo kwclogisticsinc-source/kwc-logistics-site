@@ -47,7 +47,6 @@ export default function RootLayout({
               name: "KWC Logistics Inc.",
               url: "https://kwclogistics.ca",
               email: contact.email,
-              telephone: contact.tel,
               slogan: contact.slogan,
               address: {
                 "@type": "PostalAddress",

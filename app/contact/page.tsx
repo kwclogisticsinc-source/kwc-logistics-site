@@ -6,7 +6,7 @@ import { quoteKinds, type QuoteKind } from "@/lib/quote";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request courier, freight or recurring delivery help from KWC Logistics. Call 416-300-8473 or email ship@kwclogistics.ca.",
+    "Request courier, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
   alternates: { canonical: "/contact" },
 };
 export default async function ContactPage({
@@ -42,13 +42,6 @@ export default async function ContactPage({
             Prefer to talk it through? Reach KWC directly. You don’t need to
             know the right vehicle or every freight term.
           </p>
-          <a href={`tel:${contact.tel}`} className="contact-method">
-            <Icon name="phone" />
-            <span>
-              <small>Call KWC</small>
-              <strong>{contact.phone}</strong>
-            </span>
-          </a>
           <a href={`mailto:${contact.email}`} className="contact-method">
             <Icon name="mail" />
             <span>
