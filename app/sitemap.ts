@@ -1,14 +1,21 @@
 import type { MetadataRoute } from "next";
-import { serviceCategories, site } from "@/lib/site";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/about", "/services", "/resources", "/forms", "/industries", "/service-areas", "/contact"];
-  const serviceRoutes = serviceCategories.map((item) => `/services/${item.slug}`);
-
-  return [...staticRoutes, ...serviceRoutes].map((route) => ({
-    url: `https://${site.domain}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route.includes("/services/") ? 0.75 : 0.7
+  return [
+    "",
+    "/services",
+    "/services/courier",
+    "/services/freight",
+    "/services/logistics",
+    "/service-areas",
+    "/about",
+    "/contact",
+    "/industries",
+    "/resources",
+    "/forms",
+    "/privacy",
+  ].map((route) => ({
+    url: `https://kwclogistics.ca${route}`,
+    changeFrequency: "monthly",
+    priority: route === "" ? 1 : 0.7,
   }));
 }

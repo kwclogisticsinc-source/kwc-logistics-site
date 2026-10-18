@@ -1,129 +1,72 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/ButtonLink";
-import { CoverageMap } from "@/components/CoverageMap";
-import { FullLogo } from "@/components/Logo";
-import { PageHero } from "@/components/PageHero";
+import { PageIntro, Icon } from "@/components/DeliveryUI";
 import { QuoteForm } from "@/components/QuoteForm";
-import { Section } from "@/components/Section";
-import { StockPhoto, stock } from "@/components/StockPhoto";
-import { site } from "@/lib/site";
-
+import { contact } from "@/lib/content";
+import { quoteKinds, type QuoteKind } from "@/lib/quote";
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Request a Quote",
   description:
-    "Contact KWC Logistics Inc. for Ontario local LTL freight, FTL freight, warehousing, cross-docking, dedicated routes, expedited freight, and custom transportation plans.",
-  alternates: { canonical: "/contact" }
+    "Request courier, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
+  alternates: { canonical: "/contact" },
 };
-
-const contactCards = [
-  {
-    label: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-    note: "Send lanes, freight type, skid counts, weights, dimensions, and timing."
-  },
-  {
-    label: "Location",
-    value: "Based in Kitchener, Ontario",
-    href: null,
-    note: "Serving Waterloo Region, the GTA, Southwestern Ontario, and Ontario-wide lanes."
-  },
-  {
-    label: "Office Hours",
-    value: "Dispatch by request",
-    href: null,
-    note: "Contact dispatch to discuss timing and availability."
-  }
-];
-
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const kind = quoteKinds.some((item) => item.id === params.service)
+    ? (params.service as QuoteKind)
+    : "courier";
+  const pickup =
+    typeof params.pickup === "string" ? params.pickup.slice(0, 300) : "";
+  const destination =
+    typeof params.destination === "string"
+      ? params.destination.slice(0, 300)
+      : "";
   return (
     <>
-      <PageHero eyebrow="Contact KWC" title="One request. More freight options." image={stock.dispatch}>
+      <PageIntro
+        eyebrow="LET’S TALK DELIVERY"
+        title="A simple start to your next move."
+      >
         <p>
-          Ontario service with our own equipment. North American road, rail and ocean solutions
-          through our partner network. Tell us what needs to move and where it needs to go.
+          One package, a few pallets or an ongoing delivery plan. Tell us what
+          you need—we’ll help with the details.
         </p>
-      </PageHero>
-
-      <section id="quote" className="scroll-mt-32 bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.65fr_1.35fr] lg:px-8">
-          <div className="overflow-hidden rounded-[2rem] border border-line bg-brand-pale shadow-soft">
-            <div className="relative h-[560px]">
-              <StockPhoto src={stock.dock} alt="Modern loading dock and logistics operations" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/42 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <div className="max-w-[220px] rounded-2xl border border-brand-cyan/20 bg-brand-navy/55 px-4 py-3 backdrop-blur">
-                  <FullLogo />
-                </div>
-                <h2 className="mt-6 max-w-xl text-4xl font-black tracking-tight">
-                  Reliable communication before, during, and after the move.
-                </h2>
-                <p className="mt-4 max-w-lg text-sm leading-6 text-blue-100">
-                  KWC is built for customers who want a real answer, a clear plan, and freight
-                  movement that feels organized from the first request.
-                </p>
-              </div>
-            </div>
+      </PageIntro>
+      <div className="wrap contact-layout">
+        <aside className="contact-aside">
+          <h2>People. Not a maze of menus.</h2>
+          <p>
+            Prefer to talk it through? Reach KWC directly. You don’t need to
+            know the right vehicle or every freight term.
+          </p>
+          <a href={`mailto:${contact.email}`} className="contact-method">
+            <Icon name="mail" />
+            <span>
+              <small>Email your shipment details</small>
+              <strong>{contact.email}</strong>
+            </span>
+          </a>
+          <div className="contact-method">
+            <Icon name="pin" />
+            <span>
+              <small>Based in</small>
+              <strong>Kitchener, Ontario</strong>
+            </span>
           </div>
-
-          <div className="rounded-[2rem] bg-brand-navy p-5 text-white shadow-glow sm:p-7">
-            <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Request a Quote</p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight">Send the shipment details.</h2>
-            <p className="mt-4 text-sm leading-6 text-blue-100">
-              The more detail you provide, the cleaner the recommendation. Include pickup,
-              delivery, freight type, pallet or item count, dimensions, weight, timing,
-              dock access, liftgate needs, and any special handling notes.
-            </p>
-            <div className="mt-6">
-              <QuoteForm />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Section title="Business information" intro="KWC Logistics Inc. is based in Kitchener, Ontario." className="bg-brand-pale">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {contactCards.map((card) => (
-            <article key={card.label} className="premium-hover rounded-[1.5rem] border border-line bg-white p-6 shadow-sm hover:shadow-soft">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-blue">{card.label}</p>
-              <h2 className="mt-4 text-2xl font-black text-ink">
-                {card.href ? (
-                  <a className="hover:text-brand-blue" href={card.href}>
-                    {card.value}
-                  </a>
-                ) : (
-                  card.value
-                )}
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-muted">{card.note}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Service Area" title="Ontario coverage from a Kitchener base.">
-        <CoverageMap />
-      </Section>
-
-      <section className="bg-brand-navy py-20 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.24em] text-brand-cyan">Talk to Our Team</p>
-            <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">
-              Need help choosing the right service?
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-blue-100">
-              KWC can help compare local LTL, FTL, expedited freight, warehousing,
-              cross-docking, dedicated routes, and custom logistics programs.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/services" className="bg-brand-blue hover:bg-blue-500">View Services</ButtonLink>
-
-          </div>
-        </div>
-      </section>
+          <p className="fine">
+            After your request, we review the route, shipment and capacity, then
+            contact you to agree on the price and service before booking.
+          </p>
+        </aside>
+        <QuoteForm
+          initialKind={kind}
+          pickup={pickup}
+          destination={destination}
+        />
+      </div>
     </>
   );
 }

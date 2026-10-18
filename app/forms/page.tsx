@@ -1,30 +1,100 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { ContactCTA, PageIntro } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
-  title: "Forms & Documents", description: "KWC Logistics credit application and road freight bill of lading. Download business and shipping forms or contact dispatch for help.", alternates: { canonical: "/forms" }
+  title: "Forms & Documents",
+  description:
+    "Shipment preparation help and downloadable KWC Logistics shipment, customer setup, draft bill of lading and credit application forms.",
+  alternates: { canonical: "/forms" },
 };
-export default function FormsPage() {
-  return <>
-    <section className="bg-brand-navy py-16 text-white sm:py-20"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-cyan">Customer resources</p>
-      <h1 className="mt-4 text-4xl font-black sm:text-6xl">Forms & Documents</h1>
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-100">The paperwork behind a well-planned shipment. Download KWC forms or speak with dispatch about the documents your move requires.</p>
-    </div></section>
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <p className="mb-8 rounded-lg border border-line bg-white p-4 text-sm leading-6">Preview documents: these branded drafts are available for review. Credit terms and applicable carriage conditions must be approved before operational use.</p>
-      <div className="grid gap-6 md:grid-cols-2">
-        {[
-          ["01", "Credit Application", "Business account details, accounts-payable contacts, requested credit and trade references for KWC’s review. Submitting an application does not establish an approved credit account.", "kwc-credit-application.pdf"],
-          ["02", "Bill of Lading", "Road freight shipment details, shipper and consignee information, freight descriptions, handling instructions and pickup/delivery acknowledgements. Rail and ocean shipments require the selected partner’s documentation.", "kwc-bill-of-lading.pdf"]
-        ].map(([number, title, description, file]) => <article key={file} className="flex flex-col rounded-2xl border border-line bg-white p-7 sm:p-9">
-          <span className="text-sm font-bold text-brand-blue">{number} / FILLABLE PDF</span><h2 className="mt-5 text-3xl font-bold">{title}</h2><p className="mb-8 mt-4 leading-7 text-muted">{description}</p>
-          <a href={`/forms/${file}`} download className="mt-auto inline-flex min-h-12 items-center justify-center rounded-md bg-brand-navy px-6 py-3 font-bold text-white">Download {title} ↓</a>
-        </article>)}
-      </div>
-      <div className="mt-10 border-t border-line pt-8"><h2 className="text-2xl font-bold">Need help with a form?</h2><p className="mt-3 max-w-3xl leading-7 text-muted">Contact dispatch to confirm the correct document and return instructions. Keep financial documents out of the public quote form.</p>
-        <div className="mt-5 flex flex-wrap gap-6 font-semibold"><a href={`mailto:${site.email}`}>{site.email}</a><Link href="/contact#quote">Request a freight quote →</Link></div>
-      </div>
-    </section>
-  </>;
+const docs = [
+  {
+    title: "Book a shipment",
+    text: "Send pickup, delivery and handling details for review. A request is not a confirmed booking.",
+    file: "kwc-book-a-shipment.pdf",
+    label: "Download shipment request PDF ↓",
+  },
+  {
+    title: "Road bill of lading · Draft",
+    text: "Shipper, receiver and freight details. Confirm the carrier’s documentation and applicable carriage conditions before operational use.",
+    file: "kwc-bill-of-lading.pdf",
+    label: "Download draft bill of lading ↓",
+  },
+  {
+    title: "Customer setup",
+    text: "Introduce your business, billing contacts and delivery needs. Customer setup does not establish a credit account.",
+    file: "kwc-customer-setup.pdf",
+    label: "Download customer setup PDF ↓",
+  },
+  {
+    title: "Credit application · Draft",
+    text: "Business and trade-reference information for review. Credit terms and reference authorization require approval before use.",
+    file: "kwc-credit-application.pdf",
+    label: "Download draft credit application ↓",
+  },
+];
+function Documents({ start, end }: { start: number; end: number }) {
+  return (
+    <div className="capability-grid document-grid">
+      {docs.slice(start, end).map((doc) => (
+        <article key={doc.file}>
+          <h3>{doc.title}</h3>
+          <p>{doc.text}</p>
+          <a className="text-link" href={`/forms/${doc.file}`} download>
+            {doc.label}
+          </a>
+        </article>
+      ))}
+    </div>
+  );
+}
+export default function Forms() {
+  return (
+    <>
+      <PageIntro
+        eyebrow="FORMS & SHIPPING HELP"
+        title="A little preparation. A smoother delivery."
+      >
+        <p>
+          Download fillable PDFs, save your copy, and email it to{" "}
+          <a href="mailto:ship@kwclogistics.ca">ship@kwclogistics.ca</a>.
+          Confirm the right documents and return instructions with KWC.
+        </p>
+      </PageIntro>
+      <section className="wrap content-section">
+        <div className="article-copy">
+          <h2>Before you ship</h2>
+          <ul>
+            <li>Confirm pickup and delivery contacts.</li>
+            <li>Provide the number of pieces, dimensions and weight.</li>
+            <li>Package goods appropriately for transport.</li>
+            <li>Tell us about dock access, stairs or special handling.</li>
+            <li>Confirm receiving hours and appointment requirements.</li>
+          </ul>
+          <p>
+            Still measuring? Share approximate details or say “Not sure” in your
+            quote request.
+          </p>
+          <Link className="text-link" href="/resources">
+            More shipping help →
+          </Link>
+        </div>
+        <h2>Book and manage a shipment</h2>
+        <Documents start={0} end={2} />
+        <p>
+          <Link className="text-link" href="/contact#quote">
+            Prefer to start online? Request a Quote →
+          </Link>
+        </p>
+        <h2 style={{ marginTop: 56 }}>Business account documents</h2>
+        <Documents start={2} end={4} />
+        <p className="fine">
+          The bill of lading and credit application remain drafts for review. Do
+          not include bank details, card numbers or personal identification.
+          Applying does not establish approved credit.
+        </p>
+      </section>
+      <ContactCTA />
+    </>
+  );
 }

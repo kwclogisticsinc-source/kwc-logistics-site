@@ -14,3 +14,7 @@ outputs/
 .wrangler
 *.log
 .DS_Store
+*.preview.log
+.next-review
+.next-final
+.next-documents

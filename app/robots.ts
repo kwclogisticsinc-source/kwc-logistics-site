@@ -1,12 +1,11 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
-
+import { previewOnly } from "@/lib/release";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/"
+      ...(previewOnly ? { disallow: "/" } : { allow: "/" }),
     },
-    sitemap: `https://${site.domain}/sitemap.xml`
+    sitemap: "https://kwclogistics.ca/sitemap.xml",
   };
 }

@@ -13,6 +13,6 @@ export async function POST(request: Request) {
       }
     },
     send: fetch,
-    log: (code) => console.error(code)
+    log: (code) => console.error(code),
   });
 }
