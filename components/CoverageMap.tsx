@@ -1,2 +1,4 @@
 import { CoverageGraphic } from "./DeliveryUI";
-export function CoverageMap(){return <CoverageGraphic/>;}
+export function CoverageMap() {
+  return <CoverageGraphic />;
+}

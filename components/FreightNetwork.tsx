@@ -1,2 +1,4 @@
 import { ContactCTA } from "./DeliveryUI";
-export function FreightNetwork(){return <ContactCTA/>;}
+export function FreightNetwork() {
+  return <ContactCTA />;
+}
