@@ -103,7 +103,7 @@ Required Cloudflare config files:
 
 ## Content Notes
 
-- Phone is currently set to `416-300-8473`.
+- Business phone contact is temporarily hidden; use dispatch email or the quote form.
 - Email is set to `dispatch@kwclogistics.ca`.
 - The site intentionally does not publish a full street address yet and says `Based in Kitchener, Ontario`.
 - The quote form submits through `/api/quote`, which forwards submissions to Web3Forms from the server. Add `WEB3FORMS_ACCESS_KEY` in Cloudflare with the Web3Forms key connected to `kwclogisticsinc@gmail.com`.

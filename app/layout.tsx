@@ -7,11 +7,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
   title: {
-    default: "KWC Logistics Inc | Smarter Ontario Logistics & Transportation",
+    default: "KWC Logistics Inc | Ontario Transport & North American Freight Brokerage",
     template: "%s | KWC Logistics Inc."
   },
   description:
-    "KWC Logistics Inc provides family-run Ontario local LTL, FTL, warehousing, cross-docking, dedicated routes, and expedited freight.",
+    "Ontario transportation with KWC equipment. North American road, rail and ocean freight arranged through our partner network. Request a freight quote.",
   keywords: [
     "Kitchener logistics company",
     "Ontario logistics company",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "Southern Ontario LTL carrier"
   ],
   openGraph: {
-    title: "KWC Logistics Inc | Smarter Ontario Logistics & Transportation",
+    title: "KWC Logistics Inc | Ontario Transport & North American Freight Brokerage",
     description:
-      "Family-run Ontario local LTL, FTL, warehousing, cross-docking, dedicated routes, and expedited freight.",
+      "Ontario equipment. North American partners. Road, rail and ocean freight solutions.",
     url: `https://${site.domain}`,
     siteName: site.name,
     locale: "en_CA",
@@ -50,8 +50,10 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <body className="font-sans antialiased">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-white focus:p-4">Skip to content</a>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.name, url: `https://${site.domain}`, email: site.email, description: site.description }) }} />
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

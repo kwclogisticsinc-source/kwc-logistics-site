@@ -17,12 +17,6 @@ export const metadata: Metadata = {
 
 const contactCards = [
   {
-    label: "Dispatch Phone",
-    value: site.phone,
-    href: `tel:${site.phone}`,
-    note: "Call for freight that needs a clear answer and practical next step."
-  },
-  {
     label: "Email",
     value: site.email,
     href: `mailto:${site.email}`,
@@ -38,22 +32,22 @@ const contactCards = [
     label: "Office Hours",
     value: "Dispatch by request",
     href: null,
-    note: "Exact published office hours can be added before launch."
+    note: "Contact dispatch to discuss timing and availability."
   }
 ];
 
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact KWC" title="Talk to a logistics team that makes freight easier to move." image={stock.dispatch}>
+      <PageHero eyebrow="Contact KWC" title="One request. More freight options." image={stock.dispatch}>
         <p>
-          Send the details for your lane, freight profile, delivery timing, warehouse needs,
-          customer requirements, or recurring route. KWC will help define the right logistics plan.
+          Ontario service with our own equipment. North American road, rail and ocean solutions
+          through our partner network. Tell us what needs to move and where it needs to go.
         </p>
       </PageHero>
 
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8">
+      <section id="quote" className="scroll-mt-32 bg-white py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.65fr_1.35fr] lg:px-8">
           <div className="overflow-hidden rounded-[2rem] border border-line bg-brand-pale shadow-soft">
             <div className="relative h-[560px]">
               <StockPhoto src={stock.dock} alt="Modern loading dock and logistics operations" />
@@ -67,7 +61,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-4 max-w-lg text-sm leading-6 text-blue-100">
                   KWC is built for customers who want a real answer, a clear plan, and freight
-                  movement that feels organized from the first call.
+                  movement that feels organized from the first request.
                 </p>
               </div>
             </div>
@@ -88,8 +82,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Section title="Business information" intro="No full street address is published yet. KWC Logistics Inc. is based in Kitchener, Ontario." className="bg-brand-pale">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <Section title="Business information" intro="KWC Logistics Inc. is based in Kitchener, Ontario." className="bg-brand-pale">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {contactCards.map((card) => (
             <article key={card.label} className="premium-hover rounded-[1.5rem] border border-line bg-white p-6 shadow-sm hover:shadow-soft">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-blue">{card.label}</p>
@@ -126,9 +120,7 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/services" className="bg-brand-blue hover:bg-blue-500">View Services</ButtonLink>
-            <a href={`tel:${site.phone}`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/25 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-brand-navy">
-              {site.phone}
-            </a>
+
           </div>
         </div>
       </section>

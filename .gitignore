@@ -7,6 +7,9 @@ dist
 outputs/
 .env
 .env.local
+.env.*.local
+.dev.vars*
+*.tsbuildinfo
 .vercel
 .wrangler
 *.log

@@ -35,10 +35,10 @@ const resourceCards = [
 
 const faqs = [
   ["What information is needed for a quote?", "Send pickup city, delivery city, freight type, pallet or item count, weight, dimensions, timing, dock or liftgate details, and any special handling notes."],
-  ["Where does KWC provide LTL and FTL service?", "KWC focuses on Ontario freight lanes from Windsor to Ottawa, Niagara to Barrie, and the cities in between, with Kitchener-Waterloo-Cambridge as the home base."],
+  ["Where does KWC provide LTL and FTL service?", "KWC serves Ontario with its own equipment from a Kitchener base. Across North America, our partner network supports road, rail and ocean freight options. Availability is confirmed for each lane."],
   ["Can KWC help reduce transportation costs?", "Yes. KWC looks for practical ways to consolidate compatible freight, improve route planning, reduce wasted miles, and match the shipment to the right service level."],
-  ["Do you offer warehousing and cross-docking?", "Yes. KWC supports warehouse movement, freight staging, cross-docking, sorting, and distribution planning for customers that need freight moving through Ontario efficiently."],
-  ["How do I start working with KWC?", "Use the contact form, call dispatch, or email the shipment details. KWC will review the lane, freight, timing, paperwork, and next steps."]
+  ["Do you offer warehousing and cross-docking?", "KWC can assess warehouse transfers, staging and cross-dock coordination. Facility availability, service scope and partner requirements are confirmed before booking."],
+  ["How do I start working with KWC?", "Use the contact form or email the shipment details. KWC will review the lane, freight, timing, paperwork, and next steps."]
 ];
 
 export default function ResourcesPage() {

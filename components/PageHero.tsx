@@ -38,7 +38,7 @@ export function PageHero({ eyebrow, title, children, image = stock.warehouse }: 
           {children ? <div className="mt-6 max-w-3xl text-lg leading-8 text-blue-100">{children}</div> : null}
         </div>
         <div className="mt-10 grid max-w-4xl gap-3 sm:grid-cols-3">
-          {["Waterloo Region", "Professional Freight", "Ontario Capability"].map((item) => (
+          {["Ontario equipment", "North American partners", "Road • Rail • Ocean"].map((item) => (
             <div key={item} className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-bold text-blue-50 backdrop-blur">
               {item}
             </div>

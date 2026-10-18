@@ -1,3 +1,4 @@
+import { FreightNetwork } from "@/components/FreightNetwork";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -60,6 +61,7 @@ export default function ServicesPage() {
           dedicated route, and expedited freight programs.
         </p>
       </PageHero>
+      <FreightNetwork />
 
       <section className="border-b border-line bg-white py-5">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
@@ -71,9 +73,7 @@ export default function ServicesPage() {
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             <ButtonLink href="/contact">Get a Freight Quote</ButtonLink>
-            <a href={`tel:${site.phone}`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-bold text-brand-navy transition hover:bg-brand-pale">
-              Call {site.phone}
-            </a>
+
           </div>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
       <Section
         eyebrow="Main Service Focus"
         title="Local LTL Services in Kitchener"
-        intro="Fast freight delivery within Kitchener, the GTA, and Southern Ontario for businesses that need pallets, skids, parts, supplies, and commercial freight moved without broker runaround."
+        intro="Fast freight delivery within Kitchener, the GTA, and Southern Ontario for businesses that need pallets, skids, parts, supplies, and commercial freight moved with one point of contact."
       >
         <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr]">
           <div className="overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
@@ -98,8 +98,7 @@ export default function ServicesPage() {
           <div className="grid content-center gap-4">
             <p className="text-base leading-7 text-muted">
               For businesses in the Kitchener area seeking dependable and professional shipping
-              solutions, KWC Logistics provides practical local LTL service backed by 15+ years
-              of transportation and logistics experience. We handle freight moving from industrial
+              solutions, KWC Logistics provides practical local LTL service planned around each shipment’s requirements. We handle freight moving from industrial
               parks, warehouses, manufacturers, suppliers, and commercial receivers across Kitchener,
               the GTA, and Southern Ontario.
             </p>

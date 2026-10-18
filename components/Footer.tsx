@@ -1,64 +1,9 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { FullLogo } from "./Logo";
-
 export function Footer() {
-  const columns = [
-    ["Services", "LTL Distribution", "Final Mile", "Dedicated Routes", "Warehousing", "Freight Brokerage"],
-    ["Industries", "Manufacturing", "Automotive", "Retail", "E-commerce", "Food"],
-    ["Company", "About", "Resources", "Quote", "Privacy", "Terms"]
-  ];
-
-  return (
-    <footer className="border-t border-line bg-brand-navy text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_1.35fr_0.9fr] lg:px-8">
-        <div>
-          <div className="max-w-[220px]">
-            <FullLogo />
-          </div>
-          <p className="mt-3 max-w-md text-sm leading-6 text-blue-100">
-            Technology-driven logistics from Kitchener-Waterloo. Built around communication,
-            trust, transparent pricing, and freight movement that feels simple.
-          </p>
-          <p className="mt-4 text-sm text-blue-100">{site.location}</p>
-        </div>
-        <div>
-          <div className="grid gap-7 sm:grid-cols-3">
-            {columns.map(([title, ...items]) => (
-              <div key={title}>
-                <p className="font-semibold">{title}</p>
-                <div className="mt-3 space-y-2 text-sm text-blue-100">
-                  {items.map((item) => (
-                    <p key={item}>{item}</p>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <p className="font-semibold">Quote</p>
-          <div className="mt-3 space-y-2 text-sm text-blue-100">
-            <p><a href={`tel:${site.phone}`} className="hover:text-white">{site.phone}</a></p>
-            <p><a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a></p>
-            <p>No full street address listed yet.</p>
-          </div>
-          <Link href="/contact" className="mt-5 inline-flex rounded-md bg-brand-blue px-5 py-3 text-sm font-black text-white transition hover:bg-blue-500">
-            Get a Quote
-          </Link>
-        </div>
-      </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-blue-100 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/services" className="hover:text-white">Services</Link>
-            <Link href="/resources" className="hover:text-white">Resources</Link>
-            <Link href="/contact" className="hover:text-white">Contact Us</Link>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="bg-brand-navy text-white"><div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
+    <div><p className="text-2xl font-black">KWC LOGISTICS</p><p className="mt-4 leading-7 text-blue-100">Ontario service with our own equipment. North American road, rail and ocean freight through our partner network.</p><p className="mt-4 text-sm text-blue-100">Based in Kitchener, Ontario</p></div>
+    <nav aria-label="Footer navigation" className="grid content-start gap-3 text-sm font-semibold"><Link href="/services">Our Services</Link><Link href="/services/freight-brokerage">North American Freight Brokerage</Link><Link href="/industries">Industries We Serve</Link><Link href="/service-areas">Service Areas</Link><Link href="/forms">Forms & Documents</Link><Link href="/resources">Shipping Resources</Link><Link href="/about">About KWC</Link></nav>
+    <div><p className="font-bold">Talk to Dispatch</p><a className="mt-3 block" href={`mailto:${site.email}`}>{site.email}</a><Link href="/contact#quote" className="mt-6 inline-block rounded-md bg-white px-5 py-3 font-bold text-brand-navy">Request a Freight Quote</Link></div>
+  </div><div className="border-t border-white/20 px-4 py-5 text-center text-xs text-blue-100">© {new Date().getFullYear()} {site.name} All rights reserved.</div></footer>;
 }
