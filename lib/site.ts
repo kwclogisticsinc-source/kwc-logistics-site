@@ -7,7 +7,7 @@ export const site = {
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener-Waterloo, Ontario",
   description:
-    "KWC Logistics Inc. is a technology-driven Ontario logistics company built around communication, trust, transparent pricing, and simpler freight movement."
+    "Ontario transportation with our own equipment. North American freight brokerage by road, rail and ocean through our partner network."
 };
 
 export type ItemPage = {
@@ -24,22 +24,32 @@ export type ItemPage = {
 export const localLtlOptions = [
   {
     name: "LTL Direct",
-    time: "2 hrs",
+    time: "By arrangement",
     description: "Priority local cartage for freight that needs the fastest practical pickup and delivery window."
   },
   {
     name: "LTL Rush",
-    time: "4 hrs",
+    time: "By arrangement",
     description: "Expedited LTL movement for time-sensitive pallets, parts, skids, and commercial freight."
   },
   {
     name: "LTL Sameday",
-    time: "By 5PM",
+    time: "Subject to availability",
     description: "Same-day local LTL service for scheduled freight that needs to move before close of business."
   }
 ];
 
 export const serviceCategories: ItemPage[] = [
+  {
+    slug: "frozen-refrigerated-freight",
+    title: "Frozen & Refrigerated Freight",
+    description: "Temperature-controlled freight options for grocery, food and other qualifying shipments. We review the required range, lane and suitable direct or partner equipment before quoting.",
+    image: stock.straightTruck,
+    benefits: ["Temperature requirements reviewed", "Food distribution", "Equipment coordination", "Direct or partner-arranged options"],
+    industries: ["Grocery", "Food wholesalers", "Frozen food distribution"],
+    customers: ["Food distributors", "Grocery stores", "Manufacturers"],
+    keywords: ["refrigerated freight Ontario", "frozen food transportation Ontario"]
+  },
   {
     slug: "ltl-distribution",
     title: "LTL Distribution",
@@ -52,8 +62,8 @@ export const serviceCategories: ItemPage[] = [
   },
   {
     slug: "final-mile-b2c",
-    title: "Final Mile, B2C & D2C",
-    description: "Customer-facing delivery programs for retail, e-commerce, home delivery, scheduled deliveries, and white-glove freight.",
+    title: "Final-Mile Delivery",
+    description: "B2B and B2C deliveries to stores, businesses and customer doors, with liftgate, inside delivery and additional handling available by arrangement.",
     image: stock.cargoVan,
     benefits: ["Final mile", "B2C and D2C", "Scheduled delivery", "White glove"],
     industries: ["Retail", "E-commerce", "Furniture", "Technology"],
@@ -98,10 +108,10 @@ export const serviceCategories: ItemPage[] = [
   },
   {
     slug: "freight-brokerage",
-    title: "Freight Brokerage",
-    description: "Partner-carrier coordination for lanes, capacity, equipment, or Canadian transportation needs outside direct asset coverage.",
+    title: "North American Freight Brokerage",
+    description: "North American freight brokerage through our partner network: road, rail, ocean and multimodal options, with one point of contact from planning to delivery.",
     image: stock.yard,
-    benefits: ["Partner network", "Capacity planning", "Canada-wide future", "Single point of contact"],
+    benefits: ["North American partners", "Road, rail & ocean", "Multimodal coordination", "Single point of contact"],
     industries: ["Manufacturing", "Distribution", "Retail", "Industrial"],
     customers: ["Growing shippers", "Multi-lane customers", "Regional distributors", "Procurement teams"]
   }

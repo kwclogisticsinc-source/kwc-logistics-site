@@ -1,3 +1,4 @@
+import { FreightNetwork } from "@/components/FreightNetwork";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -5,6 +6,17 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { StockPhoto } from "@/components/StockPhoto";
 import { localLtlOptions, serviceCategories, site } from "@/lib/site";
+
+const serviceNotes: Record<string, string> = {
+  "ltl-distribution": "Move pallets and partial loads between manufacturers, warehouses and commercial receivers. Discuss one-time shipments, consolidation and recurring Ontario distribution routes with dispatch.",
+  "final-mile-b2c": "Deliver to businesses, stores, warehouses and customer doors. Tell us about stairs, restricted access, appointments and whether liftgate, inside delivery or setup support is needed. Additional handling is agreed before booking.",
+  "frozen-refrigerated-freight": "Share the product type, required temperature range and units, loading conditions, delivery window and monitoring needs. Suitable equipment may be directly operated or arranged through partners; the quote confirms the service. Pharmaceutical and other regulated shipments require a separate capability review.",
+  "specialized-freight": "For non-standard freight, describe the packaging, dimensions, loading and unloading arrangements. Wrapping, palletizing, offloading, inside delivery and setup may be coordinated by arrangement. Specialty equipment is confirmed for each shipment.",
+  "freight-brokerage": "Our North American relationships expand the options beyond KWC equipment. We coordinate road, rail, ocean and multimodal options through transport partners, reviewing lanes, carrier acceptance, timing and cross-border documentation needs before booking. We do not operate rail or ocean services or promise every route or commodity.",
+  "b2b-dedicated-routes": "Build a recurring plan for store replenishment, supplier pickups and business deliveries. Share frequency, stops, volume changes and receiving windows so dispatch can assess a practical route.",
+  "warehousing-cross-dock": "Discuss warehouse transfers, staging and cross-dock coordination as part of a transport plan. Facility access, storage needs, handling and partner availability are confirmed before a service is agreed.",
+  "expedited-courier": "Share the actual pickup deadline and required arrival time for urgent parts or commercial freight. Dispatch checks available equipment and routes before confirming a feasible schedule."
+};
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -28,13 +40,14 @@ export default async function ServiceDetailPage({ params }: Props) {
   const { slug } = await params;
   const service = serviceCategories.find((item) => item.slug === slug);
   if (!service) notFound();
-  const isLocalLtl = service.slug === "ltl-freight";
+  const isLocalLtl = service.slug === "ltl-distribution";
 
   return (
     <>
       <PageHero eyebrow="KWC Service" title={service.title} image={service.image}>
         <p>{service.description}</p>
       </PageHero>
+      {service.slug === "freight-brokerage" ? <FreightNetwork /> : null}
 
       {isLocalLtl ? (
         <Section
@@ -66,6 +79,12 @@ export default async function ServiceDetailPage({ params }: Props) {
         </Section>
       ) : null}
 
+      <Section title="Plan the shipment around your requirements" intro="Tell us what needs to move, where it is going, and what matters at each end.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <article className="rounded-xl border border-line bg-white p-6"><h2 className="text-xl font-bold">Service scope</h2><p className="mt-4 leading-7 text-muted">{serviceNotes[service.slug] ?? service.description}</p></article>
+          <article className="rounded-xl border border-line bg-white p-6"><h2 className="text-xl font-bold">What to include in your quote</h2><p className="mt-4 leading-7 text-muted">Share the pickup and delivery locations, dates, freight description, quantity, weight and dimensions. Include site access, loading equipment, handling and temperature requirements where relevant.</p><p className="mt-4 leading-7 text-muted">KWC confirms whether your shipment will use our Ontario equipment or be arranged through a carrier partner. Availability and commodity acceptance are reviewed before booking.</p></article>
+        </div>
+      </Section>
       <Section title={`A professional ${service.title.toLowerCase()} program`} intro="KWC builds each solution around shipment profile, service level, customer expectations, communication requirements, and long-term operational goals.">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="overflow-hidden rounded-[2rem] shadow-soft">

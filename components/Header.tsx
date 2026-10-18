@@ -1,73 +1,15 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { ButtonLink } from "./ButtonLink";
 import { HeaderLogo } from "./Logo";
-
-const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/resources", label: "Resources" },
-  { href: "/contact", label: "Contact Us" }
-];
-
+const nav = [{ href: "/services", label: "Services" }, { href: "/services/freight-brokerage", label: "Freight Brokerage" }, { href: "/forms", label: "Forms & Documents" }, { href: "/industries", label: "Industries" }, { href: "/service-areas", label: "Service Areas" }, { href: "/about", label: "About" }];
 export function Header() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/95 text-brand-navy shadow-lg shadow-brand-navy/5 backdrop-blur-xl">
-      <div className="bg-brand-navy text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-1.5 px-4 py-2 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p className="text-center uppercase tracking-[0.16em] text-blue-100 sm:text-left">
-            Ontario-first logistics • LTL freight • warehousing • distribution
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-blue-100 sm:justify-end">
-            <a href={`mailto:${site.email}`} className="transition hover:text-white">
-              <span className="font-black text-white">Email:</span> {site.email}
-            </a>
-            <a href={`tel:${site.phone}`} className="transition hover:text-white">
-              <span className="font-black text-white">Phone:</span> {site.phone}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-4 pb-3 pt-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center justify-center" aria-label="KWC Logistics Inc. home">
-          <HeaderLogo />
-        </Link>
-        <p className="mt-[-8px] text-center text-[11px] font-black uppercase tracking-[0.22em] text-brand-blue sm:text-xs">
-          Make logistics simple • Ontario first • Canada-wide future
-        </p>
-      </div>
-
-      <div className="border-t border-line bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4 lg:px-8">
-          <div className="hidden lg:block" aria-hidden="true" />
-
-          <nav className="flex items-center justify-start gap-2 overflow-x-auto text-sm font-black text-brand-navy sm:justify-center lg:overflow-visible" aria-label="Primary navigation">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="shrink-0 whitespace-nowrap rounded-full px-4 py-2 transition hover:bg-brand-pale hover:text-brand-blue"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center justify-center gap-2 lg:justify-end">
-            <a
-              className="inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-md border border-brand-blue/25 bg-white px-4 text-sm font-black text-brand-navy transition hover:border-brand-blue hover:text-brand-blue"
-              href={`tel:${site.phone}`}
-            >
-              Call Dispatch
-            </a>
-            <ButtonLink href="/contact" className="min-h-11 whitespace-nowrap bg-brand-blue px-5 text-white hover:bg-blue-500">
-              Get a Quote
-            </ButtonLink>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+  return <header className="sticky top-0 z-50 border-b border-line bg-white text-brand-navy">
+    <div className="bg-brand-navy px-4 py-2 text-center text-xs font-semibold text-white">Ontario equipment · North American partners · Road / Rail / Ocean</div>
+    <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
+      <Link href="/" aria-label="KWC Logistics home"><HeaderLogo /></Link>
+      <nav aria-label="Primary navigation" className="hidden items-center gap-4 text-sm font-bold xl:flex">{nav.map(item => <Link className="hover:text-brand-blue" key={item.href} href={item.href}>{item.label}</Link>)}</nav>
+      <Link href="/contact#quote" className="rounded-md bg-brand-navy px-4 py-3 text-sm font-bold text-white">Get a Quote</Link>
+      <details className="relative xl:hidden"><summary className="cursor-pointer rounded-md border border-line px-3 py-3 text-sm font-bold">Menu</summary><nav aria-label="Mobile navigation" className="absolute right-0 mt-3 grid w-64 gap-1 rounded-lg border border-line bg-white p-3 shadow-soft">{nav.map(item => <Link key={item.href} href={item.href} className="rounded p-3 text-sm font-semibold hover:bg-brand-pale">{item.label}</Link>)}<a className="p-3 text-sm font-semibold" href={`tel:${site.phone}`}>Call {site.phone}</a></nav></details>
+    </div>
+  </header>;
 }

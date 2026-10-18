@@ -7,25 +7,27 @@ type StockPhotoProps = {
 };
 
 export const stock = {
-  hero: "/images/kwc-yard-fleet.png",
-  warehouse: "/images/kwc-warehouse-crossdock.png",
-  dock: "/images/kwc-straight-trucks-dock.png",
-  pallets: "/images/kwc-warehouse-crossdock.png",
-  dispatch: "/images/kwc-cargo-van-dock.png",
-  driver: "/images/kwc-cargo-van-dock.png",
-  technology: "/images/kwc-yard-fleet.png",
-  fleet: "/images/kwc-yard-fleet.png",
-  containers: "/images/kwc-straight-trucks-dock.png",
-  cargoVan: "/images/kwc-cargo-van-dock.png",
-  straightTruck: "/images/kwc-straight-trucks-dock.png",
-  yard: "/images/kwc-yard-fleet.png",
-  crossdock: "/images/kwc-warehouse-crossdock.png"
+  hero: "/images/kwc-yard-fleet-1400.webp",
+  warehouse: "/images/kwc-warehouse-crossdock-1400.webp",
+  dock: "/images/kwc-straight-trucks-dock-1400.webp",
+  pallets: "/images/kwc-warehouse-crossdock-1400.webp",
+  dispatch: "/images/kwc-cargo-van-dock-1400.webp",
+  driver: "/images/kwc-cargo-van-dock-1400.webp",
+  technology: "/images/kwc-yard-fleet-1400.webp",
+  fleet: "/images/kwc-yard-fleet-1400.webp",
+  containers: "/images/kwc-straight-trucks-dock-1400.webp",
+  cargoVan: "/images/kwc-cargo-van-dock-1400.webp",
+  straightTruck: "/images/kwc-straight-trucks-dock-1400.webp",
+  yard: "/images/kwc-yard-fleet-1400.webp",
+  crossdock: "/images/kwc-warehouse-crossdock-1400.webp"
 };
 
 export function StockPhoto({ src, alt, className = "" }: StockPhotoProps) {
   return (
     <img
       src={src}
+      srcSet={src.endsWith("-1400.webp") ? `${src.replace("-1400.webp", "-640.webp")} 640w, ${src} 1400w` : undefined}
+      sizes="(max-width: 640px) 100vw, 60vw"
       alt={alt}
       loading="lazy"
       decoding="async"
