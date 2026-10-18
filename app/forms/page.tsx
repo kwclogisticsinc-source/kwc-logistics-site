@@ -23,7 +23,7 @@ export default function FormsPage() {
         </article>)}
       </div>
       <div className="mt-10 border-t border-line pt-8"><h2 className="text-2xl font-bold">Need help with a form?</h2><p className="mt-3 max-w-3xl leading-7 text-muted">Contact dispatch to confirm the correct document and return instructions. Keep financial documents out of the public quote form.</p>
-        <div className="mt-5 flex flex-wrap gap-6 font-semibold"><a href={`mailto:${site.email}`}>{site.email}</a><a href={`tel:${site.phone}`}>{site.phone}</a><Link href="/contact#quote">Request a freight quote →</Link></div>
+        <div className="mt-5 flex flex-wrap gap-6 font-semibold"><a href={`mailto:${site.email}`}>{site.email}</a><Link href="/contact#quote">Request a freight quote →</Link></div>
       </div>
     </section>
   </>;

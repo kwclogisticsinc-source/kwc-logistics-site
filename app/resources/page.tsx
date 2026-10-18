@@ -38,7 +38,7 @@ const faqs = [
   ["Where does KWC provide LTL and FTL service?", "KWC serves Ontario with its own equipment from a Kitchener base. Across North America, our partner network supports road, rail and ocean freight options. Availability is confirmed for each lane."],
   ["Can KWC help reduce transportation costs?", "Yes. KWC looks for practical ways to consolidate compatible freight, improve route planning, reduce wasted miles, and match the shipment to the right service level."],
   ["Do you offer warehousing and cross-docking?", "KWC can assess warehouse transfers, staging and cross-dock coordination. Facility availability, service scope and partner requirements are confirmed before booking."],
-  ["How do I start working with KWC?", "Use the contact form, call dispatch, or email the shipment details. KWC will review the lane, freight, timing, paperwork, and next steps."]
+  ["How do I start working with KWC?", "Use the contact form or email the shipment details. KWC will review the lane, freight, timing, paperwork, and next steps."]
 ];
 
 export default function ResourcesPage() {

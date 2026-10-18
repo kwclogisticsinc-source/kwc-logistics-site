@@ -17,12 +17,6 @@ export const metadata: Metadata = {
 
 const contactCards = [
   {
-    label: "Dispatch Phone",
-    value: site.phone,
-    href: `tel:${site.phone}`,
-    note: "Call for freight that needs a clear answer and practical next step."
-  },
-  {
     label: "Email",
     value: site.email,
     href: `mailto:${site.email}`,
@@ -67,7 +61,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-4 max-w-lg text-sm leading-6 text-blue-100">
                   KWC is built for customers who want a real answer, a clear plan, and freight
-                  movement that feels organized from the first call.
+                  movement that feels organized from the first request.
                 </p>
               </div>
             </div>
@@ -89,7 +83,7 @@ export default function ContactPage() {
       </section>
 
       <Section title="Business information" intro="KWC Logistics Inc. is based in Kitchener, Ontario." className="bg-brand-pale">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {contactCards.map((card) => (
             <article key={card.label} className="premium-hover rounded-[1.5rem] border border-line bg-white p-6 shadow-sm hover:shadow-soft">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-blue">{card.label}</p>
@@ -126,9 +120,7 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/services" className="bg-brand-blue hover:bg-blue-500">View Services</ButtonLink>
-            <a href={`tel:${site.phone}`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/25 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-brand-navy">
-              {site.phone}
-            </a>
+
           </div>
         </div>
       </section>

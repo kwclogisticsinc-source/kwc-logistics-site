@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FreightNetwork } from "@/components/FreightNetwork";
-import { site } from "@/lib/site";
 const services = [
   ["01", "LTL Freight & Distribution", "Pallets, partial loads and recurring commercial routes across Ontario.", "ltl-distribution"],
   ["02", "Final-Mile Delivery", "Business-to-business and doorstep delivery, with access and handling planned around the receiver.", "final-mile-b2c"],
@@ -18,7 +17,7 @@ export default function HomePage() {
         <div><p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-cyan">Kitchener, Ontario · Connected across North America</p>
           <h1 className="mt-6 max-w-3xl text-5xl font-black leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl">From Dock to Door.<br /><span className="text-blue-200">And Everywhere<br className="hidden sm:block" /> in Between.</span></h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-blue-100">Ontario transportation with our own equipment. North American freight solutions through our partner network. One team to help move your business forward.</p>
-          <div className="mt-8 flex flex-wrap gap-3"><Link href="/contact#quote" className="rounded-md bg-white px-6 py-4 font-bold text-brand-navy">Request a Freight Quote →</Link><a href={`tel:${site.phone}`} className="rounded-md border border-white/40 px-6 py-4 font-bold">Call Dispatch</a></div>
+          <div className="mt-8 flex flex-wrap gap-3"><Link href="/contact#quote" className="rounded-md bg-white px-6 py-4 font-bold text-brand-navy">Request a Freight Quote →</Link></div>
         </div>
         <aside className="self-end border-l-2 border-brand-cyan pl-6"><p className="text-sm font-bold uppercase tracking-widest text-brand-cyan">Your freight. Our network.</p><h2 className="mt-4 text-3xl font-bold">One solution starts<br />with one conversation.</h2><p className="mt-5 leading-7 text-blue-100">A local delivery. A recurring route. A shipment that needs more than a truck. Tell us the challenge.</p><Link href="/services/freight-brokerage" className="mt-6 inline-block border-b border-white/50 pb-2 font-bold">Explore our brokerage network ↗</Link></aside>
       </div>

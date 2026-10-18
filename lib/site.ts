@@ -3,7 +3,6 @@ import { stock } from "@/components/StockPhoto";
 export const site = {
   name: "KWC Logistics Inc.",
   domain: "kwclogistics.ca",
-  phone: "416-300-8473",
   email: "dispatch@kwclogistics.ca",
   location: "Based in Kitchener-Waterloo, Ontario",
   description:

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
 import { HeaderLogo } from "./Logo";
 const nav = [{ href: "/services", label: "Services" }, { href: "/services/freight-brokerage", label: "Freight Brokerage" }, { href: "/forms", label: "Forms & Documents" }, { href: "/industries", label: "Industries" }, { href: "/service-areas", label: "Service Areas" }, { href: "/about", label: "About" }];
 export function Header() {
@@ -9,7 +8,7 @@ export function Header() {
       <Link href="/" aria-label="KWC Logistics home"><HeaderLogo /></Link>
       <nav aria-label="Primary navigation" className="hidden items-center gap-4 text-sm font-bold xl:flex">{nav.map(item => <Link className="hover:text-brand-blue" key={item.href} href={item.href}>{item.label}</Link>)}</nav>
       <Link href="/contact#quote" className="rounded-md bg-brand-navy px-4 py-3 text-sm font-bold text-white">Get a Quote</Link>
-      <details className="relative xl:hidden"><summary className="cursor-pointer rounded-md border border-line px-3 py-3 text-sm font-bold">Menu</summary><nav aria-label="Mobile navigation" className="absolute right-0 mt-3 grid w-64 gap-1 rounded-lg border border-line bg-white p-3 shadow-soft">{nav.map(item => <Link key={item.href} href={item.href} className="rounded p-3 text-sm font-semibold hover:bg-brand-pale">{item.label}</Link>)}<a className="p-3 text-sm font-semibold" href={`tel:${site.phone}`}>Call {site.phone}</a></nav></details>
+      <details className="relative xl:hidden"><summary className="cursor-pointer rounded-md border border-line px-3 py-3 text-sm font-bold">Menu</summary><nav aria-label="Mobile navigation" className="absolute right-0 mt-3 grid w-64 gap-1 rounded-lg border border-line bg-white p-3 shadow-soft">{nav.map(item => <Link key={item.href} href={item.href} className="rounded p-3 text-sm font-semibold hover:bg-brand-pale">{item.label}</Link>)}</nav></details>
     </div>
   </header>;
 }

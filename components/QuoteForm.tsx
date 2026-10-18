@@ -30,11 +30,11 @@ export function QuoteForm() {
         setMessage("Thank you. Your request has been submitted. Dispatch will review your shipment and contact you. This is a quote request, not a confirmed booking.");
       } else {
         setErrors(result.errors ?? {}); setStatus("error");
-        setMessage(result.error ?? "We could not confirm your request. Please call 416-300-8473 or email dispatch@kwclogistics.ca.");
+        setMessage(result.error ?? "We could not confirm your request. Please email dispatch@kwclogistics.ca.");
       }
     } catch {
       setStatus("error");
-      setMessage("We could not confirm delivery. Your details are still here. Before resending, call 416-300-8473 or email dispatch@kwclogistics.ca to avoid a duplicate.");
+      setMessage("We could not confirm delivery. Your details are still here. Before resending, email dispatch@kwclogistics.ca to avoid a duplicate.");
     } finally { busy.current = false; }
   }
   return (

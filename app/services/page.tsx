@@ -73,9 +73,7 @@ export default function ServicesPage() {
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             <ButtonLink href="/contact">Get a Freight Quote</ButtonLink>
-            <a href={`tel:${site.phone}`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-navy bg-white px-5 py-3 text-sm font-bold text-brand-navy transition hover:bg-brand-pale">
-              Call {site.phone}
-            </a>
+
           </div>
         </div>
       </section>

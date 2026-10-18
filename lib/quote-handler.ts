@@ -5,7 +5,7 @@ export type QuoteEnvironment = {
 };
 type Dependencies = { environment(): Promise<QuoteEnvironment>; send: typeof fetch; log: (code: string) => void };
 const MAX_BODY = 24000;
-const fallback = "Please call 416-300-8473 or email dispatch@kwclogistics.ca.";
+const fallback = "Please email dispatch@kwclogistics.ca.";
 function reply(status: number, data: object) {
   return Response.json(data, { status, headers: { "Cache-Control": "no-store", ...(status === 429 ? { "Retry-After": "60" } : {}) } });
 }

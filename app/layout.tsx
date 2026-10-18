@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en-CA">
       <body className="font-sans antialiased">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-white focus:p-4">Skip to content</a>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.name, url: `https://${site.domain}`, telephone: site.phone, email: site.email, description: site.description }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.name, url: `https://${site.domain}`, email: site.email, description: site.description }) }} />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
