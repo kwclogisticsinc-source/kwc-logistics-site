@@ -35,7 +35,7 @@ const docs = [
 ];
 function Documents({ start, end }: { start: number; end: number }) {
   return (
-    <div className="capability-grid">
+    <div className="capability-grid document-grid">
       {docs.slice(start, end).map((doc) => (
         <article key={doc.file}>
           <h3>{doc.title}</h3>

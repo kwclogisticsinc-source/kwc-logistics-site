@@ -49,8 +49,8 @@ export default function Privacy() {
         <p>
           Form details are held in the current page’s memory while you move
           between steps; the form does not save them to browser storage. You can
-          contact KWC by phone or email instead. To ask about access, correction
-          or deletion of enquiry information, email{" "}
+          contact KWC by email instead. To ask about access, correction or
+          deletion of enquiry information, email{" "}
           <a href={`mailto:${contact.email}`} className="text-link">
             {contact.email}
           </a>

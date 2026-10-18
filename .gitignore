@@ -17,3 +17,4 @@ outputs/
 *.preview.log
 .next-review
 .next-final
+.next-documents
