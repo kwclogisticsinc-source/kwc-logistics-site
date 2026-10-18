@@ -1,124 +1,26 @@
-import { FreightNetwork } from "@/components/FreightNetwork";
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ButtonLink } from "@/components/ButtonLink";
-import { PageHero } from "@/components/PageHero";
-import { Section } from "@/components/Section";
-import { StockPhoto } from "@/components/StockPhoto";
-import { localLtlOptions, serviceCategories, site } from "@/lib/site";
-
-const serviceNotes: Record<string, string> = {
-  "ltl-distribution": "Move pallets and partial loads between manufacturers, warehouses and commercial receivers. Discuss one-time shipments, consolidation and recurring Ontario distribution routes with dispatch.",
-  "final-mile-b2c": "Deliver to businesses, stores, warehouses and customer doors. Tell us about stairs, restricted access, appointments and whether liftgate, inside delivery or setup support is needed. Additional handling is agreed before booking.",
-  "frozen-refrigerated-freight": "Share the product type, required temperature range and units, loading conditions, delivery window and monitoring needs. Suitable equipment may be directly operated or arranged through partners; the quote confirms the service. Pharmaceutical and other regulated shipments require a separate capability review.",
-  "specialized-freight": "For non-standard freight, describe the packaging, dimensions, loading and unloading arrangements. Wrapping, palletizing, offloading, inside delivery and setup may be coordinated by arrangement. Specialty equipment is confirmed for each shipment.",
-  "freight-brokerage": "Our North American relationships expand the options beyond KWC equipment. We coordinate road, rail, ocean and multimodal options through transport partners, reviewing lanes, carrier acceptance, timing and cross-border documentation needs before booking. We do not operate rail or ocean services or promise every route or commodity.",
-  "b2b-dedicated-routes": "Build a recurring plan for store replenishment, supplier pickups and business deliveries. Share frequency, stops, volume changes and receiving windows so dispatch can assess a practical route.",
-  "warehousing-cross-dock": "Discuss warehouse transfers, staging and cross-dock coordination as part of a transport plan. Facility access, storage needs, handling and partner availability are confirmed before a service is agreed.",
-  "expedited-courier": "Share the actual pickup deadline and required arrival time for urgent parts or commercial freight. Dispatch checks available equipment and routes before confirming a feasible schedule."
+import { categories, industries } from "@/lib/content";
+import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
+const details = {
+ courier:{title:"A delivery service that starts with you.",intro:"One envelope, a customer’s order, or a van full of local deliveries. KWC Courier is part of KWC Logistics, with a simple way to ask for the delivery you need.",groups:[
+ ["One-off & time-sensitive",["Envelopes, documents, parcels and suitable larger packages","Urgent point-to-point delivery","Same-day and next-day options, subject to capacity and booking requirements","Cars, SUVs and cargo vans matched to the shipment"]],
+ ["Business delivery, your way",["Scheduled pickups and recurring routes","Multi-stop delivery, vendor collections and store replenishment","Retail, e-commerce, business-to-business and doorstep deliveries","Returns collection for suitable shipments"]],
+ ["Care in the details",["Meal-kit and prepared-food distribution where suitable handling is available","Pickup, handoff and receiving instructions agreed before booking","Approximate size and weight help us choose suitable capacity","Special products and handling requirements reviewed before acceptance"]]
+ ],outcome:"Reach more customers without building your own delivery fleet.",body:"Orders can come through your own website, phone or usual sales channels. KWC can help plan pickup, regional movement and final delivery around them. We can discuss communication and handoff arrangements that support your brand relationship; custom integrations and branded tracking are not implied.",quote:"courier"},
+ freight:{title:"Big shipment. Clear plan.",intro:"Pallets, commercial freight and larger deliveries need the right questions up front. We help work through access, timing and extra handling before the vehicle arrives.",groups:[
+ ["The right capacity",["LTL: share suitable truck capacity instead of paying for a whole truck","FTL: full truckload capacity for larger or dedicated movements","Expedited road freight when timing is tight","Local and regional distribution, dedicated routes and final-mile delivery"]],
+ ["Beyond the loading dock",["Door-to-door and tailgate/liftgate options","Inside delivery and two-person handling where available","Placement, setup assistance and packaging removal when specifically arranged","Wrapping, palletizing and shipment preparation"]],
+ ["Plan for the exceptions",["Appointment windows, multiple delivery points and no-dock locations","Urgent replacement stock and returns / reverse logistics","Temperature-controlled road transport through suitable confirmed capacity","Special equipment and handling agreed before booking"]]
+ ],outcome:"No dock? Narrow receiving window? Start with the details.",body:"Tell us about the freight and the receiving location. We review the required vehicle, unloading method, access and handling together. Setup assistance means agreed delivery handling; installation and equipment commissioning are not offered as part of standard delivery.",quote:"freight"},
+ logistics:{title:"One contact. A practical plan for every shipment.",intro:"Connect the pickup, road movement and final delivery without coordinating every carrier yourself. KWC helps plan recurring distribution and more complex road freight.",groups:[
+ ["Plan the movement",["Freight planning and carrier sourcing / coordination","LTL, full truckload and expedited road freight","Ontario distribution programs and multi-location delivery","Dedicated routes, consolidation and linehaul arrangements"]],
+ ["Connect the regions",["Canada/U.S. road freight through suitable carrier partners","Final-mile delivery coordination","Shipment-specific equipment and receiving requirements","One KWC contact to work through the transportation plan"]],
+ ["Arrange the supporting work",["Sorting, staging and cross-docking through confirmed facilities or arranged partners","Storage arrangements reviewed for product, duration and location","Wrapping, palletizing and shipment preparation","Returns handling matched to the agreed program"]]
+ ],outcome:"Build a delivery plan around your business.",body:"Start with the locations, approximate volume, frequency and receiving needs. We can assess how compatible shipments, regional movement and final delivery could work together. Wider freight is carried by third-party carriers; KWC coordinates the arrangements. Cross-border documentation responsibilities and any specialist customs provider are confirmed before booking.",quote:"logistics"}
 };
-
-type Props = { params: Promise<{ slug: string }> };
-
-export function generateStaticParams() {
-  return serviceCategories.map((service) => ({ slug: service.slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const service = serviceCategories.find((item) => item.slug === slug);
-  if (!service) return {};
-  return {
-    title: service.title,
-    description: `${service.description} Contact KWC Logistics Inc. at ${site.domain}.`,
-    keywords: service.keywords,
-    alternates: { canonical: `/services/${service.slug}` }
-  };
-}
-
-export default async function ServiceDetailPage({ params }: Props) {
-  const { slug } = await params;
-  const service = serviceCategories.find((item) => item.slug === slug);
-  if (!service) notFound();
-  const isLocalLtl = service.slug === "ltl-distribution";
-
-  return (
-    <>
-      <PageHero eyebrow="KWC Service" title={service.title} image={service.image}>
-        <p>{service.description}</p>
-      </PageHero>
-      {service.slug === "freight-brokerage" ? <FreightNetwork /> : null}
-
-      {isLocalLtl ? (
-        <Section
-          eyebrow="Kitchener Cartage Freight"
-          title="LTL Direct, Rush, and Sameday options."
-          intro="KWC provides fast local LTL freight delivery within Kitchener, the GTA, and Southern Ontario for businesses that need practical timing, direct communication, and dependable handling."
-          className="bg-brand-pale"
-        >
-          <div className="grid gap-4 md:grid-cols-3">
-            {localLtlOptions.map((option) => (
-              <article key={option.name} className="rounded-[1.5rem] border border-line bg-white p-6 shadow-sm">
-                <p className="text-sm font-black uppercase tracking-[0.22em] text-brand-blue">{option.time}</p>
-                <h2 className="mt-3 text-2xl font-black text-ink">{option.name}</h2>
-                <p className="mt-3 text-sm leading-6 text-muted">{option.description}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-8 rounded-[2rem] bg-brand-navy p-6 text-white shadow-glow">
-            <h2 className="text-3xl font-black tracking-tight">Get a local cartage freight quote for the Kitchener area.</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-blue-100">
-              Send pickup city, delivery city, pallet count, freight type, weight, dimensions,
-              timing requirement, and any dock or liftgate notes. KWC will help match the freight
-              to the right local LTL option.
-            </p>
-            <div className="mt-6">
-              <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">Request a Local LTL Quote</ButtonLink>
-            </div>
-          </div>
-        </Section>
-      ) : null}
-
-      <Section title="Plan the shipment around your requirements" intro="Tell us what needs to move, where it is going, and what matters at each end.">
-        <div className="grid gap-6 md:grid-cols-2">
-          <article className="rounded-xl border border-line bg-white p-6"><h2 className="text-xl font-bold">Service scope</h2><p className="mt-4 leading-7 text-muted">{serviceNotes[service.slug] ?? service.description}</p></article>
-          <article className="rounded-xl border border-line bg-white p-6"><h2 className="text-xl font-bold">What to include in your quote</h2><p className="mt-4 leading-7 text-muted">Share the pickup and delivery locations, dates, freight description, quantity, weight and dimensions. Include site access, loading equipment, handling and temperature requirements where relevant.</p><p className="mt-4 leading-7 text-muted">KWC confirms whether your shipment will use our Ontario equipment or be arranged through a carrier partner. Availability and commodity acceptance are reviewed before booking.</p></article>
-        </div>
-      </Section>
-      <Section title={`A professional ${service.title.toLowerCase()} program`} intro="KWC builds each solution around shipment profile, service level, customer expectations, communication requirements, and long-term operational goals.">
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="overflow-hidden rounded-[2rem] shadow-soft">
-            <div className="h-[460px]">
-              <StockPhoto src={service.image} alt={service.title} />
-            </div>
-          </div>
-          <div className="grid gap-5">
-            <article className="rounded-[2rem] border border-line bg-white p-6 shadow-sm">
-              <h2 className="text-2xl font-black text-ink">Benefits</h2>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {service.benefits.map((benefit) => (
-                  <div key={benefit} className="rounded-xl bg-brand-pale px-4 py-3 text-sm font-bold text-brand-navy">{benefit}</div>
-                ))}
-              </div>
-            </article>
-            <article className="rounded-[2rem] border border-line bg-white p-6 shadow-sm">
-              <h2 className="text-2xl font-black text-ink">Industries served</h2>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {service.industries.map((industry) => (
-                  <span key={industry} className="rounded-full border border-line px-4 py-2 text-sm font-bold text-muted">{industry}</span>
-                ))}
-              </div>
-            </article>
-            <article className="rounded-[2rem] bg-brand-navy p-6 text-white shadow-glow">
-              <h2 className="text-2xl font-black">Typical customers</h2>
-              <p className="mt-3 text-sm leading-6 text-blue-100">{service.customers.join(", ")}.</p>
-              <div className="mt-6">
-                <ButtonLink href="/contact" className="bg-brand-blue hover:bg-blue-500">Request a Quote</ButtonLink>
-              </div>
-            </article>
-          </div>
-        </div>
-      </Section>
-    </>
-  );
-}
+export function generateStaticParams(){return Object.keys(details).map(slug=>({slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const item=categories.find(i=>i.href.endsWith(`/${slug}`));return {title:item?.title??"Service",description:item?.description,alternates:{canonical:`/services/${slug}`}};}
+export default async function ServicePage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;if(!(slug in details))notFound();const detail=details[slug as keyof typeof details];const item=categories.find(i=>i.href.endsWith(`/${slug}`))!;return <><PageIntro eyebrow={item.title} title={detail.title}><p>{detail.intro}</p></PageIntro><section className="wrap content-section"><div className="service-detail-heading"><p>Tell us what needs to move. We’ll confirm a suitable service, capacity and price before booking.</p><Link className="btn" href={`/contact?service=${detail.quote}#quote`}>Request a Quote <Icon name="arrow"/></Link></div><div className="service-detail-image"><Image src={item.image} alt={item.alt} fill priority sizes="100vw"/><span className="photo-caption">Illustrative marketing scene</span></div><div className="capability-grid">{detail.groups.map(([title,items])=><article key={title as string}><h3>{title}</h3><ul>{(items as string[]).map(text=><li key={text}>{text}</li>)}</ul></article>)}</div><div className="notice"><strong>How your shipment is operated.</strong> Suitable local and Ontario movements may be handled by KWC directly. Carrier partners provide broader lanes or specialist capacity when needed. The operator, equipment and agreed handling are confirmed for your shipment.</div><div className="article-copy"><h2>{detail.outcome}</h2><p>{detail.body}</p><Link href="/contact?service=regular#quote" className="text-link">Discuss recurring deliveries <Icon name="arrow"/></Link></div>{slug==="courier"&&<><div className="section-heading" style={{marginTop:60}}><h2>Useful for your kind of business.</h2></div><div className="industry-grid">{industries.map(([title,text])=><article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></>}</section><ContactCTA/></>;}

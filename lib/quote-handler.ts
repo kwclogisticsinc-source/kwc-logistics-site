@@ -49,7 +49,7 @@ export async function handleQuote(request: Request, dependencies: Dependencies) 
     if (!limit.success) return reply(429, { success: false, error: "Too many requests. Please wait a minute before trying again." });
     const response = await dependencies.send("https://api.web3forms.com/submit", {
       method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, signal: AbortSignal.timeout(12000),
-      body: JSON.stringify({ ...values, access_key: key, subject: `KWC freight quote — ${values.Service}`, from_name: "KWC Logistics Website", name: values.Name, email: values.Email })
+      body: JSON.stringify({ ...values, access_key: key, subject: `KWC quote request — ${values.Service}`, from_name: "KWC Logistics Website", name: values.Name, email: values.Email })
     });
     const result = await response.json() as { success?: boolean };
     if (!response.ok || result.success !== true) {
