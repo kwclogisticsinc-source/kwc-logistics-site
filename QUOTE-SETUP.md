@@ -1,6 +1,6 @@
 # Quote delivery and preview checklist
 
-Public contact remains dispatch@kwclogistics.ca, which the owner confirms forwards to kwclogisticsinc@gmail.com. Do not change routing or add duplicate CC delivery. ship@kwclogistics.ca is a possible future mailbox, not active website configuration.
+The public website contact is ship@kwclogistics.ca at the owner's request. The Web3Forms access key determines actual quote delivery; changing the displayed email does not change that destination. The Cloudflare deploy command now copies the existing build secret into the Worker runtime using wrangler secret put; its value must never be committed or logged.
 
 The access key determines the Web3Forms destination. The previous `Send To` custom field did not configure routing. The deployed Worker must have `WEB3FORMS_ACCESS_KEY` as a runtime secret, not only a GitHub/build variable. Never commit its value. This change retains the Cloudflare binding lookup and adds explicit safe diagnostics; it cannot provision the missing key without access to the deployment account.
 

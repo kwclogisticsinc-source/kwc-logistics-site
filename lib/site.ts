@@ -3,7 +3,7 @@ import { stock } from "@/components/StockPhoto";
 export const site = {
   name: "KWC Logistics Inc.",
   domain: "kwclogistics.ca",
-  email: "dispatch@kwclogistics.ca",
+  email: "ship@kwclogistics.ca",
   location: "Based in Kitchener-Waterloo, Ontario",
   description:
     "Ontario transportation with our own equipment. North American freight brokerage by road, rail and ocean through our partner network."
