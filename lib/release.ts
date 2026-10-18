@@ -1,3 +1,2 @@
-// Review build only. Change to false only after the owner approves this preview.
-// Live domain deployment remains a separate, explicit release action.
-export const previewOnly = true;
+// Owner approved the redesign for production on October 18, 2026.
+export const previewOnly = false;
