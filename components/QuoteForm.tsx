@@ -37,6 +37,8 @@ export function QuoteForm({
   useEffect(() => {
     if (window.location.hash.startsWith("#quote&")) {
       const route = new URLSearchParams(window.location.hash.slice(7));
+      // Hydrate private route details from the browser-only fragment after mount.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValues((previous) => ({
         ...previous,
         "Pickup Location": (route.get("pickup") ?? "").slice(0, 300),

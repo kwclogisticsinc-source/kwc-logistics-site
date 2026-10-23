@@ -1,7 +1,9 @@
 "use client";
 import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { Icon } from "./DeliveryUI";
 export function QuoteEntry() {
+  const router = useRouter();
   const [service, setService] = useState("courier");
   function start(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -10,7 +12,7 @@ export function QuoteEntry() {
       pickup: String(values.get("pickup") ?? ""),
       destination: String(values.get("destination") ?? ""),
     });
-    window.location.assign(
+    router.push(
       `/contact?service=${service}#quote&${route.toString()}`,
     );
   }
