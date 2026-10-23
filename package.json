@@ -30,12 +30,5 @@
     "tailwindcss": "3.4.17",
     "typescript": "5.7.2",
     "wrangler": "^4.105.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "@babel/types": "7.29.8",
-      "@babel/helper-string-parser": "7.29.7",
-      "@babel/parser": "7.29.9"
-    }
   }
 }
