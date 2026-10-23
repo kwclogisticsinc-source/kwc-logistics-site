@@ -48,11 +48,27 @@ export function Header() {
           <nav className="desktop-nav" aria-label="Main navigation">
             {nav.map(([url, label]) =>
               url === "/services" ? (
-                <details className="regional-nav-services" key={url}>
+                <details
+                  className="regional-nav-services"
+                  key={url}
+                  onKeyDown={(event) => {
+                    if (event.key === "Escape") {
+                      event.currentTarget.open = false;
+                      event.currentTarget.querySelector("summary")?.focus();
+                    }
+                  }}
+                >
                   <summary>
                     Services <span aria-hidden="true">⌄</span>
                   </summary>
-                  <div>
+                  <div
+                    onClick={(event) => {
+                      if ((event.target as HTMLElement).closest("a")) {
+                        const menu = event.currentTarget.closest("details");
+                        if (menu) menu.open = false;
+                      }
+                    }}
+                  >
                     <Link href="/services">All transportation services</Link>
                     <Link href="/services/courier">Courier & packages</Link>
                     <Link href="/services/freight">

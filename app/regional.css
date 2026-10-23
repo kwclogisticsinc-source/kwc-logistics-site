@@ -93,11 +93,19 @@ h3 {
   background: var(--pale);
 }
 .page-intro {
+  width: 100%;
   max-width: none;
   background: #f2f5f9;
   padding: 60px max(24px, calc((100% - 1180px) / 2));
   margin: 0;
   border-bottom: 1px solid var(--line);
+}
+.service-region-line {
+  margin-top: 20px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.8;
 }
 .page-intro h1 {
   max-width: 1000px;
