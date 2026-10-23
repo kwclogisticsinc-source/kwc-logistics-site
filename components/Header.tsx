@@ -14,6 +14,18 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <>
+      <div className="regional-utility">
+        <div className="wrap">
+          <span>
+            KITCHENER–WATERLOO BASED{" "}
+            <span className="utility-region">
+              {" "}
+              · LONDON–WINDSOR · GODERICH · OWEN SOUND
+            </span>
+          </span>
+          <Link href="/forms">Forms & Shipping Help →</Link>
+        </div>
+      </div>
       <header className="site-header">
         <div className="wrap header-inner">
           <Link
@@ -34,11 +46,32 @@ export function Header() {
             </span>
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
-            {nav.map(([url, label]) => (
-              <Link href={url} key={url}>
-                {label}
-              </Link>
-            ))}
+            {nav.map(([url, label]) =>
+              url === "/services" ? (
+                <details className="regional-nav-services" key={url}>
+                  <summary>
+                    Services <span aria-hidden="true">⌄</span>
+                  </summary>
+                  <div>
+                    <Link href="/services">All transportation services</Link>
+                    <Link href="/services/courier">Courier & packages</Link>
+                    <Link href="/services/freight">
+                      Freight & specialized delivery
+                    </Link>
+                    <Link href="/services/logistics">
+                      Logistics & distribution
+                    </Link>
+                    <Link href="/contact?service=regular#quote">
+                      Regular business deliveries
+                    </Link>
+                  </div>
+                </details>
+              ) : (
+                <Link href={url} key={url}>
+                  {label}
+                </Link>
+              ),
+            )}
           </nav>
           <div className="header-actions">
             <a href={`mailto:${contact.email}`} className="header-phone">

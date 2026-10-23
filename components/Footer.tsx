@@ -33,7 +33,12 @@ export function Footer() {
         <div className="footer-contact">
           <strong>A real conversation starts here.</strong>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <p>Kitchener, Ontario</p>
+          <p>Based in Kitchener–Waterloo, Ontario</p>
+          <p className="fine">
+            London–Windsor · Goderich · Owen Sound
+            <br />
+            Waterloo Region & wider Ontario
+          </p>
           <Link href="/contact#quote" className="text-link">
             Request a Quote →
           </Link>

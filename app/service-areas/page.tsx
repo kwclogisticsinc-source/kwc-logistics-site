@@ -1,68 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import {
-  ContactCTA,
-  CoverageGraphic,
-  PageIntro,
-} from "@/components/DeliveryUI";
+export { RegionalCoveragePage as default } from "@/components/RegionalCoveragePage";
 export const metadata: Metadata = {
-  title: "KWC & Ontario Delivery Coverage",
+  title: "Waterloo Region & Western Ontario Delivery Coverage",
   description:
-    "Local courier in Kitchener, Waterloo and Cambridge. Ontario service corridors and Canada/U.S. road freight through carrier partners.",
+    "Kitchener–Waterloo based courier and freight. London to Windsor, Goderich, Owen Sound and Ontario delivery arrangements.",
   alternates: { canonical: "/service-areas" },
 };
-export default function Coverage() {
-  return (
-    <>
-      <PageIntro
-        eyebrow="CLOSE TO HOME. CONNECTED BEYOND."
-        title="Start in KWC. Go from there."
-      >
-        <p>
-          Local courier delivery comes first. For regional shipments and wider
-          road freight, we work through the route, timing and suitable capacity
-          with you.
-        </p>
-      </PageIntro>
-      <section className="wrap content-section">
-        <div className="split-section">
-          <CoverageGraphic />
-          <div className="article-copy">
-            <h2>Know which kind of coverage you need.</h2>
-            <p>
-              <strong>Local courier:</strong> Kitchener, Waterloo and Cambridge,
-              for packages, supplier pickups and customer deliveries.
-            </p>
-            <p>
-              <strong>Regional arrangements:</strong> KWC ↔ GTA, KWC ↔
-              Niagara, KWC ↔ London ↔ Windsor, and KWC ↔ Ottawa, arranged
-              around shipment and receiving requirements.
-            </p>
-            <p>
-              <strong>Wider road freight:</strong> Suitable carrier partners for
-              Canada/U.S. lanes and the equipment your freight requires.
-            </p>
-          </div>
-        </div>
-        <div className="article-copy">
-          <h2>The corridors behind the connections.</h2>
-          <p>
-            Highway 401 connects Waterloo Region with the GTA to the east and
-            London and Windsor to the west. Highway 403 connects the
-            Woodstock/Brantford corridor with Hamilton and the QEW for Niagara.
-            Ottawa routes can use Highway 401 east and Highway 416 north.
-          </p>
-          <p>
-            This is a corridor guide, not a schedule or promise of daily
-            service. Pickup and delivery timing, capacity and any transfer
-            arrangements are confirmed with your quote.
-          </p>
-          <Link className="text-link" href="/contact#quote">
-            Ask about your route →
-          </Link>
-        </div>
-      </section>
-      <ContactCTA />
-    </>
-  );
-}

@@ -12,11 +12,12 @@ export default function Services() {
     <>
       <PageIntro
         eyebrow="YOUR SHIPMENT. THE RIGHT SERVICE."
-        title="Small parcel to full truckload."
+        title="Courier. Freight. Regional distribution."
       >
         <p>
-          Choose a starting point. We’ll help match the route, equipment and
-          handling to what you actually need.
+          From our Kitchener–Waterloo base, connect local pickups with
+          deliveries across Western Ontario. London to Windsor, Goderich, Owen
+          Sound and wider connections—with the service matched to your shipment.
         </p>
       </PageIntro>
       <section className="wrap content-section">

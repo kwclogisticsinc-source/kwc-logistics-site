@@ -109,7 +109,7 @@ export const faqs = [
   ],
   [
     "Where do you deliver?",
-    "We start in Kitchener, Waterloo and Cambridge, with regional delivery arrangements across Ontario. Wider Canada/U.S. road freight is coordinated through suitable carrier partners. Each route and timing is confirmed with your quote.",
+    "We are based in Kitchener–Waterloo and serve Cambridge, the London–Windsor corridor, Goderich, Owen Sound and area, with wider Ontario arrangements. Canada/U.S. road freight is coordinated through suitable carrier partners. Each route and timing is confirmed with your quote.",
   ],
   [
     "Can you support deliveries to my customers under my brand?",
