@@ -7,6 +7,10 @@ import { Icon } from "./DeliveryUI";
 const nav = [
   ["/services", "Services"],
   ["/service-areas", "Coverage"],
+  ["/business", "For Business"],
+  ["/fleet-services", "Fleet & Mobile"],
+  ["/blog", "Insights"],
+  ["/forms", "Forms"],
   ["/about", "About"],
   ["/contact", "Contact"],
 ];
@@ -14,18 +18,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="regional-utility">
-        <div className="wrap">
-          <span>
-            KITCHENER–WATERLOO BASED{" "}
-            <span className="utility-region">
-              {" "}
-              · LONDON–WINDSOR · GODERICH · OWEN SOUND
-            </span>
-          </span>
-          <Link href="/forms">Forms & Shipping Help →</Link>
-        </div>
-      </div>
       <header className="site-header">
         <div className="wrap header-inner">
           <Link

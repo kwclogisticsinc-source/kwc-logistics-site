@@ -1,58 +1,66 @@
 export const deliveryRegions = [
   {
-    id: "local",
-    label: "Waterloo Region",
-    destination: "Waterloo Region",
-    title: "Kitchener. Waterloo. Cambridge.",
-    towns: ["Kitchener", "Waterloo", "Cambridge"],
+    id: "gta",
+    label: "GTA & beyond",
+    destination: "GTA / surrounding regions",
+    title: "Into the GTA. Onward to the next stop.",
+    towns: [
+      "Toronto & the GTA",
+      "Peel, York, Durham & Halton",
+      "Connections beyond the GTA",
+    ],
     description:
-      "Our home base for courier collections, business deliveries, supplier pickups and regional dispatch coordination.",
+      "Cargo vans and trucks connect business pickups, customer orders and commercial freight with the Greater Toronto Area and onward destinations. Build a point-to-point movement or connect several stops.",
     example:
-      "A parcel across the region, an urgent supplier collection, or a regular round of customer deliveries.",
+      "Collect from a supplier, replenish a store and connect the next delivery through one coordinated plan.",
   },
   {
     id: "west",
-    label: "London–Windsor",
-    destination: "London / Windsor",
-    title: "West through London to Windsor.",
-    towns: ["London", "Windsor"],
+    label: "London & beyond",
+    destination: "London / Southwestern Ontario",
+    title: "Through London. Across the southwest.",
+    towns: ["London", "Windsor & Essex", "Southwestern Ontario connections"],
     description:
-      "Connect Waterloo Region with customers, suppliers and commercial receiving locations across the London–Windsor corridor.",
+      "Connect local collections with freight and delivery lanes through London and further west. We coordinate suitable capacity for packages, pallets and recurring distribution requirements.",
     example:
-      "Pallet replenishment, commercial deliveries, scheduled pickups or a dedicated road movement.",
+      "Arrange a business pickup, pallet replenishment or a dedicated delivery to a commercial receiving location.",
   },
   {
-    id: "goderich",
-    label: "Goderich",
-    destination: "Goderich",
-    title: "Your delivery route can reach Goderich.",
-    towns: ["Goderich", "Surrounding communities by arrangement"],
+    id: "central",
+    label: "Central & Niagara",
+    destination: "Central Ontario / Niagara",
+    title: "Regional connections. A wider delivery plan.",
+    towns: ["Waterloo Region", "Hamilton & Niagara", "Central Ontario"],
     description:
-      "Deliveries beyond the main 401 corridor need the same attention to timing, access and receiving details. Tell us where the goods need to go in Goderich and the surrounding area.",
+      "Link suppliers, businesses and customer destinations across regional Ontario. Courier collections, commercial deliveries and recurring routes can form part of the same distribution conversation.",
     example:
-      "A supplier pickup or commercial delivery with a specific receiving window and unloading requirement.",
+      "Combine store replenishment with scheduled collections and final delivery requirements.",
   },
   {
-    id: "owen-sound",
-    label: "Owen Sound",
-    destination: "Owen Sound",
-    title: "Connect with Owen Sound and area.",
-    towns: ["Owen Sound", "Surrounding communities by arrangement"],
+    id: "east",
+    label: "Eastern Ontario",
+    destination: "Eastern Ontario",
+    title: "Eastbound connections across Ontario.",
+    towns: ["Kingston", "Ottawa", "Eastern Ontario communities"],
     description:
-      "Plan courier, freight or recurring delivery requirements between Waterloo Region and Owen Sound. We assess the location, shipment and suitable capacity together.",
+      "Plan shipments between southern Ontario and eastern destinations, with the vehicle, operator and delivery requirements matched to the actual movement.",
     example:
-      "Parts, packaged customer orders or freight for a business away from the main highway corridor.",
+      "Move commercial freight or packaged orders with receiving hours and appointment details considered before booking.",
   },
   {
-    id: "ontario",
-    label: "Wider reach",
-    destination: "Ontario / Canada / U.S.",
-    title: "Ontario connections. North American road freight.",
-    towns: ["Greater Toronto Area", "Niagara Region", "Ottawa"],
+    id: "province",
+    label: "All Ontario",
+    destination: "Ontario",
+    title: "The province is the starting point.",
+    towns: [
+      "Northern Ontario",
+      "Regional & rural destinations",
+      "Province-wide coordination",
+    ],
     description:
-      "Ontario delivery arrangements connect with wider Canada/U.S. road freight through suitable carrier partners. The actual operator and service are confirmed with your quote.",
+      "Our coverage conversation extends across Ontario, including communities outside the major highway corridors. Direct service and suitable carrier partnerships connect the capacity needed for each shipment.",
     example:
-      "A regional delivery that connects with a wider road freight movement or a multi-location distribution plan.",
+      "Share a destination anywhere in Ontario. We will review the route, equipment and delivery arrangements with you.",
   },
 ] as const;
 export const serviceDirectory = [

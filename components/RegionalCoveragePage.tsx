@@ -6,38 +6,89 @@ export function RegionalCoveragePage() {
   return (
     <>
       <PageIntro
-        eyebrow="BASED IN KITCHENER–WATERLOO"
-        title="Your customers aren’t all on the same highway."
+        eyebrow="ONTARIO-WIDE CONNECTIONS"
+        title="Across Ontario. Connected around your business."
       >
         <p>
-          Courier, freight and delivery programs from Waterloo Region—west
-          through London to Windsor, and beyond the main 401 corridor to
-          Goderich, Owen Sound and area.
+          Cargo vans, trucks and carrier capacity. From the GTA and beyond to
+          London and beyond, KWC connects local pickups, regional lanes and
+          final delivery across Ontario.
         </p>
       </PageIntro>
-      <section className="wrap content-section">
+      <section className="wrap section">
         <div className="regional-coverage-page">
           <div className="article-copy">
+            <p className="eyebrow">A NETWORK, NOT A SHORT LIST OF CITIES</p>
             <h2>
-              A local base.
-              <br />A practical regional network.
+              Your next destination.
+              <br />
+              Our next conversation.
             </h2>
             <p>
-              Start with where the goods are and where they need to go. We
-              review your shipment, receiving windows and access requirements,
-              then work through a suitable service.
+              Ontario businesses need transportation that reaches beyond a few
+              postal codes. Our logistics network brings together courier
+              delivery, pallet freight, dedicated transport and recurring
+              distribution across the province.
             </p>
             <p>
-              Local courier, regional freight and recurring delivery routes
-              serve different needs. A delivery outside the main highway
-              corridor can still be part of the conversation.
+              We coordinate cargo vans and trucks moving toward the GTA and
+              onward, through London and further west, and along regional
+              connections throughout Ontario. Whether the destination is a major
+              commercial centre or a community away from the main highway, we
+              build the plan around the actual shipment.
             </p>
             <Link className="btn" href="/contact#quote">
-              Discuss Your Route →
+              Plan an Ontario Shipment →
             </Link>
           </div>
           <RegionExplorer />
         </div>
+      </section>
+      <section className="network-equipment">
+        <div className="wrap section">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">CAPACITY THAT FITS THE MOVEMENT</p>
+              <h2>
+                Small deliveries.
+                <br />
+                Serious freight capability.
+              </h2>
+            </div>
+            <p>
+              Match the service to the load, location and receiving
+              requirements. One point of contact connects the pieces.
+            </p>
+          </div>
+          <div className="capability-grid">
+            {[
+              [
+                "Cargo vans & courier vehicles",
+                "Documents, parcels, packaged orders, supplier collections and suitable larger packages. A flexible starting point for local delivery and regional point-to-point requirements.",
+              ],
+              [
+                "Trucks & commercial freight",
+                "Pallets, commercial shipments, shared-capacity freight and dedicated loads. We review dimensions, weight, dock access and handling before confirming suitable equipment.",
+              ],
+              [
+                "Connected distribution",
+                "Recurring pickups, multi-stop delivery, store replenishment and final-mile coordination. Connect collection, regional movement and the receiving location in one practical plan.",
+              ],
+            ].map(([title, copy]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="wrap section">
+        <p className="eyebrow">EXPLORE THE CONNECTIONS</p>
+        <h2>Lanes that connect the province.</h2>
+        <p className="lead">
+          These are starting points for planning—not the limits of our coverage.
+        </p>
         <div className="regional-area-grid">
           {deliveryRegions.map((region) => (
             <article key={region.id}>
@@ -51,39 +102,46 @@ export function RegionalCoveragePage() {
               </ul>
               <Link
                 className="text-link"
-                href={`/contact?service=freight&pickup=Kitchener&destination=${encodeURIComponent(region.destination)}#quote`}
+                href={
+                  "/contact?service=freight&destination=" +
+                  encodeURIComponent(region.destination) +
+                  "#quote"
+                }
               >
-                Request route advice →
+                Discuss this connection →
               </Link>
             </article>
           ))}
         </div>
-        <div className="article-copy">
-          <h2>What matters when planning the route?</h2>
-          <p>
-            Tell us the collection point, each delivery location, the
-            goods-ready time and receiving hours. Include piece counts,
-            dimensions, weight and whether each stop has a dock or needs
-            additional handling.
-          </p>
-          <p>
-            Highway 401 connects the London–Windsor corridor. Goderich and Owen
-            Sound require different regional connections. We plan around the
-            actual addresses and requirements, rather than treating every
-            location as an interchangeable highway stop.
-          </p>
-          <h2>Direct service and carrier coordination.</h2>
-          <p>
-            Suitable local and Ontario movements may be handled by KWC directly.
-            Wider Canada/U.S. road freight and specialist capacity can be
-            coordinated through carrier partners. The operator, equipment,
-            availability and service details are confirmed with your quote.
-          </p>
-          <p className="fine">
-            No fixed daily departures, cutoff times or terminal locations are
-            advertised. Nearby communities and routes not listed can be reviewed
-            on request.
-          </p>
+        <div className="coverage-planning">
+          <div>
+            <p className="eyebrow">BEYOND THE CITY NAME</p>
+            <h2>
+              Good coverage starts
+              <br />
+              with good planning.
+            </h2>
+          </div>
+          <div>
+            <p>
+              Highway 401 connects the GTA with southwestern and eastern
+              Ontario. Highway 403 adds connections through Hamilton, Brantford
+              and Woodstock, with the QEW serving Niagara. Northern Ontario and
+              destinations away from the main corridors require their own route
+              and capacity planning.
+            </p>
+            <p>
+              Share the actual locations, ready time, receiving hours,
+              dimensions and weight. We work through direct service or suitable
+              carrier partners, including specialist equipment where required.
+              Availability, operator and service details are confirmed with your
+              quote.
+            </p>
+            <p>
+              Need to go further? We also coordinate suitable Canada/U.S. road
+              freight through carrier partners.
+            </p>
+          </div>
         </div>
       </section>
       <ContactCTA />

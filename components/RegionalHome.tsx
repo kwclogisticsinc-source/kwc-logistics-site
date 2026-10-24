@@ -4,6 +4,7 @@ import { contact, industries } from "@/lib/content";
 import { serviceDirectory } from "@/lib/coverage";
 import { ContactCTA, FAQ, Icon } from "@/components/DeliveryUI";
 import { RegionExplorer } from "@/components/RegionExplorer";
+import { NetworkSections } from "@/components/NetworkSections";
 import { QuoteEntry } from "@/components/QuoteEntry";
 export function RegionalHome() {
   return (
@@ -19,21 +20,21 @@ export function RegionalHome() {
         />
         <div className="regional-hero-shade" />
         <div className="wrap regional-hero-content">
-          <p className="eyebrow">KITCHENER–WATERLOO BASED. BUSINESS DRIVEN.</p>
+          <p className="eyebrow">ONE CONNECTED ONTARIO NETWORK.</p>
           <h1>
-            LOCAL ROOTS.
+            MORE CONNECTIONS.
             <br />
-            MORE POSSIBILITIES.
+            FEWER COMPLICATIONS.
           </h1>
           <p className="regional-hero-lead">
             Courier, freight and distribution.
             <br />
-            From Waterloo Region to your next customer.
+            Across Ontario. Around your business.
           </p>
           <p className="regional-hero-copy">
-            Across Kitchener, Waterloo and Cambridge. West through London to
-            Windsor. Beyond the main corridor to Goderich, Owen Sound and the
-            communities your business needs to reach.
+            Cargo vans, trucks and coordinated freight capacity. Into the GTA
+            and beyond. Through London and beyond. One logistics network
+            connecting your deliveries across Ontario.
           </p>
           <div className="button-row">
             <Link className="btn" href="/contact#quote">
@@ -144,13 +145,13 @@ export function RegionalHome() {
       <section className="regional-coverage-band">
         <div className="wrap regional-coverage-layout">
           <div className="regional-coverage-copy">
-            <p className="eyebrow">OUR HOME BASE. YOUR WIDER REACH.</p>
+            <p className="eyebrow">
+              CONNECTED LANES. PROVINCE-WIDE POSSIBILITIES.
+            </p>
             <h2>
-              Waterloo Region.
+              Across Ontario.
               <br />
-              Western Ontario.
-              <br />
-              Beyond the main corridor.
+              Across your supply chain.
             </h2>
             <p>
               Business doesn’t stop at the highway exit. We help plan deliveries
@@ -158,13 +159,16 @@ export function RegionalHome() {
             </p>
             <ul>
               <li>
-                <strong>Local:</strong> Kitchener · Waterloo · Cambridge
+                <strong>Courier:</strong> Parcels, supplier pickups & customer
+                orders
               </li>
               <li>
-                <strong>West:</strong> London through to Windsor
+                <strong>Freight:</strong> Pallets, dedicated loads &
+                distribution
               </li>
               <li>
-                <strong>Beyond the 401:</strong> Goderich · Owen Sound & area
+                <strong>Network:</strong> GTA & beyond · London & beyond · All
+                Ontario
               </li>
             </ul>
             <Link href="/service-areas" className="text-link">
@@ -361,6 +365,7 @@ export function RegionalHome() {
         </div>
         <FAQ limit={6} />
       </section>
+      <NetworkSections />
       <ContactCTA />
     </>
   );

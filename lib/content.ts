@@ -109,7 +109,7 @@ export const faqs = [
   ],
   [
     "Where do you deliver?",
-    "We are based in Kitchener–Waterloo and serve Cambridge, the London–Windsor corridor, Goderich, Owen Sound and area, with wider Ontario arrangements. Canada/U.S. road freight is coordinated through suitable carrier partners. Each route and timing is confirmed with your quote.",
+    "We coordinate courier delivery, freight and recurring delivery programs throughout Ontario. Cargo vans, trucks and suitable carrier partners connect the GTA and beyond, London and beyond, and regional destinations across the province. Canada/U.S. road freight is arranged through suitable carrier partners. Route, equipment and availability are confirmed with your quote.",
   ],
   [
     "Can you support deliveries to my customers under my brand?",

@@ -27,6 +27,9 @@ export function Footer() {
           <Link href="/service-areas">Coverage</Link>
           <Link href="/about">About us</Link>
           <Link href="/industries">Industries</Link>
+          <Link href="/business">Business delivery programs</Link>
+          <Link href="/fleet-services">Truck repair & mobile enquiries</Link>
+          <Link href="/blog">Shipping insights</Link>
           <Link href="/resources">Shipping help</Link>
           <Link href="/forms">Forms & documents</Link>
         </nav>
@@ -35,9 +38,9 @@ export function Footer() {
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <p>Based in Kitchener–Waterloo, Ontario</p>
           <p className="fine">
-            London–Windsor · Goderich · Owen Sound
+            Ontario-wide delivery network
             <br />
-            Waterloo Region & wider Ontario
+            Cargo vans · Trucks · Carrier partnerships
           </p>
           <Link href="/contact#quote" className="text-link">
             Request a Quote →

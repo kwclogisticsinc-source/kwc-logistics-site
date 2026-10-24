@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/industries",
     "/resources",
+    "/business",
+    "/fleet-services",
+    "/blog",
+    "/blog/choosing-courier-or-freight",
+    "/blog/planning-recurring-deliveries",
+    "/blog/delivery-without-a-loading-dock",
     "/forms",
     "/privacy",
   ].map((route) => ({

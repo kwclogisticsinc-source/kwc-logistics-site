@@ -5,5 +5,5 @@ export const site = {
   email: contact.email,
   location: "Kitchener, Ontario",
   description:
-    "Kitchener–Waterloo based courier, freight and distribution. London–Windsor, Goderich, Owen Sound and wider Ontario delivery arrangements.",
+    "Ontario-wide courier, freight and distribution. Cargo vans, trucks and a coordinated logistics network connecting the GTA, London and beyond.",
 };

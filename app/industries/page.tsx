@@ -16,8 +16,8 @@ export default function Industries() {
       >
         <p>
           A supplier waiting, a customer order ready, or stock needed at another
-          location. From Waterloo Region across Western Ontario, tell us the
-          problem you need to solve and the places you need to reach.
+          location. Across Ontario, tell us the problem you need to solve and
+          the places you need to reach.
         </p>
       </PageIntro>
       <section className="wrap content-section">

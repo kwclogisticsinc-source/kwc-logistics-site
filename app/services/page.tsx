@@ -12,12 +12,13 @@ export default function Services() {
     <>
       <PageIntro
         eyebrow="YOUR SHIPMENT. THE RIGHT SERVICE."
-        title="Courier. Freight. Regional distribution."
+        title="Courier. Freight. Ontario distribution."
       >
         <p>
-          From our Kitchener–Waterloo base, connect local pickups with
-          deliveries across Western Ontario. London to Windsor, Goderich, Owen
-          Sound and wider connections—with the service matched to your shipment.
+          Cargo vans, trucks and coordinated carrier capacity connect local
+          pickups, Ontario-wide lanes and final delivery. From the GTA and
+          beyond to London and beyond, we build the service around your
+          shipment.
         </p>
       </PageIntro>
       <section className="wrap content-section">

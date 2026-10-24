@@ -30,14 +30,14 @@ export function RegionExplorer() {
         aria-live="polite"
         aria-atomic="true"
       >
-        <p className="eyebrow">FROM OUR WATERLOO REGION BASE</p>
+        <p className="eyebrow">CONNECTED ACROSS ONTARIO</p>
         <h3>{region.title}</h3>
         <p>{region.description}</p>
         <div
           className="region-route"
           aria-label="Service connection illustration, not a geographic map"
         >
-          <span className="region-origin">KWC</span>
+          <span className="region-origin">KWC network</span>
           <span className="region-route-line" aria-hidden="true" />
           <span>{region.towns[0]}</span>
         </div>

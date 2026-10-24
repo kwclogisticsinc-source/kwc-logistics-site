@@ -1,4 +1,4 @@
-/* KWC regional transportation design: original composition, established brand. */
+/* KWC transportation design: original composition, established brand. */
 :root {
   --blue: #164fce;
   --ink: #10263f;
@@ -963,5 +963,416 @@ h3 {
   }
   body:has(.quote-form:focus-within) .mobile-actions {
     display: none;
+  }
+}
+
+/* Expanded Ontario network, company story and customer resources. */
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 24px;
+  padding-top: 10px;
+  min-height: 132px;
+}
+.header-inner > .brand {
+  grid-column: 1;
+  grid-row: 1;
+}
+.header-actions {
+  grid-column: 2;
+  grid-row: 1;
+}
+.desktop-nav {
+  grid-column: 1/-1;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  font-size: 13px;
+}
+.desktop-nav > a,
+.regional-nav-services summary {
+  padding-block: 15px;
+}
+.regional-nav-services > div {
+  top: 48px;
+  z-index: 10;
+}
+.regional-hero h1 {
+  max-width: 1000px;
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+}
+.company-story {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 65px;
+  align-items: start;
+}
+.company-story .article-copy {
+  max-width: none;
+}
+.company-story-image {
+  margin: 0;
+  min-height: 630px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.company-story-image img {
+  object-fit: cover;
+  object-position: 58% center;
+}
+.company-story-image figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  color: white;
+  background: #10263fc9;
+  padding: 5px 9px;
+  font-size: 10px;
+}
+.company-principles,
+.network-promise {
+  background: #102d50;
+  color: white;
+}
+.company-principles h2,
+.company-principles h3,
+.network-promise h2,
+.network-promise h3 {
+  color: white;
+}
+.company-principles .eyebrow,
+.network-promise .eyebrow {
+  color: #f7c85c;
+}
+.company-principles .lead {
+  max-width: 780px;
+  color: #d6e0eb;
+}
+.company-principles .button-row {
+  margin-top: 35px;
+}
+.perspective-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+.perspective-grid article {
+  border-top: 1px solid #ffffff38;
+  padding-top: 25px;
+}
+.perspective-grid article > span {
+  color: #f7c85c;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.perspective-grid h3 {
+  font-size: 25px;
+  margin-top: 20px;
+}
+.perspective-grid p {
+  color: #d6e0eb;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.network-promise .text-link {
+  color: #f7c85c;
+}
+.company-manifesto {
+  margin-top: 60px;
+  background: #f2f5f9;
+  padding: 50px;
+  border-left: 4px solid #f7c85c;
+}
+.company-manifesto p {
+  max-width: 720px;
+}
+.company-manifesto .btn {
+  margin-top: 20px;
+}
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.insight-grid article {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background: white;
+}
+.insight-grid h2,
+.insight-grid h3 {
+  font-size: 25px;
+  line-height: 1.25;
+  margin-top: 10px;
+}
+.insight-grid article > p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.insight-grid .text-link {
+  margin-top: auto;
+  padding-top: 22px;
+}
+.insight-grid article:hover {
+  box-shadow: 0 16px 35px #10263f0e;
+}
+.insight-grid h2 a:hover,
+.insight-grid h3 a:hover {
+  color: var(--blue);
+}
+.insight-help {
+  background: var(--pale);
+  margin-top: 50px;
+  padding: 40px;
+}
+.insight-help .text-link {
+  display: inline-flex;
+  margin-left: 25px;
+}
+.insight-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+.insight-article {
+  max-width: 760px;
+}
+.insight-article > .lead {
+  margin: 32px 0;
+  font-size: 20px;
+}
+.insight-article section {
+  margin-top: 40px;
+  scroll-margin-top: 170px;
+}
+.insight-article section p {
+  line-height: 1.95;
+}
+.insight-article h2 {
+  font-size: 29px;
+}
+.insight-sidebar {
+  position: sticky;
+  top: 165px;
+  padding: 28px;
+  background: var(--pale);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.insight-sidebar > a:not(.btn) {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.insight-sidebar h3 {
+  font-size: 23px;
+  margin-top: 16px;
+}
+.insight-sidebar .btn {
+  white-space: normal;
+  line-height: 1.5;
+  padding: 15px;
+  font-size: 12px;
+}
+.business-program-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.business-program-grid article {
+  border: 1px solid var(--line);
+  padding: 35px;
+  background: white;
+}
+.program-number {
+  display: block;
+  color: var(--blue);
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.business-program-grid h3 {
+  font-size: 29px;
+}
+.business-program-grid article > p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.85;
+}
+.business-program-grid .program-example {
+  background: var(--pale);
+  padding: 18px;
+  border-left: 3px solid var(--warm);
+}
+.business-program-grid .text-link {
+  margin-top: 20px;
+}
+.coverage-planning {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 65px;
+  align-items: start;
+}
+.business-checklist {
+  padding-left: 20px;
+  line-height: 2;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.network-equipment {
+  background: var(--pale);
+}
+.fleet-benefits {
+  margin-top: 45px;
+}
+.fleet-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 65px;
+  align-items: center;
+}
+.fleet-feature p {
+  line-height: 1.9;
+}
+.fleet-feature-note {
+  padding: 38px;
+  background: var(--pale);
+  border-top: 4px solid var(--warm);
+}
+.fleet-feature-note > span {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: var(--blue);
+  font-weight: 700;
+}
+.fleet-feature-note h3 {
+  font-size: 40px;
+  line-height: 1.16;
+}
+@media (max-width: 1100px) {
+  .desktop-nav {
+    gap: 21px;
+    font-size: 12px;
+  }
+  .insight-layout {
+    gap: 40px;
+  }
+  .company-story {
+    gap: 35px;
+  }
+  .company-story-image {
+    min-height: 650px;
+  }
+}
+@media (max-width: 850px) {
+  .header-inner {
+    display: flex;
+    min-height: 80px;
+    padding-top: 0;
+    gap: 12px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-phone {
+    display: none;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  .mobile-nav {
+    max-height: calc(100dvh - 85px);
+    overflow-y: auto;
+  }
+  .company-story,
+  .coverage-planning,
+  .fleet-feature,
+  .insight-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .company-story-image {
+    min-height: 390px;
+  }
+  .insight-sidebar {
+    position: static;
+  }
+  .perspective-grid,
+  .insight-grid {
+    gap: 18px;
+  }
+  .perspective-grid h3,
+  .insight-grid h3,
+  .insight-grid h2 {
+    font-size: 22px;
+  }
+  .insight-grid article {
+    padding: 22px;
+  }
+  .regional-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 3.6rem);
+  }
+}
+@media (max-width: 600px) {
+  .header-inner {
+    min-height: 76px;
+  }
+  .perspective-grid,
+  .insight-grid,
+  .business-program-grid {
+    grid-template-columns: 1fr;
+  }
+  .company-story-image {
+    min-height: 340px;
+  }
+  .company-manifesto,
+  .insight-help {
+    padding: 26px;
+  }
+  .company-manifesto h2 {
+    font-size: 29px;
+  }
+  .insight-help .text-link {
+    margin: 20px 0 0;
+  }
+  .business-program-grid article {
+    padding: 26px;
+  }
+  .business-program-grid h3 {
+    font-size: 26px;
+  }
+  .fleet-feature-note {
+    padding: 28px;
+  }
+  .fleet-feature-note h3 {
+    font-size: 33px;
+  }
+  .regional-hero h1 {
+    font-size: clamp(1.9rem, 8.3vw, 2.7rem);
+    max-width: 100%;
+  }
+  .insight-article h2 {
+    font-size: 26px;
+  }
+  .insight-article section {
+    scroll-margin-top: 100px;
+  }
+  .region-route {
+    font-size: 11px;
   }
 }

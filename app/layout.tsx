@@ -12,10 +12,9 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics",
   },
   description:
-    "Kitchener–Waterloo based courier, freight and distribution. Serving London to Windsor, Goderich, Owen Sound and Ontario, with wider road freight coordination.",
+    "Ontario-wide courier, freight and distribution. Cargo vans, trucks and a coordinated logistics network connecting the GTA, London and beyond.",
   openGraph: {
-    title:
-      "KWC Logistics | Waterloo Region. Western Ontario. Wider possibilities.",
+    title: "KWC Logistics | Ontario connected. Deliveries simplified.",
     description:
       "Local courier, freight and recurring delivery help. Kitchener, Ontario.",
     url: "https://kwclogistics.ca",

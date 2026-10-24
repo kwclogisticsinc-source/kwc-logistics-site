@@ -140,8 +140,8 @@ export default async function ServicePage({
       <PageIntro eyebrow={item.title} title={detail.title}>
         <p>{detail.intro}</p>
         <p className="service-region-line">
-          Based in Kitchener–Waterloo · London–Windsor · Goderich · Owen Sound &
-          area
+          Ontario-wide network · Cargo vans & trucks · Direct service & carrier
+          coordination
         </p>
       </PageIntro>
       <section className="wrap content-section">

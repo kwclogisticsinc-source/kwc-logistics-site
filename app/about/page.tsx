@@ -1,93 +1,161 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
-  title: "About KWC",
+  title: "Our Story & Approach",
   description:
-    "Meet KWC Logistics, founded by Jay Sandhu in Kitchener to help businesses grow through practical transportation plans.",
+    "Transportation, engineering and mechanical experience come together in KWC Logistics. Meet the thinking behind our Ontario network.",
   alternates: { canonical: "/about" },
 };
 export default function About() {
   return (
     <>
       <PageIntro
-        eyebrow="KITCHENER IS OUR STARTING POINT"
-        title="Local people. A wider view of logistics."
+        eyebrow="THE THINKING BEHIND THE MOVEMENT"
+        title="Different backgrounds. One shared direction."
       >
         <p>
-          Packages, pallets and recurring deliveries—with a practical plan and a
-          person to talk to.
+          Transportation experience. An engineering perspective. Mechanical
+          know-how. Together, they shape a company built to connect the
+          details—and keep business moving.
         </p>
       </PageIntro>
-      <section className="wrap content-section">
-        <div className="article-copy story-copy">
-          <h2>Our story</h2>
+      <section className="wrap section company-story">
+        <div className="article-copy">
+          <p className="eyebrow">OUR STORY</p>
+          <h2>
+            Three perspectives.
+            <br />A more complete picture.
+          </h2>
           <p>
-            KWC Logistics started with a simple belief: smaller businesses
-            should have access to transportation that helps them grow.
+            KWC Logistics began with three people looking at transportation from
+            different sides of the same problem. One brought a logistics
+            background: understanding shipments, dispatch, carrier relationships
+            and the realities of moving freight. Another brought engineering
+            experience and an interest in how technology and better processes
+            could make complex work easier to manage. The third brought a
+            mechanic's practical understanding of vehicles, equipment and what a
+            job demands on the road.
           </p>
           <p>
-            Our founder, <strong>Jay Sandhu</strong>, built his experience in
-            traditional transportation, working with companies across dry van,
-            refrigerated and flatbed freight. He later worked with a
-            technology-based final mile delivery company, gaining a different
-            perspective on how local delivery networks can help businesses reach
-            more customers.
+            They shared a belief: a delivery should be planned as a complete
+            job, from the first pickup instruction to the final handoff. The
+            route matters. So does the equipment. So do the people waiting at
+            either end.
           </p>
           <p>
-            Through that experience, Jay saw a gap. Smaller businesses often
-            have the products, demand and ambition to expand, but organizing
-            deliveries beyond their existing market can be costly and difficult.
-            They need a logistics partner who understands their operation and
-            can help make that next step practical.
+            Those complementary backgrounds came together in KWC Logistics. Our
+            approach connects transportation planning, thoughtful coordination
+            and attention to the practical details. It is the foundation for how
+            we work with a customer sending one package—and a business building
+            an Ontario-wide delivery program.
           </p>
           <p>
-            <strong>KWC Logistics was created to help close that gap.</strong>{" "}
-            Based in Kitchener, we help businesses connect supplier pickups,
-            freight movements and final mile deliveries into a plan that fits
-            their needs. Through direct service and carrier partnerships, our
-            goal is to help customers expand their delivery network without
-            having to build a fleet of their own.
-          </p>
-          <p>
-            From a single shipment to a recurring delivery route, we start by
-            understanding your business—and where you want to take it.
+            Based in Kitchener, we combine direct service and carrier
+            partnerships to connect courier deliveries, freight movements and
+            regional distribution. Our ambition is straightforward: make it
+            easier for customers to reach the next location, the next order and
+            the next stage of their business.
           </p>
         </div>
-        <div className="article-copy">
-          <h2>Built around your next step.</h2>
+        <figure className="company-story-image">
+          <Image
+            src="/images/business-pickup.webp"
+            alt="Illustrative business pickup of packaged customer orders"
+            fill
+            sizes="(max-width:850px) 100vw,40vw"
+          />
+          <figcaption>Illustrative business pickup</figcaption>
+        </figure>
+      </section>
+      <section className="company-principles">
+        <div className="wrap section">
+          <p className="eyebrow">WHAT EACH PERSPECTIVE BRINGS</p>
+          <h2>
+            Road sense. Systems thinking.
+            <br />
+            Practical know-how.
+          </h2>
+          <div className="perspective-grid">
+            {[
+              [
+                "01",
+                "Transportation",
+                "See the whole journey",
+                "Pickup windows, shipment details, carrier coordination and receiving instructions belong in one plan. We start by understanding how the movement fits your business.",
+              ],
+              [
+                "02",
+                "Engineering",
+                "Make the process clearer",
+                "An engineering perspective brings structure to complicated work: break down the requirements, connect the steps and look for a practical way forward. Technology supports the process; clear communication keeps it useful.",
+              ],
+              [
+                "03",
+                "Mechanical",
+                "Respect the real-world job",
+                "Vehicle suitability, loading access and the demands of the freight matter. A practical equipment perspective helps frame the right questions before collection.",
+              ],
+            ].map(([n, label, title, copy]) => (
+              <article key={n}>
+                <span>
+                  {n} / {label}
+                </span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="wrap section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">HOW WE WORK WITH YOU</p>
+            <h2>
+              Professional service.
+              <br />A human relationship.
+            </h2>
+          </div>
           <p>
-            Whether you’re collecting from suppliers, delivering to stores or
-            reaching customers in a new region, KWC helps you put the
-            transportation pieces together. We work through your locations,
-            shipment volumes and delivery requirements to develop a practical
-            plan.
+            Understand the plan, know what information is needed and have a
+            clear point of contact.
           </p>
         </div>
         <div className="capability-grid">
           {[
             [
-              "Start small",
-              "Arrange a single shipment or discuss a recurring route.",
+              "Start with understanding",
+              "Your order pattern, collection points, delivery locations and customer expectations guide the conversation. You do not need to arrive with a freight specification.",
             ],
             [
-              "Reach further",
-              "Explore delivery options beyond your current service area.",
+              "Work through the details",
+              "Dimensions, access, timing and handling can change the right transport choice. We discuss them early so the proposed service reflects the actual job.",
             ],
             [
-              "Keep your focus",
-              "Grow your business while we help coordinate the movement.",
+              "Build for the next step",
+              "A single shipment can be the start of a wider requirement. Discuss recurring collections, regional distribution and customer delivery programs as your needs develop.",
             ],
-          ].map(([title, text]) => (
+          ].map(([title, copy]) => (
             <article key={title}>
               <h3>{title}</h3>
-              <p>{text}</p>
+              <p>{copy}</p>
             </article>
           ))}
         </div>
-        <Link className="btn" href="/contact">
-          Let’s Talk About Your Deliveries →
-        </Link>
+        <div className="company-manifesto">
+          <p className="eyebrow">OUR COMMITMENT</p>
+          <h2>
+            Take the shipment seriously.
+            <br />
+            Keep the conversation simple.
+          </h2>
+          <p>Driven by Excellence. Defined by Reliability.</p>
+          <Link className="btn" href="/contact#quote">
+            Tell Us What's Moving →
+          </Link>
+        </div>
       </section>
       <ContactCTA />
     </>
