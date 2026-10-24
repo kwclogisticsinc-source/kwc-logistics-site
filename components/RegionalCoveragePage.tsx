@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ContactCTA, PageIntro } from "@/components/DeliveryUI";
 import { RegionExplorer } from "@/components/RegionExplorer";
 import { deliveryRegions } from "@/lib/coverage";
+import { LaneNetwork } from "@/components/LaneNetwork";
 export function RegionalCoveragePage() {
   return (
     <>
@@ -15,6 +16,7 @@ export function RegionalCoveragePage() {
           final delivery across Ontario.
         </p>
       </PageIntro>
+      <LaneNetwork />
       <section className="wrap section">
         <div className="regional-coverage-page">
           <div className="article-copy">

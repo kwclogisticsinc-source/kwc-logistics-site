@@ -5,6 +5,7 @@ import { serviceDirectory } from "@/lib/coverage";
 import { ContactCTA, FAQ, Icon } from "@/components/DeliveryUI";
 import { RegionExplorer } from "@/components/RegionExplorer";
 import { NetworkSections } from "@/components/NetworkSections";
+import { LaneNetwork } from "@/components/LaneNetwork";
 import { QuoteEntry } from "@/components/QuoteEntry";
 export function RegionalHome() {
   return (
@@ -83,6 +84,7 @@ export function RegionalHome() {
           ))}
         </div>
       </div>
+      <LaneNetwork />
       <section className="section wrap regional-intro">
         <div>
           <p className="eyebrow">KWC LOGISTICS INC.</p>

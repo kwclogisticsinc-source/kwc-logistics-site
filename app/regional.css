@@ -1450,3 +1450,86 @@ h3 {
     padding: 25px;
   }
 }
+
+.lane-network {
+  background: #f2f5f9;
+}
+.lane-network .section {
+  padding-block: 55px;
+}
+.lane-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lane-grid > a {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 22px;
+  min-height: 100px;
+}
+.lane-grid > a > span:first-child {
+  font-size: 14px;
+  color: var(--blue);
+  font-weight: 800;
+}
+.lane-arrow {
+  font-size: 29px;
+  color: var(--blue);
+}
+.lane-grid > a > div {
+  flex: 1;
+}
+.lane-grid strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.2;
+}
+.lane-grid small {
+  display: block;
+  color: var(--muted);
+  margin-top: 7px;
+  font-size: 11px;
+}
+.lane-grid > a:hover {
+  border-color: var(--blue);
+  box-shadow: 0 8px 25px #10263f0b;
+}
+.lane-network-bottom {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+.lane-network-bottom p {
+  max-width: 760px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.lane-network-bottom .text-link {
+  white-space: nowrap;
+}
+@media (max-width: 800px) {
+  .lane-network-bottom {
+    display: block;
+  }
+  .lane-grid > a {
+    gap: 16px;
+    padding: 18px;
+  }
+  .lane-grid strong {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .lane-grid {
+    grid-template-columns: 1fr;
+  }
+  .lane-network .section {
+    padding-block: 40px;
+  }
+}
