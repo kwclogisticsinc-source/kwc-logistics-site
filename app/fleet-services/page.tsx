@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/DeliveryUI";
 import { contact } from "@/lib/content";
+import { EquipmentGrid } from "@/components/EquipmentGrid";
 export const metadata: Metadata = {
-  title: "Fleet Care, Truck Repair & Mobile Services",
+  title: "Our Fleet, Truck Repair & Mobile Services",
   description:
-    "KWC’s approach to maintenance, vehicle readiness and dependable transportation. Discuss truck repair and mobile service requirements with KWC.",
+    "Explore KWC cargo vans, straight trucks and trailer capacity. Fleet maintenance and mobile repair support within 150 km of Kitchener–Waterloo–Cambridge. Safety inspections excluded.",
   alternates: { canonical: "/fleet-services" },
 };
 export default function FleetServices() {
@@ -21,6 +22,7 @@ export default function FleetServices() {
           readiness all support a dependable delivery plan.
         </p>
       </PageIntro>
+      <EquipmentGrid />
       <section className="wrap section">
         <div className="coverage-planning">
           <div>
@@ -46,10 +48,9 @@ export default function FleetServices() {
               other.
             </p>
             <p>
-              Well-maintained equipment supports delivery reliability, but it
-              cannot guarantee arrival times. Traffic, weather, access,
-              receiving delays and other operating conditions still matter. We
-              plan with those realities in view.
+              Maintenance planning helps protect operating continuity. We pair
+              attention to equipment with route planning, receiving instructions
+              and communication around changing delivery conditions.
             </p>
           </div>
         </div>
@@ -77,17 +78,28 @@ export default function FleetServices() {
       </section>
       <section className="company-principles">
         <div className="wrap section">
-          <p className="eyebrow">TRUCK REPAIR & MOBILE SERVICE ENQUIRIES</p>
+          <p className="eyebrow">KWC TRUCK REPAIR & MOBILE SERVICES</p>
           <h2>
             Start with the vehicle.
             <br />
             Tell us what support is needed.
           </h2>
           <p className="lead">
-            Contact KWC to discuss a repair or mobile service requirement. We
-            will clarify the scope, service location and available support
-            before making arrangements.
+            Our repair work primarily supports our own fleet, helping keep
+            maintenance and transportation closely connected. Mobile support is
+            available within 150 km of the Kitchener–Waterloo–Cambridge area.
+            For external repair requirements, contact us to confirm the work,
+            location and available capacity.
           </p>
+          <div className="repair-scope">
+            <strong>Truck and trailer repair support</strong>
+            <p>
+              Discuss mechanical repairs, fault diagnosis, routine servicing and
+              maintenance requirements. Safety inspections and safety
+              certification are not offered. The specific repair scope,
+              attendance and pricing are agreed before work proceeds.
+            </p>
+          </div>
           <div className="perspective-grid">
             {[
               [

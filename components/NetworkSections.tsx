@@ -31,8 +31,9 @@ export function NetworkSections() {
             Continuity.
           </h3>
           <p>
-            Explore our approach to fleet care and discuss truck repair or
-            mobile support requirements.
+            Access cargo vans, dry and refrigerated straight trucks, and dry
+            van, refrigerated and flatbed trailer capacity. Mobile repair
+            support within 150 km of KWC. Safety inspections excluded.
           </p>
           <Link className="text-link" href="/about">
             Three perspectives. One company. →
