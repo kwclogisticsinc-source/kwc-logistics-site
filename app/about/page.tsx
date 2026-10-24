@@ -35,7 +35,7 @@ export default function About() {
             and the realities of moving freight. Another brought engineering
             experience and an interest in how technology and better processes
             could make complex work easier to manage. The third brought a
-            mechanic's practical understanding of vehicles, equipment and what a
+            mechanic’s practical understanding of vehicles, equipment and what a
             job demands on the road.
           </p>
           <p>
@@ -153,7 +153,7 @@ export default function About() {
           </h2>
           <p>Driven by Excellence. Defined by Reliability.</p>
           <Link className="btn" href="/contact#quote">
-            Tell Us What's Moving →
+            Tell Us What’s Moving →
           </Link>
         </div>
       </section>
@@ -161,3 +161,4 @@ export default function About() {
     </>
   );
 }
+
