@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, industries } from "@/lib/content";
 import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
+import { serviceGuides } from "@/lib/service-guides";
 const details = {
   courier: {
     title: "A delivery service that starts with you.",
@@ -132,11 +133,16 @@ export default async function ServicePage({
   const { slug } = await params;
   if (!(slug in details)) notFound();
   const detail = details[slug as keyof typeof details];
+  const guide = serviceGuides[slug as keyof typeof serviceGuides];
   const item = categories.find((i) => i.href.endsWith(`/${slug}`))!;
   return (
     <>
       <PageIntro eyebrow={item.title} title={detail.title}>
         <p>{detail.intro}</p>
+        <p className="service-region-line">
+          Ontario-wide network · Cargo vans & trucks · Direct service & carrier
+          coordination
+        </p>
       </PageIntro>
       <section className="wrap content-section">
         <div className="service-detail-heading">
@@ -152,6 +158,28 @@ export default async function ServicePage({
           <Image src={item.image} alt={item.alt} fill priority sizes="100vw" />
           <span className="photo-caption">Illustrative marketing scene</span>
         </div>
+        <nav className="service-jump-links" aria-label="On this service page">
+          <a href="#service-options">Service explained</a>
+          <a href="#delivery-examples">Examples</a>
+          <a href="#service-process">How it works</a>
+          <a href="#quote-preparation">What to prepare</a>
+          <a href="#service-questions">Questions</a>
+        </nav>
+        <section id="service-options" className="service-guide-section">
+          <div className="article-copy">
+            <h2>{guide.heading}</h2>
+            <p>{guide.overview}</p>
+          </div>
+          <div className="service-explanations">
+            {guide.options.map(([title, text]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+        <h2 className="service-subheading">Capabilities at a glance</h2>
         <div className="capability-grid">
           {detail.groups.map(([title, items]) => (
             <article key={title as string}>
@@ -198,6 +226,86 @@ export default async function ServicePage({
             Discuss recurring deliveries <Icon name="arrow" />
           </Link>
         </div>
+        <section id="delivery-examples" className="service-guide-section">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">WHAT THAT COULD LOOK LIKE</p>
+              <h2>Everyday delivery situations.</h2>
+            </div>
+            <p>
+              Examples to help describe your needs. Your service is planned
+              around the actual shipment.
+            </p>
+          </div>
+          <div className="capability-grid">
+            {guide.examples.map(([title, text]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section id="service-process" className="service-guide-section">
+          <h2 className="service-subheading">
+            How we work through it with you.
+          </h2>
+          <ol className="service-process-list">
+            {guide.steps.map(([title, text], i) => (
+              <li key={title}>
+                <span className="eyebrow">0{i + 1}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+        <section
+          id="quote-preparation"
+          className="service-prepare service-guide-section"
+        >
+          <div>
+            <p className="eyebrow">A GOOD STARTING POINT</p>
+            <h2>What to share for a useful quote.</h2>
+            <p>
+              Start with what you know. We can work through the remaining
+              details together.
+            </p>
+            <Link
+              className="btn"
+              href={`/contact?service=${detail.quote}#quote`}
+            >
+              Request a Quote <Icon name="arrow" />
+            </Link>
+          </div>
+          <ul>
+            {guide.prepare.map((text) => (
+              <li key={text}>{text}</li>
+            ))}
+          </ul>
+        </section>
+        <section
+          id="service-questions"
+          className="service-guide-section article-copy"
+        >
+          <h2>Questions about this service.</h2>
+          <div className="faq-list">
+            {guide.faqs.map(([q, a]) => (
+              <details key={q}>
+                <summary>
+                  {q}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>{a}</p>
+              </details>
+            ))}
+          </div>
+          <p style={{ marginTop: 24 }}>
+            <Link className="text-link" href="/forms">
+              Shipment checklist & downloadable forms →
+            </Link>
+          </p>
+        </section>
         {slug === "courier" && (
           <>
             <div className="section-heading" style={{ marginTop: 60 }}>

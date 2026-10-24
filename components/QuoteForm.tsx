@@ -37,6 +37,8 @@ export function QuoteForm({
   useEffect(() => {
     if (window.location.hash.startsWith("#quote&")) {
       const route = new URLSearchParams(window.location.hash.slice(7));
+      // Hydrate private route details from the browser-only fragment after mount.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValues((previous) => ({
         ...previous,
         "Pickup Location": (route.get("pickup") ?? "").slice(0, 300),
@@ -221,6 +223,15 @@ export function QuoteForm({
           </p>
           {kind === "courier" && step === 1 && (
             <p className="size-guidance">{courierConfig.sizeGuidance}</p>
+          )}
+          {step === 3 && (
+            <p className="quote-payment-note">
+              New customers pay upfront. Approved credit accounts: Net 30 from
+              invoice date.{" "}
+              <a href="/terms" target="_blank" rel="noreferrer">
+                Payment & shipment terms ↗
+              </a>
+            </p>
           )}
           {step === 3 && (
             <div className="review-box">

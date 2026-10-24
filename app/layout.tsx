@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { contact } from "@/lib/content";
 import "./globals.css";
+import "./regional.css";
 import { previewOnly } from "@/lib/release";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kwclogistics.ca"),
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
     template: "%s | KWC Logistics",
   },
   description:
-    "Packages, pallets and regular deliveries from Kitchener–Waterloo–Cambridge across Ontario, with Canada/U.S. road freight coordination. Request a quote.",
+    "Ontario-wide courier, freight and distribution. Cargo vans, trucks and a coordinated logistics network connecting the GTA, London and beyond.",
   openGraph: {
-    title: "KWC Logistics | Your next delivery. Made simple.",
+    title: "KWC Logistics | Ontario connected. Deliveries simplified.",
     description:
       "Local courier, freight and recurring delivery help. Kitchener, Ontario.",
     url: "https://kwclogistics.ca",

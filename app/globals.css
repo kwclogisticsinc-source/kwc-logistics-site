@@ -949,6 +949,110 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-block: 24px;
 }
+.service-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 42px;
+}
+.service-jump-links a {
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.service-jump-links a:hover {
+  background: var(--pale);
+  color: var(--blue);
+}
+.service-guide-section {
+  margin-block: 60px;
+  scroll-margin-top: 110px;
+}
+.service-subheading {
+  font-size: 29px;
+  margin: 32px 0 24px;
+}
+.service-explanations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 40px;
+  margin-top: 30px;
+}
+.service-explanations article {
+  border-top: 2px solid var(--line);
+  padding-top: 22px;
+}
+.service-explanations h3,
+.service-process-list h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.service-explanations p,
+.service-process-list p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.service-process-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+.service-process-list .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+.service-prepare {
+  padding: 35px;
+  border-radius: 12px;
+  background: var(--pale);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.service-prepare h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.service-prepare p,
+.service-prepare li {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+.service-prepare .btn {
+  margin-top: 20px;
+}
+.service-prepare ul {
+  display: grid;
+  gap: 16px;
+  padding-left: 20px;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .service-explanations,
+  .service-process-list,
+  .service-prepare {
+    grid-template-columns: 1fr;
+  }
+  .service-prepare {
+    padding: 24px;
+    gap: 28px;
+  }
+  .service-guide-section {
+    margin-block: 42px;
+  }
+  .service-jump-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
 .story-copy {
   margin-bottom: 54px;
 }

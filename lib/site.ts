@@ -5,5 +5,5 @@ export const site = {
   email: contact.email,
   location: "Kitchener, Ontario",
   description:
-    "Local courier, Ontario delivery arrangements and Canada/U.S. road freight coordination.",
+    "Ontario-wide courier, freight and distribution. Cargo vans, trucks and a coordinated logistics network connecting the GTA, London and beyond.",
 };

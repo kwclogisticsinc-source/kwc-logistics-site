@@ -27,13 +27,21 @@ export function Footer() {
           <Link href="/service-areas">Coverage</Link>
           <Link href="/about">About us</Link>
           <Link href="/industries">Industries</Link>
+          <Link href="/business">Business delivery programs</Link>
+          <Link href="/fleet-services">Fleet & equipment</Link>
+          <Link href="/blog">Shipping insights</Link>
           <Link href="/resources">Shipping help</Link>
           <Link href="/forms">Forms & documents</Link>
         </nav>
         <div className="footer-contact">
           <strong>A real conversation starts here.</strong>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <p>Kitchener, Ontario</p>
+          <p>Based in Kitchener–Waterloo, Ontario</p>
+          <p className="fine">
+            Ontario-wide delivery network
+            <br />
+            Cargo vans · Trucks · Carrier partnerships
+          </p>
           <Link href="/contact#quote" className="text-link">
             Request a Quote →
           </Link>
@@ -42,6 +50,7 @@ export function Footer() {
       <div className="wrap footer-bottom">
         <span>© {new Date().getFullYear()} KWC Logistics Inc.</span>
         <Link href="/privacy">Privacy</Link>
+        <Link href="/terms">Payment & shipment terms</Link>
         <span>Photography is illustrative.</span>
       </div>
     </footer>

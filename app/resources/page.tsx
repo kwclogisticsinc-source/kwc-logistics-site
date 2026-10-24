@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro, ContactCTA, FAQ } from "@/components/DeliveryUI";
+import { ShipmentPlanner } from "@/components/ShipmentPlanner";
 export const metadata: Metadata = {
   title: "Shipping Help",
   description:
@@ -17,6 +18,7 @@ export default function Resources() {
         <p>Start with what you know. We can help work through the rest.</p>
       </PageIntro>
       <section className="wrap content-section">
+        <ShipmentPlanner />
         <div className="capability-grid">
           {[
             [
