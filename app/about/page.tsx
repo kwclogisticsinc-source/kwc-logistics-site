@@ -52,6 +52,14 @@ export default function About() {
             an Ontario-wide delivery program.
           </p>
           <p>
+            We put that systems thinking into practice by developing our own
+            internal tools for order coordination, shipment tracking and
+            invoicing. Together with practical dispatch knowledge, they help us
+            organize the work with less repeated administration and look for
+            better use of suitable capacity. Our goal is a more affordable,
+            approachable way for businesses to build their delivery network.
+          </p>
+          <p>
             Based in Kitchener, we combine direct service and carrier
             partnerships to connect courier deliveries, freight movements and
             regional distribution. Our ambition is straightforward: make it
@@ -161,4 +169,3 @@ export default function About() {
     </>
   );
 }
-

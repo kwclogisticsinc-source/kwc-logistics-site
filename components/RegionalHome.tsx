@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CostEfficiency } from "@/components/CostEfficiency";
 import Link from "next/link";
 import { contact, industries } from "@/lib/content";
 import { serviceDirectory } from "@/lib/coverage";
@@ -328,6 +329,7 @@ export function RegionalHome() {
           ))}
         </div>
       </section>
+      <CostEfficiency />
       <section className="wrap regional-consolidation">
         <div>
           <p className="eyebrow">SMARTER USE OF EVERY TRIP</p>
