@@ -7,6 +7,8 @@ import { RegionExplorer } from "@/components/RegionExplorer";
 import { NetworkSections } from "@/components/NetworkSections";
 import { LaneNetwork } from "@/components/LaneNetwork";
 import { QuoteEntry } from "@/components/QuoteEntry";
+import { SitePhoto } from "@/components/SitePhoto";
+import { servicePhotos } from "@/lib/photography";
 export function RegionalHome() {
   return (
     <>
@@ -85,6 +87,27 @@ export function RegionalHome() {
         </div>
       </div>
       <LaneNetwork />
+      <section className="wrap network-photo-feature">
+        <SitePhoto
+          src="/images/ontario-road-freight.webp"
+          alt="Illustrative highway tractor and dry van travelling through Ontario"
+          caption="Illustrative road freight"
+        />
+        <div>
+          <p className="eyebrow">ONE CONTACT. CONNECTED CAPACITY.</p>
+          <h2>
+            Local pickup.
+            <br />A wider road ahead.
+          </h2>
+          <p>
+            Connect cargo-van collections, straight-truck deliveries and highway
+            freight through one transportation conversation.
+          </p>
+          <Link className="text-link" href="/fleet-services#equipment">
+            Explore the Equipment & Network →
+          </Link>
+        </div>
+      </section>
       <section className="section wrap regional-intro">
         <div>
           <p className="eyebrow">KWC LOGISTICS INC.</p>
@@ -127,6 +150,15 @@ export function RegionalHome() {
           <div className="regional-service-grid">
             {serviceDirectory.map((service, i) => (
               <article key={service.title}>
+                <div className="service-editorial-photo">
+                  <Image
+                    src={servicePhotos[i].src}
+                    alt={servicePhotos[i].alt}
+                    width={640}
+                    height={400}
+                    sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 33vw"
+                  />
+                </div>
                 <div className="regional-service-top">
                   <Icon name={service.icon} size={34} />
                   <span>0{i + 1}</span>

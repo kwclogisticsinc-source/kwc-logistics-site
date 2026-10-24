@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { articles } from "@/lib/articles";
+import { SitePhoto } from "./SitePhoto";
+import { articlePhoto } from "@/lib/photography";
 export function NetworkSections() {
   return (
     <>
       <section className="wrap section fleet-feature">
         <div>
-          <p className="eyebrow">KWC TRUCK REPAIR & MOBILE SERVICES</p>
+          <p className="eyebrow">EQUIPMENT READINESS</p>
           <h2>
             Delivery reliability starts
             <br />
@@ -18,22 +20,22 @@ export function NetworkSections() {
             vehicle—it affects the customer waiting for a delivery.
           </p>
           <Link className="btn" href="/fleet-services">
-            Fleet Care & Mobile Enquiries →
+            Explore Fleet & Equipment →
           </Link>
         </div>
         <div className="fleet-feature-note">
+          <SitePhoto
+            src="/images/fleet-maintenance.webp"
+            alt="Illustrative mechanic inspecting a stationary commercial truck"
+            caption="Illustrative maintenance scene"
+          />
           <span>READY FOR THE ROAD</span>
-          <h3>
-            Maintenance.
-            <br />
-            Coordination.
-            <br />
-            Continuity.
-          </h3>
+          <h3>Ready for the road.</h3>
           <p>
             Access cargo vans, dry and refrigerated straight trucks, and dry
-            van, refrigerated and flatbed trailer capacity. Mobile repair
-            support within 150 km of KWC. Safety inspections excluded.
+            van, refrigerated and flatbed trailer capacity. Equipment knowledge
+            and maintenance planning support the transportation behind every
+            delivery.
           </p>
           <Link className="text-link" href="/about">
             Three perspectives. One company. →
@@ -98,6 +100,13 @@ export function NetworkSections() {
         <div className="insight-grid">
           {articles.map((article) => (
             <article key={article.slug}>
+              <Link
+                className="insight-photo-link"
+                href={"/blog/" + article.slug}
+                aria-label={"Read: " + article.title}
+              >
+                <SitePhoto {...articlePhoto(article.slug)} />
+              </Link>
               <p className="eyebrow">{article.category}</p>
               <h3>
                 <Link href={"/blog/" + article.slug}>{article.title}</Link>

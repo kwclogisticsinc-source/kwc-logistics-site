@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
+import { BusinessJourney } from "@/components/BusinessJourney";
 export const metadata: Metadata = {
   title: "Business Delivery Programs",
   description:
@@ -137,6 +138,7 @@ export default function Business() {
           </Link>
         </div>
       </section>
+      <BusinessJourney />
       <ContactCTA />
     </>
   );

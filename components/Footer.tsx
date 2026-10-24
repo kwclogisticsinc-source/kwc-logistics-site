@@ -28,7 +28,7 @@ export function Footer() {
           <Link href="/about">About us</Link>
           <Link href="/industries">Industries</Link>
           <Link href="/business">Business delivery programs</Link>
-          <Link href="/fleet-services">Truck repair & mobile enquiries</Link>
+          <Link href="/fleet-services">Fleet & equipment</Link>
           <Link href="/blog">Shipping insights</Link>
           <Link href="/resources">Shipping help</Link>
           <Link href="/forms">Forms & documents</Link>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/DeliveryUI";
 import { articles } from "@/lib/articles";
+import { SitePhoto } from "@/components/SitePhoto";
+import { articlePhoto } from "@/lib/photography";
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
@@ -40,6 +42,7 @@ export default async function Article({
             ← All shipping insights
           </Link>
           <p className="lead">{article.intro}</p>
+          <SitePhoto {...articlePhoto(article.slug)} />
           {article.sections.map((section, i) => (
             <section id={"guide-" + i} key={section.title}>
               <h2>{section.title}</h2>

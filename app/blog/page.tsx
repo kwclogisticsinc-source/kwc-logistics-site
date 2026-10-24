@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
 import { articles } from "@/lib/articles";
+import { SitePhoto } from "@/components/SitePhoto";
+import { articlePhoto } from "@/lib/photography";
 export const metadata: Metadata = {
   title: "Shipping Insights",
   description:
@@ -24,6 +26,13 @@ export default function Insights() {
         <div className="insight-grid">
           {articles.map((article) => (
             <article key={article.slug}>
+              <Link
+                className="insight-photo-link"
+                href={"/blog/" + article.slug}
+                aria-label={"Read: " + article.title}
+              >
+                <SitePhoto {...articlePhoto(article.slug)} />
+              </Link>
               <p className="eyebrow">{article.category}</p>
               <h2>
                 <Link href={"/blog/" + article.slug}>{article.title}</Link>

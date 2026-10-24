@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/DeliveryUI";
-import { contact } from "@/lib/content";
 import { EquipmentGrid } from "@/components/EquipmentGrid";
+import { SitePhoto } from "@/components/SitePhoto";
 export const metadata: Metadata = {
-  title: "Our Fleet, Truck Repair & Mobile Services",
+  title: "Fleet & Equipment",
   description:
-    "Explore KWC cargo vans, straight trucks and trailer capacity. Fleet maintenance and mobile repair support within 150 km of Kitchener–Waterloo–Cambridge. Safety inspections excluded.",
+    "Explore KWC cargo vans, dry and refrigerated straight trucks, highway tractors and dry van, refrigerated and flatbed trailer capacity.",
   alternates: { canonical: "/fleet-services" },
 };
 export default function FleetServices() {
   return (
     <>
       <PageIntro
-        eyebrow="KWC TRUCK REPAIR & MOBILE SERVICES"
+        eyebrow="FLEET, EQUIPMENT & READINESS"
         title="Reliability starts before the pickup."
       >
         <p>
@@ -23,6 +23,18 @@ export default function FleetServices() {
         </p>
       </PageIntro>
       <EquipmentGrid />
+      <div className="wrap fleet-photo-pair">
+        <SitePhoto
+          src="/images/ontario-road-freight.webp"
+          alt="Illustrative dry van highway freight"
+          caption="Illustrative network capacity"
+        />
+        <SitePhoto
+          src="/images/fleet-maintenance.webp"
+          alt="Illustrative mechanic inspecting commercial truck equipment"
+          caption="Illustrative vehicle maintenance"
+        />
+      </div>
       <section className="wrap section">
         <div className="coverage-planning">
           <div>
@@ -78,44 +90,43 @@ export default function FleetServices() {
       </section>
       <section className="company-principles">
         <div className="wrap section">
-          <p className="eyebrow">KWC TRUCK REPAIR & MOBILE SERVICES</p>
+          <p className="eyebrow">A PRACTICAL VIEW OF EQUIPMENT</p>
           <h2>
             Start with the vehicle.
             <br />
-            Tell us what support is needed.
+            Plan the whole movement.
           </h2>
           <p className="lead">
-            Our repair work primarily supports our own fleet, helping keep
-            maintenance and transportation closely connected. Mobile support is
-            available within 150 km of the Kitchener–Waterloo–Cambridge area.
-            For external repair requirements, contact us to confirm the work,
-            location and available capacity.
+            Our mechanical background and in-house fleet maintenance bring
+            equipment knowledge into transportation planning. We connect the
+            vehicle, the load and the receiving requirements before confirming a
+            suitable service.
           </p>
           <div className="repair-scope">
-            <strong>Truck and trailer repair support</strong>
+            <strong>Readiness is part of reliability.</strong>
             <p>
-              Discuss mechanical repairs, fault diagnosis, routine servicing and
-              maintenance requirements. Safety inspections and safety
-              certification are not offered. The specific repair scope,
-              attendance and pricing are agreed before work proceeds.
+              Regular maintenance helps support equipment availability and
+              reduce avoidable interruptions. We combine that practical
+              attention with clear shipment information and realistic route
+              planning.
             </p>
           </div>
           <div className="perspective-grid">
             {[
               [
                 "01",
-                "Describe the requirement",
-                "Share the vehicle type, a plain-language description of the concern, the location and a callback contact. Avoid sending sensitive vehicle or account documents in an initial enquiry.",
+                "Understand the load",
+                "Review commodity, piece count, dimensions and weight to identify the type of capacity the movement needs.",
               ],
               [
                 "02",
-                "Review the options",
-                "Repair scope, suitable support, scheduling and any attendance arrangements need to be confirmed individually. An enquiry is not a confirmed callout or repair booking.",
+                "Work through access",
+                "Consider loading docks, liftgate needs, receiving appointments and additional handling before confirming equipment.",
               ],
               [
                 "03",
-                "Agree before proceeding",
-                "Confirm the proposed work, location, timing and price before authorizing service. Discuss whether the requirement affects a planned shipment or an upcoming operating schedule.",
+                "Connect the capacity",
+                "Confirm suitable direct service or carrier arrangements, with the operator, timing and handling scope agreed before booking.",
               ],
             ].map(([n, title, copy]) => (
               <article key={n}>
@@ -126,16 +137,9 @@ export default function FleetServices() {
             ))}
           </div>
           <div className="button-row">
-            <a
-              className="btn"
-              href={
-                "mailto:" +
-                contact.email +
-                "?subject=Truck%20repair%20or%20mobile%20service%20enquiry"
-              }
-            >
-              Discuss Repair or Mobile Support →
-            </a>
+            <Link className="btn" href="/contact?service=freight#quote">
+              Find Suitable Equipment →
+            </Link>
             <Link className="btn secondary" href="/contact">
               Contact KWC
             </Link>

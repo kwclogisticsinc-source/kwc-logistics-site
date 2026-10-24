@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactCTA, PageIntro, ServiceCards } from "@/components/DeliveryUI";
+import { ShipmentPlanner } from "@/components/ShipmentPlanner";
 export const metadata: Metadata = {
   title: "Courier, Freight & Logistics Services",
   description:
@@ -23,6 +24,7 @@ export default function Services() {
       </PageIntro>
       <section className="wrap content-section">
         <ServiceCards />
+        <ShipmentPlanner />
         <section className="service-guide-section">
           <div className="article-copy">
             <h2>Which service is right for you?</h2>
