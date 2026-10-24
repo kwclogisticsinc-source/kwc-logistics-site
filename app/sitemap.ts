@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/delivery-without-a-loading-dock",
     "/forms",
     "/privacy",
+    "/terms",
   ].map((route) => ({
     url: `https://kwclogistics.ca${route}`,
     changeFrequency: "monthly",

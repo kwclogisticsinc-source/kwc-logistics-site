@@ -225,6 +225,15 @@ export function QuoteForm({
             <p className="size-guidance">{courierConfig.sizeGuidance}</p>
           )}
           {step === 3 && (
+            <p className="quote-payment-note">
+              New customers pay upfront. Approved credit accounts: Net 30 from
+              invoice date.{" "}
+              <a href="/terms" target="_blank" rel="noreferrer">
+                Payment & shipment terms ↗
+              </a>
+            </p>
+          )}
+          {step === 3 && (
             <div className="review-box">
               <div>
                 <strong>Delivery type</strong>

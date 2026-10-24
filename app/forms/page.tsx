@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactCTA, PageIntro } from "@/components/DeliveryUI";
+import { PaymentSummary } from "@/components/PaymentSummary";
 export const metadata: Metadata = {
   title: "Forms & Documents",
   description:
@@ -28,14 +29,14 @@ const docs = [
   },
   {
     title: "Credit application · Draft",
-    text: "Business and trade-reference information for review. Credit terms and reference authorization require approval before use.",
+    text: "Apply for an approved Net 30 account. Business and trade-reference information is reviewed before credit is granted. New customers pay upfront until KWC confirms credit approval.",
     file: "kwc-credit-application.pdf",
     label: "Download draft credit application ↓",
   },
 ];
 function Documents({ start, end }: { start: number; end: number }) {
   return (
-    <div className="capability-grid document-grid">
+    <div className="capability-grid document-grid colour-documents">
       {docs.slice(start, end).map((doc) => (
         <article key={doc.file}>
           <h3>{doc.title}</h3>
@@ -50,7 +51,7 @@ function Documents({ start, end }: { start: number; end: number }) {
 }
 export default function Forms() {
   return (
-    <>
+    <div className="forms-page">
       <PageIntro
         eyebrow="FORMS & SHIPPING HELP"
         title="A little preparation. A smoother delivery."
@@ -62,6 +63,11 @@ export default function Forms() {
         </p>
       </PageIntro>
       <section className="wrap content-section">
+        <div className="forms-shortcuts">
+          <a href="#shipment-documents">Shipment documents ↘</a>
+          <a href="#account-documents">Customer accounts ↘</a>
+          <a href="#payment">Payment & liability ↘</a>
+        </div>
         <div className="article-copy">
           <h2>Before you ship</h2>
           <ul>
@@ -79,22 +85,25 @@ export default function Forms() {
             More shipping help →
           </Link>
         </div>
-        <h2>Book and manage a shipment</h2>
+        <h2 id="shipment-documents">Book and manage a shipment</h2>
         <Documents start={0} end={2} />
         <p>
           <Link className="text-link" href="/contact#quote">
             Prefer to start online? Request a Quote →
           </Link>
         </p>
-        <h2 style={{ marginTop: 56 }}>Business account documents</h2>
+        <h2 id="account-documents" style={{ marginTop: 56 }}>
+          Business account documents
+        </h2>
         <Documents start={2} end={4} />
         <p className="fine">
           The bill of lading and credit application remain drafts for review. Do
           not include bank details, card numbers or personal identification.
           Applying does not establish approved credit.
         </p>
+        <PaymentSummary />
       </section>
       <ContactCTA />
-    </>
+    </div>
   );
 }

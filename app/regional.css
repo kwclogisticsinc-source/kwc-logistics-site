@@ -1533,3 +1533,350 @@ h3 {
     padding-block: 40px;
   }
 }
+
+/* Colourful document centre and clear payment information. */
+:root {
+  --teal: #087e8b;
+  --mint: #e7f6f2;
+  --gold-pale: #fff4d7;
+}
+.regional-action-band {
+  background: #f1f6ff;
+}
+.regional-service-grid article:nth-child(3n + 2) {
+  border-top-color: var(--teal);
+}
+.regional-service-grid article:nth-child(3n) {
+  border-top-color: #df9e29;
+}
+.equipment-grid article:nth-child(3n + 2) {
+  background: var(--mint);
+  border-color: var(--teal);
+}
+.equipment-grid article:nth-child(3n) {
+  background: var(--gold-pale);
+  border-color: #df9e29;
+}
+.insight-grid article:nth-child(3n + 2) {
+  border-top-color: var(--teal);
+}
+.insight-grid article:nth-child(3n) {
+  border-top-color: #df9e29;
+}
+.forms-page .page-intro {
+  background: linear-gradient(115deg, #eaf1ff 0%, #edf8f5 76%, #fff4d7 100%);
+  border-bottom: 4px solid #f7c85c;
+}
+.forms-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.forms-shortcuts a {
+  background: #eaf1ff;
+  border: 1px solid #c7d8f5;
+  padding: 14px 20px;
+  color: #1648ae;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 30px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+}
+.forms-shortcuts a:nth-child(2) {
+  background: var(--mint);
+  border-color: #b3ded3;
+  color: #126253;
+}
+.forms-shortcuts a:nth-child(3) {
+  background: var(--gold-pale);
+  border-color: #efd38c;
+  color: #785411;
+}
+.forms-shortcuts a:hover {
+  filter: brightness(0.96);
+}
+.colour-documents article {
+  border-top: 4px solid var(--blue);
+  background: #f0f5ff;
+  padding: 30px;
+}
+.colour-documents article:nth-child(2) {
+  background: var(--mint);
+  border-top-color: var(--teal);
+}
+.colour-documents h3 {
+  font-size: 25px;
+}
+.colour-documents p {
+  font-size: 14px;
+  line-height: 1.85;
+}
+.colour-documents .text-link {
+  margin-top: 15px;
+}
+.payment-summary {
+  margin-top: 60px;
+  padding: 40px;
+  background: #eef3fa;
+  border: 1px solid #dbe5f2;
+  border-radius: 8px;
+  scroll-margin-top: 165px;
+}
+.payment-summary h2 {
+  font-size: 35px;
+}
+.payment-summary .section-heading {
+  margin-bottom: 28px;
+}
+.payment-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.payment-cards article {
+  background: white;
+  border: 1px solid #d9e3ef;
+  padding: 25px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.payment-cards article:first-child {
+  border-top: 5px solid #e0a426;
+}
+.payment-cards article:nth-child(2) {
+  border-top: 5px solid var(--teal);
+}
+.payment-cards article:nth-child(3) {
+  border-top: 5px solid var(--blue);
+}
+.payment-badge {
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  font-weight: 800;
+  color: #596b81;
+}
+.payment-cards strong {
+  font-size: 25px;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 20px 0 12px;
+}
+.payment-cards p {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.payment-cards .text-link {
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: auto;
+  padding-top: 15px;
+}
+.payment-footnote {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+.terms-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 70px;
+  align-items: start;
+}
+.terms-copy section {
+  scroll-margin-top: 165px;
+}
+.terms-copy h2 {
+  font-size: 29px;
+  margin-top: 36px;
+}
+.terms-copy p {
+  line-height: 1.95;
+}
+.terms-copy #shipment-care {
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+  padding-top: 38px;
+}
+.terms-callout {
+  background: var(--mint);
+  border-left: 4px solid var(--teal);
+  padding: 25px;
+  margin-top: 30px;
+}
+.terms-callout p {
+  font-size: 14px;
+}
+.terms-reference {
+  padding: 24px;
+  background: var(--pale);
+  margin-top: 32px;
+}
+.terms-reference h3 {
+  font-size: 20px;
+}
+.terms-reference p,
+.terms-reference a {
+  font-size: 12px;
+}
+.terms-reference a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.terms-sidebar {
+  position: sticky;
+  top: 165px;
+  background: var(--gold-pale);
+  border-top: 4px solid #e0a426;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.terms-sidebar > a {
+  font-size: 13px;
+  font-weight: 650;
+}
+.terms-sidebar p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.print-terms {
+  font-size: 12px;
+  white-space: normal;
+  text-align: left;
+  justify-content: center;
+  padding: 15px;
+}
+.quote-payment-note {
+  padding: 16px;
+  background: var(--gold-pale);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.quote-payment-note a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 700;
+}
+#shipment-documents,
+#account-documents {
+  scroll-margin-top: 165px;
+}
+@media (max-width: 1000px) {
+  .payment-cards {
+    grid-template-columns: 1fr;
+  }
+  .payment-cards article {
+    padding: 25px;
+  }
+  .terms-layout {
+    gap: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .terms-layout {
+    grid-template-columns: 1fr;
+  }
+  .terms-sidebar {
+    position: static;
+  }
+  .payment-summary {
+    padding: 25px;
+  }
+  .payment-summary .section-heading {
+    display: block;
+  }
+  .payment-summary .section-heading > .text-link {
+    margin-top: 15px;
+  }
+  .payment-summary h2 {
+    font-size: 30px;
+  }
+  .terms-copy section,
+  #shipment-documents,
+  #account-documents,
+  .payment-summary {
+    scroll-margin-top: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .forms-shortcuts {
+    gap: 8px;
+  }
+  .forms-shortcuts a {
+    font-size: 11px;
+    padding: 12px 14px;
+  }
+  .colour-documents article {
+    padding: 25px;
+  }
+  .payment-summary {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .payment-summary h2 {
+    font-size: 28px;
+  }
+  .terms-copy h2 {
+    font-size: 26px;
+  }
+}
+@media print {
+  .site-header,
+  .site-footer,
+  .mobile-actions,
+  .terms-sidebar,
+  .skip-link {
+    display: none !important;
+  }
+  body {
+    padding: 0 !important;
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+  .terms-layout {
+    display: block;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+  }
+  .terms-copy {
+    max-width: none;
+  }
+  .page-intro {
+    padding: 20px 0 !important;
+    background: white !important;
+    border: 0 !important;
+  }
+  .page-intro h1 {
+    font-size: 26pt;
+  }
+  .terms-copy h2 {
+    font-size: 17pt;
+    break-after: avoid;
+  }
+  .terms-copy p {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  .terms-copy section {
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+  }
+  .terms-callout,
+  .terms-reference {
+    background: white;
+    border: 1px solid #aaa;
+    break-inside: avoid;
+  }
+  a {
+    color: black;
+  }
+}
