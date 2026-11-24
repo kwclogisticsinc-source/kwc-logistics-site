@@ -54,6 +54,10 @@ export default function About() {
         <section className="article-copy" id="how-we-work">
           <h2>How we work with you</h2>
           <p>Before booking, we review what is moving, the pickup and receiving windows, and whether the freight needs a dock or liftgate. We confirm the operating carrier and equipment with you.</p>
+          <h3>What to include in a freight request</h3>
+          <p>Share the pickup and delivery locations, date or receiving window, pallet count, weight and dimensions. Tell us about restricted access, special handling or a site without a dock. For a recurring lane, include the stops and expected weekly volume.</p>
+          <h3>How to follow up on a shipment</h3>
+          <p>Have your shipment reference and stop details handy if you need to check a handoff or confirm an appointment. <Link className="text-link" href="/shipment-updates">Request a shipment update</Link></p>
           <div className="capability-grid">
             <article>
               <h3>One-time freight</h3>

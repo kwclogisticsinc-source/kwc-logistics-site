@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { registration, type RegistrationKind } from "@/lib/registration";
+import { registration, type DriverRole, type RegistrationKind } from "@/lib/registration";
 import { contact } from "@/lib/content";
 
-export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
+export function RegistrationForm({ kind, initialDriverRole }: { kind: RegistrationKind; initialDriverRole?: DriverRole }) {
   const [status, setStatus] = useState<"ready" | "sending" | "success" | "error">("ready");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -61,7 +61,7 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
                 ) : <>
                   <label htmlFor={id}>{field.name}</label>
                   {options ? (
-                  <select {...accessible} defaultValue=""><option value="" disabled>Choose an option</option>{options.map((item) => <option key={item}>{item}</option>)}</select>
+                  <select {...accessible} defaultValue={kind === "driver" && field.name === "Application type" ? initialDriverRole ?? "" : ""}><option value="" disabled>Choose an option</option>{options.map((item) => <option key={item}>{item}</option>)}</select>
                 ) : type === "textarea" ? (
                   <textarea {...accessible} rows={4} maxLength={1200} />
                 ) : (
@@ -74,7 +74,7 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
             );
           })}
           <button className="btn" type="submit" disabled={status === "sending"}>
-            {status === "sending" ? "Sending…" : kind === "newsletter" ? "Request Newsletter Signup" : "Send for Review"}
+            {status === "sending" ? "Sending…" : kind === "newsletter" ? "Request Newsletter Signup" : kind === "driver" ? "Send application" : "Send for Review"}
           </button>
         </>
       )}

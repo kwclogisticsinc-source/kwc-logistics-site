@@ -1,3 +1,13 @@
+export const driverRoles = [
+  { id: "az-driver", label: "AZ driver" },
+  { id: "dz-driver", label: "DZ driver" },
+  { id: "az-owner-operator", label: "AZ owner-operator" },
+  { id: "dz-owner-operator", label: "DZ owner-operator" },
+  { id: "carrier-partner", label: "Carrier partner" },
+] as const;
+
+export type DriverRole = (typeof driverRoles)[number]["label"];
+
 const legacyDriverRoles = ["Straight-truck driver", "Straight-truck owner-operator"];
 
 export const registration = {
@@ -42,8 +52,10 @@ export const registration = {
       { name: "Name", required: true },
       { name: "Email", required: true, type: "email" },
       { name: "Operating city", required: true },
-      { name: "Application type", required: true, options: ["AZ driver", "DZ driver", "AZ owner-operator", "DZ owner-operator", "Carrier partner"] },
+      { name: "Application type", required: true, options: driverRoles.map(({ label }) => label) },
       { name: "Company", required: false },
+      { name: "Equipment operated or supplied", required: false },
+      { name: "Preferred lanes or service area", required: false },
       { name: "Experience, equipment and availability", required: true, type: "textarea" },
     ],
   },

@@ -393,10 +393,15 @@ test("accepts AZ and DZ applications with qualified role labels", async () => {
       Email: "driver@example.com",
       "Operating city": "Kitchener",
       "Application type": role,
+      "Equipment operated or supplied": "Straight truck with liftgate",
+      "Preferred lanes or service area": "Waterloo Region",
       "Experience, equipment and availability": "Local freight experience; weekdays",
     }), deps({
       send: async (_, options) => {
-        assert.equal(JSON.parse(options.body)["Application type"], role);
+        const payload = JSON.parse(options.body);
+        assert.equal(payload["Application type"], role);
+        assert.equal(payload["Equipment operated or supplied"], "Straight truck with liftgate");
+        assert.equal(payload["Preferred lanes or service area"], "Waterloo Region");
         return Response.json({ success: true });
       },
     }));
