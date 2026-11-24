@@ -21,7 +21,7 @@ export default function MarketsPage() {
         <article className="article-copy">
           <p className="eyebrow">Planning brief · November 24, 2026</p>
           <h2>Three details to confirm before quoting a regional lane</h2>
-          <Image className="kwc-context-photo" src="/images/kwc-liftgate-receiving.webp" alt="Pallet staged beside a straight truck with its liftgate lowered" width={1280} height={853} sizes="(max-width: 760px) 100vw, 56vw" />
+          <Image className="kwc-context-photo" src="/images/kwc-liftgate-ground-level.webp" alt="Pallet staged by a straight truck’s lowered rear liftgate at a ground-level receiving door" width={1280} height={853} sizes="(max-width: 760px) 100vw, 56vw" />
           <h3>Receiving windows</h3>
           <p>Send the booked appointment or the hours the receiver accepts freight. For multi-stop routes, include the order of stops and any fixed appointments before dispatch plans capacity.</p>
           <h3>Dock or liftgate access</h3>
