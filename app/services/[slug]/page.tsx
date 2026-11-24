@@ -144,7 +144,7 @@ export default async function ServicePage({
             <Link className="btn secondary" href="/regular-deliveries#quote">Discuss Regular Deliveries</Link>
           </div>
           <figure className="july-service-image local-delivery">
-            <Image src={slug === "tailgate-delivery" || slug === "retail-grocery-distribution" ? "/images/kwc-freightliner-delivery.webp" : "/images/kwc-yard-fleet-1400.webp"} alt="Illustrative commercial transportation scene" fill sizes="(max-width: 720px) 100vw, 760px" />
+            <Image src={slug === "tailgate-delivery" || slug === "retail-grocery-distribution" ? "/images/kwc-straight-trucks-dock.png" : "/images/kwc-yard-fleet.png"} alt="Illustrative commercial transportation scene" fill sizes="(max-width: 720px) 100vw, 760px" />
             <figcaption>Illustrative transportation scene</figcaption>
           </figure>
           <div className="article-copy">

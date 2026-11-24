@@ -55,8 +55,8 @@ export default function Home() {
     <div className="local-home">
       <section className="local-hero july-hero">
         <Image
-          src="/images/kwc-freightliner-warehouse.webp"
-          alt="Illustrative scene of Freightliner straight trucks with KWC cab-door logos at a warehouse"
+          src="/images/kwc-yard-fleet.png"
+          alt="Illustrative KWC-branded fleet in an Ontario logistics yard"
           fill
           priority
           sizes="100vw"
@@ -72,7 +72,7 @@ export default function Home() {
               <Link href="/regular-deliveries#quote" className="btn secondary">Discuss Regular Deliveries</Link>
             </div>
           </div>
-          <p className="july-hero-caption">Illustrative facility and straight trucks</p>
+          <p className="july-hero-caption">Illustrative KWC fleet and loading yard</p>
         </div>
       </section>
 
@@ -99,8 +99,8 @@ export default function Home() {
       <section className="local-business">
         <div className="wrap local-section local-business-grid">
           <figure className="local-delivery">
-            <Image src="/images/kwc-freightliner-delivery.webp" alt="Illustration of a straight-truck pallet delivery at a local receiving entrance" fill sizes="(max-width: 840px) 100vw, 48vw" />
-            <figcaption>Illustrative commercial delivery</figcaption>
+            <Image src="/images/kwc-straight-trucks-dock.png" alt="Illustrative KWC straight trucks at loading docks" fill sizes="(max-width: 840px) 100vw, 48vw" />
+            <figcaption>Illustrative straight trucks at a loading dock</figcaption>
           </figure>
           <div>
             <h2>Big Reach for Small Businesses.</h2>

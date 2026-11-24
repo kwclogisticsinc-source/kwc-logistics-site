@@ -10,8 +10,8 @@ export const categories = [
     short: "Pallet freight and dedicated trucks",
     description:
       "Pallets, larger shipments and deliveries that need the right equipment or a little extra handling.",
-    image: "/images/kwc-freightliner-delivery.webp",
-    alt: "Illustrative liftgate delivery from a straight truck at a local receiving entrance",
+    image: "/images/kwc-straight-trucks-dock.png",
+    alt: "Illustrative KWC straight trucks at loading docks",
     tags: ["Pallets & truckloads", "Handling by arrangement"],
     href: "/services/freight",
   },
@@ -22,8 +22,8 @@ export const categories = [
     short: "Regular routes and store replenishment",
     description:
       "Recurring routes, regional distribution and Canada/U.S. road freight with one point of contact.",
-    image: "/images/business-pickup.webp",
-    alt: "Illustrative courier collecting packaged orders from a small business",
+    image: "/images/kwc-warehouse-crossdock.png",
+    alt: "Illustrative cross-dock warehouse scene",
     tags: ["Recurring routes", "Canada/U.S. road freight"],
     href: "/services/logistics",
   },
@@ -34,8 +34,8 @@ export const categories = [
     short: "Local courier and parcel delivery",
     description:
       "Documents, parcels and customer orders. From a one-off pickup to your everyday deliveries.",
-    image: "/images/courier-hero.webp",
-    alt: "Illustrative KWC courier handing a parcel to a customer beside a branded cargo van",
+    image: "/images/kwc-cargo-van-dock.png",
+    alt: "Illustrative KWC cargo van at a loading dock",
     tags: ["Individuals & businesses", "Local & regional"],
     href: "/services/courier",
   },
