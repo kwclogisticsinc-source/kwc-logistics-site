@@ -37,7 +37,7 @@ export default function Coverage() {
         </section>
         <section>
           <h2>Freight brokerage beyond Ontario</h2>
-          <p>We arrange shipments in both directions between Ontario and Québec, including Montréal, as well as throughout Canada and between Canada and the U.S. Qualified carrier partners operate these shipments.</p>
+          <p>Ask about partner-arranged service between Ontario and Québec, including Montréal, as well as other interprovincial and Canada–U.S. lanes. We confirm lane availability and the operating carrier before booking.</p>
           <Link href="/services/freight-brokerage" className="text-link">Explore freight brokerage</Link>
         </section>
         <section>

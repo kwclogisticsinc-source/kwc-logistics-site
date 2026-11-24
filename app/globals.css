@@ -3028,3 +3028,84 @@ ul.freight-grid {
   border-right: 1.5px solid currentColor;
   transform: translateY(-0.12em) rotate(45deg);
 }
+
+.kwc-front h1 {
+  max-width: 14ch;
+  font-size: clamp(3rem, 5.8vw, 5.7rem);
+}
+
+.kwc-quote-start {
+  padding-block: 2rem;
+}
+
+.kwc-service-index,
+.kwc-industry-band {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.kwc-service-index > ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.kwc-service-index li {
+  border-top: 1px solid #b9c9dc;
+  padding-top: 0.9rem;
+}
+
+.kwc-industry-band {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(1.5rem, 5vw, 5rem);
+}
+
+.kwc-industry-band ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.kwc-industry-band li a {
+  display: block;
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.75rem;
+}
+
+.kwc-industry-band li a:hover {
+  border-color: var(--blue);
+}
+
+.kwc-broker-process .kwc-journey {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 850px) {
+  .kwc-service-index > ul,
+  .kwc-broker-process .kwc-journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kwc-industry-band {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .kwc-service-index > ul,
+  .kwc-broker-process .kwc-journey {
+    grid-template-columns: 1fr;
+  }
+}
+
+.capability-grid article h2:has(.text-link) {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}

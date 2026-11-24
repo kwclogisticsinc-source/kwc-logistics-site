@@ -46,7 +46,7 @@ export function Footer() {
       </div>
       <div className="wrap footer-bottom">
         <span>© {new Date().getFullYear()} KWC Logistics Inc.</span>
-        <Link href="/privacy">Privacy</Link>
+        <div className="button-row"><Link href="/privacy">Privacy</Link><Link href="/terms">Website Terms</Link></div>
       </div>
     </footer>
   );

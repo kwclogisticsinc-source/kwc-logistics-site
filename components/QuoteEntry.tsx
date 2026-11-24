@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { quickQuoteTypes } from "@/lib/quote";
 export function QuoteEntry() {
   const [intent, setIntent] = useState("pallets");
-  const { kind } = quickQuoteTypes.find(({ id }) => id === intent) ?? quickQuoteTypes[1];
+  const kind = quickQuoteTypes.find(({ id }) => id === intent)?.kind ?? "freight";
   function start(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const values = new FormData(event.currentTarget);
@@ -11,9 +11,7 @@ export function QuoteEntry() {
       pickup: String(values.get("pickup") ?? ""),
       destination: String(values.get("destination") ?? ""),
     });
-    window.location.assign(
-      `/contact?service=${kind}&intent=${intent}#quote&${route.toString()}`,
-    );
+    window.location.assign(`/contact?service=${kind}&intent=${intent}#quote&${route.toString()}`);
   }
   return (
     <form action="/contact" onSubmit={start} className="quote-entry">

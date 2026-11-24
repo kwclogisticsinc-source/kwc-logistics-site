@@ -12,20 +12,19 @@ export default function Industries() {
   return (
     <>
       <PageIntro
-        eyebrow="YOUR INDUSTRY. YOUR EVERYDAY CHALLENGES."
-        title="The right delivery starts with the details."
+        eyebrow="Industry solutions"
+        title="Transportation by industry."
       >
         <p>
-          A supplier waiting, a customer order ready, or stock needed at another
-          location. Tell us the problem you need to solve.
+          Explore pickup, receiving and delivery options for your business. Each
+          guide explains what to share so we can assess your freight and timing.
         </p>
       </PageIntro>
       <section className="wrap content-section">
         <div className="capability-grid">
           {industryPages.map(([slug, title, text]) => (
             <article key={title}>
-              <h3><Link href={`/industries/${slug}`}>{title}</Link></h3>
-              <Link className="text-link" href={`/industries/${slug}`}>Delivery options</Link>
+              <h2><Link className="text-link" href={`/industries/${slug}`}>{title}</Link></h2>
               <p>{text}</p>
             </article>
           ))}

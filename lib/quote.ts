@@ -1,6 +1,7 @@
 export type QuoteKind = "courier" | "freight" | "regular" | "logistics";
 export const quickQuoteTypes = [
   { id: "bulk-packages", label: "B2B bulk packages", kind: "courier" },
+  { id: "residential", label: "Residential pallet or large item", kind: "freight", freightService: "Residential freight delivery" },
   { id: "pallets", label: "Palletized freight", kind: "freight", freightService: "Shared-capacity freight (LTL)" },
   { id: "bulky", label: "Large or bulky freight", kind: "freight", freightService: "Large or bulky freight" },
   { id: "refrigerated", label: "Refrigerated freight", kind: "freight", freightService: "Refrigerated freight", temperature: true },
@@ -91,6 +92,7 @@ export function fieldsFor(
                   "Tailgate or liftgate delivery",
                   "Expedited road freight",
                   "Final-mile delivery",
+                  "Residential freight delivery",
                   "Partner-arranged freight",
                   "Help me plan",
                 ],
@@ -174,6 +176,11 @@ export function fieldsFor(
                   "Inside / stairs",
                   "Please advise",
                 ],
+              },
+              {
+                name: "Delivery Site",
+                label: "Delivery location type",
+                options: ["Commercial", "Residential", "Multiple locations", "Please advise"],
               },
               {
                 name: "Delivery Access",

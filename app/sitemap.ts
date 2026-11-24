@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resources",
     "/forms",
     "/privacy",
+    "/terms",
   ].map((route) => ({
     url: `https://kwclogistics.ca${route}`,
     changeFrequency: "monthly",

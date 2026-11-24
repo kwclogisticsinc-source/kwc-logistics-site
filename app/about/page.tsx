@@ -33,8 +33,8 @@ export default function About() {
             Our company-operated fleet serves Ontario exclusively, including
             communities beyond the main commercial corridors. Through our{" "}
             <Link className="text-link" href="/services/freight-brokerage">freight brokerage</Link>,
-            we arrange additional capacity in Ontario and shipments across Canada
-            and between Canada and the U.S. through qualified carrier partners.
+            we review additional Ontario capacity, interprovincial shipments and
+            Canada–U.S. lanes with qualified carrier partners.
           </p>
           <p>
             The galloping horse represents strength, speed and the conviction

@@ -7,6 +7,8 @@ import { contact } from "@/lib/content";
 import { BrandLogo } from "./Logo";
 
 const navigation = [
+  { label: "Ship", href: "/book-now" },
+  { label: "Business Solutions", href: "/regular-deliveries" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Brokerage", href: "/services/freight-brokerage" },
@@ -21,10 +23,10 @@ const navigation = [
     ["About KWC", "/about"],
     ["Contact", "/contact"],
     ["Resources", "/resources"],
-    ["Business Solutions", "/regular-deliveries"],
+    ["Drive with KWC", "/drive-with-kwc"],
     ["Register Your Business", "/customer-registration"],
   ] },
-  { label: "Drive with KWC", href: "/drive-with-kwc" },
+
 ] as const;
 
 export function Header() {

@@ -21,7 +21,7 @@ export default function EquipmentPage() {
             <Image src="/images/kwc-straight-trucks-dock-1400.webp" alt="Straight trucks at loading docks" fill sizes="(max-width: 720px) 100vw, 55vw" />
           </div>
           <dl className="project-equipment-list">
-            <div><dt>Company-operated 26-foot straight trucks</dt><dd>Our company-operated fleet runs exclusively within Ontario. The straight trucks handle dry pallet freight, dedicated routes and commercial final-mile deliveries. Share pallet dimensions, loaded weight and how the truck can reach the receiving area.</dd></div>
+            <div><dt>Company-operated 26-foot straight truck</dt><dd>Our company-operated fleet runs exclusively within Ontario. The truck handles dry pallet freight, dedicated routes and commercial final-mile deliveries. Share pallet dimensions, loaded weight and how the truck can reach the receiving area.</dd></div>
             <div><dt>Tailgate and liftgate service</dt><dd>For stores and commercial stops without a dock. Tell us whether the surface is level and whether there is space to unload safely.</dd></div>
             <div><dt>Cargo van routes</dt><dd>Bulk packages, supplier collections and multi-stop deliveries for business customers. Include the number of packages and delivery stops.</dd></div>
             <div><dt>53-foot dry vans</dt><dd>For dry, palletized freight and larger dock-to-dock shipments. Include the pallet count, loaded dimensions, weight and dock access so we can confirm capacity.</dd></div>

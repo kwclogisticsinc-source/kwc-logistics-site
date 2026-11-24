@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export default function BookNow() {
   return (
     <>
-      <PageIntro eyebrow="Freight, final-mile and recurring routes" title="Book your next shipment.">
-        <p>Start with the pickup and destination. We’ll ask about the freight, equipment and timing, then confirm capacity and price with you before booking.</p>
+      <PageIntro eyebrow="Freight, final-mile and recurring routes" title="Ship something.">
+        <p>Request an Ontario freight quote as an individual or a business. We review one-time pallet shipments and eligible large items for commercial and residential delivery. Start with the pickup and destination. We’ll ask about the freight, equipment and timing, then confirm capacity and price with you before booking.</p>
       </PageIntro>
       <section className="wrap content-section">
         <p className="notice"><strong>{freightInsurance}</strong></p>

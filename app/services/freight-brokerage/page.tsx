@@ -23,7 +23,7 @@ export default function FreightBrokerage() {
         <div className="wrap">
           <p className="eyebrow">Freight brokerage</p>
           <h1>One point of contact for freight beyond Ontario.</h1>
-          <p>KWC arranges road freight across Canada and between Canada and the United States through qualified carrier partners. We confirm who will carry your freight, what equipment they’ll use and the agreed service before you book.</p>
+          <p>KWC reviews interprovincial and Canada–U.S. road freight requests and sources capacity through qualified carrier partners where available. We confirm who will carry your freight, what equipment they’ll use and the agreed service before you book.</p>
           <div className="button-row">
             <Link href={quote} className="btn">Request a Brokerage Quote</Link>
             <Link className="kwc-front-link" href="/service-areas">See Ontario fleet coverage <span className="kwc-link-arrow" aria-hidden="true" /></Link>
