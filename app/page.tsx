@@ -32,10 +32,7 @@ export default function Home() {
   return (
     <div className="kwc-home">
       <section className="kwc-front">
-        <div className="kwc-front-media">
-          <Image src="/images/kwc-straight-truck-side-profile.webp" alt="Side profile of a KWC-branded Freightliner straight truck at a loading dock" fill priority sizes="100vw" className="kwc-front-photo" />
-        </div>
-        <div className="wrap kwc-front-inner">
+        <div className="kwc-front-inner">
           <p className="eyebrow">Kitchener, Ontario · Since 2022</p>
           <h1>Ontario freight, from first mile to final mile.</h1>
           <p className="kwc-front-lead">KWC collects freight from suppliers, moves pallets between communities in our Ontario service area and delivers to businesses and eligible residential destinations.</p>
@@ -43,6 +40,9 @@ export default function Home() {
             <Link href="/book-now" className="btn">Ship Something</Link>
             <Link href="/regular-deliveries" className="kwc-front-link">Business Logistics Solutions</Link>
           </div>
+        </div>
+        <div className="kwc-front-media">
+          <Image src="/images/kwc-branded-trucks-yard.webp" alt="Freightliner straight truck and dry van trailer with large KWC Logistics blue horse branding" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />
         </div>
       </section>
 

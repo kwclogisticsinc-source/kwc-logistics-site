@@ -2772,35 +2772,24 @@ ul.freight-grid {
 }
 
 .kwc-front {
-  position: relative;
-  isolation: isolate;
   display: grid;
-  align-items: end;
-  min-height: clamp(520px, 52vw, 690px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr);
+  align-items: center;
 }
 
 .kwc-front-media {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #182940;
 }
 
 .kwc-front-photo {
   object-fit: cover;
-  object-position: center 62%;
-}
-
-.kwc-front::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  content: "";
-  background: linear-gradient(90deg, #07172ff7 0%, #07172fec 23%, #07172f8c 48%, transparent 81%),
-    linear-gradient(0deg, #07172fa6, transparent 45%);
+  object-position: center 72%;
 }
 
 .kwc-front-inner {
-  padding-block: clamp(68px, 9vw, 125px);
+  padding: clamp(2rem, 4vw, 4.5rem) clamp(1.25rem, 3.5vw, 4.5rem);
 }
 
 .kwc-front .eyebrow,
@@ -2816,7 +2805,8 @@ ul.freight-grid {
 }
 
 .kwc-front h1 {
-  max-width: 12ch;
+  max-width: 14ch;
+  font-size: clamp(2.7rem, 4.15vw, 5rem);
 }
 
 .kwc-broker-hero h1 {
@@ -2981,24 +2971,21 @@ ul.freight-grid {
   font-weight: 700;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .kwc-front {
-    min-height: 0;
+    grid-template-columns: 1fr;
   }
 
   .kwc-front-media {
-    position: relative;
-    aspect-ratio: 3 / 2;
+    grid-row: 1;
   }
 
   .kwc-front-inner {
     padding-block: 32px 40px;
   }
+}
 
-  .kwc-front::before {
-    display: none;
-  }
-
+@media (max-width: 760px) {
   .kwc-operating,
   .kwc-editorial,
   .kwc-home-close,
@@ -3032,11 +3019,6 @@ ul.freight-grid {
   border-top: 1.5px solid currentColor;
   border-right: 1.5px solid currentColor;
   transform: translateY(-0.12em) rotate(45deg);
-}
-
-.kwc-front h1 {
-  max-width: 14ch;
-  font-size: clamp(3rem, 5.8vw, 5.7rem);
 }
 
 .kwc-quote-start {
