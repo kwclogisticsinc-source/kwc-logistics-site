@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageIntro } from "@/components/DeliveryUI";
 import { RegistrationForm } from "@/components/RegistrationForm";
 
@@ -16,12 +17,13 @@ export default function DriveWithKwc() {
         <p>Tell us your licence class, operating area and availability. KWC reviews applications against the work and equipment available.</p>
         <div className="button-row"><Link className="btn" href="#request">Apply to Drive with KWC</Link></div>
       </PageIntro>
-      <section className="wrap content-section" aria-label="Ways to work with KWC">
-        <div className="capability-grid">
+      <section className="wrap kwc-editorial" aria-label="Ways to work with KWC">
+        <div className="kwc-careers-roles">
           <article id="drivers"><h2>AZ and DZ drivers</h2><p>Share the equipment you’ve driven, your local or regional experience and the schedule you’re available for. For DZ straight-truck work, include liftgate and delivery experience if applicable.</p></article>
           <article id="owner-operators"><h2>AZ and DZ owner-operators</h2><p>Tell us your equipment type, service area, availability and preferred lanes. Include any liftgate or refrigeration capability relevant to the work you’re seeking.</p></article>
           <article id="carrier-partners"><h2>Carrier partners</h2><p>Introduce your company, equipment and the lanes you serve. If there’s a fit, we’ll agree on how to exchange operating and insurance documents.</p></article>
         </div>
+        <Image className="kwc-context-photo" src="/images/kwc-driver-pretrip.webp" alt="Driver checking the front tire of a parked KWC straight truck" width={1280} height={853} sizes="(max-width: 760px) 100vw, 47vw" />
       </section>
       <section className="wrap contact-layout">
         <aside className="contact-aside">
