@@ -13,20 +13,17 @@ const navigation = [
   { label: "Industries", href: "/industries" },
   { label: "Brokerage", href: "/services/freight-brokerage" },
   { label: "Coverage", href: "/service-areas" },
-  { label: "Safety & Technology", links: [
-    ["Fleet Equipment", "/equipment"],
-    ["Safety and Fleet Standards", "/safety"],
-    ["Transportation Technology", "/technology"],
-    ["Shipment Updates", "/shipment-updates"],
-  ] },
+  { label: "Safety", href: "/safety" },
+  { label: "Technology", href: "/technology" },
   { label: "Company", links: [
+    ["Fleet Equipment", "/equipment"],
+    ["Shipment Updates", "/shipment-updates"],
     ["About KWC", "/about"],
     ["Contact", "/contact"],
     ["Resources", "/resources"],
     ["Drive with KWC", "/drive-with-kwc"],
     ["Register Your Business", "/customer-registration"],
   ] },
-
 ] as const;
 
 export function Header() {

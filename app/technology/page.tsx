@@ -23,6 +23,7 @@ export default function TechnologyPage() {
         <div className="button-row operations-actions">
           <Link href="/shipment-updates" className="btn">Get a Shipment Update</Link>
           <Link href="/book-now" className="btn secondary">Start a Quote</Link>
+          <Link href="/safety" className="text-link">Fleet Safety</Link>
         </div>
       </section>
     </>

@@ -2598,7 +2598,7 @@ ul.freight-grid {
   margin-left: 1rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .project-header .desktop-nav,
   .project-header .shipment-link {
     display: none;
@@ -2610,7 +2610,7 @@ ul.freight-grid {
 }
 
 .project-header .kwc-navigation {
-  gap: clamp(.65rem, 1.5vw, 1.4rem);
+  gap: clamp(.65rem, 1.25vw, 1.2rem);
 }
 
 .kwc-nav-group {
@@ -2653,7 +2653,7 @@ ul.freight-grid {
   padding: .65rem .65rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .project-header .kwc-navigation.is-open {
     position: absolute;
     top: 100%;
@@ -2779,10 +2779,15 @@ ul.freight-grid {
   min-height: clamp(520px, 52vw, 690px);
 }
 
-.kwc-front-photo {
+.kwc-front-media {
+  position: absolute;
   z-index: -2;
+  inset: 0;
+}
+
+.kwc-front-photo {
   object-fit: cover;
-  object-position: 57% 49%;
+  object-position: center 62%;
 }
 
 .kwc-front::before {
@@ -2978,20 +2983,20 @@ ul.freight-grid {
 
 @media (max-width: 760px) {
   .kwc-front {
-    min-height: 620px;
+    min-height: 0;
+  }
+
+  .kwc-front-media {
+    position: relative;
+    aspect-ratio: 3 / 2;
   }
 
   .kwc-front-inner {
-    padding-block: 40px;
-  }
-
-  .kwc-front-photo {
-    object-fit: contain;
-    object-position: center top;
+    padding-block: 32px 40px;
   }
 
   .kwc-front::before {
-    background: linear-gradient(0deg, #091c36 56%, #091c3600 78%);
+    display: none;
   }
 
   .kwc-operating,

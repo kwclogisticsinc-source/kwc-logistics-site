@@ -31,7 +31,10 @@ export default function SafetyPage() {
           <p>Pre-trip checks and maintenance on this page describe our company-operated fleet. When arranging a partner move, we confirm the operator and review the applicable insurance documentation for the shipment.</p>
           <h2>Freight insurance</h2>
           <p>{freightInsurance} Tell us about high-value goods, special commodities or additional coverage needs before booking so we can review what applies to your shipment.</p>
-          <Link href="/contact?service=freight#quote" className="btn">Discuss Your Shipment</Link>
+          <div className="button-row">
+            <Link href="/contact?service=freight#quote" className="btn">Discuss Your Shipment</Link>
+            <Link href="/technology" className="text-link">Technology and Dispatch</Link>
+          </div>
         </div>
       </section>
     </>

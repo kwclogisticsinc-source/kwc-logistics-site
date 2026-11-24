@@ -32,7 +32,9 @@ export default function Home() {
   return (
     <div className="kwc-home">
       <section className="kwc-front">
-        <Image src="/images/kwc-freightliner-warehouse.webp" alt="KWC-branded Freightliner straight trucks outside a warehouse" fill priority sizes="100vw" className="kwc-front-photo" />
+        <div className="kwc-front-media">
+          <Image src="/images/kwc-straight-truck-side-profile.webp" alt="Side profile of a KWC-branded Freightliner straight truck at a loading dock" fill priority sizes="100vw" className="kwc-front-photo" />
+        </div>
         <div className="wrap kwc-front-inner">
           <p className="eyebrow">Kitchener, Ontario · Since 2022</p>
           <h1>Ontario freight, from first mile to final mile.</h1>
