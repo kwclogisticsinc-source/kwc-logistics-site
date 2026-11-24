@@ -370,7 +370,7 @@ test("newsletter requires an explicit opt-in and sends a timestamped signup sepa
   assert.ok((await missingConsent.json()).errors["Newsletter consent"]);
 
   let payload;
-  const result = await handleQuote(req({ ...base, "Newsletter consent": "yes", Phone: "ignored" }), deps({
+  const result = await handleQuote(req({ ...base, "Newsletter consent": "yes", "Newsletter consent wording": "untrusted", "Newsletter form path": "untrusted", Phone: "ignored" }), deps({
     send: async (_, options) => {
       payload = JSON.parse(options.body);
       return Response.json({ success: true });
@@ -379,6 +379,8 @@ test("newsletter requires an explicit opt-in and sends a timestamped signup sepa
   assert.equal(result.status, 200);
   assert.match(payload.subject, /Market newsletter signup/);
   assert.equal(payload["Newsletter consent"], "yes");
+  assert.equal(payload["Newsletter consent wording"], "I agree to receive KWC Logistics freight market updates by email. I can unsubscribe at any time.");
+  assert.equal(payload["Newsletter form path"], "/markets#request");
   assert.ok(Number.isFinite(Date.parse(payload["Newsletter consent recorded at"])));
   assert.equal(payload.Phone, undefined);
 });

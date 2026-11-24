@@ -133,7 +133,11 @@ export async function handleQuote(
         signal: AbortSignal.timeout(12000),
         body: JSON.stringify({
           ...values,
-          ...(category === "newsletter" ? { "Newsletter consent recorded at": new Date().toISOString() } : {}),
+          ...(category === "newsletter" ? {
+            "Newsletter consent recorded at": new Date().toISOString(),
+            "Newsletter consent wording": registration.newsletter.fields[1].label,
+            "Newsletter form path": "/markets#request",
+          } : {}),
           access_key: key,
           subject: category
             ? `KWC ${registration[category].title} — ${reference}`

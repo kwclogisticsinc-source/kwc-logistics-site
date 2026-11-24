@@ -38,7 +38,7 @@ export default function Privacy() {
           lanes and capacity requirements so KWC can assess and reply to the enquiry.
         </p>
         <h2>Freight market newsletter</h2>
-        <p>Newsletter requests include your email, consent and the time it was recorded. KWC uses these details to manage requests for freight market updates. You can withdraw consent by emailing <a href={`mailto:${contact.email}`}>{contact.email}</a>.</p>
+        <p>Newsletter requests include your email, consent, the wording shown at signup and the time it was recorded. KWC uses these details to manage requests for freight market updates. You can withdraw consent by emailing <a href={`mailto:${contact.email}`}>{contact.email}</a>.</p>
         <h2>Data minimization and technical logs</h2>
         <p>
           Please do not submit patient information, passwords, payment details
