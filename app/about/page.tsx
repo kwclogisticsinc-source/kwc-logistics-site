@@ -15,7 +15,7 @@ export default function About() {
         title="Small team. Big ambition."
       >
         <p>
-          We help local businesses move pallets, book straight trucks and set up regular delivery routes across Ontario.
+          We help local businesses move pallets, book straight trucks and set up regular delivery routes within our Ontario service area, as far north as Sudbury.
         </p>
       </PageIntro>
       <section className="wrap content-section">

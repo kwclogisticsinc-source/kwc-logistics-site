@@ -7,7 +7,7 @@ import { localAreas } from "@/lib/local-areas";
 
 export const metadata: Metadata = {
   title: "Ontario Freight Coverage | Highways 401 and 403",
-  description: "KWC serves businesses throughout Ontario, from the 401 and 403 corridors to cities, small towns and rural communities in Northern, Central and Eastern Ontario.",
+  description: "KWC serves businesses along Ontario’s 401 and 403 corridors, in Central and Eastern Ontario, and as far north as Sudbury.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -15,13 +15,13 @@ export default function Coverage() {
   return (
     <>
       <PageIntro eyebrow="ONTARIO REGIONAL TRANSPORTATION" title={coverageTitle}>
-        <p>We serve businesses throughout Ontario, including Northern Ontario, small towns and rural communities. Our company-operated fleet runs exclusively within the province.</p>
+        <p>Our company-operated fleet serves Ontario only. We cover routes across Southern and Eastern Ontario and serve selected communities in Central Ontario, with Sudbury as our current northern limit.</p>
         {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </PageIntro>
       <div className="wrap content-section article-copy">
         <ProvinceCoverageGraphic />
         <section>
-          <h2>Service across all of Ontario</h2>
+          <h2>Current Ontario service regions</h2>
           <p>The cities below are examples of where we serve. Share your destination or postal code so we can confirm timing, equipment and access, including locations off the main highway corridors.</p>
           <div className="freight-grid">
             {regions.map(([name, cities]) => <article key={name}><h3>{name}</h3><p>{cities}</p></article>)}

@@ -34,8 +34,8 @@ export const regions = [
     "Barrie, Orillia, the Muskokas, Peterborough, the Kawarthas and surrounding communities"
   ],
   [
-    "Northern Ontario",
-    "North Bay, Sudbury, Sault Ste. Marie, Timmins, Thunder Bay, Kenora and surrounding communities"
+    "Northern routes",
+    "North Bay and Sudbury. Ask us to confirm service for your specific pickup or delivery address."
   ],
   [
     "Guelph",

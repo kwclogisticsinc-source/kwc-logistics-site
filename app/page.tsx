@@ -38,7 +38,7 @@ export default function Home() {
         <div className="wrap kwc-front-inner">
           <p className="eyebrow">Kitchener, Ontario · Since 2022</p>
           <h1>Ontario freight, from first mile to final mile.</h1>
-          <p className="kwc-front-lead">KWC collects freight from suppliers, moves pallets between Ontario communities and delivers to businesses and eligible residential destinations.</p>
+          <p className="kwc-front-lead">KWC collects freight from suppliers, moves pallets between communities in our Ontario service area and delivers to businesses and eligible residential destinations.</p>
           <div className="button-row">
             <Link href="/book-now" className="btn">Ship Something</Link>
             <Link href="/regular-deliveries" className="kwc-front-link">Business Logistics Solutions</Link>
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="wrap kwc-operating" aria-label="How KWC serves your lane">
           <article>
             <p className="eyebrow">Company-operated equipment</p>
-            <h2>Ontario, province-wide.</h2>
+            <h2>Ontario regional freight.</h2>
             <p>Our 26-foot straight truck with a liftgate operates exclusively in Ontario. We confirm equipment, site access and delivery timing for each shipment.</p>
             <Link className="text-link" href="/equipment">See our equipment</Link>
           </article>
@@ -118,9 +118,9 @@ export default function Home() {
 
       <section className="wrap kwc-editorial kwc-home-coverage">
         <div className="kwc-editorial-copy">
-          <p className="eyebrow">Province-wide coverage</p>
-          <h2>We serve every region of Ontario.</h2>
-          <p>Our main freight corridors run along Highways 401 and 403, connecting Waterloo Region, the GTA, Southwestern Ontario and Eastern Ontario. We also serve Central and Northern Ontario, from Muskoka and Sudbury to Thunder Bay and communities beyond the major highways.</p>
+          <p className="eyebrow">Ontario coverage</p>
+          <h2>Ontario freight as far north as Sudbury.</h2>
+          <p>Our main freight corridors run along Highways 401 and 403, connecting Waterloo Region, the GTA, Southwestern Ontario and Eastern Ontario. We also serve selected communities in Central Ontario and along the route to Sudbury, our current northern limit.</p>
           <p>Send us your city, postal code or community name. We’ll confirm timing, equipment and access for that location.</p>
           <Link href="/service-areas" className="text-link">View coverage and freight lanes</Link>
         </div>

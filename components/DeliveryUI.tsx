@@ -173,9 +173,9 @@ export function ProvinceCoverageGraphic() {
         src="/images/ontario-province-coverage.svg"
         width={710}
         height={495}
-        alt="Ontario province-wide coverage, with Waterloo Region headquarters and example destinations including Windsor, the GTA, Ottawa, Sudbury, Timmins, Thunder Bay and Kenora."
+        alt="Selected Ontario service destinations, including Windsor, the GTA and Ottawa, with Sudbury as the northern limit. KWC is based in Waterloo Region."
       />
-      <figcaption>Waterloo Region headquarters and selected Ontario destinations.</figcaption>
+      <figcaption>Selected Ontario destinations. Current service extends north to Sudbury.</figcaption>
     </figure>
   );
 }
