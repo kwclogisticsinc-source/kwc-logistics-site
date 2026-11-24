@@ -360,3 +360,44 @@ test("partnership enquiries require a business type and deliver a separate capac
   assert.equal(payload["Insurance document"], undefined);
   assert.match(payload.subject, /Carrier capacity enquiry/);
 });
+
+test("newsletter requires an explicit opt-in and sends a timestamped signup separately", async () => {
+  const base = { "Request Type": "newsletter", Email: "reader@example.com" };
+  const missingConsent = await handleQuote(req(base), deps({
+    send: async () => assert.fail("Newsletter requests without consent must not be forwarded"),
+  }));
+  assert.equal(missingConsent.status, 400);
+  assert.ok((await missingConsent.json()).errors["Newsletter consent"]);
+
+  let payload;
+  const result = await handleQuote(req({ ...base, "Newsletter consent": "yes", Phone: "ignored" }), deps({
+    send: async (_, options) => {
+      payload = JSON.parse(options.body);
+      return Response.json({ success: true });
+    },
+  }));
+  assert.equal(result.status, 200);
+  assert.match(payload.subject, /Market newsletter signup/);
+  assert.equal(payload["Newsletter consent"], "yes");
+  assert.ok(Number.isFinite(Date.parse(payload["Newsletter consent recorded at"])));
+  assert.equal(payload.Phone, undefined);
+});
+
+test("accepts AZ and DZ applications with qualified role labels", async () => {
+  for (const role of ["AZ driver", "DZ driver", "AZ owner-operator", "DZ owner-operator"]) {
+    const result = await handleQuote(req({
+      "Request Type": "driver",
+      Name: "Test Applicant",
+      Email: "driver@example.com",
+      "Operating city": "Kitchener",
+      "Application type": role,
+      "Experience, equipment and availability": "Local freight experience; weekdays",
+    }), deps({
+      send: async (_, options) => {
+        assert.equal(JSON.parse(options.body)["Application type"], role);
+        return Response.json({ success: true });
+      },
+    }));
+    assert.equal(result.status, 200);
+  }
+});

@@ -3135,3 +3135,66 @@ ul.freight-grid {
     grid-template-columns: 1fr;
   }
 }
+
+.kwc-subnav {
+  margin: 0;
+  list-style: none;
+  min-width: max(100%, 15rem);
+}
+
+.kwc-nav-group:nth-last-child(-n + 2) .kwc-subnav {
+  right: 0;
+  left: auto;
+}
+
+.kwc-nav-trigger[aria-expanded="true"] {
+  color: var(--blue);
+}
+
+.kwc-nav-trigger[aria-expanded="true"]::after {
+  transform: rotate(225deg);
+}
+
+.kwc-subnav a:hover,
+.kwc-subnav a:focus-visible {
+  color: var(--blue);
+  background: #edf4fa;
+}
+
+.newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.newsletter-consent input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0.15rem 0 0;
+  accent-color: var(--blue);
+}
+
+.market-signup-note {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1180px) {
+  .kwc-nav-group + .kwc-nav-group {
+    border-top: 1px solid var(--line);
+  }
+
+  .kwc-nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+  }
+
+  .kwc-subnav {
+    min-width: 0;
+    margin: 0 0 0.6rem 0.5rem;
+  }
+}

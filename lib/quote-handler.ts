@@ -87,7 +87,7 @@ export async function handleQuote(
     });
   const category = form.get("Request Type");
   if (form.getAll("Request Type").length > 1 ||
-      (category !== null && category !== "customer" && category !== "driver" && category !== "partnership"))
+      (category !== null && category !== "customer" && category !== "driver" && category !== "partnership" && category !== "newsletter"))
     return reply(400, { success: false, error: "Choose a valid request type." });
 
   const { values, errors } = category
@@ -133,6 +133,7 @@ export async function handleQuote(
         signal: AbortSignal.timeout(12000),
         body: JSON.stringify({
           ...values,
+          ...(category === "newsletter" ? { "Newsletter consent recorded at": new Date().toISOString() } : {}),
           access_key: key,
           subject: category
             ? `KWC ${registration[category].title} — ${reference}`

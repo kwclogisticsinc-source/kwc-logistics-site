@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/industries",
     ...industryPages.map(([slug]) => `/industries/${slug}`),
     "/resources",
+    "/markets",
     "/forms",
     "/privacy",
     "/terms",

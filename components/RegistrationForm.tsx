@@ -23,7 +23,7 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
       const result = await response.json();
       if (response.ok && result.success === true) {
         setStatus("success");
-        setMessage(`KWC received your request for review. Reference: ${result.reference}.`);
+        setMessage(kind === "newsletter" ? "KWC received your newsletter signup request." : `KWC received your request for review. Reference: ${result.reference}.`);
       } else {
         setStatus("error");
         setErrors(result.errors ?? {});
@@ -53,21 +53,28 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
             };
             return (
               <div key={field.name} className="registration-field">
-                <label htmlFor={id}>{field.name}</label>
-                {options ? (
+                {type === "checkbox" ? (
+                  <label className="newsletter-consent" htmlFor={id}>
+                    <input {...accessible} type="checkbox" value="yes" />
+                    <span>{"label" in field ? field.label : field.name}</span>
+                  </label>
+                ) : <>
+                  <label htmlFor={id}>{field.name}</label>
+                  {options ? (
                   <select {...accessible} defaultValue=""><option value="" disabled>Choose an option</option>{options.map((item) => <option key={item}>{item}</option>)}</select>
                 ) : type === "textarea" ? (
                   <textarea {...accessible} rows={4} maxLength={1200} />
                 ) : (
                   <input {...accessible} type={type} maxLength={250} />
                 )}
+                </>}
                 {field.name === "Capacity needed" && <p className="fine" id={`${id}-hint`}>Include pickup and delivery windows, anticipated volume and frequency, and the type of freight.</p>}
                 {errors[field.name] && <p id={`${id}-error`}>{errors[field.name]}</p>}
               </div>
             );
           })}
           <button className="btn" type="submit" disabled={status === "sending"}>
-            {status === "sending" ? "Sending…" : "Send for Review"}
+            {status === "sending" ? "Sending…" : kind === "newsletter" ? "Request Newsletter Signup" : "Send for Review"}
           </button>
         </>
       )}
