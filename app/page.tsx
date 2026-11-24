@@ -2,13 +2,33 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ProvinceCoverageGraphic } from "@/components/DeliveryUI";
-import { QuoteEntry } from "@/components/QuoteEntry";
 import { freightInsurance } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: { absolute: "KWC Logistics | Ontario Transportation & Freight Brokerage" },
   description: "Based in Kitchener since 2022. Ontario first-mile pickup, pallet freight, liftgate and final-mile delivery, recurring transportation and partner-arranged freight.",
 };
+
+const customerPaths = [
+  {
+    title: "Ship something",
+    href: "/book-now",
+    copy: "Send a pallet or eligible large item. Start with two locations and what you’re moving.",
+    action: "Start a one-time quote",
+  },
+  {
+    title: "Business transportation",
+    href: "/regular-deliveries",
+    copy: "Set up regular pickups, dedicated runs or distribution. Tell us your volume, stops and delivery windows.",
+    action: "Plan recurring freight",
+  },
+  {
+    title: "Transportation partnerships",
+    href: "/transportation-partnerships",
+    copy: "Brokers, forwarders and logistics teams can request Ontario carrier capacity for a lane or an ongoing program.",
+    action: "Request carrier capacity",
+  },
+] as const;
 
 const services = [
   ["First-mile pickup", "/services/supplier-pickups", "Collect freight from suppliers, plants and retailers."],
@@ -35,10 +55,10 @@ export default function Home() {
         <div className="kwc-front-inner">
           <p className="eyebrow">Kitchener, Ontario · Since 2022</p>
           <h1>Ontario freight, from first mile to final mile.</h1>
-          <p className="kwc-front-lead">KWC collects freight from suppliers, moves pallets between communities in our Ontario service area and delivers to businesses and eligible residential destinations.</p>
+          <p className="kwc-front-lead">KWC connects pickup, regional freight and final-mile delivery for one-time shipments and ongoing transportation programs.</p>
           <div className="button-row">
             <Link href="/book-now" className="btn">Ship Something</Link>
-            <Link href="/regular-deliveries" className="kwc-front-link">Business Logistics Solutions</Link>
+            <a href="#shipping-options" className="kwc-front-link">Explore shipping options</a>
           </div>
         </div>
         <div className="kwc-front-media">
@@ -46,8 +66,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrap kwc-quote-start" aria-label="Start a no-account freight quote">
-        <QuoteEntry />
+      <section className="wrap kwc-customer-paths" id="shipping-options" aria-labelledby="shipping-options-title">
+        <h2 id="shipping-options-title">What do you need to move?</h2>
+        <ul>
+          {customerPaths.map(({ title, href, copy, action }) => (
+            <li key={href}>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <Link className="text-link" href={href}>{action}</Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="kwc-home-services">

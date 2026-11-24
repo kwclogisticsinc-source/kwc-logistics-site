@@ -1,6 +1,8 @@
 "use client";
 import { useState, type FormEvent } from "react";
 import { quickQuoteTypes } from "@/lib/quote";
+const oneTimeTypes = quickQuoteTypes.filter(({ id }) => id !== "regular" && id !== "brokerage");
+
 export function QuoteEntry() {
   const [intent, setIntent] = useState("pallets");
   const kind = quickQuoteTypes.find(({ id }) => id === intent)?.kind ?? "freight";
@@ -11,10 +13,11 @@ export function QuoteEntry() {
       pickup: String(values.get("pickup") ?? ""),
       destination: String(values.get("destination") ?? ""),
     });
-    window.location.assign(`/contact?service=${kind}&intent=${intent}#quote&${route.toString()}`);
+    window.location.assign(`/contact?service=${kind}&intent=${intent}&journey=ship#quote&${route.toString()}`);
   }
   return (
     <form action="/contact" onSubmit={start} className="quote-entry">
+      <input type="hidden" name="journey" value="ship" />
       <div className="entry-heading">
         <strong>Get a quote for your route</strong>
       </div>
@@ -26,7 +29,7 @@ export function QuoteEntry() {
             value={intent}
             onChange={(e) => setIntent(e.target.value)}
           >
-            {quickQuoteTypes.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
+            {oneTimeTypes.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
           </select>
         </label>
         <label>

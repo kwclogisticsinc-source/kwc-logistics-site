@@ -324,3 +324,39 @@ test("customer requests require company details before reaching dispatch", async
   assert.equal(response.status, 400);
   assert.ok((await response.json()).errors.Company);
 });
+
+test("partnership enquiries require a business type and deliver a separate capacity request", async () => {
+  const fields = {
+    "Request Type": "partnership",
+    Name: "Test Dispatcher",
+    Email: "dispatch@example.com",
+    Company: "Test Forwarder",
+    "Business type": "Freight forwarder",
+    "Lanes and service areas": "GTA to Sudbury",
+    "Equipment and handling requirements": "Liftgate",
+    "Capacity needed": "Two pallets weekly, weekday delivery",
+    "Insurance document": "ignored",
+  };
+  const invalid = await handleQuote(
+    req({ ...fields, "Business type": "Invalid" }),
+    deps({ send: async () => assert.fail("Invalid requests must not reach dispatch") }),
+  );
+  assert.equal(invalid.status, 400);
+  assert.match((await invalid.json()).errors["Business type"], /business type/);
+
+  let payload, accepted;
+  const result = await handleQuote(req(fields), deps({
+    send: async (_, options) => {
+      payload = JSON.parse(options.body);
+      return Response.json({ success: true });
+    },
+    recordAccepted: (kind) => { accepted = kind; },
+  }));
+  assert.equal(result.status, 200);
+  const { reference } = await result.json();
+  assert.equal(accepted, "partnership");
+  assert.equal(payload["Request Reference"], reference);
+  assert.equal(payload["Capacity needed"], fields["Capacity needed"]);
+  assert.equal(payload["Insurance document"], undefined);
+  assert.match(payload.subject, /Carrier capacity enquiry/);
+});

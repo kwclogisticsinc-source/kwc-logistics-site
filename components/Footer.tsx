@@ -21,6 +21,7 @@ export function Footer() {
           <Link href="/services/freight-brokerage">Freight brokerage</Link>
           <Link href="/services/logistics">Logistics management</Link>
           <Link href="/regular-deliveries#quote">Regular deliveries</Link>
+          <Link href="/transportation-partnerships">Transportation partnerships</Link>
         </nav>
         <nav aria-label="Footer company">
           <strong>Get to know KWC</strong>

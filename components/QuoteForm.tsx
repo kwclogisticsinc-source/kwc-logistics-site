@@ -17,12 +17,14 @@ export function QuoteForm({
   destination = "",
   freightService = "",
   temperatureRequested = false,
+  fixedKind = false,
 }: {
   initialKind?: QuoteKind;
   pickup?: string;
   destination?: string;
   freightService?: string;
   temperatureRequested?: boolean;
+  fixedKind?: boolean;
 }) {
   const [kind, setKind] = useState<QuoteKind>(initialKind);
   const [step, setStep] = useState(0);
@@ -169,8 +171,8 @@ export function QuoteForm({
       className="quote-form"
       aria-busy={submitting}
     >
-      <p className="eyebrow">REQUEST A QUOTE · NO ACCOUNT NEEDED</p>
-      <div className="quote-service-options" aria-label="Delivery type">
+      <p className="eyebrow">{kind === "regular" ? "REQUEST A TRANSPORTATION PROPOSAL" : "REQUEST A QUOTE · NO ACCOUNT NEEDED"}</p>
+      {!fixedKind && <div className="quote-service-options" aria-label="Delivery type">
         {quoteKinds.map((item) => (
           <button
             key={item.id}
@@ -189,7 +191,7 @@ export function QuoteForm({
             {item.label}
           </button>
         ))}
-      </div>
+      </div>}
       {status === "success" ? (
         <>
           <h2>Thank you. We’ve got your request.</h2>

@@ -1,4 +1,4 @@
-import { registration, validateRegistration } from "./registration.ts";
+import { registration, validateRegistration, type RegistrationKind } from "./registration.ts";
 import { validateQuote } from "./quote.ts";
 export type QuoteEnvironment = {
   WEB3FORMS_ACCESS_KEY?: string;
@@ -10,7 +10,7 @@ type Dependencies = {
   environment(): Promise<QuoteEnvironment>;
   send: typeof fetch;
   log: (code: string) => void;
-  recordAccepted?: (kind: "quote" | "customer" | "driver") => void;
+  recordAccepted?: (kind: "quote" | RegistrationKind) => void;
 };
 const MAX_BODY = 24000;
 const fallback = "Please email ship@kwclogistics.ca.";
@@ -87,7 +87,7 @@ export async function handleQuote(
     });
   const category = form.get("Request Type");
   if (form.getAll("Request Type").length > 1 ||
-      (category !== null && category !== "customer" && category !== "driver"))
+      (category !== null && category !== "customer" && category !== "driver" && category !== "partnership"))
     return reply(400, { success: false, error: "Choose a valid request type." });
 
   const { values, errors } = category

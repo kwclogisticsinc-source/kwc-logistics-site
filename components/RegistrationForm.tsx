@@ -36,20 +36,20 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
   }
 
   return (
-    <form className="quote-entry registration-form" method="post" action="/api/quote" onSubmit={submit}>
+    <form id="request" className="quote-entry registration-form" method="post" action="/api/quote" onSubmit={submit}>
       <h2>{title}</h2>
       {status !== "success" && (
         <>
           <input type="hidden" name="Request Type" value={kind} />
           <input type="text" name="botcheck" tabIndex={-1} autoComplete="off" hidden />
           {fields.map((field, index) => {
-            const id = `registration-${index}`;
+            const id = `registration-${kind}-${index}`;
             const options = "options" in field ? field.options : null;
             const type = "type" in field ? field.type : "text";
             const accessible = {
               id, name: field.name, required: field.required,
               "aria-invalid": Boolean(errors[field.name]),
-              "aria-describedby": errors[field.name] ? `${id}-error` : undefined,
+              "aria-describedby": [field.name === "Capacity needed" && `${id}-hint`, errors[field.name] && `${id}-error`].filter(Boolean).join(" ") || undefined,
             };
             return (
               <div key={field.name} className="registration-field">
@@ -61,6 +61,7 @@ export function RegistrationForm({ kind }: { kind: RegistrationKind }) {
                 ) : (
                   <input {...accessible} type={type} maxLength={250} />
                 )}
+                {field.name === "Capacity needed" && <p className="fine" id={`${id}-hint`}>Include pickup and delivery windows, anticipated volume and frequency, and the type of freight.</p>}
                 {errors[field.name] && <p id={`${id}-error`}>{errors[field.name]}</p>}
               </div>
             );

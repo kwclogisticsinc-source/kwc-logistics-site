@@ -62,7 +62,7 @@ export default function FreightBrokerage() {
           <p>Share your weekly volume, delivery windows and equipment requirements so we can quote for the work you expect to move.</p>
           <div className="button-row">
             <Link className="btn" href={quote}>Get a Freight Quote</Link>
-            <Link className="text-link" href="/drive-with-kwc">Apply as a carrier partner</Link>
+            <Link className="text-link" href="/transportation-partnerships">Request Ontario carrier capacity</Link>
           </div>
         </div>
       </section>

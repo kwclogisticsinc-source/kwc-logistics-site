@@ -3102,3 +3102,36 @@ ul.freight-grid {
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
+
+.kwc-customer-paths {
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+
+.kwc-customer-paths ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.7rem);
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kwc-customer-paths li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding-block-start: 1.1rem;
+  border-top: 2px solid var(--blue);
+}
+
+.kwc-customer-paths li a {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-block: 0.45rem;
+}
+
+@media (max-width: 760px) {
+  .kwc-customer-paths ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,16 @@
 export const registration = {
+  partnership: {
+    title: "Carrier capacity enquiry",
+    fields: [
+      { name: "Name", required: true },
+      { name: "Email", required: true, type: "email" },
+      { name: "Company", required: true },
+      { name: "Business type", required: true, options: ["Freight broker", "Freight forwarder", "Carrier or 3PL", "Shipper or distribution team", "Other"] },
+      { name: "Lanes and service areas", required: true },
+      { name: "Equipment and handling requirements", required: false },
+      { name: "Capacity needed", required: true, type: "textarea" },
+    ],
+  },
   customer: {
     title: "Customer registration request",
     fields: [
@@ -42,7 +54,7 @@ export function validateRegistration(form: FormData, kind: RegistrationKind) {
     if (entries.length > 1 || (raw != null && typeof raw !== "string") || (field.required && !value) || value.length > limit)
       errors[field.name] = "Enter one valid value.";
     else if (value && "options" in field && !field.options.some((item) => item === value))
-      errors[field.name] = "Choose an application type.";
+      errors[field.name] = field.name === "Application type" ? "Choose an application type." : "Choose a business type.";
   }
   if (values.Email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.Email))
     errors.Email = "Enter a valid email address.";

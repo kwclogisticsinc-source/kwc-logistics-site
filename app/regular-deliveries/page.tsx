@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RegularDeliveries() {
   return (
     <>
-      <PageIntro eyebrow="Recurring commercial transportation" title="Your Business. Our Delivery Network.">
+      <PageIntro eyebrow="Recurring commercial transportation" title="Business transportation on a regular schedule.">
         <p>Tell us about your route, typical volume, delivery windows and how often you ship. We’ll review equipment, capacity and pricing with you.</p>
       </PageIntro>
       <div className="wrap contact-layout">
@@ -23,7 +23,7 @@ export default function RegularDeliveries() {
           <p><Link className="text-link" href="/customer-registration">Register your business</Link></p>
           <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a>
         </aside>
-        <QuoteForm initialKind="regular" />
+        <QuoteForm initialKind="regular" fixedKind />
       </div>
     </>
   );

@@ -34,7 +34,8 @@ export default function Privacy() {
           requests are sent server-side through Web3Forms to KWC’s configured
           email recipient. Relevant shipment information may be shared with
           suitable transportation partners when needed to assess or arrange your
-          requested service.
+          requested service. Partnership enquiries also collect your company, business type,
+          lanes and capacity requirements so KWC can assess and reply to the enquiry.
         </p>
         <h2>Data minimization and technical logs</h2>
         <p>

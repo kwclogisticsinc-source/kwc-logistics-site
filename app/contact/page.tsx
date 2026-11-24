@@ -63,6 +63,7 @@ export default async function ContactPage({
         </aside>
         <QuoteForm
           initialKind={kind}
+          fixedKind={params.journey === "ship" && (kind === "courier" || kind === "freight")}
           freightService={intent && "freightService" in intent ? intent.freightService : undefined}
           temperatureRequested={Boolean(intent && "temperature" in intent && intent.temperature)}
           pickup={pickup}

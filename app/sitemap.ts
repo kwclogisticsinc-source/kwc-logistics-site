@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/drive-with-kwc",
     "/customer-registration",
     "/regular-deliveries",
+    "/transportation-partnerships",
     "/industries",
     ...industryPages.map(([slug]) => `/industries/${slug}`),
     "/resources",

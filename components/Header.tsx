@@ -8,15 +8,16 @@ import { BrandLogo } from "./Logo";
 
 const navigation = [
   { label: "Ship", href: "/book-now" },
-  { label: "Business Solutions", href: "/regular-deliveries" },
+  { label: "Business", href: "/regular-deliveries" },
+  { label: "Partnerships", href: "/transportation-partnerships" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Brokerage", href: "/services/freight-brokerage" },
   { label: "Coverage", href: "/service-areas" },
   { label: "Safety", href: "/safety" },
   { label: "Technology", href: "/technology" },
   { label: "Company", links: [
     ["Fleet Equipment", "/equipment"],
+    ["Freight Brokerage", "/services/freight-brokerage"],
     ["Shipment Updates", "/shipment-updates"],
     ["About KWC", "/about"],
     ["Contact", "/contact"],
