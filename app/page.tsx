@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div className="kwc-front-media">
-          <Image src="/images/kwc-rigid-truck-and-trailer.webp" alt="Side profile of a Freightliner straight truck beside a tractor-trailer, both with KWC blue horse decals" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />
+          <Image src="/images/kwc-straight-truck-building.webp" alt="White Freightliner straight truck parked in front of a loading dock, with a large blue KWC horse decal on the cargo box" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />
         </div>
       </section>
 
@@ -87,8 +87,8 @@ export default function Home() {
       </section>
 
       <section className="wrap kwc-editorial">
-        <div className="kwc-editorial-photo">
-          <Image src="/images/kwc-freightliner-delivery.webp" alt="Freightliner straight truck making a tailgate delivery at a commercial site" fill sizes="(max-width: 760px) 100vw, 46vw" />
+        <div className="kwc-editorial-photo kwc-dock-photo">
+          <Image src="/images/kwc-straight-truck-pickup.webp" alt="KWC-branded straight truck parked alongside a commercial loading dock" fill sizes="(max-width: 760px) 100vw, 46vw" />
         </div>
         <div className="kwc-editorial-copy">
           <h2>Regular routes built around your business.</h2>

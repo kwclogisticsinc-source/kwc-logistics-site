@@ -2890,6 +2890,12 @@ ul.freight-grid {
   object-fit: cover;
 }
 
+.kwc-editorial-photo.kwc-dock-photo {
+  align-self: center;
+  min-height: 0;
+  aspect-ratio: 3 / 2;
+}
+
 .kwc-editorial .project-equipment-list {
   margin-block-start: 20px;
 }
