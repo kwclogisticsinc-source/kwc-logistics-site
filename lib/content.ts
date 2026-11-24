@@ -41,10 +41,10 @@ export const categories = [
   },
 ] as const;
 export const industries = [
-  [
-    "Retail & e-commerce",
-    "Collect packaged orders from your shop and deliver to customers, including returns collection.",
-  ],
+  ["Grocery stores", "Plan store replenishment, multi-stop deliveries and refrigerated transportation where suitable capacity is available."],
+  ["Flower shops", "Coordinate supplier pickups and deliveries around shop receiving windows and handling needs."],
+  ["E-commerce businesses", "Arrange customer deliveries, inventory replenishment and returns pickups."],
+  ["Medical supply customers", "Coordinate deliveries of general medical supplies. We review shipment and handling requirements before booking."],
   [
     "Manufacturing & industrial",
     "Move urgent replacement parts, samples and supplier orders between business locations.",

@@ -1919,3 +1919,40 @@ img {
     transition: none !important;
   }
 }
+
+.ontario-map {
+  margin: 1.5rem 0 0;
+}
+
+.ontario-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ontario-map figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+}
+
+.freight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1rem;
+}
+
+.freight-grid > * {
+  border: 1px solid #c7d9e8;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #f5faff;
+}
+
+.content-section > section + section {
+  margin-top: 2rem;
+}
+
+ul.freight-grid {
+  padding: 0;
+  list-style: none;
+}

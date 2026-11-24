@@ -7,15 +7,15 @@ import { previewOnly } from "@/lib/release";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kwclogistics.ca"),
   title: {
-    default: "KWC Logistics | Courier, Freight & Regular Deliveries",
+    default: "KWC Logistics | Ontario Freight & Recurring Transportation",
     template: "%s | KWC Logistics",
   },
   description:
-    "Packages, pallets and regular deliveries from Kitchener–Waterloo–Cambridge across Ontario, with Canada/U.S. road freight coordination. Request a quote.",
+    "Affordable pallet freight, regional distribution and dedicated transportation along Ontario Highways 401 and 403. Request a quote from KWC Logistics.",
   openGraph: {
-    title: "KWC Logistics | Your next delivery. Made simple.",
+    title: "KWC Logistics | Ontario Freight & Recurring Transportation",
     description:
-      "Local courier, freight and recurring delivery help. Kitchener, Ontario.",
+      "Commercial transportation from Waterloo Region throughout Ontario, with extended Canada and U.S. freight through qualified partners.",
     url: "https://kwclogistics.ca",
     siteName: "KWC Logistics Inc.",
     locale: "en_CA",
@@ -48,6 +48,7 @@ export default function RootLayout({
               url: "https://kwclogistics.ca",
               email: contact.email,
               slogan: contact.slogan,
+              foundingDate: "2022",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Kitchener",

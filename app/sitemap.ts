@@ -1,3 +1,4 @@
+import { freightPages } from "@/lib/freight-pages";
 import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -7,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/freight",
     "/services/logistics",
     "/service-areas",
+    ...freightPages.map(({ slug }) => `/service-areas/${slug}`),
     "/about",
     "/contact",
     "/industries",
