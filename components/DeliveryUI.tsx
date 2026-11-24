@@ -115,7 +115,7 @@ export function ContactCTA() {
   return (
     <section className="wrap final-cta">
       <div>
-        <p className="eyebrow">One package or your next big move</p>
+        <p className="eyebrow">Pallet freight, bulk parcels and scheduled routes</p>
         <h2>Let’s get it moving.</h2>
         <p>Tell us what you need. We’ll work through the details together.</p>
       </div>

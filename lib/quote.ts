@@ -1,6 +1,6 @@
 export type QuoteKind = "courier" | "freight" | "regular" | "logistics";
 export const quoteKinds: { id: QuoteKind; label: string; service: string }[] = [
-  { id: "courier", label: "Package", service: "Courier delivery" },
+  { id: "courier", label: "B2B bulk parcels", service: "B2B bulk parcel delivery" },
   {
     id: "freight",
     label: "Freight",
@@ -16,7 +16,7 @@ export const courierConfig: {
   maxDimensionsCm: [number, number, number] | null;
 } = {
   sizeGuidance:
-    "Envelope, parcel or larger package? Include approximate dimensions and weight. We’ll match the vehicle and confirm what can be accepted.",
+    "For business parcel batches, include parcel count, approximate sizes, total weight and delivery stops. We’ll confirm suitable cargo van capacity.",
   maxWeightKg: null,
   maxDimensionsCm: null,
 };
@@ -27,6 +27,7 @@ export type QuoteField = {
   required?: boolean;
   options?: string[];
   max?: number;
+  min?: number;
   help?: string;
 };
 export const services = quoteKinds.map((item) => item.service);
@@ -100,9 +101,10 @@ export function fieldsFor(
             ? "Approximate items per collection"
             : freight
               ? "Pallet or piece count"
-              : "Number of packages",
+              : "Number of parcels in the batch",
           type: "number",
           required: !recurring,
+          min: kind === "courier" ? 2 : 1,
         },
         {
           name: "Weight",
@@ -287,7 +289,8 @@ export const quoteGroups = fieldsFor("courier");
 export function validateQuote(form: FormData) {
   const values: Record<string, string> = {};
   const errors: Record<string, string> = {};
-  const service = form.get("Service");
+  const submittedService = form.get("Service");
+  const service = submittedService === "Courier delivery" ? "B2B bulk parcel delivery" : submittedService;
   if (
     typeof service !== "string" ||
     !services.includes(service) ||
@@ -326,6 +329,8 @@ export function validateQuote(form: FormData) {
     errors.Phone = "Enter a valid phone number.";
   if (values["Item Count"] && !/^[1-9]\d{0,5}$/.test(values["Item Count"]))
     errors["Item Count"] = "Enter a whole number from 1 to 999999.";
+  else if (kind === "courier" && values["Item Count"] === "1")
+    errors["Item Count"] = "Enter the number of parcels in your business shipment. Bulk delivery requires multiple parcels.";
   if (
     values["Delivery Date"] &&
     values["Preferred Date"] &&

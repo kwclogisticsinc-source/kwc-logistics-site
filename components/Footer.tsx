@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <nav aria-label="Footer services">
           <strong>What we move</strong>
-          <Link href="/services/courier">KWC Courier</Link>
+          <Link href="/services/courier">Bulk parcel delivery</Link>
           <Link href="/services/freight">Freight & specialized delivery</Link>
           <Link href="/services/logistics">Logistics management</Link>
           <Link href="/regular-deliveries#quote">Regular deliveries</Link>

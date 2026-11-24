@@ -6,12 +6,12 @@ import { requestPrice } from "../lib/pricing.ts";
 const valid = {
   Name: "Preview Test",
   Email: "sender@example.com",
-  Service: "Courier delivery",
+  Service: "B2B bulk parcel delivery",
   "Pickup Location": "Kitchener, ON",
   "Delivery Location": "Waterloo, ON",
   "Preferred Date": "2026-11-20",
-  "Freight Type": "Documents",
-  "Item Count": "1",
+  "Freight Type": "Retail orders",
+  "Item Count": "12",
   "Service Preference": "Scheduled / flexible",
 };
 function req(values = valid) {
@@ -281,4 +281,15 @@ test("no unapproved package limits or fabricated prices", async () => {
     ).status,
     "manual-review",
   );
+});
+
+test("single parcels are rejected for current and older bulk-parcel forms", async () => {
+  for (const Service of ["B2B bulk parcel delivery", "Courier delivery"]) {
+    const response = await handleQuote(
+      req({ ...valid, Service, "Item Count": "1" }),
+      deps({ send: async () => assert.fail("Single parcels must not reach dispatch") }),
+    );
+    assert.equal(response.status, 400);
+    assert.match((await response.json()).errors["Item Count"], /multiple parcels/);
+  }
 });

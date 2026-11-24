@@ -6,7 +6,7 @@ import { quoteKinds, type QuoteKind } from "@/lib/quote";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request courier, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
+    "Request bulk parcel, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
   alternates: { canonical: "/contact" },
 };
 export default async function ContactPage({
@@ -17,7 +17,7 @@ export default async function ContactPage({
   const params = await searchParams;
   const kind = quoteKinds.some((item) => item.id === params.service)
     ? (params.service as QuoteKind)
-    : "courier";
+    : "freight";
   const pickup =
     typeof params.pickup === "string" ? params.pickup.slice(0, 300) : "";
   const destination =

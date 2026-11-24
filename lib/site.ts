@@ -5,5 +5,5 @@ export const site = {
   email: contact.email,
   location: "Kitchener, Ontario",
   description:
-    "Local courier, Ontario delivery arrangements and Canada/U.S. road freight coordination.",
+    "B2B bulk parcel delivery, Ontario freight arrangements and Canada/U.S. road freight coordination.",
 };

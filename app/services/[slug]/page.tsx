@@ -7,17 +7,17 @@ import { categories, industries } from "@/lib/content";
 import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
 const details = {
   courier: {
-    title: "A delivery service that starts with you.",
+    title: "B2B bulk parcel delivery by cargo van.",
     intro:
-      "One envelope, a customer’s order, or a van full of local deliveries. KWC Courier is part of KWC Logistics, with a simple way to ask for the delivery you need.",
+      "Move a batch of customer orders in a cargo van. KWC helps businesses collect parcels from a warehouse or shop and deliver them across multiple stops.",
     groups: [
       [
-        "One-off & time-sensitive",
+        "Bulk parcel loads",
         [
-          "Envelopes, documents, parcels and suitable larger packages",
-          "Urgent point-to-point delivery",
-          "Same-day and next-day options, subject to capacity and booking requirements",
-          "Cars, SUVs and cargo vans matched to the shipment",
+          "Batches of labelled parcels and packaged orders",
+          "Consolidated pickup of business parcel batches",
+          "Delivery windows confirmed with your quote",
+          "Cargo van capacity matched to parcel volume",
         ],
       ],
       [
@@ -25,7 +25,7 @@ const details = {
         [
           "Scheduled pickups and recurring routes",
           "Multi-stop delivery, vendor collections and store replenishment",
-          "Retail, e-commerce, business-to-business and doorstep deliveries",
+          "Retail and e-commerce distribution for business customers",
           "Returns collection for suitable shipments",
         ],
       ],

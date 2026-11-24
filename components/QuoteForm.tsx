@@ -12,7 +12,7 @@ import { Icon } from "./DeliveryUI";
 const idFor = (name: string) =>
   `quote-${name.toLowerCase().replaceAll(" ", "-")}`;
 export function QuoteForm({
-  initialKind = "courier",
+  initialKind = "freight",
   pickup = "",
   destination = "",
 }: {
@@ -294,7 +294,7 @@ export function QuoteForm({
                       {...props}
                       type={field.type ?? "text"}
                       maxLength={field.max}
-                      min={field.type === "number" ? 1 : undefined}
+                      min={field.type === "number" ? field.min ?? 1 : undefined}
                       max={field.type === "number" ? 999999 : undefined}
                       autoComplete={
                         field.name === "Email"

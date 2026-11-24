@@ -33,6 +33,12 @@ const services = [
   },
   {
     icon: "truck",
+    title: "B2B bulk parcel delivery",
+    copy: "Move batches of business parcels in a cargo van, with scheduled pickups and multiple delivery stops.",
+    href: "/services/courier",
+  },
+  {
+    icon: "truck",
     title: "Expedited freight",
     copy: "Share your deadline so we can assess direct and same-day options where capacity permits.",
     href: "/services/expedited-freight",

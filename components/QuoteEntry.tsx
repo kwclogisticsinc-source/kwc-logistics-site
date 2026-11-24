@@ -26,7 +26,7 @@ export function QuoteEntry() {
             value={service}
             onChange={(e) => setService(e.target.value)}
           >
-            <option value="courier">A package</option>
+            <option value="courier">B2B bulk parcels</option>
             <option value="freight">Pallets or larger freight</option>
             <option value="regular">Regular deliveries</option>
           </select>

@@ -29,14 +29,14 @@ export const categories = [
   },
   {
     id: "courier",
-    title: "KWC Courier",
-    action: "Send a package",
-    short: "Local courier and parcel delivery",
+    title: "B2B Bulk Parcel Delivery",
+    action: "Quote a bulk parcel route",
+    short: "Bulk parcel routes by cargo van",
     description:
-      "Documents, parcels and customer orders. From a one-off pickup to your everyday deliveries.",
+      "Cargo van delivery for batches of business parcels, including scheduled pickups, multi-stop routes and customer order distribution.",
     image: "/images/kwc-cargo-van-dock.png",
     alt: "Illustrative KWC cargo van at a loading dock",
-    tags: ["Individuals & businesses", "Local & regional"],
+    tags: ["Business-to-business", "Multiple parcels"],
     href: "/services/courier",
   },
 ] as const;
@@ -80,8 +80,8 @@ export const industries = [
 ];
 export const faqs = [
   [
-    "Can I send just one package?",
-    "Yes. You can request a quote for a single envelope, parcel or suitable larger package. Tell us the locations, size and timing so we can check the right delivery option.",
+    "Do you deliver bulk parcels for businesses?",
+    "Yes. We coordinate cargo van deliveries for business parcel batches. Include the number of parcels, pickup location, delivery stops and preferred schedule.",
   ],
   [
     "Do you deliver for individuals as well as businesses?",

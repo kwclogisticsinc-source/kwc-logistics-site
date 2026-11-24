@@ -4,7 +4,7 @@ import { PageIntro, ContactCTA, FAQ } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
   title: "Shipping Help",
   description:
-    "What to prepare for a courier or freight quote, including package measurements, pallets, access and timing.",
+    "What to prepare for a bulk parcel or freight quote, including package measurements, pallets, access and timing.",
   alternates: { canonical: "/resources" },
 };
 export default function Resources() {
@@ -20,8 +20,8 @@ export default function Resources() {
         <div className="capability-grid">
           {[
             [
-              "Sending a package?",
-              "Share pickup and destination, number of packages, approximate dimensions and total weight. Tell us whether timing is flexible or urgent.",
+              "Preparing a bulk parcel route?",
+              "Share pickup, delivery stops, parcel count, approximate dimensions and total weight. Include receiving windows and whether the route repeats.",
             ],
             [
               "Moving pallets?",
