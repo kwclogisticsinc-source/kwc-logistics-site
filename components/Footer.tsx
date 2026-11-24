@@ -18,6 +18,7 @@ export function Footer() {
           <strong>What we move</strong>
           <Link href="/services/courier">Bulk package delivery</Link>
           <Link href="/services/freight">Freight & specialized delivery</Link>
+          <Link href="/services/freight-brokerage">Freight brokerage</Link>
           <Link href="/services/logistics">Logistics management</Link>
           <Link href="/regular-deliveries#quote">Regular deliveries</Link>
         </nav>

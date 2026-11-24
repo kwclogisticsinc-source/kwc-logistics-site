@@ -9,9 +9,10 @@ import { BrandLogo } from "./Logo";
 const navigation = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Equipment", href: "/equipment" },
+  { label: "Brokerage", href: "/services/freight-brokerage" },
   { label: "Coverage", href: "/service-areas" },
   { label: "Safety & Technology", links: [
+    ["Fleet Equipment", "/equipment"],
     ["Safety and Fleet Standards", "/safety"],
     ["Transportation Technology", "/technology"],
     ["Shipment Updates", "/shipment-updates"],
@@ -30,14 +31,14 @@ export function Header() {
   const pathname = usePathname();
   const [mobile, setMobile] = useState(false);
   const [group, setGroup] = useState<string | null>(null);
-  const isCurrent = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  const isCurrent = (href: string) => pathname === href || (href !== "/services" && pathname.startsWith(href + "/"));
   const close = () => { setMobile(false); setGroup(null); };
 
   return (
     <header className="site-header project-header">
       <div className="project-utility">
         <div className="wrap">
-          <span>Providing transportation since 2022 · Ontario</span>
+          <span>Kitchener, Ontario · Serving businesses since 2022</span>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
         </div>
       </div>

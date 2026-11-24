@@ -4,11 +4,6 @@ const nextConfig = {
   distDir: process.env.KWC_BUILD_DIR || ".next",
   async redirects() {
     return [
-      {
-        source: "/services/freight-brokerage",
-        destination: "/services/logistics",
-        permanent: true,
-      },
       ...[
         "ltl-distribution",
         "specialized-freight",

@@ -30,11 +30,10 @@ export default function Services() {
         </ul>
         <ServiceCards />
         <div className="notice">
-          <strong>Direct service and the right partners.</strong> KWC handles
-          suitable Ontario movements directly. Where a shipment needs different
-          capacity, equipment or a wider reach, we coordinate with carrier
-          partners. We confirm who will move your shipment and the service
-          details before booking.
+          <strong>Ontario fleet. Canada-wide and cross-border brokerage.</strong>{" "}
+          Our company-operated fleet serves Ontario exclusively. For moves beyond Ontario
+          and additional capacity within the province, we arrange service through qualified
+          carrier partners. <Link className="text-link" href="/services/freight-brokerage">Explore freight brokerage</Link>.
         </div>
       </section>
       <ContactCTA />

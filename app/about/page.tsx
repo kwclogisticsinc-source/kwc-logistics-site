@@ -30,9 +30,11 @@ export default function About() {
             final-mile deliveries into a plan that fits their operations.
           </p>
           <p>
-            We operate straight-truck capacity with tailgate service and work
-            with qualified transportation partners for additional equipment and
-            broader coverage.
+            Our company-operated fleet serves Ontario exclusively, including
+            communities beyond the main commercial corridors. Through our{" "}
+            <Link className="text-link" href="/services/freight-brokerage">freight brokerage</Link>,
+            we arrange additional capacity in Ontario and shipments across Canada
+            and between Canada and the U.S. through qualified carrier partners.
           </p>
           <p>
             The galloping horse represents strength, speed and the conviction

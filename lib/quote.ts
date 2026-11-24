@@ -8,6 +8,7 @@ export const quickQuoteTypes = [
   { id: "tailgate", label: "Tailgate or liftgate delivery", kind: "freight", freightService: "Tailgate or liftgate delivery" },
   { id: "dedicated", label: "Dedicated truck", kind: "freight", freightService: "Dedicated truck" },
   { id: "regular", label: "Recurring business deliveries", kind: "regular" },
+  { id: "brokerage", label: "Partner-arranged freight", kind: "freight", freightService: "Partner-arranged freight" },
   { id: "other", label: "Other freight", kind: "freight", freightService: "Help me plan" },
 ] as const satisfies readonly {
   id: string; label: string; kind: QuoteKind; freightService?: string; temperature?: boolean;
@@ -90,6 +91,7 @@ export function fieldsFor(
                   "Tailgate or liftgate delivery",
                   "Expedited road freight",
                   "Final-mile delivery",
+                  "Partner-arranged freight",
                   "Help me plan",
                 ],
               },

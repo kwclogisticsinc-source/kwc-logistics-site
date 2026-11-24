@@ -2763,3 +2763,268 @@ ul.freight-grid {
     border-right: 1px solid var(--line);
   }
 }
+
+/* Ontario transportation and brokerage */
+.kwc-front,
+.kwc-broker-hero {
+  background: #091c36;
+  color: #fff;
+}
+
+.kwc-front {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: clamp(520px, 52vw, 690px);
+}
+
+.kwc-front-photo {
+  z-index: -2;
+  object-fit: cover;
+  object-position: 57% 49%;
+}
+
+.kwc-front::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, #07172ff7 0%, #07172fec 23%, #07172f8c 48%, transparent 81%),
+    linear-gradient(0deg, #07172fa6, transparent 45%);
+}
+
+.kwc-front-inner {
+  padding-block: clamp(68px, 9vw, 125px);
+}
+
+.kwc-front .eyebrow,
+.kwc-broker-hero .eyebrow {
+  color: #c0d9ff;
+}
+
+.kwc-front h1,
+.kwc-broker-hero h1 {
+  margin-block: 16px 20px;
+  font-size: clamp(3rem, 6.2vw, 6.2rem);
+  line-height: 0.97;
+}
+
+.kwc-front h1 {
+  max-width: 12ch;
+}
+
+.kwc-broker-hero h1 {
+  max-width: 15ch;
+}
+
+.kwc-front-lead,
+.kwc-broker-hero h1 + p {
+  max-width: 44ch;
+  color: #f1f6ff;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+}
+
+.kwc-front-link {
+  color: #fff;
+  font-weight: 700;
+  text-underline-offset: 5px;
+}
+
+.kwc-front-link:hover,
+.kwc-home-close nav a:hover {
+  text-decoration: underline;
+}
+
+.kwc-front-link span,
+.kwc-home-close nav span,
+.kwc-editorial dt span {
+  margin-inline-start: 5px;
+}
+
+.kwc-operating,
+.kwc-editorial,
+.kwc-home-close {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.kwc-operating article + article {
+  border-inline-start: 1px solid var(--line);
+  padding-inline-start: clamp(2rem, 5vw, 5rem);
+}
+
+.kwc-operating .eyebrow,
+.kwc-editorial .eyebrow {
+  margin-block-end: 12px;
+}
+
+.kwc-operating h2 + p,
+.kwc-editorial h2 + p,
+.kwc-editorial p + p,
+.kwc-home-close h2 + p {
+  margin-block-start: 14px;
+}
+
+.kwc-operating .text-link,
+.kwc-editorial .text-link {
+  display: inline-block;
+  margin-block-start: 16px;
+}
+
+.kwc-home-services,
+.kwc-broker-process {
+  background: var(--pale);
+}
+
+.kwc-editorial {
+  align-items: center;
+}
+
+.kwc-editorial-photo {
+  position: relative;
+  align-self: stretch;
+  min-height: 375px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.kwc-editorial-photo img {
+  object-fit: cover;
+}
+
+.kwc-editorial .project-equipment-list {
+  margin-block-start: 20px;
+}
+
+.kwc-home-coverage .ontario-map {
+  margin: 0;
+}
+
+.kwc-home-coverage .ontario-map .text-link {
+  margin: 0;
+}
+
+.kwc-home-trust {
+  background: #091c36;
+  color: #fff;
+}
+
+.kwc-home-trust p,
+.kwc-home-trust .text-link {
+  color: #dce9fd;
+}
+
+.kwc-home-close {
+  align-items: center;
+}
+
+.kwc-home-close nav {
+  display: grid;
+}
+
+.kwc-home-close nav a {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  font-weight: 700;
+  text-underline-offset: 5px;
+}
+
+.kwc-broker-hero {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  background: linear-gradient(115deg, #091c36 35%, #173e75);
+}
+
+.kwc-broker-hero h1 + p {
+  max-width: 57ch;
+}
+
+.kwc-broker-process {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.kwc-broker-process ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin: 28px 0;
+  padding-inline-start: 1.5rem;
+  list-style: decimal-leading-zero;
+}
+
+.kwc-broker-process li {
+  border-top: 1px solid #a4b8d8;
+  padding-block-start: 14px;
+}
+
+.kwc-broker-process li::marker {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.kwc-broker-process li p {
+  margin-block-start: 8px;
+}
+
+.kwc-broker-insurance {
+  border-top: 1px solid #a4b8d8;
+  padding-block-start: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .kwc-front {
+    min-height: 620px;
+  }
+
+  .kwc-front-inner {
+    padding-block: 40px;
+  }
+
+  .kwc-front-photo {
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .kwc-front::before {
+    background: linear-gradient(0deg, #091c36 56%, #091c3600 78%);
+  }
+
+  .kwc-operating,
+  .kwc-editorial,
+  .kwc-home-close,
+  .kwc-broker-process ol {
+    grid-template-columns: 1fr;
+  }
+
+  .kwc-operating article + article {
+    border-inline-start: 0;
+    border-top: 1px solid var(--line);
+    padding: 28px 0 0;
+  }
+
+  .kwc-editorial-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.kwc-front .button-row,
+.kwc-broker-hero .button-row,
+.kwc-home-close .button-row {
+  align-items: center;
+  margin-top: 24px;
+}
+
+.kwc-link-arrow {
+  display: inline-block;
+  width: 0.48em;
+  height: 0.48em;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: translateY(-0.12em) rotate(45deg);
+}

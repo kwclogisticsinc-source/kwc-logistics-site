@@ -165,3 +165,17 @@ export function CoverageGraphic() {
     </figure>
   );
 }
+
+export function ProvinceCoverageGraphic() {
+  return (
+    <figure className="ontario-map">
+      <Image
+        src="/images/ontario-province-coverage.svg"
+        width={710}
+        height={495}
+        alt="Ontario province-wide coverage, with Waterloo Region headquarters and example destinations including Windsor, the GTA, Ottawa, Sudbury, Timmins, Thunder Bay and Kenora."
+      />
+      <figcaption>Waterloo Region headquarters and selected Ontario destinations.</figcaption>
+    </figure>
+  );
+}

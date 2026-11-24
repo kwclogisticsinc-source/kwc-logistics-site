@@ -30,6 +30,14 @@ export const regions = [
     "Niagara Region and surrounding communities"
   ],
   [
+    "Central Ontario",
+    "Barrie, Orillia, the Muskokas, Peterborough, the Kawarthas and surrounding communities"
+  ],
+  [
+    "Northern Ontario",
+    "North Bay, Sudbury, Sault Ste. Marie, Timmins, Thunder Bay, Kenora and surrounding communities"
+  ],
+  [
     "Guelph",
     "Guelph and surrounding communities"
   ]
@@ -44,8 +52,7 @@ export const lanes = [
   "Waterloo Region ↔ Hamilton",
   "GTA ↔ Kingston",
   "London ↔ Ottawa",
-  "Hamilton ↔ Ottawa",
-  "Ontario ↔ Quebec, including Montréal"
+  "Hamilton ↔ Ottawa"
 ];
 
 export const services = [

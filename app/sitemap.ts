@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/courier",
     "/services/freight",
     "/services/logistics",
+    "/services/freight-brokerage",
     ...commercialServices.map(([slug]) => `/services/${slug}`),
     "/service-areas",
     ...freightPages.map(({ slug }) => `/service-areas/${slug}`),
