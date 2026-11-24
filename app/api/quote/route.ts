@@ -14,5 +14,6 @@ export async function POST(request: Request) {
     },
     send: fetch,
     log: (code) => console.error(code),
+    recordAccepted: (kind) => console.info("kwc_request_accepted", { kind }),
   });
 }

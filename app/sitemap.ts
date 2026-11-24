@@ -1,3 +1,4 @@
+import { industryPages } from "@/lib/industry-pages";
 import { commercialServices } from "@/lib/commercial-services";
 import { freightPages } from "@/lib/freight-pages";
 import type { MetadataRoute } from "next";
@@ -12,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/service-areas",
     ...freightPages.map(({ slug }) => `/service-areas/${slug}`),
     "/about",
+    "/equipment",
+    "/safety",
+    "/technology",
     "/contact",
     "/book-now",
     "/shipment-updates",
@@ -19,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/customer-registration",
     "/regular-deliveries",
     "/industries",
+    ...industryPages.map(([slug]) => `/industries/${slug}`),
     "/resources",
     "/forms",
     "/privacy",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageIntro } from "@/components/DeliveryUI";
+import { FAQ, PageIntro } from "@/components/DeliveryUI";
 import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
 import { freightInsurance } from "@/lib/content";
@@ -26,6 +26,8 @@ export default function BookNow() {
           <p>Send your pallet count, approximate weight and dimensions, preferred pickup and delivery dates, and whether either location needs a liftgate. Tell us if your shipment has a temperature requirement.</p>
           <Link className="text-link" href="/regular-deliveries#quote">Set up recurring deliveries</Link>
         </div>
+        <h2 className="operations-actions">Freight FAQs</h2>
+        <FAQ limit={5} />
       </section>
     </>
   );

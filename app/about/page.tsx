@@ -22,7 +22,7 @@ export default function About() {
         <div className="article-copy story-copy">
           <h2>Our story</h2>
           <p>
-            We founded KWC Logistics so smaller businesses could get practical transportation as they grew.
+            KWC Logistics is a family-operated Canadian transportation company. We started providing services in Kitchener in 2022 so smaller businesses could ship as they grew without having to run a fleet of their own.
           </p>
           <p>
             Our team brings nine years of logistics and dispatch experience.

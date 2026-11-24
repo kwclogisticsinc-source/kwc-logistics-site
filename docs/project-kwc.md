@@ -2,7 +2,7 @@
 
 ## Public website
 
-The revenue-first review keeps the July-inspired navy photography layout, the existing blue galloping-horse artwork, and the current Next.js, OpenNext, GitHub and Cloudflare infrastructure. The new hero and retained supporting photography are illustrative. Limit equipment claims to confirmed operating capabilities. The logo in the repository remains the approved screenshot-derived artwork. A source-quality original would be needed to verify pixel-for-pixel fidelity.
+The revenue-first review keeps the July-inspired navy photography layout, the existing blue galloping-horse artwork, and the current Next.js, OpenNext, GitHub and Cloudflare infrastructure. Hero, equipment and maintenance imagery depict transportation scenes. They are not evidence of company-owned sites, employees or equipment. Limit equipment claims to confirmed operating capabilities. The logo in the repository remains the approved screenshot-derived artwork. A source-quality original would be needed to verify pixel-for-pixel fidelity.
 
 The public site offers bulk business package delivery, freight quotes, recurring transportation inquiries, shipment updates by email, business registration requests, and straight-truck driver and owner-operator applications. Submissions reuse the existing rate-limited Web3Forms workflow. A random request reference appears in the provider payload and on successful confirmation. The reference identifies an inquiry only. Dispatch confirms the carrier, service, timing and price before booking. The configured provider recipient still requires an inbox test for ship@kwclogistics.ca before release.
 
@@ -15,6 +15,14 @@ The corridor map uses projected city coordinates and public-domain Natural Earth
 - DHL and FedEx distinguish shipping actions from tracking. DHL redirected to a different region and FedEx presented a country selector. Maersk gives tracking a distinct place beside its network and industry offering.
 - Flexport and Uber Freight describe visibility and managed operations in terms of work customers need to do. Day & Ross puts quote and track near the top. C.H. Robinson separates shipper and carrier paths. The XPO fetch returned a limited shell.
 - Apple's hierarchy and single-product compositions inform the focused hero. NVIDIA groups content by application. Stripe presents complexity through successive sections. Tesla returned a limited shell during research, so its current page layout was not verified. KWC uses its own code, copy and illustrative assets.
+
+## November design review
+
+The industrial direction emphasizes white trucks and operation-specific imagery. The technology direction emphasizes clear task paths and honest shipment visibility. The human-centred direction emphasizes family operations, accessible quotes and industry-specific examples. The review combines the industrial imagery with the latter two approaches to navigation and copy.
+
+Freightliner and Scania distinguish vehicle offerings by use case. Ryder and Penske group transport and equipment services, UPS gives tracking and shipping clear entry points, and project44 organizes visibility by customer task. Caterpillar redirected to its region selector, Kenworth required JavaScript, and the research service could not retrieve Kriska or Forward Air. Those limits were not treated as evidence of their full site experience.
+
+Successfully accepted quote, customer and driver requests log only their category in Cloudflare observability. Request contents and customer identifiers are excluded from that conversion event.
 
 ## Secure customer and driver accounts
 

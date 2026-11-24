@@ -144,8 +144,7 @@ export default async function ServicePage({
             <Link className="btn secondary" href="/regular-deliveries#quote">Discuss Regular Deliveries</Link>
           </div>
           <figure className="july-service-image local-delivery">
-            <Image src={slug === "tailgate-delivery" || slug === "retail-grocery-distribution" ? "/images/kwc-straight-trucks-dock.png" : "/images/kwc-yard-fleet.png"} alt="Illustrative commercial transportation scene" fill sizes="(max-width: 720px) 100vw, 760px" />
-            <figcaption>Illustrative transportation scene</figcaption>
+            <Image src={slug === "tailgate-delivery" || slug === "retail-grocery-distribution" ? "/images/kwc-straight-trucks-dock.png" : "/images/kwc-yard-fleet.png"} alt="Commercial vehicles at a loading facility" fill sizes="(max-width: 720px) 100vw, 760px" />
           </figure>
           <div className="article-copy">
             <h2>What to include in your request</h2>
@@ -179,7 +178,6 @@ export default async function ServicePage({
         </div>
         <div className="service-detail-image">
           <Image src={item.image} alt={item.alt} fill priority sizes="100vw" />
-          <span className="photo-caption">Illustrative marketing scene</span>
         </div>
         <div className="capability-grid">
           {detail.groups.map(([title, items]) => (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactCTA, PageIntro } from "@/components/DeliveryUI";
-import { industries } from "@/lib/content";
+import Link from "next/link";
+import { industryPages } from "@/lib/industry-pages";
 export const metadata: Metadata = {
   title: "Delivery for Your Industry",
   description:
@@ -21,9 +22,10 @@ export default function Industries() {
       </PageIntro>
       <section className="wrap content-section">
         <div className="capability-grid">
-          {industries.map(([title, text]) => (
+          {industryPages.map(([slug, title, text]) => (
             <article key={title}>
-              <h3>{title}</h3>
+              <h3><Link href={`/industries/${slug}`}>{title}</Link></h3>
+              <Link className="text-link" href={`/industries/${slug}`}>Delivery options</Link>
               <p>{text}</p>
             </article>
           ))}

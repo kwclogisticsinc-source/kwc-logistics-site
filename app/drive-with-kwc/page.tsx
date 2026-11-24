@@ -4,16 +4,23 @@ import { RegistrationForm } from "@/components/RegistrationForm";
 
 export const metadata: Metadata = {
   title: "Drive with KWC | Straight-Truck Drivers and Owner-Operators",
-  description: "Apply to drive straight trucks with KWC Logistics or introduce your owner-operator business in Waterloo Region.",
+  description: "Express interest as a straight-truck driver, owner-operator or carrier partner with KWC Logistics in Waterloo Region.",
   alternates: { canonical: "/drive-with-kwc" },
 };
 
 export default function DriveWithKwc() {
   return (
     <>
-      <PageIntro eyebrow="Waterloo Region" title="Drive with KWC Logistics.">
-        <p>Interested in driving a straight truck or bringing your own straight-truck capacity? Tell us where you operate and what kind of work you’re looking for.</p>
+      <PageIntro eyebrow="Waterloo Region" title="Drive with purpose. Grow with KWC.">
+        <p>Drivers, straight-truck owner-operators and carrier partners can tell us about their work, equipment and operating areas.</p>
       </PageIntro>
+      <section className="wrap content-section" aria-label="Ways to work with KWC">
+        <div className="capability-grid">
+          <article><h3>Company drivers</h3><p>Tell us about your straight-truck experience and availability for local and regional work. We review applicable licence qualifications, driving experience and customer-facing responsibilities during follow-up.</p></article>
+          <article><h3>Owner-operators</h3><p>Share your truck type, service area, tailgate or refrigeration capacity, and the local, regional or scheduled work you’re interested in.</p></article>
+          <article><h3>Carrier partners</h3><p>Introduce your company, equipment types and the lanes you serve. If there’s a fit, we’ll follow up to verify operating and insurance documents through an appropriate channel.</p></article>
+        </div>
+      </section>
       <section className="wrap contact-layout">
         <aside className="contact-aside">
           <h2>What happens next</h2>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function CustomerRegistration() {
   return (
     <>
-      <PageIntro eyebrow="Customer onboarding" title="Register your business with KWC.">
+      <PageIntro eyebrow="Customer onboarding" title="Your transportation network starts here.">
         <p>Tell us about your company, what you ship and how often. We’ll follow up to discuss service, coverage and onboarding.</p>
       </PageIntro>
       <section className="wrap contact-layout">

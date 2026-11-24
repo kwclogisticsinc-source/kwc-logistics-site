@@ -3,7 +3,7 @@ export const contact = {
   slogan: "Driven by Excellence. Defined by Reliability.",
 };
 export const freightInsurance =
-  "All freight we transport is insured, subject to applicable policy terms.";
+  "Freight accepted for insured transportation is covered by applicable cargo insurance, subject to policy limits, exclusions, commodity eligibility and shipment terms.";
 
 export const categories = [
   {
@@ -14,7 +14,7 @@ export const categories = [
     description:
       "Pallets, larger shipments and deliveries that need the right equipment or a little extra handling.",
     image: "/images/kwc-straight-trucks-dock.png",
-    alt: "Illustrative KWC straight trucks at loading docks",
+    alt: "Straight trucks at loading docks",
     tags: ["Pallets & truckloads", "Handling by arrangement"],
     href: "/services/freight",
   },
@@ -26,7 +26,7 @@ export const categories = [
     description:
       "Recurring routes, regional distribution and Canada/U.S. road freight with one point of contact.",
     image: "/images/kwc-warehouse-crossdock.png",
-    alt: "Illustrative cross-dock warehouse scene",
+    alt: "Pallet freight in a cross-dock warehouse",
     tags: ["Recurring routes", "Canada/U.S. road freight"],
     href: "/services/logistics",
   },
@@ -38,7 +38,7 @@ export const categories = [
     description:
       "Cargo van delivery for batches of business packages, including scheduled pickups, multi-stop routes and customer order distribution.",
     image: "/images/kwc-cargo-van-dock.png",
-    alt: "Illustrative KWC cargo van at a loading dock",
+    alt: "Cargo van at a loading dock",
     tags: ["Business-to-business", "Multiple packages"],
     href: "/services/courier",
   },

@@ -25,6 +25,9 @@ export function Footer() {
           <strong>Get to know KWC</strong>
           <Link href="/service-areas">Coverage</Link>
           <Link href="/about">About us</Link>
+          <Link href="/equipment">Equipment</Link>
+          <Link href="/safety">Safety</Link>
+          <Link href="/technology">Technology</Link>
           <Link href="/drive-with-kwc">Drive with KWC</Link>
           <Link href="/customer-registration">Register your business</Link>
           <Link href="/industries">Industries</Link>
@@ -43,7 +46,6 @@ export function Footer() {
       <div className="wrap footer-bottom">
         <span>© {new Date().getFullYear()} KWC Logistics Inc.</span>
         <Link href="/privacy">Privacy</Link>
-        <span>Photography is illustrative.</span>
       </div>
     </footer>
   );

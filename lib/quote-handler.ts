@@ -10,6 +10,7 @@ type Dependencies = {
   environment(): Promise<QuoteEnvironment>;
   send: typeof fetch;
   log: (code: string) => void;
+  recordAccepted?: (kind: "quote" | "customer" | "driver") => void;
 };
 const MAX_BODY = 24000;
 const fallback = "Please email ship@kwclogistics.ca.";
@@ -151,6 +152,7 @@ export async function handleQuote(
         error: `We could not confirm your request. ${fallback}`,
       });
     }
+    dependencies.recordAccepted?.(category ?? "quote");
     return reply(200, { success: true, reference });
   } catch {
     dependencies.log("quote_delivery_unconfirmed");
