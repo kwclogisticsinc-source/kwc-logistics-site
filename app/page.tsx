@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div className="kwc-front-media">
-          <Image src="/images/kwc-branded-trucks-yard.webp" alt="Freightliner straight truck and dry van trailer with large KWC blue horse branding" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />
+          <Image src="/images/kwc-rigid-truck-and-trailer.webp" alt="Side profile of a Freightliner straight truck beside a tractor-trailer, both with KWC blue horse decals" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />
         </div>
       </section>
 
