@@ -32,7 +32,7 @@ export default function Home() {
             </div>
           </div>
           <figure className="local-truck">
-            <Image src="/images/kwc-local-straight-truck.webp" alt="Illustrative scene of KWC-branded straight trucks at a warehouse loading dock" fill priority sizes="(max-width: 840px) 100vw, 58vw" />
+            <Image src="/images/kwc-freightliner-warehouse.webp" alt="Illustrative scene of Freightliner straight trucks with KWC cab-door logos at a branded warehouse" fill priority sizes="(max-width: 840px) 100vw, 58vw" />
             <figcaption>Illustrative KWC facility and straight trucks</figcaption>
           </figure>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
       <section className="local-business">
         <div className="wrap local-section local-business-grid">
           <figure className="local-delivery">
-            <Image src="/images/kwc-local-delivery.webp" alt="Illustration of a straight-truck pallet delivery at a local receiving entrance" fill sizes="(max-width: 840px) 100vw, 48vw" />
+            <Image src="/images/kwc-freightliner-delivery.webp" alt="Illustration of a straight-truck pallet delivery at a local receiving entrance" fill sizes="(max-width: 840px) 100vw, 48vw" />
             <figcaption>Illustrative commercial delivery</figcaption>
           </figure>
           <div>

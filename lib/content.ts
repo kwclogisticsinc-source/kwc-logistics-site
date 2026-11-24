@@ -10,7 +10,7 @@ export const categories = [
     short: "Pallet freight and dedicated trucks",
     description:
       "Pallets, larger shipments and deliveries that need the right equipment or a little extra handling.",
-    image: "/images/kwc-local-delivery.webp",
+    image: "/images/kwc-freightliner-delivery.webp",
     alt: "Illustrative liftgate delivery from a straight truck at a local receiving entrance",
     tags: ["Pallets & truckloads", "Handling by arrangement"],
     href: "/services/freight",
