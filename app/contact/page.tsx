@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageIntro, Icon } from "@/components/DeliveryUI";
 import { QuoteForm } from "@/components/QuoteForm";
-import { contact } from "@/lib/content";
+import { contact, freightInsurance } from "@/lib/content";
 import { quickQuoteTypes, quoteKinds, type QuoteKind } from "@/lib/quote";
 export const metadata: Metadata = {
   title: "Request a Quote",
@@ -55,6 +55,7 @@ export default async function ContactPage({
               <strong>Kitchener, Ontario</strong>
             </span>
           </div>
+          <p><strong>{freightInsurance}</strong></p>
           <p className="fine">
             After your request, we review the route, shipment and capacity, then
             contact you to agree on the price and service before booking.

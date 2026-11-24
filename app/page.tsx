@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CoverageGraphic, FAQ, Icon } from "@/components/DeliveryUI";
 import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
-import { contact, industries } from "@/lib/content";
+import { contact, freightInsurance, industries } from "@/lib/content";
 import { coverageCopy, coverageTitle } from "@/lib/ontario";
 
 export const metadata: Metadata = {
@@ -98,6 +98,7 @@ export default function Home() {
           <div>
             <h2 id="booking-expectations">Know what you’re booking.</h2>
             <p>Based in Kitchener since 2022, we operate straight trucks with tailgate capacity and arrange broader lanes through qualified partners.</p>
+            <p><strong>{freightInsurance}</strong></p>
           </div>
         </div>
         <ol className="booking-steps">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageIntro } from "@/components/DeliveryUI";
 import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
+import { freightInsurance } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Book a Freight Shipment",
@@ -17,6 +18,7 @@ export default function BookNow() {
         <p>Start with the pickup and destination. We’ll ask about the freight, equipment and timing, then confirm capacity and price with you before booking.</p>
       </PageIntro>
       <section className="wrap content-section">
+        <p className="notice"><strong>{freightInsurance}</strong></p>
         <QuoteEntry />
         <div className="article-copy booking-details">
           <BrandLogo decorative />

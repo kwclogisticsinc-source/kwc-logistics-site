@@ -2,6 +2,9 @@ export const contact = {
   email: "ship@kwclogistics.ca",
   slogan: "Driven by Excellence. Defined by Reliability.",
 };
+export const freightInsurance =
+  "All freight we transport is insured, subject to applicable policy terms.";
+
 export const categories = [
   {
     id: "freight",
