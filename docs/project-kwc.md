@@ -24,6 +24,8 @@ Freightliner and Scania distinguish vehicle offerings by use case. Ryder and Pen
 
 Successfully accepted quote, customer and driver requests log only their category in Cloudflare observability. Request contents and customer identifiers are excluded from that conversion event.
 
+SSP Group’s homepage made quotes, shipment updates and recruitment easy to find and grouped services by what the customer needs to move. KWC applies that concentration with its own task strip, shipping terminology, fleet imagery and routes. SSP’s operating claims, figures and assets are not used.
+
 ## Secure customer and driver accounts
 
 Add established identity infrastructure before enabling public login. Support verified email, secure sessions and recovery, optional MFA, throttling, and role-based access. Isolate business memberships, customer records, and driver applications. Verify access to every resource on the server. Use personal and business onboarding flows with contact, company, transportation needs, volume, and review. Keep credit and account approval separate. Limit driver records to details necessary for qualification and restrict their retention and access.

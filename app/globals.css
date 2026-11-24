@@ -2704,3 +2704,62 @@ ul.freight-grid {
     aspect-ratio: 1.6 / 1;
   }
 }
+
+.kwc-next-steps {
+  background: #eef3f7;
+  border-bottom: 1px solid var(--line);
+}
+
+.kwc-next-steps .wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kwc-next-step {
+  display: block;
+  min-height: 96px;
+  padding: 1rem 1.15rem;
+  border-left: 1px solid var(--line);
+}
+
+.kwc-next-step:last-child {
+  border-right: 1px solid var(--line);
+}
+
+.kwc-next-step:hover {
+  background: #e1ebf4;
+}
+
+.kwc-next-step strong,
+.kwc-next-step span {
+  display: block;
+}
+
+.kwc-next-step strong {
+  color: var(--blue);
+}
+
+.kwc-next-step span {
+  margin-top: .2rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.project-equipment-list dt a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+@media (max-width: 780px) {
+  .kwc-next-steps .wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kwc-next-step:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .kwc-next-step:nth-child(2) {
+    border-right: 1px solid var(--line);
+  }
+}

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Icon } from "@/components/DeliveryUI";
-import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
 import { contact, freightInsurance } from "@/lib/content";
 
@@ -13,47 +11,27 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: "pin",
-    title: "B2B final-mile & tailgate",
-    copy: "Deliver pallets to stores and commercial receiving sites. Ask about liftgate service for locations without a dock.",
+    title: "Pallet and truckload freight",
+    copy: "One pallet, a dedicated straight truck or a 53-foot dry van or reefer. We confirm the equipment and operator with your quote.",
+    href: "/services/freight",
+  },
+  {
+    title: "Commercial final-mile delivery",
+    copy: "Liftgate delivery to sites without a dock and cargo van routes for business package batches.",
     href: "/services/b2b-final-mile",
   },
   {
-    icon: "route",
-    title: "Dedicated routes & retail distribution",
-    copy: "Plan supplier pickups, store replenishment and regular delivery across multiple locations.",
-    href: "/regular-deliveries#quote",
+    title: "Scheduled business routes",
+    copy: "Supplier collections, store replenishment and multi-stop distribution planned around your receiving windows.",
+    href: "/regular-deliveries",
   },
-  {
-    icon: "box",
-    title: "LTL & per-pallet shipping",
-    copy: "Move one pallet or several with shared capacity where available.",
-    href: "/services/ltl-freight",
-  },
-  {
-    icon: "truck",
-    title: "B2B bulk package delivery",
-    copy: "Move batches of business packages in a cargo van, with scheduled pickups and multiple delivery stops.",
-    href: "/services/courier",
-  },
-  {
-    icon: "truck",
-    title: "Expedited freight",
-    copy: "Share your deadline so we can assess direct and same-day options where capacity permits.",
-    href: "/services/expedited-freight",
-  },
-  {
-    icon: "box",
-    title: "Refrigerated freight",
-    copy: "Arrange suitable temperature-controlled equipment through qualified partners.",
-    href: "/services/refrigerated-transportation",
-  },
-  {
-    icon: "route",
-    title: "North American freight",
-    copy: "Coordinate Canada-wide and Canada–USA shipments through our transportation partners.",
-    href: "/services/canada-usa-freight",
-  },
+];
+
+const nextSteps = [
+  { label: "Start a shipment", description: "Share the pickup, destination and load.", href: "#quick-quote" },
+  { label: "Get a shipment update", description: "Contact dispatch about a confirmed booking.", href: "/shipment-updates" },
+  { label: "Register your business", description: "Tell us what you ship and how often.", href: "/customer-registration" },
+  { label: "Drive with KWC", description: "Apply as a driver, owner-operator or carrier.", href: "/drive-with-kwc" },
 ];
 
 export default function Home() {
@@ -86,39 +64,33 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="wrap local-quote">
+      <section className="kwc-next-steps" aria-label="Work with KWC">
+        <div className="wrap">
+          {nextSteps.map(({ label, description, href }) => (
+            <Link className="kwc-next-step" href={href} key={href}>
+              <strong>{label}</strong>
+              <span>{description}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <div className="wrap local-quote" id="quick-quote">
         <QuoteEntry />
       </div>
 
-      <section className="wrap booking-expectations" aria-labelledby="booking-expectations">
-        <div className="booking-intro">
-          <BrandLogo decorative />
-          <div>
-            <h2 id="booking-expectations">Know what you’re booking.</h2>
-            <p>Based in Kitchener since 2022, we operate straight trucks with tailgate capacity and arrange broader lanes through qualified partners.</p>
-            <p><strong>{freightInsurance}</strong></p>
-          </div>
+      <section className="wrap local-section project-equipment-grid" id="services">
+        <div className="local-delivery">
+          <Image src="/images/kwc-straight-trucks-dock-1400.webp" alt="Straight trucks lined up at loading docks" fill sizes="(max-width: 720px) 100vw, 54vw" />
         </div>
-        <ol className="booking-steps">
-          <li><h3>Tell us about the load</h3><p>Send the route, shipment size, receiving hours and any liftgate or temperature needs.</p></li>
-          <li><h3>Review the quote</h3><p>We confirm the equipment, carrier, available timing and price for your shipment.</p></li>
-          <li><h3>Approve the booking</h3><p>Once you accept the details, we confirm the plan for pickup and delivery.</p></li>
-        </ol>
-      </section>
-
-      <section className="wrap local-section" id="services">
-        <div className="local-section-heading">
-          <h2>How can we help you ship?</h2>
-          <Link href="/services" className="text-link">All transportation services</Link>
-        </div>
-        <div className="local-services">
-          {services.map(({ icon, title, copy, href }) => (
-            <article key={title}>
-              <Icon name={icon} size={26} />
-              <h3><Link href={href}>{title}</Link></h3>
-              <p>{copy}</p>
-            </article>
-          ))}
+        <div>
+          <h2>What we move</h2>
+          <dl className="project-equipment-list">
+            {services.map(({ title, copy, href }) => (
+              <div key={href}><dt><Link href={href}>{title}</Link></dt><dd>{copy}</dd></div>
+            ))}
+          </dl>
+          <Link href="/services" className="text-link">Explore all services</Link>
         </div>
       </section>
 
@@ -151,6 +123,7 @@ export default function Home() {
         <div className="wrap local-section">
           <h2>Your business has somewhere to go. Let’s get it there.</h2>
           <p>One pallet, a dedicated truck or an ongoing contract. Share the route and we’ll take it from there.</p>
+          <p><strong>{freightInsurance}</strong></p>
           <div className="button-row">
             <Link href="/contact?service=freight#quote" className="btn">Get a Freight Quote</Link>
             <a href={`mailto:${contact.email}`} className="btn secondary">Speak with Dispatch</a>
