@@ -12,14 +12,14 @@ export default function About() {
     <>
       <PageIntro
         eyebrow="KITCHENER, ONTARIO · FOUNDED IN 2022"
-        title="Small team. Big ambition."
+        title="An Ontario carrier built around the handoff."
       >
         <p>
-          We help local businesses move pallets, book straight trucks and set up regular delivery routes within our Ontario service area, as far north as Sudbury.
+          From the supplier’s loading dock to your customer’s door, KWC helps businesses arrange Ontario freight, final-mile delivery and regular transportation.
         </p>
       </PageIntro>
       <section className="wrap content-section">
-        <div className="article-copy story-copy">
+        <div className="article-copy story-copy" id="our-story">
           <h2>Our story</h2>
           <p>
             KWC Logistics is a family-operated Canadian transportation company. We started providing services in Kitchener in 2022 so smaller businesses could ship as they grew without having to run a fleet of their own.
@@ -51,40 +51,27 @@ export default function About() {
           <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>
           <p>We set clear safety and performance standards for hiring and continued work with KWC. We use technology to review driver performance and address safety concerns so we can reduce avoidable setbacks for customers.</p>
         </section>
-        <div className="article-copy">
-          <h2>Built around your next step.</h2>
-          <p>
-            Whether you’re collecting from suppliers, delivering to stores or
-            reaching customers in a new region, KWC helps you put the
-            transportation pieces together. We work through your locations,
-            shipment volumes and delivery requirements to develop a practical
-            plan.
-          </p>
-        </div>
-        <div className="capability-grid">
-          {[
-            [
-              "Start small",
-              "Arrange a single shipment or discuss a recurring route.",
-            ],
-            [
-              "Reach further",
-              "Explore delivery options beyond your current service area.",
-            ],
-            [
-              "Keep your focus",
-              "Grow your business while we help coordinate the movement.",
-            ],
-          ].map(([title, text]) => (
-            <article key={title}>
-              <h3>{title}</h3>
-              <p>{text}</p>
+        <section className="article-copy" id="how-we-work">
+          <h2>How we work with you</h2>
+          <p>Before booking, we review what is moving, the pickup and receiving windows, and whether the freight needs a dock or liftgate. We confirm the operating carrier and equipment with you.</p>
+          <div className="capability-grid">
+            <article>
+              <h3>One-time freight</h3>
+              <p>Start with the route, pallet count or item dimensions, and receiving access.</p>
+              <Link className="text-link" href="/book-now">Request a shipment quote</Link>
             </article>
-          ))}
-        </div>
-        <Link className="btn" href="/contact">
-          Let’s Talk About Your Deliveries →
-        </Link>
+            <article>
+              <h3>Regular transportation</h3>
+              <p>Share your typical volume, supplier pickups and the stops you need covered each week.</p>
+              <Link className="text-link" href="/regular-deliveries">Plan a recurring route</Link>
+            </article>
+            <article>
+              <h3>Carrier capacity</h3>
+              <p>Tell us which Ontario lanes or final-mile handoffs you need covered.</p>
+              <Link className="text-link" href="/transportation-partnerships">Discuss a partnership</Link>
+            </article>
+          </div>
+        </section>
       </section>
       <ContactCTA />
     </>

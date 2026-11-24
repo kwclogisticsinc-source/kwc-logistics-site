@@ -36,6 +36,7 @@ const navigation = [
   ] },
   { label: "About", links: [
     ["About KWC", "/about"],
+    ["How we work", "/about#how-we-work"],
     ["Safety and fleet standards", "/safety"],
     ["Technology and dispatch", "/technology"],
     ["Contact KWC", "/contact"],
