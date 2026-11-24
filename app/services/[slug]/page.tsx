@@ -1,3 +1,4 @@
+import { commercialServices } from "@/lib/commercial-services";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -109,7 +110,7 @@ const details = {
   },
 };
 export function generateStaticParams() {
-  return Object.keys(details).map((slug) => ({ slug }));
+  return [...Object.keys(details), ...commercialServices.map(([slug]) => slug)].map((slug) => ({ slug }));
 }
 export async function generateMetadata({
   params,
@@ -117,10 +118,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const commercial = commercialServices.find(([id]) => id === slug);
   const item = categories.find((i) => i.href.endsWith(`/${slug}`));
   return {
-    title: item?.title ?? "Service",
-    description: item?.description,
+    title: commercial?.[1] ?? item?.title ?? "Service",
+    description: commercial?.[2] ?? item?.description,
     alternates: { canonical: `/services/${slug}` },
   };
 }
@@ -130,6 +132,33 @@ export default async function ServicePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const commercial = commercialServices.find(([id]) => id === slug);
+  if (commercial) {
+    const [, title, benefit, preparation, question, answer] = commercial;
+    return (
+      <>
+        <PageIntro eyebrow="Waterloo Region transportation" title={title}><p>{benefit}</p></PageIntro>
+        <section className="wrap content-section">
+          <div className="button-row">
+            <Link className="btn" href="/contact?service=freight#quote">Get a Freight Quote</Link>
+            <Link className="btn secondary" href="/regular-deliveries#quote">Discuss Regular Deliveries</Link>
+          </div>
+          <figure className="july-service-image local-delivery">
+            <Image src={slug === "tailgate-delivery" || slug === "retail-grocery-distribution" ? "/images/kwc-freightliner-delivery.webp" : "/images/kwc-yard-fleet-1400.webp"} alt="Illustrative commercial transportation scene" fill sizes="(max-width: 720px) 100vw, 760px" />
+            <figcaption>Illustrative transportation scene</figcaption>
+          </figure>
+          <div className="article-copy">
+            <h2>What to include in your request</h2>
+            <p>{preparation}</p>
+            <h2>{question}</h2>
+            <p>{answer}</p>
+            <p>We confirm equipment, availability and price before booking.</p>
+            <Link className="text-link" href="/services">Explore all freight services</Link>
+          </div>
+        </section>
+      </>
+    );
+  }
   if (!(slug in details)) notFound();
   const detail = details[slug as keyof typeof details];
   const item = categories.find((i) => i.href.endsWith(`/${slug}`))!;

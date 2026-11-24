@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CoverageGraphic, PageIntro } from "@/components/DeliveryUI";
 import { coverageCopy, coverageTitle, lanes, regions, services } from "@/lib/ontario";
 import { freightPages } from "@/lib/freight-pages";
+import { localAreas } from "@/lib/local-areas";
 
 export const metadata: Metadata = {
   title: "Ontario Freight Coverage | Highways 401 and 403",
@@ -36,9 +37,15 @@ export default function Coverage() {
           <ul className="freight-grid">{services.map((service) => <li key={service}>{service}</li>)}</ul>
         </section>
         <section>
+          <h2>Local freight and delivery guides</h2>
+          <ul className="freight-grid">
+            {localAreas.map(({ slug, title }) => <li key={slug}><Link className="text-link" href={`/service-areas/${slug}`}>{title}</Link></li>)}
+          </ul>
+        </section>
+        <section>
           <h2>Freight guides by lane and service</h2>
           <ul className="freight-grid">
-            {freightPages.map(({ slug, title }) => <li key={slug}><Link className="text-link" href={`/service-areas/${slug}`}>{title}</Link></li>)}
+            {freightPages.filter((page) => !localAreas.includes(page)).map(({ slug, title }) => <li key={slug}><Link className="text-link" href={`/service-areas/${slug}`}>{title}</Link></li>)}
           </ul>
         </section>
         <div className="button-row">

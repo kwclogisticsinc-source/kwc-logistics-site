@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { commercialServices } from "@/lib/commercial-services";
 import type { Metadata } from "next";
 import { ContactCTA, PageIntro, ServiceCards } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
@@ -18,6 +20,14 @@ export default function Services() {
         </p>
       </PageIntro>
       <section className="wrap content-section">
+        <ul className="july-directory">
+          {commercialServices.map(([slug, title, summary]) => (
+            <li key={slug}>
+              <Link className="text-link" href={`/services/${slug}`}>{title}</Link>
+              <p>{summary}</p>
+            </li>
+          ))}
+        </ul>
         <ServiceCards />
         <div className="notice">
           <strong>Direct service and the right partners.</strong> KWC handles

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact } from "@/lib/content";
 export function Footer() {
@@ -5,8 +6,8 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
-          <Link href="/" className="footer-wordmark">
-            KWC<span>LOGISTICS INC.</span>
+          <Link href="/" className="footer-wordmark" aria-label="KWC Logistics home">
+            <Image src="/images/kwc-galloping-horse.png" alt="" width={96} height={77} />
           </Link>
           <p>{contact.slogan}</p>
           <p className="fine">

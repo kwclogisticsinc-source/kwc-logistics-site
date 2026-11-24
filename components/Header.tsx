@@ -37,8 +37,8 @@ export function Header() {
               <Icon name="mail" size={17} />
               {contact.email}
             </a>
-            <Link href="/contact?service=freight#quote" className="btn small">
-              Get a Quote
+            <Link href="/book-now" className="btn small">
+              Book Now
             </Link>
             <button
               className="menu-toggle"
@@ -71,8 +71,8 @@ export function Header() {
         <a href={`mailto:${contact.email}`}>
           <Icon name="mail" size={18} /> Email KWC
         </a>
-        <Link href="/contact?service=freight#quote">
-          Get a Quote
+        <Link href="/book-now">
+          Book Now
         </Link>
       </div>
     </>

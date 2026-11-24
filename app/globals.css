@@ -2215,3 +2215,106 @@ ul.freight-grid {
 .content-section .article-copy h2:first-child {
   margin-top: 0;
 }
+
+.july-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 0;
+  background: #0a2042;
+}
+
+.july-hero-image {
+  object-position: center 55%;
+  z-index: -2;
+}
+
+.july-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(90deg, #081d3cf5 5%, #081d3cde 41%, #081d3c33 82%);
+}
+
+.july-hero-inner {
+  min-height: clamp(32rem, 58vw, 44rem);
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-block: 3rem 4rem;
+}
+
+.july-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.7rem, 5.5vw, 5rem);
+}
+
+.july-hero .local-hero-copy > p {
+  max-width: 54ch;
+}
+
+.july-hero-caption {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  padding: 0.25rem 0.55rem;
+  background: #081d3ce0;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.july-recurring {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.july-recurring p {
+  margin-block: 0.9rem 1.3rem;
+}
+
+.july-recurring aside {
+  background: var(--pale);
+  border-left: 3px solid var(--blue);
+  padding: 1.5rem;
+}
+
+.july-recurring aside p {
+  margin-bottom: 0;
+}
+
+.july-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1px;
+  padding: 1px;
+  margin-bottom: 2rem;
+  background: var(--line);
+  list-style: none;
+}
+
+.july-directory li {
+  background: white;
+  padding: 1.1rem 1.25rem;
+}
+
+@media (max-width: 720px) {
+  .july-hero-image {
+    object-position: 62% center;
+  }
+
+  .july-hero::before {
+    background: #081d3cdd;
+  }
+
+  .july-recurring {
+    grid-template-columns: 1fr;
+  }
+}
+
+.july-service-image {
+  max-width: 760px;
+  margin-block: 1.5rem;
+}

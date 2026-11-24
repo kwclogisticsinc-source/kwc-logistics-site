@@ -4,7 +4,7 @@ import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
   title: "About KWC",
   description:
-    "Meet KWC Logistics, founded by Jay Sandhu in Kitchener to help businesses grow through practical transportation plans.",
+    "KWC Logistics started in Kitchener in 2022. Learn how we help Waterloo Region businesses with final-mile delivery, LTL and recurring transportation.",
   alternates: { canonical: "/about" },
 };
 export default function About() {
@@ -25,27 +25,14 @@ export default function About() {
             We founded KWC Logistics so smaller businesses could get practical transportation as they grew.
           </p>
           <p>
-            Our founder, <strong>Jay Sandhu</strong>, built his experience in
-            traditional transportation, working with companies across dry van,
-            refrigerated and flatbed freight. He later worked with a
-            technology-based final mile delivery company, gaining a different
-            perspective on how local delivery networks can help businesses reach
-            more customers.
+            Our team brings nine years of logistics and dispatch experience.
+            We help businesses connect supplier pickups, freight movements and
+            final-mile deliveries into a plan that fits their operations.
           </p>
           <p>
-            Through that experience, Jay saw a gap. Smaller businesses often
-            have the products, demand and ambition to expand, but organizing
-            deliveries beyond their existing market can be costly and difficult.
-            They need a logistics partner who understands their operation and
-            can help make that next step practical.
-          </p>
-          <p>
-            <strong>KWC Logistics was created to help close that gap.</strong>{" "}
-            Based in Kitchener, we help businesses connect supplier pickups,
-            freight movements and final mile deliveries into a plan that fits
-            their needs. Through direct service and carrier partnerships, our
-            goal is to help customers expand their delivery network without
-            having to build a fleet of their own.
+            We operate straight-truck capacity with tailgate service and work
+            with qualified transportation partners for additional equipment and
+            broader coverage.
           </p>
           <p>
             From a single shipment to a recurring delivery route, we start by

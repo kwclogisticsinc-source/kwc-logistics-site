@@ -1,3 +1,4 @@
+import { commercialServices } from "@/lib/commercial-services";
 import { freightPages } from "@/lib/freight-pages";
 import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,10 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/courier",
     "/services/freight",
     "/services/logistics",
+    ...commercialServices.map(([slug]) => `/services/${slug}`),
     "/service-areas",
     ...freightPages.map(({ slug }) => `/service-areas/${slug}`),
     "/about",
     "/contact",
+    "/book-now",
+    "/regular-deliveries",
     "/industries",
     "/resources",
     "/forms",

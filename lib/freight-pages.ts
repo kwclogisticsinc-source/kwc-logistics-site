@@ -1,3 +1,5 @@
+import { localAreas } from "./local-areas";
+
 export const freightPages = [
   {
     slug: "gta-ottawa-ltl",
@@ -71,4 +73,5 @@ export const freightPages = [
       ["Plan for specialized loads and longer routes", "Identify refrigerated freight and any special handling up front. Ask about full truckload arrangements, Ontario to Quebec lanes including Montréal, and extended Canada-wide or Canada–USA moves through qualified transportation partners."],
     ],
   },
+  ...localAreas,
 ];

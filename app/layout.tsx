@@ -18,6 +18,7 @@ export const metadata: Metadata = {
       "Commercial transportation from Waterloo Region throughout Ontario, with extended Canada and U.S. freight through qualified partners.",
     url: "https://kwclogistics.ca",
     siteName: "KWC Logistics Inc.",
+    images: [{ url: "/images/kwc-galloping-horse.png", alt: "KWC Logistics blue horse logo" }],
     locale: "en_CA",
     type: "website",
   },
@@ -49,6 +50,7 @@ export default function RootLayout({
               email: contact.email,
               slogan: contact.slogan,
               foundingDate: "2022",
+              logo: "https://kwclogistics.ca/images/kwc-galloping-horse.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Kitchener",

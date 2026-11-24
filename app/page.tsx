@@ -1,40 +1,78 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CoverageGraphic, Icon } from "@/components/DeliveryUI";
+import { CoverageGraphic, FAQ, Icon } from "@/components/DeliveryUI";
 import { QuoteEntry } from "@/components/QuoteEntry";
 import { contact, industries } from "@/lib/content";
 import { coverageCopy, coverageTitle } from "@/lib/ontario";
 
 export const metadata: Metadata = {
-  title: { absolute: "KWC Logistics | Straight-Truck Freight from Waterloo Region" },
+  title: { absolute: "KWC Logistics | Waterloo Region Final-Mile Delivery & LTL Freight" },
   description: "Founded in Kitchener in 2022. Get a quote for straight-truck freight, pallet shipping and recurring commercial delivery along Ontario Highways 401 and 403.",
 };
 
 const services = [
-  { icon: "box", title: "Pallet freight & LTL", copy: "Ship a single pallet or several. Ask about liftgate delivery for locations without a loading dock.", href: "/services/freight" },
-  { icon: "truck", title: "Dedicated straight trucks", copy: "Arrange a dedicated vehicle for time-sensitive shipments, direct deliveries and jobs with multiple stops.", href: "/contact?service=freight#quote" },
-  { icon: "route", title: "Recurring commercial routes", copy: "Set up regular supplier pickups, store replenishment, customer deliveries and returns.", href: "/services/logistics" },
+  {
+    icon: "pin",
+    title: "B2B final-mile & tailgate",
+    copy: "Deliver pallets to stores and commercial receiving sites. Ask about liftgate service for locations without a dock.",
+    href: "/services/b2b-final-mile",
+  },
+  {
+    icon: "route",
+    title: "Dedicated routes & retail distribution",
+    copy: "Plan supplier pickups, store replenishment and regular delivery across multiple locations.",
+    href: "/regular-deliveries#quote",
+  },
+  {
+    icon: "box",
+    title: "LTL & per-pallet shipping",
+    copy: "Move one pallet or several with shared capacity where available.",
+    href: "/services/ltl-freight",
+  },
+  {
+    icon: "truck",
+    title: "Expedited freight",
+    copy: "Share your deadline so we can assess direct and same-day options where capacity permits.",
+    href: "/services/expedited-freight",
+  },
+  {
+    icon: "box",
+    title: "Refrigerated freight",
+    copy: "Arrange suitable temperature-controlled equipment through qualified partners.",
+    href: "/services/refrigerated-transportation",
+  },
+  {
+    icon: "route",
+    title: "North American freight",
+    copy: "Coordinate Canada-wide and Canada–USA shipments through our transportation partners.",
+    href: "/services/canada-usa-freight",
+  },
 ];
 
 export default function Home() {
   return (
     <div className="local-home">
-      <section className="local-hero">
-        <div className="wrap local-hero-grid">
+      <section className="local-hero july-hero">
+        <Image
+          src="/images/kwc-freightliner-warehouse.webp"
+          alt="Illustrative scene of Freightliner straight trucks with KWC cab-door logos at a warehouse"
+          fill
+          priority
+          sizes="100vw"
+          className="july-hero-image"
+        />
+        <div className="wrap july-hero-inner">
           <div className="local-hero-copy">
-            <p className="eyebrow">Kitchener · Waterloo · Cambridge</p>
-            <h1>Straight-truck freight, right from Waterloo Region.</h1>
-            <p>We started in Kitchener in 2022. Today, we help Ontario businesses move pallets, stock stores and run regular delivery routes along Highways 401 and 403.</p>
+            <p className="eyebrow">Local Roots. Limitless Reach.</p>
+            <h1>Your Local Partner for Final-Mile Delivery &amp; LTL Freight.</h1>
+            <p>From a single pallet to recurring commercial deliveries, KWC Logistics provides flexible transportation solutions across Kitchener, Waterloo, Cambridge, Ontario and North America.</p>
             <div className="button-row">
               <Link href="/contact?service=freight#quote" className="btn">Get a Freight Quote</Link>
-              <Link href="/contact?service=regular#quote" className="btn secondary">Plan Regular Deliveries</Link>
+              <Link href="/regular-deliveries#quote" className="btn secondary">Discuss Regular Deliveries</Link>
             </div>
           </div>
-          <figure className="local-truck">
-            <Image src="/images/kwc-freightliner-warehouse.webp" alt="Illustrative scene of Freightliner straight trucks with KWC cab-door logos at a branded warehouse" fill priority sizes="(max-width: 840px) 100vw, 58vw" />
-            <figcaption>Illustrative KWC facility and straight trucks</figcaption>
-          </figure>
+          <p className="july-hero-caption">Illustrative facility and straight trucks</p>
         </div>
       </section>
 
@@ -65,23 +103,41 @@ export default function Home() {
             <figcaption>Illustrative commercial delivery</figcaption>
           </figure>
           <div>
-            <h2>Deliveries that fit how local businesses work.</h2>
-            <p>Tell us what has to move, where it needs to go and when your receiver can take it. We’ll work through the truck, handling and price with you.</p>
+            <h2>Big Reach for Small Businesses.</h2>
+            <p>You can get products to customers without running your own truck or transportation department. Start with a single pallet, ask about shared capacity where available, or set up regular store replenishment as you grow.</p>
             <ul className="local-industries">
               {industries.slice(0, 4).map(([title]) => <li key={title}><Icon name="check" size={18} />{title}</li>)}
             </ul>
-            <Link href="/about" className="text-link">Meet KWC Logistics</Link>
+            <Link href="/services/ltl-freight" className="text-link">See how pallet shipping works</Link>
           </div>
         </div>
+      </section>
+
+      <section className="wrap local-section july-recurring">
+        <div>
+          <h2>Your Business. Our Delivery Network.</h2>
+          <p>Plan daily, weekly or other recurring deliveries around your business. We help coordinate supplier pickups, store replenishment, scheduled routes, multiple delivery locations and regional distribution. We confirm frequency, equipment and capacity with you before booking.</p>
+          <Link href="/regular-deliveries#quote" className="btn">Discuss Regular Deliveries</Link>
+        </div>
+        <aside>
+          <h3>Based in Kitchener since 2022</h3>
+          <p>Our team brings nine years of logistics and dispatch experience, company-operated straight-truck capacity with tailgate service, and access to qualified transportation partners.</p>
+        </aside>
       </section>
 
       <section className="wrap local-section local-network">
         <div>
           <h2>{coverageTitle}</h2>
           {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <p>Start with Waterloo Region, Guelph or a shipment between KWC and the GTA. Qualified partners help us coordinate longer Ontario, Canada-wide and Canada–USA routes.</p>
           <Link href="/service-areas" className="text-link">Explore the Ontario freight network</Link>
         </div>
         <CoverageGraphic />
+      </section>
+
+      <section className="wrap local-section" aria-labelledby="home-faq">
+        <h2 id="home-faq">Freight FAQs</h2>
+        <FAQ limit={5} />
       </section>
 
       <section className="local-contact">
