@@ -18,6 +18,7 @@ export default function DriveWithKwc() {
         <aside className="contact-aside">
           <h2>What happens next</h2>
           <p>We review your experience, equipment and availability. If there’s a fit, we’ll follow up directly to verify qualifications and discuss opportunities. Applying does not guarantee work.</p>
+          <p>KWC sets safety and performance standards at hiring and expects drivers to meet them throughout their work with us. Pre-trip checks are part of every run with our company-operated fleet.</p>
           <p>Please leave licence numbers, insurance documents and other sensitive information out of this initial request.</p>
         </aside>
         <RegistrationForm kind="driver" />

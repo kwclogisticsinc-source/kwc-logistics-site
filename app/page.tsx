@@ -142,6 +142,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="wrap booking-expectations" aria-labelledby="fleet-safety">
+        <div className="local-section-heading">
+          <h2 id="fleet-safety">Safety starts before the truck moves.</h2>
+          <Link href="/about#safety" className="text-link">How we approach safety</Link>
+        </div>
+        <ul className="booking-steps">
+          <li>
+            <h3>Trained drivers</h3>
+            <p>Drivers are trained and must meet KWC’s safety and performance standards when hired and throughout their time with us.</p>
+          </li>
+          <li>
+            <h3>Pre-trip checks</h3>
+            <p>Our company-operated vehicles are checked before every trip. Our in-house mechanic maintains the fleet and addresses issues identified during checks.</p>
+          </li>
+          <li>
+            <h3>Driver performance review</h3>
+            <p>We use technology to review driver performance and follow up on safety concerns. These checks help reduce avoidable breakdowns and delivery delays.</p>
+          </li>
+        </ul>
+      </section>
+
       <section className="local-business">
         <div className="wrap local-section local-business-grid">
           <figure className="local-delivery">

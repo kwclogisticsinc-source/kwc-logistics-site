@@ -44,6 +44,11 @@ export default function About() {
             understanding your business—and where you want to take it.
           </p>
         </div>
+        <section className="article-copy story-copy" id="safety" aria-labelledby="about-safety">
+          <h2 id="about-safety">How we approach safety</h2>
+          <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>
+          <p>We set clear safety and performance standards for hiring and continued work with KWC. We use technology to review driver performance and address safety concerns so we can reduce avoidable setbacks for customers.</p>
+        </section>
         <div className="article-copy">
           <h2>Built around your next step.</h2>
           <p>
