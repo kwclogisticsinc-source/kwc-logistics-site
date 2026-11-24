@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { BrandLogo } from "./Logo";
 import Link from "next/link";
 import { contact } from "@/lib/content";
 export function Footer() {
@@ -6,10 +6,10 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
-          <Link href="/" className="footer-wordmark" aria-label="KWC Logistics home">
-            <Image src="/images/kwc-galloping-horse.png" alt="" width={96} height={77} />
+          <Link href="/" className="footer-logo" aria-label="KWC Logistics home">
+            <BrandLogo decorative />
           </Link>
-          <p>{contact.slogan}</p>
+
           <p className="fine">
             Founded in Kitchener in 2022.
           </p>
@@ -19,7 +19,7 @@ export function Footer() {
           <Link href="/services/courier">KWC Courier</Link>
           <Link href="/services/freight">Freight & specialized delivery</Link>
           <Link href="/services/logistics">Logistics management</Link>
-          <Link href="/contact?service=regular#quote">Regular deliveries</Link>
+          <Link href="/regular-deliveries#quote">Regular deliveries</Link>
         </nav>
         <nav aria-label="Footer company">
           <strong>Get to know KWC</strong>

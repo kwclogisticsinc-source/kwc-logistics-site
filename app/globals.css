@@ -2318,3 +2318,65 @@ ul.freight-grid {
   max-width: 760px;
   margin-block: 1.5rem;
 }
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: .55rem;
+}
+
+.footer-logo img,
+.booking-intro img,
+.booking-details img {
+  display: block;
+  width: 7rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.booking-expectations {
+  margin-top: 2.5rem;
+  padding-block: 1.75rem 2rem;
+  border-block: 1px solid var(--line);
+}
+
+.booking-intro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-intro p,
+.booking-steps p {
+  margin-top: 0.55rem;
+}
+
+.booking-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.booking-steps li {
+  padding: 1.1rem 0;
+  border-top: 3px solid var(--blue);
+}
+
+.booking-details {
+  margin-top: 2rem;
+}
+
+@media (max-width: 680px) {
+  .booking-steps {
+    grid-template-columns: 1fr;
+    gap: .25rem;
+  }
+
+  .booking-intro img {
+    width: 4.5rem;
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/DeliveryUI";
+import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
 
 export const metadata: Metadata = {
@@ -17,7 +18,8 @@ export default function BookNow() {
       </PageIntro>
       <section className="wrap content-section">
         <QuoteEntry />
-        <div className="article-copy">
+        <div className="article-copy booking-details">
+          <BrandLogo decorative />
           <h2>Have these details ready</h2>
           <p>Send your pallet count, approximate weight and dimensions, preferred pickup and delivery dates, and whether either location needs a liftgate. Tell us if your shipment has a temperature requirement.</p>
           <Link className="text-link" href="/regular-deliveries#quote">Set up recurring deliveries</Link>

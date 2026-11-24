@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CoverageGraphic, FAQ, Icon } from "@/components/DeliveryUI";
+import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
 import { contact, industries } from "@/lib/content";
 import { coverageCopy, coverageTitle } from "@/lib/ontario";
@@ -79,6 +80,21 @@ export default function Home() {
       <div className="wrap local-quote">
         <QuoteEntry />
       </div>
+
+      <section className="wrap booking-expectations" aria-labelledby="booking-expectations">
+        <div className="booking-intro">
+          <BrandLogo decorative />
+          <div>
+            <h2 id="booking-expectations">Know what you’re booking.</h2>
+            <p>Based in Kitchener since 2022, we operate straight trucks with tailgate capacity and arrange broader lanes through qualified partners.</p>
+          </div>
+        </div>
+        <ol className="booking-steps">
+          <li><h3>Tell us about the load</h3><p>Send the route, shipment size, receiving hours and any liftgate or temperature needs.</p></li>
+          <li><h3>Review the quote</h3><p>We confirm the equipment, carrier, available timing and price for your shipment.</p></li>
+          <li><h3>Approve the booking</h3><p>Once you accept the details, we confirm the plan for pickup and delivery.</p></li>
+        </ol>
+      </section>
 
       <section className="wrap local-section" id="services">
         <div className="local-section-heading">

@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { contact } from "@/lib/content";
-import blueHorseLogo from "@/public/images/kwc-galloping-horse.png";
+import { BrandLogo } from "./Logo";
 import { Icon } from "./DeliveryUI";
 const nav = [
   ["/services", "Freight Services"],
@@ -23,7 +22,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="brand"
           >
-            <Image src={blueHorseLogo} alt="" priority />
+            <BrandLogo decorative priority />
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {nav.map(([url, label]) => (
