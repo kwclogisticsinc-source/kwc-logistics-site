@@ -63,7 +63,7 @@ export function Icon({
 export function ServiceCards() {
   return (
     <div className="service-grid">
-      {categories.map((item, i) => (
+      {categories.map((item) => (
         <article className="service-card" key={item.id}>
           <Link href={item.href} className="service-image">
             <Image
@@ -72,10 +72,8 @@ export function ServiceCards() {
               fill
               sizes="(max-width: 720px) 100vw, 33vw"
             />
-            <span className="image-number">0{i + 1}</span>
           </Link>
           <div className="service-body">
-            <p className="eyebrow">{item.title}</p>
             <h3>{item.short}</h3>
             <p>{item.description}</p>
             <div className="tag-row">
@@ -88,7 +86,6 @@ export function ServiceCards() {
               href={`/contact?service=${item.id}#quote`}
             >
               {item.action}
-              <Icon name="arrow" size={20} />
             </Link>
             <Link className="detail-link" href={item.href}>
               Explore this service

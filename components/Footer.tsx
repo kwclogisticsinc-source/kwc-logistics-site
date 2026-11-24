@@ -10,9 +10,7 @@ export function Footer() {
           </Link>
           <p>{contact.slogan}</p>
           <p className="fine">
-            Local expertise. North American reach.
-            <br />
-            Smarter logistics.
+            Founded in Kitchener in 2022.
           </p>
         </div>
         <nav aria-label="Footer services">
@@ -31,11 +29,11 @@ export function Footer() {
           <Link href="/forms">Forms & documents</Link>
         </nav>
         <div className="footer-contact">
-          <strong>A real conversation starts here.</strong>
+          <strong>Talk to KWC Logistics</strong>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <p>Kitchener, Ontario</p>
           <Link href="/contact#quote" className="text-link">
-            Request a Quote →
+            Request a Quote
           </Link>
         </div>
       </div>

@@ -6,9 +6,9 @@ import { contact } from "@/lib/content";
 import blueHorseLogo from "@/public/images/kwc-galloping-horse.png";
 import { Icon } from "./DeliveryUI";
 const nav = [
-  ["/services", "Services"],
-  ["/service-areas", "Coverage"],
-  ["/about", "About"],
+  ["/services", "Freight Services"],
+  ["/service-areas", "Ontario Coverage"],
+  ["/about", "Our Story"],
   ["/contact", "Contact"],
 ];
 export function Header() {
@@ -37,8 +37,8 @@ export function Header() {
               <Icon name="mail" size={17} />
               {contact.email}
             </a>
-            <Link href="/contact#quote" className="btn small">
-              Get a Quote <Icon name="arrow" size={18} />
+            <Link href="/contact?service=freight#quote" className="btn small">
+              Get a Quote
             </Link>
             <button
               className="menu-toggle"
@@ -71,8 +71,8 @@ export function Header() {
         <a href={`mailto:${contact.email}`}>
           <Icon name="mail" size={18} /> Email KWC
         </a>
-        <Link href="/contact#quote">
-          Get a Quote <Icon name="arrow" size={18} />
+        <Link href="/contact?service=freight#quote">
+          Get a Quote
         </Link>
       </div>
     </>

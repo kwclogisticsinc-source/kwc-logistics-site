@@ -1,8 +1,7 @@
 "use client";
 import { useState, type FormEvent } from "react";
-import { Icon } from "./DeliveryUI";
 export function QuoteEntry() {
-  const [service, setService] = useState("courier");
+  const [service, setService] = useState("freight");
   function start(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const values = new FormData(event.currentTarget);
@@ -17,8 +16,7 @@ export function QuoteEntry() {
   return (
     <form action="/contact" onSubmit={start} className="quote-entry">
       <div className="entry-heading">
-        <span className="eyebrow">LET’S START WITH YOUR ROUTE</span>
-        <strong>What’s moving?</strong>
+        <strong>Get a quote for your route</strong>
       </div>
       <div className="entry-fields">
         <label>
@@ -52,7 +50,7 @@ export function QuoteEntry() {
           />
         </label>
         <button className="btn" type="submit">
-          Request a Quote <Icon name="arrow" size={19} />
+          Start My Quote
         </button>
       </div>
       <p>No account needed. We’ll confirm the details and price with you.</p>

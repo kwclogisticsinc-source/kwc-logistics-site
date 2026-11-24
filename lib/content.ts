@@ -4,26 +4,14 @@ export const contact = {
 };
 export const categories = [
   {
-    id: "courier",
-    title: "KWC Courier",
-    action: "Send a package",
-    short: "A little package. A big priority.",
-    description:
-      "Documents, parcels and customer orders. From a one-off pickup to your everyday deliveries.",
-    image: "/images/courier-hero.webp",
-    alt: "Illustrative KWC courier handing a parcel to a customer beside a branded cargo van",
-    tags: ["Individuals & businesses", "Local & regional"],
-    href: "/services/courier",
-  },
-  {
     id: "freight",
     title: "Freight & specialized delivery",
     action: "Move freight",
-    short: "More freight. Less complication.",
+    short: "Pallet freight and dedicated trucks",
     description:
       "Pallets, larger shipments and deliveries that need the right equipment or a little extra handling.",
-    image: "/images/freight-delivery.webp",
-    alt: "Illustrative pallet and tailgate delivery at a commercial receiving area",
+    image: "/images/kwc-local-delivery.webp",
+    alt: "Illustrative liftgate delivery from a straight truck at a local receiving entrance",
     tags: ["Pallets & truckloads", "Handling by arrangement"],
     href: "/services/freight",
   },
@@ -31,13 +19,25 @@ export const categories = [
     id: "regular",
     title: "Logistics management",
     action: "Arrange regular deliveries",
-    short: "Your deliveries. Working together.",
+    short: "Regular routes and store replenishment",
     description:
       "Recurring routes, regional distribution and Canada/U.S. road freight with one point of contact.",
     image: "/images/business-pickup.webp",
     alt: "Illustrative courier collecting packaged orders from a small business",
     tags: ["Recurring routes", "Canada/U.S. road freight"],
     href: "/services/logistics",
+  },
+  {
+    id: "courier",
+    title: "KWC Courier",
+    action: "Send a package",
+    short: "Local courier and parcel delivery",
+    description:
+      "Documents, parcels and customer orders. From a one-off pickup to your everyday deliveries.",
+    image: "/images/courier-hero.webp",
+    alt: "Illustrative KWC courier handing a parcel to a customer beside a branded cargo van",
+    tags: ["Individuals & businesses", "Local & regional"],
+    href: "/services/courier",
   },
 ] as const;
 export const industries = [

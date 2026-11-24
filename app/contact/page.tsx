@@ -27,20 +27,18 @@ export default async function ContactPage({
   return (
     <>
       <PageIntro
-        eyebrow="LET’S TALK DELIVERY"
-        title="A simple start to your next move."
+        eyebrow="WATERLOO REGION · ONTARIO FREIGHT"
+        title="Request a freight quote."
       >
         <p>
-          One package, a few pallets or an ongoing delivery plan. Tell us what
-          you need—we’ll help with the details.
+          Tell us what you’re shipping and where it’s going. We’ll review the details and follow up with your options.
         </p>
       </PageIntro>
       <div className="wrap contact-layout">
         <aside className="contact-aside">
-          <h2>People. Not a maze of menus.</h2>
+          <h2>Talk to KWC Logistics.</h2>
           <p>
-            Prefer to talk it through? Reach KWC directly. You don’t need to
-            know the right vehicle or every freight term.
+            Send us your pickup and delivery locations, shipment details and timing.
           </p>
           <a href={`mailto:${contact.email}`} className="contact-method">
             <Icon name="mail" />

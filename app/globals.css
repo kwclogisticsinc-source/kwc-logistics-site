@@ -1927,3 +1927,291 @@ ul.freight-grid {
   padding: 0;
   list-style: none;
 }
+
+/* Straight-truck redesign */
+:root {
+  --ink: #142b40;
+  --blue: #134f95;
+  --pale: #edf4fa;
+  --muted: #4d6072;
+  --line: #d4e0e8;
+}
+
+.wrap {
+  max-width: 1280px;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  min-height: 80px;
+}
+
+.desktop-nav {
+  font-size: 15px;
+  gap: clamp(16px, 2.3vw, 34px);
+}
+
+.site-header .btn,
+.local-home .btn {
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.page-intro {
+  width: 100%;
+  max-width: none;
+  padding: clamp(2.5rem, 6vw, 5rem) max(5vw, calc((100% - 1152px) / 2));
+  background: var(--pale);
+  border-block-end: 1px solid var(--line);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.site-footer {
+  background: #edf4fa;
+}
+
+.local-hero {
+  background: #142b40;
+  padding-block: clamp(1.75rem, 4.5vw, 4.5rem);
+}
+
+.local-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.83fr) minmax(0, 1.17fr);
+  gap: clamp(1.75rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.local-hero h1 {
+  color: #fff;
+  font-size: clamp(2.5rem, 4.8vw, 4.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+  max-width: 13ch;
+}
+
+.local-hero-copy > p {
+  color: #d8e6f2;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  max-width: 45ch;
+}
+
+.local-hero-copy > .eyebrow {
+  color: #bed7ef;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+}
+
+.local-hero h1 + p,
+.local-hero .button-row,
+.local-contact .button-row {
+  margin-top: 1.4rem;
+}
+
+.local-hero .btn:first-child,
+.local-contact .btn:first-child {
+  color: #102e50;
+  background: #e4f0ff;
+}
+
+.local-hero .btn:first-child:hover,
+.local-contact .btn:first-child:hover {
+  background: #fff;
+}
+
+.local-hero .btn.secondary,
+.local-contact .btn.secondary {
+  color: #fff;
+  background: transparent;
+  border-color: #adc2d5;
+}
+
+.local-hero .btn.secondary:hover,
+.local-contact .btn.secondary:hover {
+  background: #ffffff18;
+}
+
+.local-truck,
+.local-delivery {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #cbd5dc;
+}
+
+.local-truck > img,
+.local-delivery > img {
+  object-fit: cover;
+}
+
+.local-truck figcaption,
+.local-delivery figcaption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.3rem 0.6rem;
+  color: white;
+  background: #142b40e6;
+  font-size: 0.75rem;
+}
+
+.local-quote {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.local-quote .quote-entry {
+  background: var(--pale);
+  border-radius: 8px;
+}
+
+.local-quote .entry-heading strong {
+  font-size: 1.35rem;
+}
+
+.local-quote .entry-fields label,
+.local-quote .quote-entry > p {
+  font-size: 0.875rem;
+}
+
+.local-quote .entry-fields input,
+.local-quote .entry-fields select {
+  font-size: 1rem;
+  background: #fff;
+}
+
+.local-section {
+  padding-block: clamp(2.75rem, 6vw, 5.5rem);
+}
+
+.local-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.local-services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.local-services article {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.local-services svg,
+.local-industries svg {
+  color: var(--blue);
+}
+
+.local-services h3 {
+  margin-block: 0.85rem 0.6rem;
+}
+
+.local-services h3 a:hover {
+  text-decoration: underline;
+}
+
+.local-business {
+  background: var(--pale);
+}
+
+.local-business-grid,
+.local-network {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+}
+
+.local-business h2 + p,
+.local-network p,
+.local-contact p {
+  margin-top: 1rem;
+}
+
+.local-industries {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .55rem;
+  padding: 0;
+  margin: 1.2rem 0 .5rem;
+  list-style: none;
+}
+
+.local-industries li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.local-network .ontario-map {
+  margin: 0;
+}
+
+.local-contact {
+  background: #142b40;
+}
+
+.local-contact h2,
+.local-contact p {
+  color: #fff;
+}
+
+@media (max-width: 840px) {
+  .local-hero-grid,
+  .local-business-grid,
+  .local-network {
+    grid-template-columns: 1fr;
+  }
+
+  .local-hero h1 {
+    max-width: 17ch;
+  }
+
+  .local-quote .entry-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .local-services,
+  .local-quote .entry-fields,
+  .local-industries {
+    grid-template-columns: 1fr;
+  }
+
+  .local-hero .button-row .btn {
+    flex: 1 1 100%;
+  }
+}
+
+.service-card,
+.capability-grid article,
+.freight-grid > * {
+  border-radius: 6px;
+}
+
+.service-body h3 {
+  font-size: 1.35rem;
+}
+
+.service-body p,
+.capability-grid p,
+.article-copy p {
+  font-size: 1rem;
+}
+
+.content-section .article-copy h2:first-child {
+  margin-top: 0;
+}

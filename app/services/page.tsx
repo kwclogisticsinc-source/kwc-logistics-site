@@ -10,12 +10,11 @@ export default function Services() {
   return (
     <>
       <PageIntro
-        eyebrow="YOUR SHIPMENT. THE RIGHT SERVICE."
-        title="Small parcel to full truckload."
+        eyebrow="KITCHENER · WATERLOO · CAMBRIDGE"
+        title="Straight trucks, pallet freight and regular routes."
       >
         <p>
-          Choose a starting point. We’ll help match the route, equipment and
-          handling to what you actually need.
+          Tell us where your freight needs to go, what you’re moving and how often. We’ll help select a truck or service that suits your route and budget.
         </p>
       </PageIntro>
       <section className="wrap content-section">

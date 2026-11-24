@@ -11,20 +11,18 @@ export default function About() {
   return (
     <>
       <PageIntro
-        eyebrow="KITCHENER IS OUR STARTING POINT"
-        title="Local people. A wider view of logistics."
+        eyebrow="KITCHENER, ONTARIO · FOUNDED IN 2022"
+        title="We started in Kitchener in 2022."
       >
         <p>
-          Packages, pallets and recurring deliveries—with a practical plan and a
-          person to talk to.
+          We help local businesses move pallets, book straight trucks and set up regular delivery routes across Ontario.
         </p>
       </PageIntro>
       <section className="wrap content-section">
         <div className="article-copy story-copy">
           <h2>Our story</h2>
           <p>
-            KWC Logistics started with a simple belief: smaller businesses
-            should have access to transportation that helps them grow.
+            We founded KWC Logistics so smaller businesses could get practical transportation as they grew.
           </p>
           <p>
             Our founder, <strong>Jay Sandhu</strong>, built his experience in
