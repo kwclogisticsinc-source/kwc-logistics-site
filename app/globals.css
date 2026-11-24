@@ -199,24 +199,12 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 9px;
+  flex-shrink: 0;
 }
 .brand img {
-  width: 65px;
-  height: 65px;
+  width: 96px;
+  height: 76px;
   object-fit: contain;
-}
-.brand > span {
-  font-size: 29px;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 1;
-}
-.brand > span > span {
-  display: block;
-  letter-spacing: 0.17em;
-  font-size: 9px;
-  margin-top: 7px;
 }
 .desktop-nav {
   display: flex;
@@ -1305,11 +1293,8 @@ img {
     min-height: 78px;
   }
   .brand img {
-    height: 54px;
-    width: 54px;
-  }
-  .brand > span {
-    font-size: 26px;
+    width: 84px;
+    height: 64px;
   }
   .desktop-nav {
     display: none;
@@ -1482,20 +1467,6 @@ img {
   .header-inner {
     min-height: 75px;
     gap: 10px;
-  }
-  .brand {
-    gap: 3px;
-  }
-  .brand img {
-    width: 45px;
-    height: 45px;
-  }
-  .brand > span {
-    font-size: 23px;
-  }
-  .brand > span > span {
-    font-size: 7px;
-    letter-spacing: 0.12em;
   }
   .header-actions .btn {
     display: none;
