@@ -97,7 +97,15 @@ export function Header() {
         </Link>
         <nav aria-label="Main navigation" id="project-navigation" className={`desktop-nav kwc-navigation${mobile ? " is-open" : ""}`}>
           {navigation.map(({ label, links }, index) => (
-            <div className="kwc-nav-group" key={label}>
+            <div
+              className="kwc-nav-group"
+              key={label}
+              onBlur={(event) => {
+                if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) {
+                  setGroup((openGroup) => openGroup === label ? null : openGroup);
+                }
+              }}
+            >
               <button
                 className="kwc-nav-trigger"
                 type="button"
