@@ -33,8 +33,8 @@ const services = [
   },
   {
     icon: "truck",
-    title: "B2B bulk parcel delivery",
-    copy: "Move batches of business parcels in a cargo van, with scheduled pickups and multiple delivery stops.",
+    title: "B2B bulk package delivery",
+    copy: "Move batches of business packages in a cargo van, with scheduled pickups and multiple delivery stops.",
     href: "/services/courier",
   },
   {
@@ -62,8 +62,8 @@ export default function Home() {
     <div className="local-home">
       <section className="local-hero july-hero">
         <Image
-          src="/images/kwc-yard-fleet.png"
-          alt="Illustrative KWC-branded fleet in an Ontario logistics yard"
+          src="/images/kwc-waterloo-straight-truck.webp"
+          alt="Illustrative Freightliner straight truck with the KWC blue horse door logo at an Ontario loading dock"
           fill
           priority
           sizes="100vw"
@@ -71,15 +71,20 @@ export default function Home() {
         />
         <div className="wrap july-hero-inner">
           <div className="local-hero-copy">
-            <p className="eyebrow">Local Roots. Limitless Reach.</p>
-            <h1>Your Local Partner for Final-Mile Delivery &amp; LTL Freight.</h1>
-            <p>From a single pallet to recurring commercial deliveries, KWC Logistics provides flexible transportation solutions across Kitchener, Waterloo, Cambridge, Ontario and North America.</p>
+            <p className="eyebrow">Kitchener · Waterloo · Cambridge</p>
+            <h1>Built locally. Driven further.</h1>
+            <p>Freight, final-mile delivery and dedicated transportation built around your business. From a single pallet to recurring regional deliveries, we make logistics personal, practical and accessible.</p>
             <div className="button-row">
               <Link href="/contact?service=freight#quote" className="btn">Get a Freight Quote</Link>
-              <Link href="/regular-deliveries#quote" className="btn secondary">Discuss Regular Deliveries</Link>
+              <Link href="/regular-deliveries#quote" className="btn secondary">Plan My Deliveries</Link>
             </div>
+            <ul className="project-hero-facts">
+              <li>Established 2022</li>
+              <li>Waterloo Region based</li>
+              <li>Ontario focused</li>
+            </ul>
           </div>
-          <p className="july-hero-caption">Illustrative KWC fleet and loading yard</p>
+          <p className="july-hero-caption">Illustrative truck and loading facility</p>
         </div>
       </section>
 
@@ -118,19 +123,37 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="project-equipment" aria-labelledby="equipment-title">
+        <div className="wrap local-section project-equipment-grid">
+          <figure className="local-delivery">
+            <Image src="/images/kwc-straight-trucks-dock-1400.webp" alt="Illustrative straight trucks at an Ontario loading dock" fill sizes="(max-width: 840px) 100vw, 55vw" />
+            <figcaption>Illustrative straight trucks at a loading dock</figcaption>
+          </figure>
+          <div>
+            <h2 id="equipment-title">The right truck for the job.</h2>
+            <dl className="project-equipment-list">
+              <div><dt>KWC straight-truck capacity</dt><dd>Dry pallet freight and tailgate service for stores and other stops without a loading dock. We confirm vehicle size, access and liftgate limits before booking.</dd></div>
+              <div><dt>Cargo van routes</dt><dd>Bulk packages, supplier collections and multi-stop distribution for business customers.</dd></div>
+              <div><dt>Qualified partner capacity</dt><dd>Refrigerated freight, full truckloads and specialized equipment, subject to availability and shipment requirements.</dd></div>
+            </dl>
+            <Link className="text-link" href="/services">Explore equipment and services</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="local-business">
         <div className="wrap local-section local-business-grid">
           <figure className="local-delivery">
-            <Image src="/images/kwc-straight-trucks-dock.png" alt="Illustrative KWC straight trucks at loading docks" fill sizes="(max-width: 840px) 100vw, 48vw" />
-            <figcaption>Illustrative straight trucks at a loading dock</figcaption>
+            <Image src="/images/kwc-warehouse-crossdock-1400.webp" alt="Illustrative warehouse with pallet freight staged for delivery" fill sizes="(max-width: 840px) 100vw, 48vw" />
+            <figcaption>Illustrative warehouse and staged freight</figcaption>
           </figure>
           <div>
             <h2>Big Reach for Small Businesses.</h2>
             <p>You can get products to customers without running your own truck or transportation department. Start with a single pallet, ask about shared capacity where available, or set up regular store replenishment as you grow.</p>
             <ul className="local-industries">
-              {industries.slice(0, 4).map(([title]) => <li key={title}><Icon name="check" size={18} />{title}</li>)}
+              {industries.slice(0, 4).map(([title, description]) => <li key={title}><strong>{title}</strong><p>{description}</p></li>)}
             </ul>
-            <Link href="/services/ltl-freight" className="text-link">See how pallet shipping works</Link>
+            <Link href="/industries" className="text-link">Explore delivery by industry</Link>
           </div>
         </div>
       </section>
@@ -157,18 +180,53 @@ export default function Home() {
         <CoverageGraphic />
       </section>
 
+      <section className="project-technology">
+        <div className="wrap local-section project-equipment-grid">
+          <div>
+            <h2>Better logistics starts with better information.</h2>
+            <p>Today, our quote form captures the details dispatch needs to check equipment, access and delivery windows. Customers can contact dispatch directly for updates on a confirmed shipment.</p>
+          </div>
+          <div>
+            <h3>What we’re building toward</h3>
+            <p>Digital shipment records, verified delivery milestones and electronic proof of delivery. Better information can help dispatch group compatible freight, plan more efficient routes and reduce paperwork.</p>
+            <Link href="/shipment-updates" className="text-link">Get a shipment update</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="wrap local-section project-equipment-grid">
+        <div>
+          <h2>Small team. Big ambition.</h2>
+          <p>We started in Kitchener in 2022 because good transportation should be within reach of small businesses. Our team brings nine years of logistics and dispatch experience and the local knowledge to plan around real receiving conditions.</p>
+          <Link href="/about" className="text-link">Read our story</Link>
+        </div>
+        <div>
+          <h3>What customers can expect</h3>
+          <p>Direct communication, flexible equipment options and clear pricing before you book. We confirm who is moving your freight and what the delivery includes.</p>
+        </div>
+      </section>
+
       <section className="wrap local-section" aria-labelledby="home-faq">
         <h2 id="home-faq">Freight FAQs</h2>
         <FAQ limit={5} />
       </section>
 
+      <section className="wrap project-recruiting">
+        <div>
+          <h2>Drive with KWC Logistics.</h2>
+          <p>We welcome applications from straight-truck drivers and owner-operators in Waterloo Region and surrounding areas.</p>
+        </div>
+        <Link href="/drive-with-kwc" className="btn secondary">See Driver Opportunities</Link>
+      </section>
+
       <section className="local-contact">
         <div className="wrap local-section">
-          <h2>Tell us about your next shipment.</h2>
+          <h2>Your business has somewhere to go. Let’s get it there.</h2>
           <p>One pallet, a dedicated truck or an ongoing contract. Share the route and we’ll take it from there.</p>
           <div className="button-row">
             <Link href="/contact?service=freight#quote" className="btn">Get a Freight Quote</Link>
-            <a href={`mailto:${contact.email}`} className="btn secondary">Email KWC</a>
+            <a href={`mailto:${contact.email}`} className="btn secondary">Speak with Dispatch</a>
+            <Link href="/customer-registration" className="btn secondary">Register Your Business</Link>
           </div>
         </div>
       </section>

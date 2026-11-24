@@ -115,7 +115,7 @@ export function ContactCTA() {
   return (
     <section className="wrap final-cta">
       <div>
-        <p className="eyebrow">Pallet freight, bulk parcels and scheduled routes</p>
+        <p className="eyebrow">Pallet freight, bulk packages and scheduled routes</p>
         <h2>Let’s get it moving.</h2>
         <p>Tell us what you need. We’ll work through the details together.</p>
       </div>
@@ -157,7 +157,7 @@ export function CoverageGraphic() {
         alt="Ontario freight corridors. Highway 401 links Windsor, London, Waterloo Region, the GTA and Eastern Ontario. Highway 403 links Woodstock, Brantford, Hamilton, Burlington and Mississauga. Highways 416 and 417 connect Ottawa and Quebec."
       />
       <figcaption>
-        Ontario corridor map · schematic, not to scale.{" "}
+        Ontario corridor map · highway paths are approximate.{" "}
         <Link className="text-link" href="/images/ontario-freight-corridors.svg">
           View full-size map
         </Link>

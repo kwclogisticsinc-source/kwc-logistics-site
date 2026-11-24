@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { PageIntro, Icon } from "@/components/DeliveryUI";
 import { QuoteForm } from "@/components/QuoteForm";
 import { contact } from "@/lib/content";
-import { quoteKinds, type QuoteKind } from "@/lib/quote";
+import { quickQuoteTypes, quoteKinds, type QuoteKind } from "@/lib/quote";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request bulk parcel, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
+    "Request bulk package, freight or recurring delivery help from KWC Logistics. Email ship@kwclogistics.ca.",
   alternates: { canonical: "/contact" },
 };
 export default async function ContactPage({
@@ -15,9 +15,10 @@ export default async function ContactPage({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const params = await searchParams;
-  const kind = quoteKinds.some((item) => item.id === params.service)
+  const intent = quickQuoteTypes.find((item) => item.id === params.intent);
+  const kind = intent?.kind ?? (quoteKinds.some((item) => item.id === params.service)
     ? (params.service as QuoteKind)
-    : "freight";
+    : "freight");
   const pickup =
     typeof params.pickup === "string" ? params.pickup.slice(0, 300) : "";
   const destination =
@@ -61,6 +62,8 @@ export default async function ContactPage({
         </aside>
         <QuoteForm
           initialKind={kind}
+          freightService={intent && "freightService" in intent ? intent.freightService : undefined}
+          temperatureRequested={Boolean(intent && "temperature" in intent && intent.temperature)}
           pickup={pickup}
           destination={destination}
         />

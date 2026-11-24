@@ -15,16 +15,22 @@ export function QuoteForm({
   initialKind = "freight",
   pickup = "",
   destination = "",
+  freightService = "",
+  temperatureRequested = false,
 }: {
   initialKind?: QuoteKind;
   pickup?: string;
   destination?: string;
+  freightService?: string;
+  temperatureRequested?: boolean;
 }) {
   const [kind, setKind] = useState<QuoteKind>(initialKind);
   const [step, setStep] = useState(0);
   const [values, setValues] = useState<Record<string, string>>({
     "Pickup Location": pickup,
     "Delivery Location": destination,
+    "Freight Service": freightService,
+    "Temperature Service": temperatureRequested ? "Refrigerated / frozen capacity requested" : "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState("idle");
@@ -122,7 +128,7 @@ export function QuoteForm({
       if (response.ok && result.success === true) {
         setStatus("success");
         setMessage(
-          "Your request has been submitted. KWC will review your details and contact you to confirm availability, service and pricing. This is not a confirmed booking.",
+          `KWC will review your request and contact you to confirm availability, service and pricing. Your shipment is booked once you approve the quote.${typeof result.reference === "string" ? ` Request reference: ${result.reference}` : ""}`,
         );
       } else {
         setStatus("error");

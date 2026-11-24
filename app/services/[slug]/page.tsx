@@ -7,17 +7,17 @@ import { categories, industries } from "@/lib/content";
 import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
 const details = {
   courier: {
-    title: "B2B bulk parcel delivery by cargo van.",
+    title: "B2B bulk package delivery by cargo van.",
     intro:
-      "Move a batch of customer orders in a cargo van. KWC helps businesses collect parcels from a warehouse or shop and deliver them across multiple stops.",
+      "Move a batch of customer orders in a cargo van. KWC helps businesses collect packages from a warehouse or shop and deliver them across multiple stops.",
     groups: [
       [
-        "Bulk parcel loads",
+        "Bulk package loads",
         [
-          "Batches of labelled parcels and packaged orders",
-          "Consolidated pickup of business parcel batches",
+          "Batches of labelled packages and packaged orders",
+          "Consolidated pickup of business package batches",
           "Delivery windows confirmed with your quote",
-          "Cargo van capacity matched to parcel volume",
+          "Cargo van capacity matched to package volume",
         ],
       ],
       [

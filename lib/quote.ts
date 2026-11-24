@@ -1,6 +1,18 @@
 export type QuoteKind = "courier" | "freight" | "regular" | "logistics";
+export const quickQuoteTypes = [
+  { id: "bulk-packages", label: "B2B bulk packages", kind: "courier" },
+  { id: "pallets", label: "Palletized freight", kind: "freight", freightService: "Shared-capacity freight (LTL)" },
+  { id: "bulky", label: "Large or bulky freight", kind: "freight", freightService: "Large or bulky freight" },
+  { id: "refrigerated", label: "Refrigerated freight", kind: "freight", freightService: "Refrigerated freight", temperature: true },
+  { id: "dedicated", label: "Dedicated truck", kind: "freight", freightService: "Dedicated truck" },
+  { id: "regular", label: "Recurring business deliveries", kind: "regular" },
+  { id: "other", label: "Other freight", kind: "freight", freightService: "Help me plan" },
+] as const satisfies readonly {
+  id: string; label: string; kind: QuoteKind; freightService?: string; temperature?: boolean;
+}[];
+
 export const quoteKinds: { id: QuoteKind; label: string; service: string }[] = [
-  { id: "courier", label: "B2B bulk parcels", service: "B2B bulk parcel delivery" },
+  { id: "courier", label: "B2B bulk packages", service: "B2B bulk package delivery" },
   {
     id: "freight",
     label: "Freight",
@@ -16,7 +28,7 @@ export const courierConfig: {
   maxDimensionsCm: [number, number, number] | null;
 } = {
   sizeGuidance:
-    "For business parcel batches, include parcel count, approximate sizes, total weight and delivery stops. We’ll confirm suitable cargo van capacity.",
+    "For business package batches, include package count, approximate sizes, total weight and delivery stops. We’ll confirm suitable cargo van capacity.",
   maxWeightKg: null,
   maxDimensionsCm: null,
 };
@@ -70,6 +82,9 @@ export function fieldsFor(
                 options: [
                   "Shared-capacity freight (LTL)",
                   "Full truckload (FTL)",
+                  "Large or bulky freight",
+                  "Refrigerated freight",
+                  "Dedicated truck",
                   "Expedited road freight",
                   "Final-mile delivery",
                   "Help me plan",
@@ -101,7 +116,7 @@ export function fieldsFor(
             ? "Approximate items per collection"
             : freight
               ? "Pallet or piece count"
-              : "Number of parcels in the batch",
+              : "Number of packages in the batch",
           type: "number",
           required: !recurring,
           min: kind === "courier" ? 2 : 1,
@@ -290,7 +305,7 @@ export function validateQuote(form: FormData) {
   const values: Record<string, string> = {};
   const errors: Record<string, string> = {};
   const submittedService = form.get("Service");
-  const service = submittedService === "Courier delivery" ? "B2B bulk parcel delivery" : submittedService;
+  const service = (submittedService === "Courier delivery" || submittedService === "B2B bulk parcel delivery") ? "B2B bulk package delivery" : submittedService;
   if (
     typeof service !== "string" ||
     !services.includes(service) ||
@@ -330,7 +345,7 @@ export function validateQuote(form: FormData) {
   if (values["Item Count"] && !/^[1-9]\d{0,5}$/.test(values["Item Count"]))
     errors["Item Count"] = "Enter a whole number from 1 to 999999.";
   else if (kind === "courier" && values["Item Count"] === "1")
-    errors["Item Count"] = "Enter the number of parcels in your business shipment. Bulk delivery requires multiple parcels.";
+    errors["Item Count"] = "Enter the number of packages in your business shipment. Bulk delivery requires multiple packages.";
   if (
     values["Delivery Date"] &&
     values["Preferred Date"] &&

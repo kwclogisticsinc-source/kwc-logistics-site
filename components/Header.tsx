@@ -5,16 +5,23 @@ import { contact } from "@/lib/content";
 import { BrandLogo } from "./Logo";
 import { Icon } from "./DeliveryUI";
 const nav = [
-  ["/services", "Freight Services"],
-  ["/service-areas", "Ontario Coverage"],
-  ["/about", "Our Story"],
-  ["/contact", "Contact"],
+  ["/services", "Services"],
+  ["/industries", "Industries"],
+  ["/regular-deliveries", "Business Solutions"],
+  ["/service-areas", "Coverage"],
+  ["/about", "About"],
 ];
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className="site-header">
+      <header className="site-header project-header">
+        <div className="project-utility">
+          <div className="wrap">
+            <span>Waterloo Region, Ontario</span>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </div>
+        </div>
         <div className="wrap header-inner">
           <Link
             href="/"
@@ -32,12 +39,11 @@ export function Header() {
             ))}
           </nav>
           <div className="header-actions">
-            <a href={`mailto:${contact.email}`} className="header-phone">
-              <Icon name="mail" size={17} />
-              {contact.email}
-            </a>
+            <Link href="/shipment-updates" className="shipment-link">
+              Shipment Updates
+            </Link>
             <Link href="/book-now" className="btn small">
-              Book Now
+              Get a Quote
             </Link>
             <button
               className="menu-toggle"
@@ -62,7 +68,7 @@ export function Header() {
                 <Icon name="arrow" size={18} />
               </Link>
             ))}
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <Link href="/shipment-updates" onClick={() => setOpen(false)}>Shipment Updates</Link>
           </nav>
         )}
       </header>
@@ -71,7 +77,7 @@ export function Header() {
           <Icon name="mail" size={18} /> Email KWC
         </a>
         <Link href="/book-now">
-          Book Now
+          Get a Quote
         </Link>
       </div>
     </>

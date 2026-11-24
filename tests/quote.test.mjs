@@ -6,7 +6,7 @@ import { requestPrice } from "../lib/pricing.ts";
 const valid = {
   Name: "Preview Test",
   Email: "sender@example.com",
-  Service: "B2B bulk parcel delivery",
+  Service: "B2B bulk package delivery",
   "Pickup Location": "Kitchener, ON",
   "Delivery Location": "Waterloo, ON",
   "Preferred Date": "2026-11-20",
@@ -284,12 +284,43 @@ test("no unapproved package limits or fabricated prices", async () => {
 });
 
 test("single parcels are rejected for current and older bulk-parcel forms", async () => {
-  for (const Service of ["B2B bulk parcel delivery", "Courier delivery"]) {
+  for (const Service of ["B2B bulk package delivery", "B2B bulk parcel delivery", "Courier delivery"]) {
     const response = await handleQuote(
       req({ ...valid, Service, "Item Count": "1" }),
       deps({ send: async () => assert.fail("Single parcels must not reach dispatch") }),
     );
     assert.equal(response.status, 400);
-    assert.match((await response.json()).errors["Item Count"], /multiple parcels/);
+    assert.match((await response.json()).errors["Item Count"], /multiple packages/);
   }
+});
+
+test("driver application forwards only reviewed fields and a matching reference", async () => {
+  let payload;
+  const response = await handleQuote(
+    req({
+      "Request Type": "driver", Name: "Test Driver", Email: "driver@example.com",
+      "Operating city": "Kitchener", "Application type": "Straight-truck driver",
+      "Experience, equipment and availability": "Weekdays",
+      "Licence number": "must not be forwarded",
+    }),
+    deps({ send: async (_, options) => {
+      payload = JSON.parse(options.body);
+      return Response.json({ success: true });
+    } }),
+  );
+  assert.equal(response.status, 200);
+  const { reference } = await response.json();
+  assert.match(reference, /^KWC-[A-F0-9-]{36}$/);
+  assert.equal(payload["Request Reference"], reference);
+  assert.equal(payload["Licence number"], undefined);
+  assert.match(payload.subject, /Drive with KWC application/);
+});
+
+test("customer requests require company details before reaching dispatch", async () => {
+  const response = await handleQuote(
+    req({ "Request Type": "customer", Name: "Test Customer", Email: "test@example.com" }),
+    deps({ send: async () => assert.fail("Incomplete requests must not be sent") }),
+  );
+  assert.equal(response.status, 400);
+  assert.ok((await response.json()).errors.Company);
 });

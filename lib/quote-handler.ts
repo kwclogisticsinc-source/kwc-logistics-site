@@ -1,3 +1,4 @@
+import { registration, validateRegistration } from "./registration.ts";
 import { validateQuote } from "./quote.ts";
 export type QuoteEnvironment = {
   WEB3FORMS_ACCESS_KEY?: string;
@@ -83,7 +84,14 @@ export async function handleQuote(
       success: false,
       error: "Unable to submit this request.",
     });
-  const { values, errors } = validateQuote(form);
+  const category = form.get("Request Type");
+  if (form.getAll("Request Type").length > 1 ||
+      (category !== null && category !== "customer" && category !== "driver"))
+    return reply(400, { success: false, error: "Choose a valid request type." });
+
+  const { values, errors } = category
+    ? validateRegistration(form, category)
+    : validateQuote(form);
   if (Object.keys(errors).length)
     return reply(400, {
       success: false,
@@ -99,7 +107,7 @@ export async function handleQuote(
       );
       return reply(503, {
         success: false,
-        error: `Online quotes are temporarily unavailable. ${fallback}`,
+        error: `Online requests are temporarily unavailable. ${fallback}`,
       });
     }
     // CF-Connecting-IP is supplied by Cloudflare at the Worker edge.
@@ -112,6 +120,7 @@ export async function handleQuote(
         success: false,
         error: "Too many requests. Please wait a minute before trying again.",
       });
+    const reference = `KWC-${crypto.randomUUID().toUpperCase()}`;
     const response = await dependencies.send(
       "https://api.web3forms.com/submit",
       {
@@ -124,7 +133,10 @@ export async function handleQuote(
         body: JSON.stringify({
           ...values,
           access_key: key,
-          subject: `KWC quote request — ${values.Service}`,
+          subject: category
+            ? `KWC ${registration[category].title} — ${reference}`
+            : `KWC quote request — ${values.Service} — ${reference}`,
+          "Request Reference": reference,
           from_name: "KWC Logistics Website",
           name: values.Name,
           email: values.Email,
@@ -139,7 +151,7 @@ export async function handleQuote(
         error: `We could not confirm your request. ${fallback}`,
       });
     }
-    return reply(200, { success: true });
+    return reply(200, { success: true, reference });
   } catch {
     dependencies.log("quote_delivery_unconfirmed");
     return reply(502, {

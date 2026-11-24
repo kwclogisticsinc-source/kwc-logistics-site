@@ -1,7 +1,9 @@
 "use client";
 import { useState, type FormEvent } from "react";
+import { quickQuoteTypes } from "@/lib/quote";
 export function QuoteEntry() {
-  const [service, setService] = useState("freight");
+  const [intent, setIntent] = useState("pallets");
+  const { kind } = quickQuoteTypes.find(({ id }) => id === intent) ?? quickQuoteTypes[1];
   function start(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const values = new FormData(event.currentTarget);
@@ -10,7 +12,7 @@ export function QuoteEntry() {
       destination: String(values.get("destination") ?? ""),
     });
     window.location.assign(
-      `/contact?service=${service}#quote&${route.toString()}`,
+      `/contact?service=${kind}&intent=${intent}#quote&${route.toString()}`,
     );
   }
   return (
@@ -22,17 +24,15 @@ export function QuoteEntry() {
         <label>
           Delivery type
           <select
-            name="service"
-            value={service}
-            onChange={(e) => setService(e.target.value)}
+            name="intent"
+            value={intent}
+            onChange={(e) => setIntent(e.target.value)}
           >
-            <option value="courier">B2B bulk parcels</option>
-            <option value="freight">Pallets or larger freight</option>
-            <option value="regular">Regular deliveries</option>
+            {quickQuoteTypes.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
           </select>
         </label>
         <label>
-          {service === "regular" ? "Pickup area" : "Pickup city or postal code"}
+          {kind === "regular" ? "Pickup area" : "Pickup city or postal code"}
           <input
             name="pickup"
             placeholder="e.g. Kitchener, ON"
@@ -40,7 +40,7 @@ export function QuoteEntry() {
           />
         </label>
         <label>
-          {service === "regular"
+          {kind === "regular"
             ? "Delivery regions"
             : "Destination city or postal code"}
           <input

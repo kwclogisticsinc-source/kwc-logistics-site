@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageIntro } from "@/components/DeliveryUI";
 import { QuoteForm } from "@/components/QuoteForm";
 import { contact } from "@/lib/content";
@@ -19,6 +20,7 @@ export default function RegularDeliveries() {
         <aside className="contact-aside">
           <h2>Plan your regular route</h2>
           <p>Include supplier pickups, store stops, dock or tailgate access, and any returns you need picked up along the way.</p>
+          <p><Link className="text-link" href="/customer-registration">Register your business</Link></p>
           <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a>
         </aside>
         <QuoteForm initialKind="regular" />

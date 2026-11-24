@@ -3,9 +3,9 @@ import { commercialServices } from "@/lib/commercial-services";
 import type { Metadata } from "next";
 import { ContactCTA, PageIntro, ServiceCards } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
-  title: "Bulk Parcel, Freight & Logistics Services",
+  title: "Bulk Package, Freight & Logistics Services",
   description:
-    "Explore business bulk parcel delivery, pallet freight and recurring transportation routes.",
+    "Explore business bulk package delivery, pallet freight and recurring transportation routes.",
   alternates: { canonical: "/services" },
 };
 export default function Services() {

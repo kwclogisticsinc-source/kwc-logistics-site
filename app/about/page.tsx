@@ -12,7 +12,7 @@ export default function About() {
     <>
       <PageIntro
         eyebrow="KITCHENER, ONTARIO · FOUNDED IN 2022"
-        title="We started in Kitchener in 2022."
+        title="Small team. Big ambition."
       >
         <p>
           We help local businesses move pallets, book straight trucks and set up regular delivery routes across Ontario.
@@ -33,6 +33,11 @@ export default function About() {
             We operate straight-truck capacity with tailgate service and work
             with qualified transportation partners for additional equipment and
             broader coverage.
+          </p>
+          <p>
+            The galloping horse represents strength, speed and the conviction
+            to keep moving. For us, success means helping a local shop reach
+            more customers and giving businesses a reliable way to ship as they grow.
           </p>
           <p>
             From a single shipment to a recurring delivery route, we start by
