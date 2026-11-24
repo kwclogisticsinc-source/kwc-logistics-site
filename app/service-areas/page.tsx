@@ -1,68 +1,51 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ContactCTA,
-  CoverageGraphic,
-  PageIntro,
-} from "@/components/DeliveryUI";
+import { CoverageGraphic, PageIntro } from "@/components/DeliveryUI";
+import { coverageCopy, coverageTitle, lanes, regions, services } from "@/lib/ontario";
+import { freightPages } from "@/lib/freight-pages";
+
 export const metadata: Metadata = {
-  title: "KWC & Ontario Delivery Coverage",
-  description:
-    "Local courier in Kitchener, Waterloo and Cambridge. Ontario service corridors and Canada/U.S. road freight through carrier partners.",
+  title: "Ontario Freight Coverage | Highways 401 and 403",
+  description: "KWC Logistics connects Waterloo Region, the GTA, Southwestern Ontario and Eastern Ontario through Highways 401, 403, 416 and 417.",
   alternates: { canonical: "/service-areas" },
 };
+
 export default function Coverage() {
   return (
     <>
-      <PageIntro
-        eyebrow="CLOSE TO HOME. CONNECTED BEYOND."
-        title="Start in KWC. Go from there."
-      >
-        <p>
-          Local courier delivery comes first. For regional shipments and wider
-          road freight, we work through the route, timing and suitable capacity
-          with you.
-        </p>
+      <PageIntro eyebrow="ONTARIO REGIONAL TRANSPORTATION" title={coverageTitle}>
+        {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </PageIntro>
-      <section className="wrap content-section">
-        <div className="split-section">
-          <CoverageGraphic />
-          <div className="article-copy">
-            <h2>Know which kind of coverage you need.</h2>
-            <p>
-              <strong>Local courier:</strong> Kitchener, Waterloo and Cambridge,
-              for packages, supplier pickups and customer deliveries.
-            </p>
-            <p>
-              <strong>Regional arrangements:</strong> KWC ↔ GTA, KWC ↔
-              Niagara, KWC ↔ London ↔ Windsor, and KWC ↔ Ottawa, arranged
-              around shipment and receiving requirements.
-            </p>
-            <p>
-              <strong>Wider road freight:</strong> Suitable carrier partners for
-              Canada/U.S. lanes and the equipment your freight requires.
-            </p>
+      <div className="wrap content-section article-copy">
+        <CoverageGraphic />
+        <section>
+          <h2>Ontario regions we serve</h2>
+          <div className="freight-grid">
+            {regions.map(([name, cities]) => <article key={name}><h3>{name}</h3><p>{cities}</p></article>)}
           </div>
+        </section>
+        <section>
+          <h2>Freight lanes in both directions</h2>
+          <div className="freight-grid">
+            {lanes.map((lane) => <div key={lane}>{lane}</div>)}
+          </div>
+          <p>We confirm pickup and delivery timing, equipment and capacity for each shipment or recurring route. Extended Canada-wide and Canada–USA coverage is arranged through qualified transportation partners.</p>
+        </section>
+        <section>
+          <h2>Commercial transportation services</h2>
+          <ul className="freight-grid">{services.map((service) => <li key={service}>{service}</li>)}</ul>
+        </section>
+        <section>
+          <h2>Freight guides by lane and service</h2>
+          <ul className="freight-grid">
+            {freightPages.map(({ slug, title }) => <li key={slug}><Link className="text-link" href={`/service-areas/${slug}`}>{title}</Link></li>)}
+          </ul>
+        </section>
+        <div className="button-row">
+          <Link href="/contact?service=freight#quote" className="btn">Request a Freight Quote</Link>
+          <Link href="/contact?service=regular#quote" className="btn secondary">Discuss a Recurring Contract</Link>
         </div>
-        <div className="article-copy">
-          <h2>The corridors behind the connections.</h2>
-          <p>
-            Highway 401 connects Waterloo Region with the GTA to the east and
-            London and Windsor to the west. Highway 403 connects the
-            Woodstock/Brantford corridor with Hamilton and the QEW for Niagara.
-            Ottawa routes can use Highway 401 east and Highway 416 north.
-          </p>
-          <p>
-            This is a corridor guide, not a schedule or promise of daily
-            service. Pickup and delivery timing, capacity and any transfer
-            arrangements are confirmed with your quote.
-          </p>
-          <Link className="text-link" href="/contact#quote">
-            Ask about your route →
-          </Link>
-        </div>
-      </section>
-      <ContactCTA />
+      </div>
     </>
   );
 }

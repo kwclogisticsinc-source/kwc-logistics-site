@@ -1,3 +1,4 @@
+import { coverageCopy, coverageTitle } from "@/lib/ontario";
 import Image from "next/image";
 import Link from "next/link";
 import { contact, industries } from "@/lib/content";
@@ -15,35 +16,33 @@ export default function Home() {
       <section className="hero wrap">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="live-dot" /> FROM KITCHENER. FOR YOUR NEXT MOVE.
+            <span className="live-dot" /> WATERLOO REGION HEADQUARTERS · EST. 2022
           </p>
           <h1>
-            Your next delivery.
+            Ontario freight.
             <br />
-            <em>Made simple.</em>
+            <em>Built around your route.</em>
           </h1>
           <p className="hero-description">
-            Packages, pallets, and regular delivery routes. Across
-            Kitchener–Waterloo–Cambridge and Ontario, with road freight
-            coordination throughout Canada and the U.S.
+            Affordable pallet freight, dedicated trucks and recurring commercial deliveries along Highways 401 and 403. Based in Kitchener–Waterloo–Cambridge, serving Ontario from Windsor to Ottawa.
           </p>
           <div className="button-row">
-            <Link href="/contact#quote" className="btn">
-              Get a Quote <Icon name="arrow" size={20} />
+            <Link href="/contact?service=freight#quote" className="btn">
+              Get a Freight Quote
             </Link>
-            <a href={`mailto:${contact.email}`} className="btn secondary">
-              Email Us <Icon name="mail" size={18} />
-            </a>
+            <Link href="/contact?service=regular#quote" className="btn secondary">
+              Plan a Recurring Route
+            </Link>
           </div>
           <div className="hero-note">
             <Icon name="check" size={18} />
-            <span>One package? You’re in the right place.</span>
+            <span>One pallet or an ongoing commercial contract.</span>
           </div>
         </div>
         <div className="hero-visual">
           <Image
-            src="/images/courier-hero.webp"
-            alt="Illustrative KWC courier handing a parcel to a customer beside a branded cargo van"
+            src="/images/freight-delivery.webp"
+            alt="Illustrative pallet delivery at a commercial receiving area"
             fill
             priority
             sizes="(max-width: 800px) 100vw, 52vw"
@@ -53,8 +52,8 @@ export default function Home() {
               <Icon name="box" />
             </span>
             <div>
-              <strong>Small parcel. Big possibility.</strong>
-              <span>Local delivery, with a human touch.</span>
+              <strong>Pallet freight and store deliveries</strong>
+              <span>Highway 401 and Highway 403 corridors</span>
             </div>
           </div>
           <span className="photo-caption">Illustrative brand photography</span>
@@ -67,20 +66,28 @@ export default function Home() {
         <span>{contact.slogan}</span>
         <span>Local expertise. North American reach. Smarter logistics.</span>
       </div>
+      <section className="section coverage-section">
+        <div className="wrap">
+          <div className="article-copy">
+            <h2>{coverageTitle}</h2>
+            {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <Link href="/service-areas" className="text-link">
+              Explore Ontario regions and freight lanes
+            </Link>
+          </div>
+          <CoverageGraphic />
+        </div>
+      </section>
       <section className="section wrap" id="services">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">THREE WAYS TO GET MOVING</p>
+            <p className="eyebrow">TRANSPORTATION SERVICES</p>
             <h2>
-              Whatever you’re sending,
-              <br />
-              start here.
+              Commercial deliveries across Ontario
             </h2>
           </div>
           <p>
-            From your front door to the receiving dock.
-            <br />
-            Choose what fits. We’ll help with the rest.
+            Move a single pallet, book dedicated transportation or arrange recurring distribution for multiple locations.
           </p>
         </div>
         <ServiceCards />
@@ -164,41 +171,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="section coverage-section">
-        <div className="wrap split-section">
-          <div className="split-copy">
-            <p className="eyebrow">LOCAL START. WIDER POSSIBILITIES.</p>
-            <h2>
-              At home in KWC.
-              <br />
-              Connected beyond it.
-            </h2>
-            <p>
-              Local courier delivery in Kitchener, Waterloo and Cambridge.
-              Regional delivery arrangements along Ontario’s business corridors.
-              Suitable carrier partners for Canada/U.S. road freight.
-            </p>
-            <div className="coverage-key">
-              <span>
-                <i />
-                Local courier
-              </span>
-              <span>
-                <i />
-                Regional arrangements
-              </span>
-              <span>
-                <i />
-                Partner road freight
-              </span>
-            </div>
-            <Link href="/service-areas" className="text-link">
-              Explore our coverage <Icon name="arrow" />
-            </Link>
-          </div>
-          <CoverageGraphic />
-        </div>
-      </section>
       <section className="section wrap consolidation">
         <div className="section-heading">
           <div>
@@ -243,7 +215,7 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">REAL DELIVERIES. EVERYDAY BUSINESSES.</p>
-              <h2>Made for the work you do.</h2>
+              <h2>Experience with commercial deliveries.</h2>
             </div>
             <Link href="/industries" className="text-link">
               More industry examples <Icon name="arrow" />

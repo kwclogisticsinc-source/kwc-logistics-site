@@ -152,33 +152,19 @@ export function PageIntro({
 }
 export function CoverageGraphic() {
   return (
-    <div
-      className="corridor-graphic"
-      aria-label="Service corridor diagram, not a geographic map"
-    >
-      <div className="graphic-label">
-        OUR ONTARIO CONNECTIONS <span>Corridor guide · not to scale</span>
-      </div>
-      <div className="kwc-hub">
-        <Icon name="pin" />
-        <strong>Kitchener · Waterloo · Cambridge</strong>
-        <span>Our local starting point</span>
-      </div>
-      <div className="corridor-branches">
-        {[
-          ["GTA", "401 east"],
-          ["Niagara Region", "403 / QEW connections"],
-          ["London → Windsor", "401 west"],
-          ["Ottawa", "401 east / 416 north"],
-        ].map(([city, route]) => (
-          <div key={city}>
-            <span className="route-dot" />
-            <strong>{city}</strong>
-            <small>{route}</small>
-          </div>
-        ))}
-      </div>
-      <p>Routes arranged around your shipment and receiving requirements.</p>
-    </div>
+    <figure className="ontario-map">
+      <Image
+        src="/images/ontario-freight-corridors.svg"
+        width={920}
+        height={470}
+        alt="Ontario freight corridors. Highway 401 links Windsor, London, Waterloo Region, the GTA and Eastern Ontario. Highway 403 links Woodstock, Brantford, Hamilton, Burlington and Mississauga. Highways 416 and 417 connect Ottawa and Quebec."
+      />
+      <figcaption>
+        Ontario corridor map · schematic, not to scale.{" "}
+        <Link className="text-link" href="/images/ontario-freight-corridors.svg">
+          View full-size map
+        </Link>
+      </figcaption>
+    </figure>
   );
 }

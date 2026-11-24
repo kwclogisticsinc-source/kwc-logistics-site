@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+<title id="title">Southern and Eastern Ontario freight coverage</title>
+<desc id="desc">Highway 401 runs from Windsor through London, the GTA and Kingston to Cornwall. Highway 403 connects Woodstock, Brantford, Hamilton, Burlington and Mississauga. Highways 416 and 417 connect the eastern corridor with Ottawa and Quebec.</desc>
+<rect width="920" height="470" rx="22" fill="#e2eef7"/>
+<path d="M10 36H910V147L852 157 806 151 746 180 709 221 653 238 608 236 565 250 525 285 458 295 412 313 426 336 461 331 476 345 462 369 410 383 356 368 300 398 224 419 168 425 113 439 46 427 68 399 120 365 172 350 190 322 169 295 136 288 120 262 135 235 171 207 188 166 154 155 139 117 151 85 139 65 97 72 70 102 10 108Z" fill="#f8fbfe"/>
+<g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M68 416L125 400 196 368 250 335 300 306 335 285 385 274 425 263 471 254 515 233 565 218 608 214 656 210 708 200 747 183 788 167 823 153" stroke="#1b58ac"/>
+<path d="M300 306L339 320 378 318 405 295 425 263" stroke="#007678"/>
+<path d="M790 166L780 137 762 110 760 80 801 97 852 118 890 124" stroke="#8052a1" stroke-dasharray="9 9"/>
+</g>
+<g fill="#fff" stroke="#102844" stroke-width="3">
+<circle cx="68" cy="416" r="5"/><circle cx="250" cy="335" r="5"/><circle cx="300" cy="306" r="5"/><circle cx="339" cy="320" r="5"/><circle cx="378" cy="318" r="5"/><circle cx="405" cy="295" r="5"/><circle cx="425" cy="263" r="5"/><circle cx="471" cy="254" r="5"/><circle cx="608" cy="214" r="5"/><circle cx="708" cy="200" r="5"/><circle cx="747" cy="183" r="5"/><circle cx="823" cy="153" r="5"/><circle cx="760" cy="80" r="5"/>
+<circle cx="335" cy="285" r="11" fill="#1b58ac" stroke="#fff" stroke-width="4"/><circle cx="369" cy="254" r="5"/><circle cx="448" cy="350" r="5"/>
+</g>
+<g font-family="system-ui,sans-serif" font-weight="650" font-size="15" fill="#102844" stroke="#f8fbfe" stroke-width="4" paint-order="stroke">
+<text x="43" y="446">Windsor</text><text x="214" y="362">London</text><text x="225" y="305">Woodstock</text>
+<text x="301" y="345">Brantford</text><text x="370" y="343">Hamilton</text><text x="410" y="315">Burlington</text>
+<text x="447" y="286">Mississauga</text><text x="457" y="233">Toronto / GTA</text>
+<text x="190" y="268">Waterloo Region HQ</text><text x="345" y="235">Guelph</text><text x="455" y="370">Niagara</text>
+<text x="576" y="197">Belleville</text><text x="676" y="226">Kingston</text><text x="708" y="161">Brockville</text>
+<text x="809" y="180">Cornwall</text><text x="727" y="63">Ottawa</text><text x="799" y="95">To Montréal</text>
+</g>
+<g font-family="system-ui,sans-serif" font-size="17" font-weight="700">
+<text x="85" y="185" fill="#1b58ac">━  Highway 401</text><text x="85" y="212" fill="#007678">━  Highway 403</text><text x="85" y="239" fill="#8052a1">┄  Highways 416 / 417</text>
+</g>
+<text x="554" y="290" font-family="system-ui,sans-serif" font-size="18" fill="#3b6481">Lake Ontario</text>
+</svg>

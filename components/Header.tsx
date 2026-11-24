@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { contact } from "@/lib/content";
+import blueHorseLogo from "@/public/images/kwc-galloping-horse.png";
 import { Icon } from "./DeliveryUI";
 const nav = [
   ["/services", "Services"],
@@ -22,16 +23,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="brand"
           >
-            <Image
-              src="/images/kwc-logo-transparent.png"
-              alt="KWC Logistics"
-              width={90}
-              height={90}
-              priority
-            />
-            <span>
-              KWC<span>LOGISTICS INC.</span>
-            </span>
+            <Image src={blueHorseLogo} alt="" priority />
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {nav.map(([url, label]) => (
