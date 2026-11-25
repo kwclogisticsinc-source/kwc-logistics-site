@@ -20,8 +20,8 @@ const featuredServices = [
   {
     title: "Final-mile liftgate delivery",
     href: "/services/tailgate-delivery",
-    image: "/images/kwc-liftgate-storefront.webp",
-    alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a grocery storefront",
+    image: "/images/kwc-liftgate-convenience-store.webp",
+    alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a convenience store",
     summary: "For sites without a raised dock, tell us the heaviest item and what the unloading area is like.",
   },
   {

@@ -145,7 +145,7 @@ export default async function ServicePage({
           </div>
           <figure className="july-service-image local-delivery">
             {slug === "tailgate-delivery" ? (
-              <Image src="/images/kwc-liftgate-storefront.webp" alt="A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a grocery storefront" fill sizes="(max-width: 720px) 100vw, 760px" />
+              <Image src="/images/kwc-liftgate-convenience-store.webp" alt="A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a convenience store" fill sizes="(max-width: 720px) 100vw, 760px" />
             ) : (
               <Image src={slug === "retail-grocery-distribution" ? "/images/kwc-straight-trucks-dock.png" : "/images/kwc-yard-fleet.png"} alt="Commercial vehicles at a loading facility" fill sizes="(max-width: 720px) 100vw, 760px" />
             )}
