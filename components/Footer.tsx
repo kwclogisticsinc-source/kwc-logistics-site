@@ -34,7 +34,6 @@ export function Footer() {
           <Link href="/customer-registration">Register your business</Link>
           <Link href="/industries">Industries</Link>
           <Link href="/resources">Shipping help</Link>
-          <Link href="/markets">Ontario freight market brief</Link>
           <Link href="/forms">Forms & documents</Link>
         </nav>
         <div className="footer-contact">

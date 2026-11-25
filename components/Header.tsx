@@ -30,9 +30,6 @@ const navigation = [
     ["Equipment and liftgate options", "/equipment"],
     ["Ontario service coverage", "/service-areas"],
   ] },
-  { label: "Markets", links: [
-    ["Ontario freight market brief", "/markets"],
-  ] },
   { label: "About", links: [
     ["About KWC", "/about"],
     ["How we work", "/about#how-we-work"],
