@@ -14,6 +14,7 @@ const featuredServices = [
     title: "LTL and pallet freight",
     href: "/services/ltl-freight",
     image: "/images/kwc-pallet-handoff.webp",
+    height: 853,
     alt: "Two freight workers checking a wrapped pallet beside a KWC straight truck",
     summary: "Move one pallet or several. Share the dimensions, total weight and access at both stops.",
   },
@@ -29,6 +30,7 @@ const featuredServices = [
     title: "Recurring freight routes",
     href: "/regular-deliveries",
     image: "/images/kwc-raised-loading-dock.webp",
+    height: 853,
     alt: "KWC straight truck backed into a raised commercial dock, with its front wheels facing the yard",
     summary: "Plan repeat pickups and delivery stops around volume, receiving windows and equipment needs.",
   },
@@ -48,7 +50,7 @@ export default function Services() {
       <section className="wrap content-section" aria-labelledby="featured-services-title">
         <h2 id="featured-services-title">Core freight services</h2>
         <div className="kwc-featured-services">
-          {featuredServices.map(({ title, href, image, alt, summary, height = 853 }) => (
+          {featuredServices.map(({ title, href, image, alt, summary, height }) => (
             <article key={href}>
               <Link href={href}>
                 <Image src={image} alt={alt} width={1280} height={height} sizes="(max-width: 760px) 100vw, 30vw" />
