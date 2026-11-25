@@ -39,6 +39,7 @@ export function Footer() {
         </nav>
         <div className="footer-contact">
           <strong>Talk to KWC Logistics</strong>
+          <a href={contact.phoneHref}>{contact.phone}</a>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <p>Kitchener, Ontario</p>
           <Link href="/contact#quote" className="text-link">

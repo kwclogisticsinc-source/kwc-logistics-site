@@ -60,7 +60,7 @@ export default function Home() {
             <Link href="/book-now" className="btn">Ship Something</Link>
             <a href="#shipping-options" className="kwc-front-link">Explore shipping options</a>
           </div>
-          <p className="kwc-front-contact">24/7 dispatch <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+          <p className="kwc-front-contact">24/7 dispatch <a href={contact.phoneHref}>{contact.phone}</a> · <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
         </div>
         <div className="kwc-front-media">
           <Image src="/images/kwc-straight-truck-building.webp" alt="White Freightliner straight truck parked in front of a loading dock, with a large blue KWC horse decal on the cargo box" fill priority sizes="(max-width: 900px) 100vw, 62vw" className="kwc-front-photo" />

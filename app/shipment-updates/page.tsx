@@ -16,7 +16,8 @@ export default function ShipmentUpdates() {
       </PageIntro>
       <section className="wrap content-section article-copy">
         <h2>What to include</h2>
-        <p>Email your booking reference, company name and pickup date so we can identify the shipment and verify what we can share.</p>
+        <p>Have your booking reference, company name and pickup date ready so we can identify the shipment and verify what we can share.</p>
+        <p>Call dispatch at <a className="text-link" href={contact.phoneHref}>{contact.phone}</a>.</p>
         <a className="btn" href={`mailto:${contact.email}?subject=Shipment%20update`}>Email Dispatch at {contact.email}</a>
       </section>
     </>

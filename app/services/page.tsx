@@ -20,8 +20,8 @@ const featuredServices = [
   {
     title: "Final-mile liftgate delivery",
     href: "/services/tailgate-delivery",
-    image: "/images/kwc-liftgate-ground-level.webp",
-    alt: "Branded KWC straight truck with a rear liftgate lowered at a ground-level receiving door",
+    image: "/images/kwc-liftgate-storefront.webp",
+    alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a grocery storefront",
     summary: "For sites without a raised dock, tell us the heaviest item and what the unloading area is like.",
   },
   {

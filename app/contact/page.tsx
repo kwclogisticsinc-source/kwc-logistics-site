@@ -41,6 +41,13 @@ export default async function ContactPage({
           <p>
             Reach KWC dispatch directly, 24/7. We respond promptly by email. For a quote, include pickup and delivery locations, shipment details and timing.
           </p>
+          <a href={contact.phoneHref} className="contact-method">
+            <Icon name="phone" />
+            <span>
+              <small>Call 24/7 dispatch</small>
+              <strong>{contact.phone}</strong>
+            </span>
+          </a>
           <a href={`mailto:${contact.email}`} className="contact-method">
             <Icon name="mail" />
             <span>

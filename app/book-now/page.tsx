@@ -19,7 +19,7 @@ export default function BookNow() {
       </PageIntro>
       <section className="wrap content-section">
         <QuoteEntry />
-        <p className="kwc-quote-email">Need help with your shipment? <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a></p>
+        <p className="kwc-quote-email">Need help with your shipment? Call <a className="text-link" href={contact.phoneHref}>{contact.phone}</a> or email <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a></p>
         <p className="notice"><strong>{freightInsurance}</strong></p>
         <div className="article-copy booking-details">
           <BrandLogo decorative />

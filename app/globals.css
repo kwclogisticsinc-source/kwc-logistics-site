@@ -19,7 +19,7 @@ html {
 }
 body {
   margin: 0;
-  background: #fff;
+  background: #f2f7fd;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -1964,13 +1964,14 @@ ul.freight-grid {
   width: 100%;
   max-width: none;
   padding: clamp(2.5rem, 6vw, 5rem) max(5vw, calc((100% - 1152px) / 2));
-  background: var(--pale);
+  background: linear-gradient(112deg, #d8e9fc, #eaf3fe);
   border-block-end: 1px solid var(--line);
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .site-footer {
-  background: #edf4fa;
+  background: #dbe9fa;
+  border-color: #b8cee8;
 }
 
 .local-hero {
@@ -3120,7 +3121,8 @@ ul.freight-grid {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding-block-start: 1.1rem;
+  padding: 1.1rem clamp(0.85rem, 2vw, 1.5rem);
+  background: #e1edfa;
   border-top: 2px solid var(--blue);
 }
 
@@ -3226,6 +3228,13 @@ ul.freight-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-block: 1.4rem 3.5rem;
+}
+
+.kwc-featured-services article {
+  padding: clamp(0.65rem, 1.5vw, 1rem);
+  background: #e1edfa;
+  border: 1px solid #c3d7ed;
+  border-radius: 6px;
 }
 
 .kwc-featured-services img {
