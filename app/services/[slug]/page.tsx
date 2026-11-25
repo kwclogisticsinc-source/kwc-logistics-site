@@ -1,4 +1,4 @@
-import { commercialServices } from "@/lib/commercial-services";
+import { commercialServicePhotos, commercialServices } from "@/lib/commercial-services";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -135,6 +135,10 @@ export default async function ServicePage({
   const commercial = commercialServices.find(([id]) => id === slug);
   if (commercial) {
     const [, title, benefit, preparation, question, answer] = commercial;
+    const photo = commercialServicePhotos[slug] ?? {
+      src: "/images/kwc-yard-fleet.png",
+      alt: "Commercial vehicles at a loading facility",
+    };
     return (
       <>
         <PageIntro eyebrow="Waterloo Region transportation" title={title}><p>{benefit}</p></PageIntro>
@@ -144,11 +148,7 @@ export default async function ServicePage({
             <Link className="btn secondary" href="/regular-deliveries#quote">Discuss Regular Deliveries</Link>
           </div>
           <figure className={slug === "tailgate-delivery" ? "july-service-image local-delivery kwc-storefront-delivery" : "july-service-image local-delivery"}>
-            {slug === "tailgate-delivery" ? (
-              <Image src="/images/kwc-ridge-storefront-liftgate.webp" alt="A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside Ridge Variety Store" fill sizes="(max-width: 720px) 100vw, 760px" />
-            ) : (
-              <Image src={slug === "retail-grocery-distribution" ? "/images/kwc-straight-trucks-dock.png" : "/images/kwc-yard-fleet.png"} alt="Commercial vehicles at a loading facility" fill sizes="(max-width: 720px) 100vw, 760px" />
-            )}
+            <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 720px) 100vw, 760px" />
           </figure>
           <div className="article-copy">
             <h2>What to include in your request</h2>

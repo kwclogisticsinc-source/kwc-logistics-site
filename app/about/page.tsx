@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageIntro, ContactCTA } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
   title: "About KWC",
@@ -51,10 +52,13 @@ export default function About() {
           <p>We’re building an affordable Canadian logistics network from our Ontario base. Our goal is to make it easier for Canadian suppliers, retailers and distributors to do business with one another and to support the communities and jobs that depend on that trade. As tariffs change sourcing decisions and put pressure on budgets, we help customers compare domestic lanes and look for practical ways to control freight costs.</p>
           <p>We handle company-operated shipments in Ontario and work with qualified carrier partners to arrange freight elsewhere in Canada. Share your supplier locations, delivery stops and expected volume so we can review options for your business.</p>
         </section>
-        <section className="article-copy story-copy" id="safety" aria-labelledby="about-safety">
-          <h2 id="about-safety">How we approach safety</h2>
-          <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>
-          <p>We set clear safety and performance standards for hiring and continued work with KWC. We use technology to review driver performance and address safety concerns so we can reduce avoidable setbacks for customers.</p>
+        <section className="article-copy story-copy kwc-coverage-photo-band" id="safety" aria-labelledby="about-safety">
+          <Image src="/images/kwc-truck-maintenance.webp" alt="A mechanic inspecting a straight truck" width={1280} height={853} sizes="(max-width: 800px) 92vw, 46vw" />
+          <div>
+            <h2 id="about-safety">How we approach safety</h2>
+            <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>
+            <p>We set clear safety and performance standards for hiring and continued work with KWC. We use technology to review driver performance and address safety concerns so we can reduce avoidable setbacks for customers.</p>
+          </div>
         </section>
         <section className="article-copy" id="how-we-work">
           <h2>How we work with you</h2>

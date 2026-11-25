@@ -19,3 +19,26 @@ export const commercialServices = [
   ["reverse-logistics", "Reverse Logistics and Returns", "Arrange commercial returns, reusable packaging collections and pickups of eligible returned inventory.", "List pickup sites, return authorizations, packaging condition and the destination for each collection.", "Can returns be picked up on an existing delivery route?", "Share the number of pieces and pickup instructions so we can confirm suitable capacity and handling."],
   ["commercial-delivery-management", "Commercial Delivery Management", "Coordinate supplier collections, recurring deliveries and regional distribution around the way your business operates.", "Share weekly volume, service areas, receiving windows and recurring capacity or handling needs.", "Can KWC help if we do not have our own fleet?", "We can review your requirements and propose a schedule and transportation arrangement for your team to approve."],
 ] as const;
+
+export const commercialServicePhotos: Record<string, { src: string; alt: string }> = {
+  "tailgate-delivery": {
+    src: "/images/kwc-toronto-liftgate-delivery.webp",
+    alt: "A worker unloads beverage cases from a KWC liftgate truck on a downtown Toronto street",
+  },
+  "ltl-freight": {
+    src: "/images/kwc-pallet-handoff.webp",
+    alt: "Two freight workers check a wrapped pallet beside a straight truck",
+  },
+  "refrigerated-transportation": {
+    src: "/images/kwc-service-reefer.webp",
+    alt: "A refrigerated semi-trailer at a distribution warehouse dock",
+  },
+  "full-truckload": {
+    src: "/images/kwc-rigid-truck-and-trailer.webp",
+    alt: "Commercial freight trucks in a transportation yard",
+  },
+  "retail-grocery-distribution": {
+    src: "/images/kwc-straight-trucks-dock-1400.webp",
+    alt: "Straight trucks lined up at raised receiving docks",
+  },
+};

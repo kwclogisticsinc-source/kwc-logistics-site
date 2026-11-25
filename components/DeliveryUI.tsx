@@ -153,7 +153,7 @@ export function CoverageGraphic() {
       <Image
         src="/images/ontario-freight-corridors.svg"
         width={920}
-        height={470}
+        height={480}
         alt="Ontario freight corridors. Highway 401 links Windsor, London, Waterloo Region, the GTA and Eastern Ontario. Highway 403 links Woodstock, Brantford, Hamilton, Burlington and Mississauga. Highways 416 and 417 connect Ottawa and Quebec."
       />
       <figcaption>
@@ -173,9 +173,12 @@ export function ProvinceCoverageGraphic() {
         src="/images/ontario-province-coverage.svg"
         width={710}
         height={495}
-        alt="Selected Ontario service destinations, including Windsor, the GTA and Ottawa, with Sudbury as the northern limit. KWC is based in Waterloo Region."
+        alt="Selected Ontario service destinations, including Windsor, the GTA and Ottawa, with Sudbury as the northern limit. The map highlights the 401, 403 and selected northern connections from KWC’s Waterloo Region headquarters."
       />
-      <figcaption>Selected Ontario destinations. Current service extends north to Sudbury.</figcaption>
+      <figcaption>
+        Selected destinations and approximate corridor connections. Current service extends north to Sudbury.{" "}
+        <Link className="text-link" href="/images/ontario-province-coverage.svg">View full-size Ontario map</Link>
+      </figcaption>
     </figure>
   );
 }
