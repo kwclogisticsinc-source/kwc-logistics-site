@@ -171,12 +171,12 @@ export function ProvinceCoverageGraphic() {
     <figure className="ontario-map">
       <Image
         src="/images/ontario-province-coverage.svg"
-        width={710}
-        height={495}
-        alt="Selected Ontario service destinations, including Windsor, the GTA and Ottawa, with Sudbury as the northern limit. The map highlights the 401, 403 and selected northern connections from KWC’s Waterloo Region headquarters."
+        width={750}
+        height={410}
+        alt="Map of core Ontario routes from Waterloo Region to Windsor, the GTA, Ottawa and Sudbury, including Highways 401 and 403."
       />
       <figcaption>
-        Selected destinations and approximate corridor connections. Current service extends north to Sudbury.{" "}
+        Selected routes up to Sudbury. Ask us about delivery anywhere in Ontario.{" "}
         <Link className="text-link" href="/images/ontario-province-coverage.svg">View full-size Ontario map</Link>
       </figcaption>
     </figure>

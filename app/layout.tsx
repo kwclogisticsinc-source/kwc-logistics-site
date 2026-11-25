@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KWC Logistics | Ontario Freight & Recurring Transportation",
     description:
-      "Regional transportation from Waterloo Region to Ontario destinations as far north as Sudbury, with additional freight capacity through qualified partners.",
+      "Regional transportation from Waterloo Region across Ontario, with core routes up to Sudbury and additional freight capacity through qualified partners.",
     url: "https://kwclogistics.ca",
     siteName: "KWC Logistics Inc.",
     images: [{ url: "/images/kwc-galloping-horse.png", alt: "KWC Logistics blue horse logo" }],

@@ -159,8 +159,8 @@ export default function Home() {
       <section className="wrap kwc-editorial kwc-home-coverage">
         <div className="kwc-editorial-copy">
           <p className="eyebrow">Ontario coverage</p>
-          <h2>Ontario freight as far north as Sudbury.</h2>
-          <p>Our main freight corridors run along Highways 401 and 403, connecting Waterloo Region, the GTA, Southwestern Ontario and Eastern Ontario. We also serve selected communities in Central Ontario and along the route to Sudbury, our current northern limit.</p>
+          <h2>Freight delivery across Ontario.</h2>
+          <p>Our main freight corridors run along Highways 401 and 403, connecting Waterloo Region, the GTA, Southwestern Ontario and Eastern Ontario. The map shows our core routes up to Sudbury. We can arrange delivery anywhere in Ontario, including communities beyond the routes shown.</p>
           <p>Send us your city, postal code or community name. We’ll confirm timing, equipment and access for that location.</p>
           <Link href="/service-areas" className="text-link">View coverage and freight lanes</Link>
         </div>

@@ -8,7 +8,7 @@ import { localAreas } from "@/lib/local-areas";
 
 export const metadata: Metadata = {
   title: "Ontario Freight Coverage | Highways 401 and 403",
-  description: "KWC serves businesses along Ontario’s 401 and 403 corridors, in Central and Eastern Ontario, and as far north as Sudbury.",
+  description: "Request delivery anywhere in Ontario. Explore KWC’s core routes along Highways 401 and 403 and as far north as Sudbury.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -16,7 +16,7 @@ export default function Coverage() {
   return (
     <>
       <PageIntro eyebrow="ONTARIO REGIONAL TRANSPORTATION" title={coverageTitle}>
-        <p>Our company-operated fleet serves Ontario only. We cover routes across Southern and Eastern Ontario and serve selected communities in Central Ontario, with Sudbury as our current northern limit.</p>
+        <p>We can arrange delivery anywhere in Ontario. The map highlights our core routes up to Sudbury. For destinations beyond the routes shown, send us the postal code and shipment details so we can confirm equipment, timing and the operating carrier.</p>
         {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </PageIntro>
       <div className="wrap content-section article-copy">
