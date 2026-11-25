@@ -21,9 +21,9 @@ const featuredServices = [
   {
     title: "Final-mile liftgate delivery",
     href: "/services/tailgate-delivery",
-    image: "/images/kwc-convenience-store-delivery.webp",
+    image: "/images/kwc-cedar-post-delivery.webp",
     height: 720,
-    alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a convenience store",
+    alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside Cedar Post Variety",
     summary: "For sites without a raised dock, tell us the heaviest item and what the unloading area is like.",
   },
   {
