@@ -3277,3 +3277,7 @@ ul.freight-grid {
   max-width: 66ch;
   margin-block: 0.85rem 1rem;
 }
+
+.kwc-storefront-delivery {
+  aspect-ratio: 16 / 9;
+}

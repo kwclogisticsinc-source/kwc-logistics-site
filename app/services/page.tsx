@@ -20,7 +20,8 @@ const featuredServices = [
   {
     title: "Final-mile liftgate delivery",
     href: "/services/tailgate-delivery",
-    image: "/images/kwc-liftgate-convenience-store.webp",
+    image: "/images/kwc-convenience-store-delivery.webp",
+    height: 720,
     alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside a convenience store",
     summary: "For sites without a raised dock, tell us the heaviest item and what the unloading area is like.",
   },
@@ -47,10 +48,10 @@ export default function Services() {
       <section className="wrap content-section" aria-labelledby="featured-services-title">
         <h2 id="featured-services-title">Core freight services</h2>
         <div className="kwc-featured-services">
-          {featuredServices.map(({ title, href, image, alt, summary }) => (
+          {featuredServices.map(({ title, href, image, alt, summary, height = 853 }) => (
             <article key={href}>
               <Link href={href}>
-                <Image src={image} alt={alt} width={1280} height={853} sizes="(max-width: 760px) 100vw, 30vw" />
+                <Image src={image} alt={alt} width={1280} height={height} sizes="(max-width: 760px) 100vw, 30vw" />
                 <h3>{title}</h3>
               </Link>
               <p>{summary}</p>
