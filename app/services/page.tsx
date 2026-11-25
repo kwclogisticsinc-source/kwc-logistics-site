@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { commercialServicePhotos, commercialServices } from "@/lib/commercial-services";
+import { industryPhotos } from "@/lib/industry-pages";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/DeliveryUI";
 export const metadata: Metadata = {
@@ -13,8 +14,8 @@ const featuredServices = [
   {
     title: "LTL and pallet freight",
     href: "/services/ltl-freight",
-    image: "/images/kwc-pallet-handoff.webp",
-    alt: "Two freight workers checking a wrapped pallet beside a KWC straight truck",
+    image: commercialServicePhotos["ltl-freight"].src,
+    alt: commercialServicePhotos["ltl-freight"].alt,
     summary: "Move one pallet or several with shared capacity where available. A good fit for supplier orders, transfers and store replenishment.",
     details: "For a quote, send pallet count, loaded dimensions, total weight and dock access at both ends.",
   },
@@ -29,32 +30,32 @@ const featuredServices = [
   {
     title: "Recurring freight routes",
     href: "/regular-deliveries",
-    image: "/images/kwc-raised-loading-dock.webp",
-    alt: "KWC straight truck backed into a raised commercial dock, with its front wheels facing the yard",
+    image: commercialServicePhotos["retail-grocery-distribution"].src,
+    alt: commercialServicePhotos["retail-grocery-distribution"].alt,
     summary: "Build repeat pickups, store replenishment and multi-stop routes around your actual demand.",
     details: "Send weekly volume, stops and receiving windows so we can review routing, frequency and equipment.",
   },
   {
     title: "B2B bulk package delivery",
     href: "/services/courier",
-    image: "/images/kwc-cargo-van-dock-1400.webp",
-    alt: "Cargo van at a warehouse receiving area",
+    image: "/images/kwc-bulk-packages.webp",
+    alt: "A worker handling boxed packages at the rear of a cargo van",
     summary: "Consolidate a batch of labelled packages or customer orders into a business delivery run.",
     details: "Tell us the number of packages, approximate volume, stops and any time-sensitive handoffs.",
   },
   {
     title: "Full truckload and dedicated freight",
     href: "/services/full-truckload",
-    image: "/images/kwc-rigid-truck-and-trailer.webp",
-    alt: "Commercial freight trucks parked in a transportation yard",
+    image: commercialServicePhotos["full-truckload"].src,
+    alt: commercialServicePhotos["full-truckload"].alt,
     summary: "Arrange dedicated capacity when your load needs the space or a direct trip. Ask about 53-foot dry van options.",
     details: "Share the load dimensions, gross weight, loading method and shipment dates.",
   },
   {
     title: "Refrigerated transportation",
     href: "/services/refrigerated-transportation",
-    image: "/images/kwc-service-reefer.webp",
-    alt: "Refrigerated semi-trailer at a distribution warehouse dock",
+    image: commercialServicePhotos["refrigerated-transportation"].src,
+    alt: commercialServicePhotos["refrigerated-transportation"].alt,
     summary: "Request temperature-controlled capacity for eligible food and other goods, including 53-foot reefer options.",
     details: "Include the commodity, required temperature range and any loading or temperature-recording instructions.",
   },
@@ -73,7 +74,7 @@ export default function Services() {
               <Link href="/regular-deliveries#quote" className="kwc-services-hero-link">Plan recurring deliveries</Link>
             </div>
           </div>
-          <Image src="/images/kwc-freightliner-warehouse.webp" alt="KWC straight trucks outside a freight warehouse" width={1536} height={1024} preload sizes="(max-width: 800px) 94vw, 48vw" />
+          <Image src="/images/business-pickup.webp" alt="A delivery worker collects boxed orders from a business" width={1100} height={733} preload sizes="(max-width: 800px) 94vw, 48vw" />
         </div>
       </section>
       <section className="kwc-services-catalog" aria-labelledby="featured-services-title">
@@ -91,6 +92,14 @@ export default function Services() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="wrap kwc-coverage-photo-band kwc-service-industry" aria-labelledby="medical-delivery-title">
+        <Image src={industryPhotos["medical-supplies"].src} alt={industryPhotos["medical-supplies"].alt} width={1280} height={720} sizes="(max-width: 800px) 92vw, 46vw" />
+        <div>
+          <h2 id="medical-delivery-title">Medical supply delivery</h2>
+          <p>Plan scheduled deliveries of general medical supplies to clinics and other business locations. Share what you’re shipping, who will receive it and any special requirements so we can confirm eligibility and handling before pickup.</p>
+          <Link className="text-link" href="/industries/medical-supplies">Explore medical supply delivery</Link>
         </div>
       </section>
       <section className="wrap content-section kwc-services-directory">

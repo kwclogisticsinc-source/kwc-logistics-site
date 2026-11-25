@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/DeliveryUI";
-import { industryPages } from "@/lib/industry-pages";
+import { industryPages, industryPhotos } from "@/lib/industry-pages";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -24,16 +25,20 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default async function IndustryPage(props: Props) {
-  const [, title, description, requirements, guidance, service] = await resolveIndustry(props);
+  const [slug, title, description, requirements, guidance, service] = await resolveIndustry(props);
+  const photo = industryPhotos[slug];
   return (
     <>
       <PageIntro eyebrow="Ontario business transportation" title={title}><p>{description}</p></PageIntro>
       <section className="wrap content-section">
-        <div className="article-copy">
-          <h2>What to include in your quote</h2>
-          <p>{requirements}</p>
-          <h2>Planning the shipment</h2>
-          <p>{guidance}</p>
+        <div className={photo ? "article-copy kwc-coverage-photo-band" : "article-copy"}>
+          {photo && <Image src={photo.src} alt={photo.alt} width={1280} height={720} sizes="(max-width: 800px) 92vw, 46vw" />}
+          <div>
+            <h2>What to include in your quote</h2>
+            <p>{requirements}</p>
+            <h2>Planning the shipment</h2>
+            <p>{guidance}</p>
+          </div>
         </div>
         <div className="button-row">
           <Link className="btn" href="/book-now">Get a Quote</Link>

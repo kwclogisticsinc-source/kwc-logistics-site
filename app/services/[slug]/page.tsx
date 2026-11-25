@@ -136,8 +136,8 @@ export default async function ServicePage({
   if (commercial) {
     const [, title, benefit, preparation, question, answer] = commercial;
     const photo = commercialServicePhotos[slug] ?? {
-      src: "/images/kwc-yard-fleet.png",
-      alt: "Commercial vehicles at a loading facility",
+      src: "/images/kwc-service-pallets.webp",
+      alt: "Freight workers prepare a pallet at a warehouse receiving bay",
     };
     return (
       <>
@@ -165,6 +165,9 @@ export default async function ServicePage({
   if (!(slug in details)) notFound();
   const detail = details[slug as keyof typeof details];
   const item = categories.find((i) => i.href.endsWith(`/${slug}`))!;
+  const photo = slug === "courier"
+    ? { src: "/images/kwc-bulk-packages.webp", alt: "A worker handling boxed packages at the rear of a cargo van" }
+    : { src: item.image, alt: item.alt };
   return (
     <>
       <PageIntro eyebrow={item.title} title={detail.title}>
@@ -181,7 +184,7 @@ export default async function ServicePage({
           </Link>
         </div>
         <div className="service-detail-image">
-          <Image src={item.image} alt={item.alt} fill priority sizes="100vw" />
+          <Image src={photo.src} alt={photo.alt} fill priority sizes="100vw" />
         </div>
         <div className="capability-grid">
           {detail.groups.map(([title, items]) => (

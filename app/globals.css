@@ -3474,3 +3474,11 @@ ul.freight-grid {
     }
   }
 }
+
+.kwc-service-industry {
+  margin-block: clamp(2rem, 5vw, 4rem);
+}
+
+.kwc-service-industry h2 + p {
+  margin-block: 0.8rem;
+}

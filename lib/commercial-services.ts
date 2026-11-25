@@ -26,19 +26,19 @@ export const commercialServicePhotos: Record<string, { src: string; alt: string 
     alt: "A worker unloads beverage cases from a KWC liftgate truck on a downtown Toronto street",
   },
   "ltl-freight": {
-    src: "/images/kwc-pallet-handoff.webp",
-    alt: "Two freight workers check a wrapped pallet beside a straight truck",
+    src: "/images/kwc-service-pallets.webp",
+    alt: "Two freight workers check a wrapped pallet at a warehouse receiving bay",
   },
   "refrigerated-transportation": {
     src: "/images/kwc-service-reefer.webp",
     alt: "A refrigerated semi-trailer at a distribution warehouse dock",
   },
   "full-truckload": {
-    src: "/images/kwc-rigid-truck-and-trailer.webp",
-    alt: "Commercial freight trucks in a transportation yard",
+    src: "/images/kwc-service-dry-van.webp",
+    alt: "A dry van tractor-trailer at a warehouse",
   },
   "retail-grocery-distribution": {
-    src: "/images/kwc-straight-trucks-dock-1400.webp",
-    alt: "Straight trucks lined up at raised receiving docks",
+    src: "/images/kwc-retail-replenishment.webp",
+    alt: "A worker moves cartons into a grocery receiving area",
   },
 };

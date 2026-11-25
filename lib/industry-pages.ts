@@ -20,3 +20,10 @@ export const industryPages = [
   ["floral", "Transportation for Floral Businesses", "Coordinate wholesale flower pickups and planned deliveries to shops and commercial customers.", "Share pickup and receiving windows, packaging orientation, temperature requirements and the number of stops.", "For seasonal demand, give dispatch the expected volume by day. Temperature-controlled capacity is assessed against the product and route.", "refrigerated-transportation"],
   ["small-business", "Freight for Small Businesses", "Start with one pallet or build a repeat route as your business adds customers.", "Include the pickup location, destination, pallet count, shipment weight and receiving conditions. Approximate measurements help start the conversation.", "Ask about compatible shared freight if timing is flexible or a dedicated route if you have regular supplier collections and deliveries.", "dedicated-transportation"],
 ] as const;
+
+export const industryPhotos: Record<string, { src: string; alt: string }> = {
+  "medical-supplies": {
+    src: "/images/kwc-medical-supply-delivery.webp",
+    alt: "A delivery worker brings boxed supplies to a clinic receiving entrance",
+  },
+};
