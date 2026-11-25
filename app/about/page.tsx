@@ -46,6 +46,11 @@ export default function About() {
             understanding your business—and where you want to take it.
           </p>
         </div>
+        <section className="article-copy story-copy" id="canada-first" aria-labelledby="about-canada-first">
+          <h2 id="about-canada-first">Our Canada-first commitment</h2>
+          <p>We’re building an affordable Canadian logistics network from our Ontario base. Our goal is to make it easier for Canadian suppliers, retailers and distributors to do business with one another. As tariffs change sourcing decisions and put pressure on budgets, we help customers compare domestic lanes and look for practical ways to control freight costs.</p>
+          <p>We handle company-operated shipments in Ontario and work with qualified carrier partners to arrange freight elsewhere in Canada. Share your supplier locations, delivery stops and expected volume so we can review options for your business.</p>
+        </section>
         <section className="article-copy story-copy" id="safety" aria-labelledby="about-safety">
           <h2 id="about-safety">How we approach safety</h2>
           <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>

@@ -3258,3 +3258,19 @@ ul.freight-grid {
     grid-template-columns: 1fr;
   }
 }
+
+.kwc-canada-first {
+  margin-block: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  background: #dbeafe;
+  border-inline-start: 4px solid var(--blue);
+}
+
+.kwc-canada-first .eyebrow {
+  margin-block-end: 0.6rem;
+}
+
+.kwc-canada-first h2 + p {
+  max-width: 66ch;
+  margin-block: 0.85rem 1rem;
+}
