@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FAQ, PageIntro } from "@/components/DeliveryUI";
 import { BrandLogo } from "@/components/Logo";
 import { QuoteEntry } from "@/components/QuoteEntry";
-import { freightInsurance } from "@/lib/content";
+import { contact, freightInsurance } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Book a Freight Shipment",
@@ -20,6 +20,7 @@ export default function BookNow() {
       <section className="wrap content-section">
         <p className="notice"><strong>{freightInsurance}</strong></p>
         <QuoteEntry />
+        <p className="kwc-quote-email">Need help with your shipment? <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a></p>
         <div className="article-copy booking-details">
           <BrandLogo decorative />
           <h2>Have these details ready</h2>

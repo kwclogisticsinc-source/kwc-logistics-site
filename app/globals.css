@@ -3224,3 +3224,18 @@ ul.freight-grid {
   font-size: clamp(1.25rem, 2.25vw, 1.65rem);
   margin-bottom: 0.5rem;
 }
+
+.kwc-front-contact,
+.kwc-quote-email {
+  margin-top: 1rem;
+}
+
+.kwc-front-contact {
+  color: #d7e5f7;
+}
+
+.kwc-front-contact a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
