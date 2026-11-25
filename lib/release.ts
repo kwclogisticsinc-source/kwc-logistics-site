@@ -1,2 +1,2 @@
-// Keep this review build out of search until the owner approves production release.
-export const previewOnly = true;
+// Owner approved the redesign for production on October 18, 2026.
+export const previewOnly = false;
