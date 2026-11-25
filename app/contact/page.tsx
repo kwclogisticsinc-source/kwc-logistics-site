@@ -39,7 +39,7 @@ export default async function ContactPage({
         <aside className="contact-aside">
           <h2>Talk to KWC Logistics.</h2>
           <p>
-            Send us your pickup and delivery locations, shipment details and timing.
+            Reach KWC dispatch directly, 24/7. We respond promptly by email. For a quote, include pickup and delivery locations, shipment details and timing.
           </p>
           <a href={`mailto:${contact.email}`} className="contact-method">
             <Icon name="mail" />

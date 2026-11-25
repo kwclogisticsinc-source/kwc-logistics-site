@@ -4,18 +4,20 @@ import { contact } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Shipment Updates",
-  description: "Contact KWC Logistics dispatch for updates on a confirmed shipment.",
+  description: "Reach KWC Logistics dispatch directly, 24/7, for live location and status updates on a confirmed shipment.",
   alternates: { canonical: "/shipment-updates" },
 };
 
 export default function ShipmentUpdates() {
   return (
     <>
-      <PageIntro eyebrow="Dispatch" title="Get a shipment update.">
-        <p>Email dispatch with your booking reference, company name and pickup date. We’ll use those details to find your shipment and verify what we can share.</p>
+      <PageIntro eyebrow="24/7 dispatch" title="Get a live shipment update.">
+        <p>Contact your KWC dispatcher directly for the live location and latest status of a confirmed shipment. Our dispatch team is available 24/7 and responds promptly by email.</p>
       </PageIntro>
-      <section className="wrap content-section">
-        <a className="btn" href={`mailto:${contact.email}?subject=Shipment%20update`}>Email Dispatch</a>
+      <section className="wrap content-section article-copy">
+        <h2>What to include</h2>
+        <p>Email your booking reference, company name and pickup date so we can identify the shipment and verify what we can share.</p>
+        <a className="btn" href={`mailto:${contact.email}?subject=Shipment%20update`}>Email Dispatch at {contact.email}</a>
       </section>
     </>
   );
