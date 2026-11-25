@@ -21,7 +21,7 @@ const featuredServices = [
   {
     title: "Final-mile liftgate delivery",
     href: "/services/tailgate-delivery",
-    image: "/images/kwc-ridge-variety-delivery.webp",
+    image: "/images/kwc-ridge-storefront-liftgate.webp",
     height: 720,
     alt: "A worker uses a pallet jack to unload beverage cases from a KWC liftgate truck outside Ridge Variety Store",
     summary: "For sites without a raised dock, tell us the heaviest item and what the unloading area is like.",
