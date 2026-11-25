@@ -123,7 +123,7 @@ export function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <Link href="/book-now" className="btn small" onClick={close}>Get a Quote</Link>
+          <Link href="/book-now#quote-start" className="btn small" onClick={close}>Get a Quote</Link>
           <button
             ref={mobileToggle}
             id="kwc-mobile-toggle"

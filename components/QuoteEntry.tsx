@@ -16,10 +16,10 @@ export function QuoteEntry() {
     window.location.assign(`/contact?service=${kind}&intent=${intent}&journey=ship#quote&${route.toString()}`);
   }
   return (
-    <form action="/contact" onSubmit={start} className="quote-entry">
+    <form id="quote-start" action="/contact" onSubmit={start} className="quote-entry" aria-labelledby="quote-start-title">
       <input type="hidden" name="journey" value="ship" />
       <div className="entry-heading">
-        <strong>Get a quote for your route</strong>
+        <strong id="quote-start-title">Get a quote for your route</strong>
       </div>
       <div className="entry-fields">
         <label>
@@ -33,7 +33,7 @@ export function QuoteEntry() {
           </select>
         </label>
         <label>
-          {kind === "regular" ? "Pickup area" : "Pickup city or postal code"}
+          Pickup city or postal code
           <input
             name="pickup"
             placeholder="e.g. Kitchener, ON"
@@ -41,9 +41,7 @@ export function QuoteEntry() {
           />
         </label>
         <label>
-          {kind === "regular"
-            ? "Delivery regions"
-            : "Destination city or postal code"}
+          Destination city or postal code
           <input
             name="destination"
             placeholder="Where’s it going?"

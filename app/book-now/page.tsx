@@ -18,9 +18,9 @@ export default function BookNow() {
         <p>Request an Ontario freight quote as an individual or a business. We review one-time pallet shipments and eligible large items for commercial and residential delivery. Start with the pickup and destination. We’ll ask about the freight, equipment and timing, then confirm capacity and price with you before booking.</p>
       </PageIntro>
       <section className="wrap content-section">
-        <p className="notice"><strong>{freightInsurance}</strong></p>
         <QuoteEntry />
         <p className="kwc-quote-email">Need help with your shipment? <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a></p>
+        <p className="notice"><strong>{freightInsurance}</strong></p>
         <div className="article-copy booking-details">
           <BrandLogo decorative />
           <h2>Have these details ready</h2>

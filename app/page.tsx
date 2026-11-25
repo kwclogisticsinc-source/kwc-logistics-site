@@ -177,7 +177,7 @@ export default function Home() {
           <h2>Planning your next shipment?</h2>
           <p>Share the lane, load and delivery window. If it’s a recurring move, tell us how often it runs so we can price the work around your schedule.</p>
           <div className="button-row">
-            <Link href="/book-now" className="btn">Get a Freight Quote</Link>
+            <Link href="/book-now#quote-start" className="btn">Get a Freight Quote</Link>
             <Link href="/regular-deliveries" className="text-link">Discuss a recurring route</Link>
           </div>
         </div>
