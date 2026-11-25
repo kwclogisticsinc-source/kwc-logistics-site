@@ -23,7 +23,7 @@ export function RegistrationForm({ kind, initialDriverRole }: { kind: Registrati
       const result = await response.json();
       if (response.ok && result.success === true) {
         setStatus("success");
-        setMessage(kind === "newsletter" ? "KWC received your newsletter signup request." : `KWC received your request for review. Reference: ${result.reference}.`);
+        setMessage(`KWC received your request for review. Reference: ${result.reference}.`);
       } else {
         setStatus("error");
         setErrors(result.errors ?? {});
@@ -53,28 +53,24 @@ export function RegistrationForm({ kind, initialDriverRole }: { kind: Registrati
             };
             return (
               <div key={field.name} className="registration-field">
-                {type === "checkbox" ? (
-                  <label className="newsletter-consent" htmlFor={id}>
-                    <input {...accessible} type="checkbox" value="yes" />
-                    <span>{"label" in field ? field.label : field.name}</span>
-                  </label>
-                ) : <>
-                  <label htmlFor={id}>{field.name}</label>
-                  {options ? (
-                  <select {...accessible} defaultValue={kind === "driver" && field.name === "Application type" ? initialDriverRole ?? "" : ""}><option value="" disabled>Choose an option</option>{options.map((item) => <option key={item}>{item}</option>)}</select>
+                <label htmlFor={id}>{field.name}</label>
+                {options ? (
+                  <select {...accessible} defaultValue={kind === "driver" && field.name === "Application type" ? initialDriverRole ?? "" : ""}>
+                    <option value="" disabled>Choose an option</option>
+                    {options.map((item) => <option key={item}>{item}</option>)}
+                  </select>
                 ) : type === "textarea" ? (
                   <textarea {...accessible} rows={4} maxLength={1200} />
                 ) : (
                   <input {...accessible} type={type} maxLength={250} />
                 )}
-                </>}
                 {field.name === "Capacity needed" && <p className="fine" id={`${id}-hint`}>Include pickup and delivery windows, anticipated volume and frequency, and the type of freight.</p>}
                 {errors[field.name] && <p id={`${id}-error`}>{errors[field.name]}</p>}
               </div>
             );
           })}
           <button className="btn" type="submit" disabled={status === "sending"}>
-            {status === "sending" ? "Sending…" : kind === "newsletter" ? "Request Newsletter Signup" : kind === "driver" ? "Send application" : "Send for Review"}
+            {status === "sending" ? "Sending…" : kind === "driver" ? "Send application" : "Send for Review"}
           </button>
         </>
       )}

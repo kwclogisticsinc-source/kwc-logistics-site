@@ -118,7 +118,7 @@ export default function Home() {
 
       <section className="wrap kwc-editorial">
         <div className="kwc-editorial-photo kwc-dock-photo">
-          <Image src="/images/kwc-truck-backed-to-dock.webp" alt="KWC straight truck backed up to a commercial loading dock" fill sizes="(max-width: 760px) 100vw, 46vw" />
+          <Image src="/images/kwc-raised-loading-dock.webp" alt="KWC straight truck backed into a raised loading dock with its cab facing the yard" fill sizes="(max-width: 760px) 100vw, 46vw" />
         </div>
         <div className="kwc-editorial-copy">
           <h2>Regular routes built around your business.</h2>

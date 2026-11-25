@@ -4,7 +4,7 @@ import { contact } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Privacy Information",
   description:
-    "How KWC handles freight enquiries, careers applications and newsletter signup requests.",
+    "How KWC handles freight enquiries and careers applications.",
   alternates: { canonical: "/privacy" },
 };
 export default function Privacy() {
@@ -15,7 +15,7 @@ export default function Privacy() {
         title="A clear purpose for the information you share."
       >
         <p>
-          We use the details you provide to review your freight enquiry, application or newsletter request and respond where appropriate.
+          We use the details you provide to review your freight enquiry or application and respond where appropriate.
         </p>
       </PageIntro>
       <section className="wrap content-section article-copy">
@@ -37,8 +37,6 @@ export default function Privacy() {
         </p>
         <h2>Careers and carrier applications</h2>
         <p>Applications ask for contact information, operating city, role and relevant experience. You can also share equipment and preferred lanes. KWC uses these details to review applications and follow up about suitable opportunities. Keep licence numbers, copies of identification and insurance documents for follow-up.</p>
-        <h2>Freight market newsletter</h2>
-        <p>Newsletter requests include your email, consent, the wording shown at signup and the time it was recorded. KWC uses these details to manage requests for freight market updates. You can withdraw consent by emailing <a href={`mailto:${contact.email}`}>{contact.email}</a>.</p>
         <h2>Data minimization and technical logs</h2>
         <p>
           Please do not submit patient information, passwords, payment details

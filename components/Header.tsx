@@ -32,7 +32,6 @@ const navigation = [
   ] },
   { label: "Markets", links: [
     ["Ontario freight market brief", "/markets"],
-    ["Newsletter signup", "/markets#request"],
   ] },
   { label: "About", links: [
     ["About KWC", "/about"],

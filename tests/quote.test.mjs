@@ -361,28 +361,12 @@ test("partnership enquiries require a business type and deliver a separate capac
   assert.match(payload.subject, /Carrier capacity enquiry/);
 });
 
-test("newsletter requires an explicit opt-in and sends a timestamped signup separately", async () => {
-  const base = { "Request Type": "newsletter", Email: "reader@example.com" };
-  const missingConsent = await handleQuote(req(base), deps({
-    send: async () => assert.fail("Newsletter requests without consent must not be forwarded"),
-  }));
-  assert.equal(missingConsent.status, 400);
-  assert.ok((await missingConsent.json()).errors["Newsletter consent"]);
-
-  let payload;
-  const result = await handleQuote(req({ ...base, "Newsletter consent": "yes", "Newsletter consent wording": "untrusted", "Newsletter form path": "untrusted", Phone: "ignored" }), deps({
-    send: async (_, options) => {
-      payload = JSON.parse(options.body);
-      return Response.json({ success: true });
-    },
-  }));
-  assert.equal(result.status, 200);
-  assert.match(payload.subject, /Market newsletter signup/);
-  assert.equal(payload["Newsletter consent"], "yes");
-  assert.equal(payload["Newsletter consent wording"], "I agree to receive KWC Logistics freight market updates by email. I can unsubscribe at any time.");
-  assert.equal(payload["Newsletter form path"], "/markets#request");
-  assert.ok(Number.isFinite(Date.parse(payload["Newsletter consent recorded at"])));
-  assert.equal(payload.Phone, undefined);
+test("retired newsletter subscriptions do not reach the delivery provider", async () => {
+  const response = await handleQuote(
+    req({ "Request Type": "newsletter", Email: "reader@example.com", "Newsletter consent": "yes" }),
+    deps({ send: async () => assert.fail("Retired signup must not be forwarded") }),
+  );
+  assert.equal(response.status, 400);
 });
 
 test("accepts AZ and DZ applications with qualified role labels", async () => {

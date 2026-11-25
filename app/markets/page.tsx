@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageIntro } from "@/components/DeliveryUI";
-import { RegistrationForm } from "@/components/RegistrationForm";
-import { contact } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Ontario Freight Market Brief and Newsletter",
-  description: "Read practical Ontario freight insights on regional lanes, receiving, liftgate capacity and recurring distribution. Request email updates from KWC Logistics.",
+  title: "Ontario Freight Market Brief",
+  description: "Read practical Ontario freight insights on regional lanes, receiving, liftgate capacity and recurring distribution.",
   alternates: { canonical: "/markets" },
 };
 
@@ -16,10 +14,9 @@ export default function MarketsPage() {
     <>
       <PageIntro eyebrow="KWC market brief" title="What moves Ontario freight.">
         <p>Practical updates for shippers, brokers and distribution teams planning regional freight.</p>
-        <p><Link href="#request" className="text-link">Request the email newsletter</Link></p>
       </PageIntro>
-      <div className="wrap contact-layout">
-        <article className="article-copy">
+      <div className="wrap content-section">
+        <article className="article-copy story-copy">
           <p className="eyebrow">Planning brief · November 24, 2026</p>
           <h2>Three details to confirm before quoting a regional lane</h2>
           <Image className="kwc-context-photo" src="/images/kwc-liftgate-ground-level.webp" alt="Pallet staged by a straight truck’s lowered rear liftgate at a ground-level receiving door" width={1280} height={853} sizes="(max-width: 760px) 100vw, 56vw" />
@@ -39,10 +36,6 @@ export default function MarketsPage() {
           <h3>Cross-border volumes can shift by commodity</h3>
           <p>Transport Canada’s 2025 report describes shifts in freight flows as trade patterns changed. When planning Ontario–U.S. freight, confirm the equipment, appointments and customs responsibilities for each lane. <a className="text-link" href="https://tc.canada.ca/en/corporate-services/transparency/corporate-management-reporting/transportation-canada-annual-reports/transportation-canada-annual-report-2025">Transport Canada, 2025 annual report</a></p>
         </article>
-        <aside>
-          <RegistrationForm kind="newsletter" />
-          <p className="fine market-signup-note">KWC reviews signup requests before adding readers to the mailing list. To withdraw your request or stop receiving updates, email <a href={`mailto:${contact.email}`}>{contact.email}</a>. <Link href="/privacy" className="text-link">Privacy information</Link></p>
-        </aside>
       </div>
     </>
   );

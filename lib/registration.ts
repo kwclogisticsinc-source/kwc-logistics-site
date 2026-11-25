@@ -11,13 +11,6 @@ export type DriverRole = (typeof driverRoles)[number]["label"];
 const legacyDriverRoles = ["Straight-truck driver", "Straight-truck owner-operator"];
 
 export const registration = {
-  newsletter: {
-    title: "Market newsletter signup",
-    fields: [
-      { name: "Email", required: true, type: "email" },
-      { name: "Newsletter consent", required: true, type: "checkbox", label: "I agree to receive KWC Logistics freight market updates by email. I can unsubscribe at any time." },
-    ],
-  },
   partnership: {
     title: "Carrier capacity enquiry",
     fields: [
@@ -73,9 +66,7 @@ export function validateRegistration(form: FormData, kind: RegistrationKind) {
     values[field.name] = value;
     const limit = "type" in field && field.type === "textarea" ? 1200 : 250;
     const isLegacyDriverRole = kind === "driver" && field.name === "Application type" && legacyDriverRoles.includes(value);
-    if ("type" in field && field.type === "checkbox" && (value !== "yes" || entries.length !== 1))
-      errors[field.name] = "Choose whether to receive market updates.";
-    else if (entries.length > 1 || (raw != null && typeof raw !== "string") || (field.required && !value) || value.length > limit)
+    if (entries.length > 1 || (raw != null && typeof raw !== "string") || (field.required && !value) || value.length > limit)
       errors[field.name] = "Enter one valid value.";
     else if (value && "options" in field && !isLegacyDriverRole && !field.options.some((item) => item === value))
       errors[field.name] = field.name === "Application type" ? "Choose an application type." : "Choose a business type.";
