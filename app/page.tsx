@@ -147,9 +147,12 @@ export default function Home() {
       </section>
 
       <section className="wrap kwc-canada-first" aria-labelledby="canada-first-title">
-        <p className="eyebrow">Canada first</p>
+        <div className="kwc-canada-first-label">
+          <Image src="/images/flag-of-canada.svg" alt="Canadian flag" width={52} height={26} />
+          <p className="eyebrow">Canada first</p>
+        </div>
         <h2 id="canada-first-title">Affordable logistics for Canadian businesses.</h2>
-        <p>We’re building a freight network that helps Canadian businesses buy from Canadian suppliers and reach more customers here at home. When tariffs put pressure on your costs or change where you source, we can help compare domestic freight options, combine supplier pickups where practical and plan recurring routes around your volume.</p>
+        <p>We’re building a freight network that helps Canadian businesses buy from Canadian suppliers and reach more customers here at home. That’s how we do our part to strengthen the Canadian economy. When tariffs put pressure on your costs or change where you source, we can help compare domestic freight options, combine supplier pickups where practical and plan recurring routes around your volume.</p>
         <Link className="text-link" href="/regular-deliveries#quote">Talk to us about your Canadian freight</Link>
       </section>
 
