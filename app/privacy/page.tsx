@@ -4,7 +4,7 @@ import { contact } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Privacy Information",
   description:
-    "How KWC uses delivery enquiries submitted through this website.",
+    "How KWC handles freight enquiries, careers applications and newsletter signup requests.",
   alternates: { canonical: "/privacy" },
 };
 export default function Privacy() {
@@ -15,8 +15,7 @@ export default function Privacy() {
         title="A clear purpose for the information you share."
       >
         <p>
-          We collect the information needed to review your delivery request and
-          reply to you.
+          We use the details you provide to review your freight enquiry, application or newsletter request and respond where appropriate.
         </p>
       </PageIntro>
       <section className="wrap content-section article-copy">
@@ -30,13 +29,14 @@ export default function Privacy() {
         <h2>How it is used and delivered</h2>
         <p>
           KWC uses these details to assess transportation options, contact you
-          and prepare a quote. The website is hosted on Cloudflare. Quote
-          requests are sent server-side through Web3Forms to KWC’s configured
-          email recipient. Relevant shipment information may be shared with
+          and prepare a quote. Cloudflare hosts the site, and Web3Forms delivers
+          website form submissions to KWC’s configured email recipient. Relevant shipment information may be shared with
           suitable transportation partners when needed to assess or arrange your
           requested service. Partnership enquiries also collect your company, business type,
           lanes and capacity requirements so KWC can assess and reply to the enquiry.
         </p>
+        <h2>Careers and carrier applications</h2>
+        <p>Applications ask for contact information, operating city, role and relevant experience. You can also share equipment and preferred lanes. KWC uses these details to review applications and follow up about suitable opportunities. Keep licence numbers, copies of identification and insurance documents for follow-up.</p>
         <h2>Freight market newsletter</h2>
         <p>Newsletter requests include your email, consent, the wording shown at signup and the time it was recorded. KWC uses these details to manage requests for freight market updates. You can withdraw consent by emailing <a href={`mailto:${contact.email}`}>{contact.email}</a>.</p>
         <h2>Data minimization and technical logs</h2>

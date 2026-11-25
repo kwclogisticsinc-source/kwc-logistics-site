@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactCTA, PageIntro } from "@/components/DeliveryUI";
+import { contact } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Forms & Documents",
   description:
@@ -56,9 +57,9 @@ export default function Forms() {
         title="A little preparation. A smoother delivery."
       >
         <p>
-          Download fillable PDFs, save your copy, and email it to{" "}
-          <a href="mailto:ship@kwclogistics.ca">ship@kwclogistics.ca</a>.
-          Confirm the right documents and return instructions with KWC.
+          Save a copy of your shipment request or customer setup form and email it to{" "}
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+          The draft bill of lading and credit application are for review. Confirm the correct document and return instructions before using either draft.
         </p>
       </PageIntro>
       <section className="wrap content-section">
