@@ -16,25 +16,25 @@ export function Footer() {
         </div>
         <nav aria-label="Footer services">
           <strong>What we move</strong>
-          <Link href="/services/courier">Bulk package delivery</Link>
-          <Link href="/services/freight">Freight & specialized delivery</Link>
-          <Link href="/services/freight-brokerage">Freight brokerage</Link>
-          <Link href="/services/logistics">Logistics management</Link>
-          <Link href="/regular-deliveries#quote">Regular deliveries</Link>
-          <Link href="/transportation-partnerships">Transportation partnerships</Link>
+          <Link href="/services/courier">Bulk Package Delivery</Link>
+          <Link href="/services/freight">Freight & Specialized Delivery</Link>
+          <Link href="/services/freight-brokerage">Freight Brokerage</Link>
+          <Link href="/services/logistics">Logistics Management</Link>
+          <Link href="/regular-deliveries#quote">Regular Deliveries</Link>
+          <Link href="/transportation-partnerships">Transportation Partnerships</Link>
         </nav>
         <nav aria-label="Footer company">
           <strong>Get to know KWC</strong>
           <Link href="/service-areas">Coverage</Link>
-          <Link href="/about">About us</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/equipment">Equipment</Link>
           <Link href="/safety">Safety</Link>
           <Link href="/technology">Technology</Link>
           <Link href="/drive-with-kwc">Drive with KWC</Link>
-          <Link href="/customer-registration">Register your business</Link>
+          <Link href="/customer-registration">Register Your Business</Link>
           <Link href="/industries">Industries</Link>
-          <Link href="/resources">Shipping help</Link>
-          <Link href="/forms">Forms & documents</Link>
+          <Link href="/resources">Shipping Help</Link>
+          <Link href="/forms">Forms & Documents</Link>
         </nav>
         <div className="footer-contact">
           <strong>Talk to KWC Logistics</strong>

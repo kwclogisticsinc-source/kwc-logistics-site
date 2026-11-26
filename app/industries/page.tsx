@@ -13,7 +13,7 @@ export default function Industries() {
     <>
       <PageIntro
         eyebrow="Industry solutions"
-        title="Transportation by industry."
+        title="Transportation by Industry."
       >
         <p>
           Explore pickup, receiving and delivery options for your business. Each

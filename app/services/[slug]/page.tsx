@@ -7,7 +7,7 @@ import { categories, industries } from "@/lib/content";
 import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
 const details = {
   courier: {
-    title: "B2B bulk package delivery by cargo van.",
+    title: "B2B Bulk Package Delivery by Cargo Van.",
     intro:
       "Move a batch of customer orders in a cargo van. KWC helps businesses collect packages from a warehouse or shop and deliver them across multiple stops.",
     groups: [
@@ -44,7 +44,7 @@ const details = {
     quote: "courier",
   },
   freight: {
-    title: "Big shipment. Clear plan.",
+    title: "Big Shipment. Clear Plan.",
     intro:
       "Pallets, commercial freight and larger deliveries need the right questions up front. We help work through access, timing and extra handling before the vehicle arrives.",
     groups: [
@@ -67,12 +67,12 @@ const details = {
         ],
       ],
     ],
-    outcome: "Need more than dock-to-dock delivery?",
+    outcome: "Need More Than Dock-to-Dock Delivery?",
     body: "Tell us what needs to happen at pickup and delivery so we can confirm the right equipment and assistance.",
     quote: "freight",
   },
   logistics: {
-    title: "One contact. A practical plan for every shipment.",
+    title: "One Contact for Every Shipment",
     intro:
       "Connect the pickup, road movement and final delivery without coordinating every carrier yourself. KWC helps plan recurring distribution and more complex road freight.",
     groups: [
@@ -104,7 +104,7 @@ const details = {
         ],
       ],
     ],
-    outcome: "Build a delivery plan around your business.",
+    outcome: "Build a Delivery Plan Around Your Business",
     body: "Start with the locations, approximate volume, frequency and receiving needs. We can assess how compatible shipments, regional movement and final delivery could work together. Wider freight is carried by third-party carriers; KWC coordinates the arrangements. Cross-border documentation responsibilities and any specialist customs provider are confirmed before booking.",
     quote: "logistics",
   },
@@ -151,12 +151,12 @@ export default async function ServicePage({
             <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 720px) 100vw, 760px" />
           </figure>
           <div className="article-copy">
-            <h2>What to include in your request</h2>
+            <h2>What to Include in Your Request</h2>
             <p>{preparation}</p>
             <h2>{question}</h2>
             <p>{answer}</p>
             <p>We confirm equipment, availability and price before booking.</p>
-            <Link className="text-link" href="/services">Explore all freight services</Link>
+            <Link className="text-link" href="/services">Explore All Freight Services</Link>
           </div>
         </section>
       </>
@@ -235,7 +235,7 @@ export default async function ServicePage({
         {slug === "courier" && (
           <>
             <div className="section-heading" style={{ marginTop: 60 }}>
-              <h2>Useful for your kind of business.</h2>
+              <h2>Useful for Your Kind of Business.</h2>
             </div>
             <div className="industry-grid">
               {industries.map(([title, text]) => (

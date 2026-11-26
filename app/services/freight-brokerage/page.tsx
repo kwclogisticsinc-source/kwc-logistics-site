@@ -22,7 +22,7 @@ export default function FreightBrokerage() {
       <section className="kwc-broker-hero">
         <div className="wrap">
           <p className="eyebrow">Freight brokerage</p>
-          <h1>One point of contact for freight beyond Ontario.</h1>
+          <h1>One Point of Contact for Freight Beyond Ontario.</h1>
           <p>KWC reviews interprovincial and Canada–U.S. road freight requests and sources capacity through qualified carrier partners where available. We confirm who will carry your freight, what equipment they’ll use and the agreed service before you book.</p>
           <div className="button-row">
             <Link href={quote} className="btn">Request a Brokerage Quote</Link>
@@ -34,19 +34,19 @@ export default function FreightBrokerage() {
       <section className="wrap kwc-operating" aria-label="Brokerage lanes and equipment">
         <article>
           <p className="eyebrow">Where we arrange capacity</p>
-          <h2>Domestic and cross-border.</h2>
+          <h2>Domestic and Cross-Border.</h2>
           <p>Ask us about Ontario–Québec lanes, including Montréal, other interprovincial moves and freight between Canada and the U.S. We can also source additional capacity within Ontario. The KWC company fleet operates exclusively within Ontario.</p>
         </article>
         <article>
           <p className="eyebrow">What we can arrange</p>
-          <h2>LTL and full truckload.</h2>
+          <h2>LTL and Full Truckload.</h2>
           <p>Request shared truck space for pallet freight or dedicated equipment for a larger load. We can source 53-foot dry vans and reefers based on the lane, shipment requirements and carrier availability.</p>
         </article>
       </section>
 
       <section className="kwc-broker-process">
         <div className="wrap">
-          <h2>How we arrange your shipment</h2>
+          <h2>How We Arrange Your Shipment</h2>
           <ol>
             {bookingSteps.map(([title, copy]) => (
               <li key={title}><h3>{title}</h3><p>{copy}</p></li>
@@ -58,11 +58,11 @@ export default function FreightBrokerage() {
 
       <section className="wrap kwc-home-close">
         <div>
-          <h2>Have a lane you move regularly?</h2>
+          <h2>Have a Lane You Move Regularly?</h2>
           <p>Share your weekly volume, delivery windows and equipment requirements so we can quote for the work you expect to move.</p>
           <div className="button-row">
             <Link className="btn" href={quote}>Get a Freight Quote</Link>
-            <Link className="text-link" href="/transportation-partnerships">Request Ontario carrier capacity</Link>
+            <Link className="text-link" href="/transportation-partnerships">Request Ontario Carrier Capacity</Link>
           </div>
         </div>
       </section>

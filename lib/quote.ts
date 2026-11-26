@@ -58,7 +58,7 @@ export function fieldsFor(
   const freight = kind === "freight" || kind === "logistics";
   return [
     {
-      title: recurring ? "Where will your deliveries go?" : "Where’s it going?",
+      title: recurring ? "Where Will Your Deliveries Go?" : "Where’s It Going?",
       description:
         "A city or postal code is enough to start. Add full addresses if you have them.",
       fields: [
@@ -103,8 +103,8 @@ export function fieldsFor(
     },
     {
       title: recurring
-        ? "What does a typical round look like?"
-        : "What are you sending?",
+        ? "What Does a Typical Route Look Like?"
+        : "What Are You Sending?",
       description: freight
         ? "Pallets, commodity, measurements and access help us plan suitable equipment."
         : "Approximate details are welcome. We can work through the rest with you.",
@@ -113,7 +113,7 @@ export function fieldsFor(
           name: "Freight Type",
           label: freight
             ? "Commodity / what’s on the pallets?"
-            : "What are you sending?",
+            : "What Are You Sending?",
           required: true,
           max: 200,
         },
@@ -237,8 +237,8 @@ export function fieldsFor(
     },
     {
       title: recurring
-        ? "When would you like to start?"
-        : "When do you need it?",
+        ? "When Would You Like to Start?"
+        : "When Do You Need It?",
       description:
         "Timing is requested here and confirmed with you before booking.",
       fields: [
@@ -294,7 +294,7 @@ export function fieldsFor(
       ],
     },
     {
-      title: "How can we reach you?",
+      title: "How Can We Reach You?",
       description:
         "We’ll review your request and contact you with the next steps. No account needed.",
       fields: [

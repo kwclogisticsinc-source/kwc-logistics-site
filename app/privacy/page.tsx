@@ -12,21 +12,21 @@ export default function Privacy() {
     <>
       <PageIntro
         eyebrow="YOUR ENQUIRY DETAILS"
-        title="A clear purpose for the information you share."
+        title="A Clear Purpose for the Information You Share."
       >
         <p>
           We use the details you provide to review your freight enquiry or application and respond where appropriate.
         </p>
       </PageIntro>
       <section className="wrap content-section article-copy">
-        <h2>What the quote form collects</h2>
+        <h2>What the Quote Form Collects</h2>
         <p>
           Your name and email, an optional phone number and company, pickup and
           destination details, shipment information, requested timing and
           relevant handling requirements. No account or payment information is
           requested.
         </p>
-        <h2>How it is used and delivered</h2>
+        <h2>How It Is Used and Delivered</h2>
         <p>
           KWC uses these details to assess transportation options, contact you
           and prepare a quote. Cloudflare hosts the site, and Web3Forms delivers
@@ -35,9 +35,9 @@ export default function Privacy() {
           requested service. Partnership enquiries also collect your company, business type,
           lanes and capacity requirements so KWC can assess and reply to the enquiry.
         </p>
-        <h2>Careers and carrier applications</h2>
+        <h2>Careers and Carrier Applications</h2>
         <p>Applications ask for contact information, operating city, role and relevant experience. You can also share equipment and preferred lanes. KWC uses these details to review applications and follow up about suitable opportunities. Keep licence numbers, copies of identification and insurance documents for follow-up.</p>
-        <h2>Data minimization and technical logs</h2>
+        <h2>Data Minimization and Technical Logs</h2>
         <p>
           Please do not submit patient information, passwords, payment details
           or sensitive documents. The website does not add advertising trackers
@@ -46,7 +46,7 @@ export default function Privacy() {
           security and service operation. The application logs generic delivery
           error codes rather than shipment contents.
         </p>
-        <h2>Your choices</h2>
+        <h2>Your Choices</h2>
         <p>
           Form details are held in the current page’s memory while you move
           between steps; the form does not save them to browser storage. You can

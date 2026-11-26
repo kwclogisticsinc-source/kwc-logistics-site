@@ -12,7 +12,7 @@ export default function Resources() {
     <>
       <PageIntro
         eyebrow="A LITTLE PREPARATION GOES A LONG WAY"
-        title="You don’t need to speak logistics."
+        title="You Don’t Need to Speak Logistics."
       >
         <p>Start with what you know. We can help work through the rest.</p>
       </PageIntro>
@@ -39,14 +39,14 @@ export default function Resources() {
           ))}
         </div>
         <div className="article-copy">
-          <h2>Before you ship</h2>
+          <h2>Before You Ship</h2>
           <p>
             Package items suitably for road movement. Tell us about fragile
             items, unusual dimensions, stairs, loading restrictions and any
             special requirements before booking. Product and vehicle suitability
             are confirmed with the service.
           </p>
-          <h2>A few useful terms</h2>
+          <h2>A Few Useful Terms</h2>
           <p>
             <strong>LTL (less than truckload)</strong> means suitable freight
             can share vehicle capacity. <strong>FTL (full truckload)</strong>{" "}
@@ -57,7 +57,7 @@ export default function Resources() {
           <Link className="text-link" href="/forms">
             Shipment checklist & downloadable forms →
           </Link>
-          <h2>Common questions</h2>
+          <h2>Common Questions</h2>
           <FAQ />
         </div>
       </section>

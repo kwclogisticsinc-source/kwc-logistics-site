@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 export default function CustomerRegistration() {
   return (
     <>
-      <PageIntro eyebrow="Customer onboarding" title="Your transportation network starts here.">
+      <PageIntro eyebrow="Customer onboarding" title="Your Transportation Network Starts Here.">
         <p>Tell us about your company, what you ship and how often. We’ll follow up to discuss service, coverage and onboarding.</p>
       </PageIntro>
       <section className="wrap contact-layout">
         <aside className="contact-aside">
-          <h2>Start with your shipping operation</h2>
+          <h2>Start with Your Shipping Operation</h2>
           <p>Include your main pickup areas, number of locations and typical weekly volume. KWC reviews registration requests before agreeing on service or billing terms.</p>
         </aside>
         <RegistrationForm kind="customer" />

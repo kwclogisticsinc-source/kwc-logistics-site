@@ -10,25 +10,25 @@ export const metadata: Metadata = {
 };
 const docs = [
   {
-    title: "Book a shipment",
+    title: "Book a Shipment",
     text: "Send pickup, delivery and handling details for review. A request is not a confirmed booking.",
     file: "kwc-book-a-shipment.pdf",
     label: "Download shipment request PDF ↓",
   },
   {
-    title: "Road bill of lading · Draft",
+    title: "Road Bill of Lading · Draft",
     text: "Shipper, receiver and freight details. Confirm the carrier’s documentation and applicable carriage conditions before operational use.",
     file: "kwc-bill-of-lading.pdf",
     label: "Download draft bill of lading ↓",
   },
   {
-    title: "Customer setup",
+    title: "Customer Setup",
     text: "Introduce your business, billing contacts and delivery needs. Customer setup does not establish a credit account.",
     file: "kwc-customer-setup.pdf",
     label: "Download customer setup PDF ↓",
   },
   {
-    title: "Credit application · Draft",
+    title: "Credit Application · Draft",
     text: "Business and trade-reference information for review. Credit terms and reference authorization require approval before use.",
     file: "kwc-credit-application.pdf",
     label: "Download draft credit application ↓",
@@ -54,7 +54,7 @@ export default function Forms() {
     <>
       <PageIntro
         eyebrow="FORMS & SHIPPING HELP"
-        title="A little preparation. A smoother delivery."
+        title="A Little Preparation. A Smoother Delivery."
       >
         <p>
           Save a copy of your shipment request or customer setup form and email it to{" "}
@@ -64,7 +64,7 @@ export default function Forms() {
       </PageIntro>
       <section className="wrap content-section">
         <div className="article-copy">
-          <h2>Before you ship</h2>
+          <h2>Before You Ship</h2>
           <ul>
             <li>Confirm pickup and delivery contacts.</li>
             <li>Provide the number of pieces, dimensions and weight.</li>
@@ -80,14 +80,14 @@ export default function Forms() {
             More shipping help →
           </Link>
         </div>
-        <h2>Book and manage a shipment</h2>
+        <h2>Book and Manage a Shipment</h2>
         <Documents start={0} end={2} />
         <p>
           <Link className="text-link" href="/contact#quote">
             Prefer to start online? Request a Quote →
           </Link>
         </p>
-        <h2 style={{ marginTop: 56 }}>Business account documents</h2>
+        <h2 style={{ marginTop: 56 }}>Business Account Documents</h2>
         <Documents start={2} end={4} />
         <p className="fine">
           The bill of lading and credit application remain drafts for review. Do

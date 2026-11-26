@@ -36,7 +36,7 @@ export function RegistrationForm({ kind, initialDriverRole }: { kind: Registrati
   }
 
   return (
-    <form id="request" className="quote-entry registration-form" method="post" action="/api/quote" onSubmit={submit}>
+    <form id="request" className="quote-entry registration-form" method="post" action="/Api/Quote" onSubmit={submit}>
       <h2>{title}</h2>
       {status !== "success" && (
         <>

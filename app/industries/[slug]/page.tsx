@@ -34,9 +34,9 @@ export default async function IndustryPage(props: Props) {
         <div className={photo ? "article-copy kwc-coverage-photo-band" : "article-copy"}>
           {photo && <Image src={photo.src} alt={photo.alt} width={1280} height={720} sizes="(max-width: 800px) 92vw, 46vw" />}
           <div>
-            <h2>What to include in your quote</h2>
+            <h2>What to Include in Your Quote</h2>
             <p>{requirements}</p>
-            <h2>Planning the shipment</h2>
+            <h2>Planning the Shipment</h2>
             <p>{guidance}</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default async function IndustryPage(props: Props) {
           <Link className="btn" href="/book-now">Get a Quote</Link>
           <Link className="btn secondary" href={`/services/${service}`}>Explore the Service</Link>
         </div>
-        <Link className="text-link operations-actions" href="/industries">Explore all industries</Link>
+        <Link className="text-link operations-actions" href="/industries">Explore All Industries</Link>
       </section>
     </>
   );

@@ -194,7 +194,7 @@ export function QuoteForm({
       </div>}
       {status === "success" ? (
         <>
-          <h2>Thank you. We’ve got your request.</h2>
+          <h2>Thank You. We’ve Got Your Request.</h2>
           <p className="form-status success" role="status">
             {message}
           </p>

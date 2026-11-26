@@ -116,7 +116,7 @@ export function ContactCTA() {
     <section className="wrap final-cta">
       <div>
         <p className="eyebrow">Pallet freight, bulk packages and scheduled routes</p>
-        <h2>Let’s get it moving.</h2>
+        <h2>Let’s Get It Moving.</h2>
         <p>Tell us what you need. We’ll work through the details together.</p>
       </div>
       <div>
@@ -177,7 +177,7 @@ export function ProvinceCoverageGraphic() {
       />
       <figcaption>
         Selected routes up to Sudbury. Ask us about delivery anywhere in Ontario.{" "}
-        <Link className="text-link" href="/images/ontario-province-coverage.svg">View full-size Ontario map</Link>
+        <Link className="text-link" href="/images/ontario-province-coverage.svg">View Full-Size Ontario Map</Link>
       </figcaption>
     </figure>
   );

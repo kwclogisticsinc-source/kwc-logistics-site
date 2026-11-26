@@ -29,7 +29,7 @@ export default async function ContactPage({
     <>
       <PageIntro
         eyebrow="WATERLOO REGION · ONTARIO FREIGHT"
-        title="Request a freight quote."
+        title="Request a Freight Quote."
       >
         <p>
           Tell us what you’re shipping and where it’s going. We’ll review the details and follow up with your options.

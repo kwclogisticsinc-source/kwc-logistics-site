@@ -10,8 +10,8 @@ export const freightInsurance =
 export const categories = [
   {
     id: "freight",
-    title: "Freight & specialized delivery",
-    action: "Move freight",
+    title: "Freight & Specialized Delivery",
+    action: "Move Freight",
     short: "Pallet freight and dedicated trucks",
     description:
       "Pallets, larger shipments and deliveries that need the right equipment or a little extra handling.",
@@ -22,8 +22,8 @@ export const categories = [
   },
   {
     id: "regular",
-    title: "Logistics management",
-    action: "Arrange regular deliveries",
+    title: "Logistics Management",
+    action: "Arrange Regular Deliveries",
     short: "Regular routes and store replenishment",
     description:
       "Recurring routes, regional distribution and Canada/U.S. road freight with one point of contact.",
@@ -35,7 +35,7 @@ export const categories = [
   {
     id: "courier",
     title: "B2B Bulk Package Delivery",
-    action: "Quote a bulk package route",
+    action: "Quote a Bulk Package Route",
     short: "Bulk package routes by cargo van",
     description:
       "Cargo van delivery for batches of business packages, including scheduled pickups, multi-stop routes and customer order distribution.",
@@ -46,10 +46,10 @@ export const categories = [
   },
 ] as const;
 export const industries = [
-  ["Grocery stores", "Plan store replenishment, multi-stop deliveries and refrigerated transportation where suitable capacity is available."],
-  ["Flower shops", "Coordinate supplier pickups and deliveries around shop receiving windows and handling needs."],
-  ["E-commerce businesses", "Arrange customer deliveries, inventory replenishment and returns pickups."],
-  ["Medical supply customers", "Coordinate deliveries of general medical supplies. We review shipment and handling requirements before booking."],
+  ["Grocery Stores", "Plan store replenishment, multi-stop deliveries and refrigerated transportation where suitable capacity is available."],
+  ["Flower Shops", "Coordinate supplier pickups and deliveries around shop receiving windows and handling needs."],
+  ["E-Commerce Businesses", "Arrange customer deliveries, inventory replenishment and returns pickups."],
+  ["Medical Supply Customers", "Coordinate deliveries of general medical supplies. We review shipment and handling requirements before booking."],
   [
     "Manufacturing & industrial",
     "Move urgent replacement parts, samples and supplier orders between business locations.",

@@ -13,7 +13,7 @@ export default function About() {
     <>
       <PageIntro
         eyebrow="KITCHENER, ONTARIO · FOUNDED IN 2022"
-        title="An Ontario carrier built around the handoff."
+        title="An Ontario Carrier Built Around the Handoff."
       >
         <p>
           From the supplier’s loading dock to your customer’s door, KWC helps businesses arrange Ontario freight, final-mile delivery and regular transportation.
@@ -21,7 +21,7 @@ export default function About() {
       </PageIntro>
       <section className="wrap content-section">
         <div className="article-copy story-copy" id="our-story">
-          <h2>Our story</h2>
+          <h2>Our Story</h2>
           <p>
             KWC Logistics is a family-operated Canadian transportation company. We started providing services in Kitchener in 2022 so smaller businesses could ship as they grew without having to run a fleet of their own.
           </p>
@@ -33,7 +33,7 @@ export default function About() {
           <p>
             Our company-operated fleet serves Ontario exclusively, including
             communities beyond the main commercial corridors. Through our{" "}
-            <Link className="text-link" href="/services/freight-brokerage">freight brokerage</Link>,
+            <Link className="text-link" href="/services/freight-brokerage">Freight Brokerage</Link>,
             we review additional Ontario capacity, interprovincial shipments and
             Canada–U.S. lanes with qualified carrier partners.
           </p>
@@ -48,40 +48,40 @@ export default function About() {
           </p>
         </div>
         <section className="article-copy story-copy" id="canada-first" aria-labelledby="about-canada-first">
-          <h2 id="about-canada-first">Our Canada-first commitment</h2>
+          <h2 id="about-canada-first">Our Canada-First Commitment</h2>
           <p>We’re building an affordable Canadian logistics network from our Ontario base. Our goal is to make it easier for Canadian suppliers, retailers and distributors to do business with one another and to support the communities and jobs that depend on that trade. As tariffs change sourcing decisions and put pressure on budgets, we help customers compare domestic lanes and look for practical ways to control freight costs.</p>
           <p>We handle company-operated shipments in Ontario and work with qualified carrier partners to arrange freight elsewhere in Canada. Share your supplier locations, delivery stops and expected volume so we can review options for your business.</p>
         </section>
         <section className="article-copy story-copy kwc-coverage-photo-band" id="safety" aria-labelledby="about-safety">
           <Image src="/images/kwc-truck-maintenance.webp" alt="A mechanic inspecting a straight truck" width={1280} height={853} sizes="(max-width: 800px) 92vw, 46vw" />
           <div>
-            <h2 id="about-safety">How we approach safety</h2>
+            <h2 id="about-safety">How We Approach Safety</h2>
             <p>Our drivers are trained, and our company-operated vehicles are checked before each trip. Our in-house mechanic maintains the fleet and helps resolve issues found during pre-trip checks.</p>
             <p>We set clear safety and performance standards for hiring and continued work with KWC. We use technology to review driver performance and address safety concerns so we can reduce avoidable setbacks for customers.</p>
           </div>
         </section>
         <section className="article-copy" id="how-we-work">
-          <h2>How we work with you</h2>
+          <h2>How We Work with You</h2>
           <p>Before booking, we review what is moving, the pickup and receiving windows, and whether the freight needs a dock or liftgate. We confirm the operating carrier and equipment with you.</p>
-          <h3>What to include in a freight request</h3>
+          <h3>What to Include in a Freight Request</h3>
           <p>Share the pickup and delivery locations, date or receiving window, pallet count, weight and dimensions. Tell us about restricted access, special handling or a site without a dock. For a recurring lane, include the stops and expected weekly volume.</p>
-          <h3>How to follow up on a shipment</h3>
-          <p>Have your shipment reference and stop details handy if you need to check a handoff or confirm an appointment. <Link className="text-link" href="/shipment-updates">Request a shipment update</Link></p>
+          <h3>How to Follow Up on a Shipment</h3>
+          <p>Have your shipment reference and stop details handy if you need to check a handoff or confirm an appointment. <Link className="text-link" href="/shipment-updates">Request a Shipment Update</Link></p>
           <div className="capability-grid">
             <article>
-              <h3>One-time freight</h3>
+              <h3>One-Time Freight</h3>
               <p>Start with the route, pallet count or item dimensions, and receiving access.</p>
-              <Link className="text-link" href="/book-now">Request a shipment quote</Link>
+              <Link className="text-link" href="/book-now">Request a Shipment Quote</Link>
             </article>
             <article>
-              <h3>Regular transportation</h3>
+              <h3>Regular Transportation</h3>
               <p>Share your typical volume, supplier pickups and the stops you need covered each week.</p>
-              <Link className="text-link" href="/regular-deliveries">Plan a recurring route</Link>
+              <Link className="text-link" href="/regular-deliveries">Plan a Recurring Route</Link>
             </article>
             <article>
-              <h3>Carrier capacity</h3>
+              <h3>Carrier Capacity</h3>
               <p>Tell us which Ontario lanes or final-mile handoffs you need covered.</p>
-              <Link className="text-link" href="/transportation-partnerships">Discuss a partnership</Link>
+              <Link className="text-link" href="/transportation-partnerships">Discuss a Partnership</Link>
             </article>
           </div>
         </section>

@@ -47,7 +47,7 @@ export default async function FreightPage(props: PageProps) {
           <Link className="btn" href="/contact?service=freight#quote">Request a Freight Quote</Link>
           <Link className="btn secondary" href="/contact?service=regular#quote">Plan a Recurring Route</Link>
         </div>
-        <p><Link className="text-link" href="/service-areas">See all Ontario corridors and freight guides</Link></p>
+        <p><Link className="text-link" href="/service-areas">See All Ontario Corridors and Freight Guides</Link></p>
       </div>
     </>
   );

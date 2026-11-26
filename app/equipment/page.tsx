@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function EquipmentPage() {
   return (
     <>
-      <PageIntro eyebrow="Equipment" title="The right truck for the delivery.">
+      <PageIntro eyebrow="Equipment" title="The Right Truck for the Delivery.">
         <p>We match equipment to your freight, receiving site and schedule. Tell us about the load and any access restrictions before we quote.</p>
       </PageIntro>
       <section className="wrap content-section">
@@ -26,11 +26,11 @@ export default function EquipmentPage() {
             <div><dt>Cargo van routes</dt><dd>Bulk packages, supplier collections and multi-stop deliveries for business customers. Include the number of packages and delivery stops.</dd></div>
             <div><dt>53-foot dry vans</dt><dd>For dry, palletized freight and larger dock-to-dock shipments. Include the pallet count, loaded dimensions, weight and dock access so we can confirm capacity.</dd></div>
             <div><dt>53-foot reefers</dt><dd>For eligible temperature-controlled loads. Include your required temperature range, commodity and loading instructions so we can confirm suitable equipment.</dd></div>
-            <div><dt>Partner capacity</dt><dd>We work with qualified transportation partners for additional capacity, equipment and routes. Your quote confirms the operator and equipment. <Link className="text-link" href="/services/freight-brokerage">See freight brokerage</Link>.</dd></div>
+            <div><dt>Partner capacity</dt><dd>We work with qualified transportation partners for additional capacity, equipment and routes. Your quote confirms the operator and equipment. <Link className="text-link" href="/services/freight-brokerage">See Freight Brokerage</Link>.</dd></div>
           </dl>
         </div>
         <div className="article-copy">
-          <h2>What we confirm before dispatch</h2>
+          <h2>What We Confirm Before Dispatch</h2>
           <p>We review the route, access, handling needs and equipment capacity with you. Your quote confirms the service and whether KWC or a partner will operate the shipment.</p>
           <div className="button-row">
             <Link href="/book-now" className="btn">Get a Quote</Link>

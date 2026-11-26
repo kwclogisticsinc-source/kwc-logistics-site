@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 const featuredServices = [
   {
-    title: "LTL and pallet freight",
+    title: "LTL and Pallet Freight",
     href: "/services/ltl-freight",
     image: commercialServicePhotos["ltl-freight"].src,
     alt: commercialServicePhotos["ltl-freight"].alt,
@@ -20,7 +20,7 @@ const featuredServices = [
     details: "For a quote, send pallet count, loaded dimensions, total weight and dock access at both ends.",
   },
   {
-    title: "Final-mile liftgate delivery",
+    title: "Final-Mile Liftgate Delivery",
     href: "/services/tailgate-delivery",
     image: commercialServicePhotos["tailgate-delivery"].src,
     alt: commercialServicePhotos["tailgate-delivery"].alt,
@@ -28,7 +28,7 @@ const featuredServices = [
     details: "Send the heaviest pallet weight, surface conditions and the distance from the truck to the receiving door.",
   },
   {
-    title: "Recurring freight routes",
+    title: "Recurring Freight Routes",
     href: "/regular-deliveries",
     image: commercialServicePhotos["retail-grocery-distribution"].src,
     alt: commercialServicePhotos["retail-grocery-distribution"].alt,
@@ -36,7 +36,7 @@ const featuredServices = [
     details: "Send weekly volume, stops and receiving windows so we can review routing, frequency and equipment.",
   },
   {
-    title: "B2B bulk package delivery",
+    title: "B2B Bulk Package Delivery",
     href: "/services/courier",
     image: "/images/kwc-bulk-packages.webp",
     alt: "A worker handling boxed packages at the rear of a cargo van",
@@ -44,7 +44,7 @@ const featuredServices = [
     details: "Tell us the number of packages, approximate volume, stops and any time-sensitive handoffs.",
   },
   {
-    title: "Full truckload and dedicated freight",
+    title: "Full Truckload and Dedicated Freight",
     href: "/services/full-truckload",
     image: commercialServicePhotos["full-truckload"].src,
     alt: commercialServicePhotos["full-truckload"].alt,
@@ -52,7 +52,7 @@ const featuredServices = [
     details: "Share the load dimensions, gross weight, loading method and shipment dates.",
   },
   {
-    title: "Refrigerated transportation",
+    title: "Refrigerated Transportation",
     href: "/services/refrigerated-transportation",
     image: commercialServicePhotos["refrigerated-transportation"].src,
     alt: commercialServicePhotos["refrigerated-transportation"].alt,
@@ -67,11 +67,11 @@ export default function Services() {
       <section className="kwc-services-hero">
         <div className="wrap kwc-services-hero-grid">
           <div>
-            <h1>Freight services built around your shipment.</h1>
+            <h1>Freight Services Built Around Your Shipment.</h1>
             <p>From a single pallet to recurring store deliveries, we help Ontario businesses match their freight to the right equipment, route and budget.</p>
             <div className="button-row">
-              <Link href="/book-now#quote-start" className="btn">Get a freight quote</Link>
-              <Link href="/regular-deliveries#quote" className="kwc-services-hero-link">Plan recurring deliveries</Link>
+              <Link href="/book-now#quote-start" className="btn">Get a Freight Quote</Link>
+              <Link href="/regular-deliveries#quote" className="kwc-services-hero-link">Plan Recurring Deliveries</Link>
             </div>
           </div>
           <Image src="/images/business-pickup.webp" alt="A delivery worker collects boxed orders from a business" width={1100} height={733} preload sizes="(max-width: 800px) 94vw, 48vw" />
@@ -79,7 +79,7 @@ export default function Services() {
       </section>
       <section className="kwc-services-catalog" aria-labelledby="featured-services-title">
         <div className="wrap">
-          <h2 id="featured-services-title">Find the right service for your freight</h2>
+          <h2 id="featured-services-title">Find the Right Service for Your Freight</h2>
           <div className="kwc-featured-services">
             {featuredServices.map(({ title, href, image, alt, summary, details }) => (
               <article key={href}>
@@ -97,16 +97,16 @@ export default function Services() {
       <section className="wrap kwc-coverage-photo-band kwc-service-industry" aria-labelledby="medical-delivery-title">
         <Image src={industryPhotos["medical-supplies"].src} alt={industryPhotos["medical-supplies"].alt} width={1280} height={720} sizes="(max-width: 800px) 92vw, 46vw" />
         <div>
-          <h2 id="medical-delivery-title">Medical supply delivery</h2>
+          <h2 id="medical-delivery-title">Medical Supply Delivery</h2>
           <p>Plan scheduled deliveries of general medical supplies to clinics and other business locations. Share what you’re shipping, who will receive it and any special requirements so we can confirm eligibility and handling before pickup.</p>
-          <Link className="text-link" href="/industries/medical-supplies">Explore medical supply delivery</Link>
+          <Link className="text-link" href="/industries/medical-supplies">Explore Medical Supply Delivery</Link>
         </div>
       </section>
       <section className="wrap content-section kwc-services-directory">
-        <h2>All freight and logistics services</h2>
+        <h2>All Freight and Logistics Services</h2>
         <ul className="july-directory">
-          <li><Link className="text-link" href="/services/freight">Freight and specialized delivery</Link><p>Explore pallet freight, dedicated capacity and receiving options.</p></li>
-          <li><Link className="text-link" href="/services/logistics">Logistics management</Link><p>Coordinate pickups, recurring distribution and carrier handoffs.</p></li>
+          <li><Link className="text-link" href="/services/freight">Freight and Specialized Delivery</Link><p>Explore pallet freight, dedicated capacity and receiving options.</p></li>
+          <li><Link className="text-link" href="/services/logistics">Logistics Management</Link><p>Coordinate pickups, recurring distribution and carrier handoffs.</p></li>
           {commercialServices.map(([slug, title, summary]) => (
             <li key={slug}>
               <Link className="text-link" href={`/services/${slug}`}>{title}</Link>
@@ -118,7 +118,7 @@ export default function Services() {
           <strong>Ontario fleet. Canada-wide and cross-border brokerage.</strong>{" "}
           Our company-operated fleet serves Ontario exclusively. For moves beyond Ontario
           and additional capacity within the province, we arrange service through qualified
-          carrier partners. <Link className="text-link" href="/services/freight-brokerage">Explore freight brokerage</Link>.
+          carrier partners. <Link className="text-link" href="/services/freight-brokerage">Explore Freight Brokerage</Link>.
         </div>
       </section>
       <ContactCTA />
