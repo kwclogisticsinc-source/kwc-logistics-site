@@ -58,6 +58,11 @@ export function QuoteForm({
       formRef.current?.scrollIntoView();
     }
   }, []);
+  useEffect(() => {
+    if (status === "success" || (status === "error" && !formRef.current?.querySelector('[aria-invalid="true"]'))) {
+      formRef.current?.querySelector<HTMLElement>("[data-quote-result]")?.focus();
+    }
+  }, [status]);
   function captureCurrent() {
     const current = new FormData(formRef.current!);
     const captured: Record<string, string> = {};
@@ -194,7 +199,7 @@ export function QuoteForm({
       </div>}
       {status === "success" ? (
         <>
-          <h2>Thank You. We’ve Got Your Request.</h2>
+          <h2 tabIndex={-1} data-quote-result>Thank You. We’ve Got Your Request.</h2>
           <p className="form-status success" role="status">
             {message}
           </p>
@@ -381,6 +386,8 @@ export function QuoteForm({
           </div>
           {message && (
             <p
+              tabIndex={-1}
+              data-quote-result
               className={`form-status ${status}`}
               role="status"
               aria-live="polite"
