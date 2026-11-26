@@ -16,7 +16,7 @@ export function QuoteEntry() {
     window.location.assign(`/contact?service=${kind}&intent=${intent}&journey=ship#quote&${route.toString()}`);
   }
   return (
-    <form id="quote-start" action="/Contact" onSubmit={start} className="quote-entry" aria-labelledby="quote-start-title">
+    <form id="quote-start" action="/contact" onSubmit={start} className="quote-entry" aria-labelledby="quote-start-title">
       <input type="hidden" name="journey" value="ship" />
       <div className="entry-heading">
         <strong id="quote-start-title">Get a quote for your route</strong>
