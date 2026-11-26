@@ -29,7 +29,10 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 }
 
 export default async function FreightPage(props: PageProps) {
-  const { title, description, sections } = await getPage(props);
+  const page = await getPage(props);
+  const { title, description, sections } = page;
+  const route = "route" in page ? page.route : undefined;
+  const directions = route ? [route, [route[1], route[0]] as const] : [];
   return (
     <>
       <PageIntro eyebrow="ONTARIO REGIONAL FREIGHT" title={title}>
@@ -44,8 +47,17 @@ export default async function FreightPage(props: PageProps) {
         ))}
         <p>We confirm pricing, capacity and timing with your quote.</p>
         <div className="button-row">
-          <Link className="btn" href="/contact?service=freight#quote">Request a Freight Quote</Link>
-          <Link className="btn secondary" href="/contact?service=regular#quote">Plan a Recurring Route</Link>
+          {directions.map(([pickup, destination]) => (
+            <Link
+              className="btn"
+              key={pickup}
+              href={{ pathname: "/contact", query: { service: "freight", journey: "ship", pickup, destination }, hash: "quote" }}
+            >
+              Quote {pickup} to {destination}
+            </Link>
+          ))}
+          {!route && <Link className="btn" href="/contact?service=freight#quote">Request a Freight Quote</Link>}
+          <Link className="btn secondary" href="/regular-deliveries#quote">Plan a Recurring Route</Link>
         </div>
         <p><Link className="text-link" href="/service-areas">See All Ontario Corridors and Freight Guides</Link></p>
       </div>

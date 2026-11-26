@@ -3,6 +3,7 @@ import { localAreas } from "./local-areas";
 export const freightPages = [
   {
     slug: "gta-ottawa-ltl",
+    route: ["Greater Toronto Area", "Ottawa"] as const,
     title: "GTA to Ottawa LTL Shipping and Pallet Delivery",
     description: "Request Toronto to Ottawa pallet delivery and bidirectional LTL shipping between the GTA and Ottawa via Highways 401 and 416.",
     sections: [
@@ -12,6 +13,7 @@ export const freightPages = [
   },
   {
     slug: "kitchener-toronto-freight",
+    route: ["Kitchener", "Toronto"] as const,
     title: "Kitchener to Toronto Freight",
     description: "Plan commercial freight between Kitchener–Waterloo–Cambridge and the GTA on Highway 401 in either direction.",
     sections: [
@@ -21,6 +23,7 @@ export const freightPages = [
   },
   {
     slug: "toronto-london-freight",
+    route: ["Toronto", "London"] as const,
     title: "Toronto to London Freight Transportation",
     description: "Quote freight between the GTA and London in either direction, with Highway 401 options toward Woodstock, Ingersoll and Windsor.",
     sections: [
