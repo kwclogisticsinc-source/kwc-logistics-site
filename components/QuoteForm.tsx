@@ -278,11 +278,16 @@ export function QuoteForm({
                   event: React.ChangeEvent<
                     HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
                   >,
-                ) =>
-                  setValues((prev) => ({
-                    ...prev,
-                    [field.name]: event.target.value,
-                  })),
+                ) => {
+                  const value = event.target.value;
+                  setValues((previous) => ({
+                    ...previous,
+                    [field.name]: value,
+                    ...(field.name === "Freight Service" && value === "Refrigerated freight"
+                      ? { "Temperature Service": "Refrigerated / frozen capacity requested" }
+                      : {}),
+                  }));
+                },
               };
               return (
                 <div

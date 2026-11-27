@@ -196,6 +196,7 @@ export function fieldsFor(
               {
                 name: "Liftgate",
                 label: "Tailgate / liftgate needed?",
+                help: "Choose the stop that needs the truck to lower freight to ground level. If you’re unsure, choose Please advise.",
                 options: [
                   "Not required",
                   "Pickup",
