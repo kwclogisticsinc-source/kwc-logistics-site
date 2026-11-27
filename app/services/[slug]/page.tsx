@@ -5,6 +5,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, industries } from "@/lib/content";
 import { ContactCTA, PageIntro, Icon } from "@/components/DeliveryUI";
+const freightQuoteIntents: Readonly<Record<string, string>> = {
+  "ltl-freight": "pallets",
+  "tailgate-delivery": "tailgate",
+  "dedicated-transportation": "dedicated",
+  "refrigerated-transportation": "refrigerated",
+  "residential-specialized-delivery": "residential",
+  "full-truckload": "full-truckload",
+};
+
 const details = {
   courier: {
     title: "B2B Bulk Package Delivery by Cargo Van.",
@@ -135,6 +144,10 @@ export default async function ServicePage({
   const commercial = commercialServices.find(([id]) => id === slug);
   if (commercial) {
     const [, title, benefit, preparation, question, answer] = commercial;
+    const intent = freightQuoteIntents[slug];
+    const quoteHref = intent
+      ? { pathname: "/contact", query: { service: "freight", intent, journey: "ship" }, hash: "quote" }
+      : "/contact?service=freight#quote";
     const photo = commercialServicePhotos[slug] ?? {
       src: "/images/kwc-service-pallets.webp",
       alt: "Freight workers prepare a pallet at a warehouse receiving bay",
@@ -144,7 +157,7 @@ export default async function ServicePage({
         <PageIntro eyebrow="Waterloo Region transportation" title={title}><p>{benefit}</p></PageIntro>
         <section className="wrap content-section">
           <div className="button-row">
-            <Link className="btn" href="/contact?service=freight#quote">Get a Freight Quote</Link>
+            <Link className="btn" href={quoteHref}>Get a Freight Quote</Link>
             <Link className="btn secondary" href="/regular-deliveries#quote">Discuss Regular Deliveries</Link>
           </div>
           <figure className={slug === "tailgate-delivery" ? "july-service-image local-delivery kwc-storefront-delivery" : "july-service-image local-delivery"}>
