@@ -20,6 +20,7 @@ export default function RegularDeliveries() {
         <aside className="contact-aside">
           <h2>Plan Your Regular Route</h2>
           <p>Include supplier pickups, store stops, dock or tailgate access, and any returns you need picked up along the way.</p>
+          <p><Link className="text-link" href="/resources#receiving-access">Check Pickup and Receiving Access</Link></p>
           <p><Link className="text-link" href="/customer-registration">Register Your Business</Link></p>
           <a className="text-link" href={`mailto:${contact.email}`}>{contact.email}</a>
         </aside>

@@ -46,6 +46,16 @@ export default function Resources() {
             special requirements before booking. Product and vehicle suitability
             are confirmed with the service.
           </p>
+          <section id="receiving-access" aria-labelledby="receiving-access-heading">
+            <h2 id="receiving-access-heading">Check Access at Pickup and Delivery</h2>
+            <p>Check both locations. A warehouse may have a raised loading dock while the delivery site only has a street-level door.</p>
+            <ul>
+              <li><strong>Raised dock:</strong> Confirm the dock is available at your appointment time and ask who will load or unload the freight.</li>
+              <li><strong>Ground-level receiving:</strong> Tell us whether the site has a forklift or needs a liftgate. Include the heaviest loaded pallet’s weight and dimensions, and describe the surface where the truck would unload.</li>
+              <li><strong>Restricted access:</strong> Note low clearances, tight turns, stairs, curb restrictions or a long distance to the receiving door. Include receiving hours and any required appointment or check-in.</li>
+            </ul>
+            <p>KWC will confirm suitable equipment and the agreed handoff before booking. <Link className="text-link" href="/services/tailgate-delivery">Explore Tailgate and Liftgate Delivery</Link></p>
+          </section>
           <h2>A Few Useful Terms</h2>
           <p>
             <strong>LTL (less than truckload)</strong> means suitable freight

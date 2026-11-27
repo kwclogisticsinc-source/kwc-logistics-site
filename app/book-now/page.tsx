@@ -25,6 +25,7 @@ export default function BookNow() {
           <BrandLogo decorative />
           <h2>Have These Details Ready</h2>
           <p>Send your pallet count, approximate weight and dimensions, preferred pickup and delivery dates, and whether either location needs a liftgate. Tell us if your shipment has a temperature requirement.</p>
+          <p><Link className="text-link" href="/resources#receiving-access">Check Pickup and Receiving Access</Link></p>
           <Link className="text-link" href="/regular-deliveries#quote">Set up Recurring Deliveries</Link>
         </div>
         <section className="operations-actions" aria-labelledby="booking-steps-title">
