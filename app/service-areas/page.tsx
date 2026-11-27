@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CoverageGraphic, PageIntro, ProvinceCoverageGraphic } from "@/components/DeliveryUI";
-import { coverageCopy, coverageTitle, lanes, regions, services } from "@/lib/ontario";
+import { coverageTitle, lanes, regions, services } from "@/lib/ontario";
 import { freightPages } from "@/lib/freight-pages";
 import { localAreas } from "@/lib/local-areas";
 
@@ -16,10 +16,15 @@ export default function Coverage() {
   return (
     <>
       <PageIntro eyebrow="ONTARIO REGIONAL TRANSPORTATION" title={coverageTitle}>
-        <p>We can arrange delivery anywhere in Ontario. The map highlights our core routes up to Sudbury. For destinations beyond the routes shown, send us the postal code and shipment details so we can confirm equipment, timing and the operating carrier.</p>
-        {coverageCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        <p>From our Waterloo Region base, we arrange freight across Ontario. The map shows our core routes up to Sudbury. For any destination, share your postal code and shipment details so we can confirm timing, equipment and the operating carrier.</p>
       </PageIntro>
       <div className="wrap content-section article-copy">
+        <nav className="kwc-coverage-jump" aria-label="On this Ontario coverage page">
+          <a href="#ontario-corridor-map">Corridor Map and Lanes</a>
+          <a href="#ontario-service-regions">Service Regions</a>
+          <a href="#ontario-freight-guides">Local and Lane Guides</a>
+          <Link href="/contact?service=freight#quote">Request a Freight Quote</Link>
+        </nav>
         <div className="kwc-coverage-overview">
           <ProvinceCoverageGraphic />
           <aside aria-labelledby="corridor-guide-title">
@@ -33,7 +38,7 @@ export default function Coverage() {
             <a href="#ontario-corridor-map" className="text-link">View the detailed corridor map</a>
           </aside>
         </div>
-        <section>
+        <section id="ontario-service-regions">
           <h2>Current Ontario Service Regions</h2>
           <p>The cities below are examples of where we serve. Share your destination or postal code so we can confirm timing, equipment and access, including locations off the main highway corridors.</p>
           <div className="freight-grid">
@@ -60,7 +65,7 @@ export default function Coverage() {
           <h2>Commercial Transportation Services</h2>
           <ul className="freight-grid">{services.map((service) => <li key={service}>{service}</li>)}</ul>
         </section>
-        <section>
+        <section id="ontario-freight-guides">
           <h2>Local Freight and Delivery Guides</h2>
           <ul className="freight-grid">
             {localAreas.map(({ slug, title }) => <li key={slug}><Link className="text-link" href={`/service-areas/${slug}`}>{title}</Link></li>)}
@@ -74,7 +79,7 @@ export default function Coverage() {
         </section>
         <div className="button-row">
           <Link href="/contact?service=freight#quote" className="btn">Request a Freight Quote</Link>
-          <Link href="/contact?service=regular#quote" className="btn secondary">Discuss a Recurring Contract</Link>
+          <Link href="/regular-deliveries#quote" className="btn secondary">Discuss a Recurring Contract</Link>
         </div>
       </div>
     </>

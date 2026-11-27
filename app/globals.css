@@ -3482,3 +3482,28 @@ ul.freight-grid {
 .kwc-service-industry h2 + p {
   margin-block: 0.8rem;
 }
+
+.kwc-coverage-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-end: 1.5rem;
+}
+
+.kwc-coverage-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4rem 0.85rem;
+  background: #dcecff;
+  border: 1px solid #a4bfdc;
+  border-radius: 6px;
+  color: #183b66;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.kwc-coverage-jump a:hover {
+  background: #c9e2fa;
+}
