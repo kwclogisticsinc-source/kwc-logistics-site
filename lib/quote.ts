@@ -82,7 +82,8 @@ export function fieldsFor(
           ? [
               {
                 name: "Freight Service",
-                label: "What kind of freight help?",
+                label: "Freight service",
+                help: "Choose LTL for shared truck space or full truckload for a truck reserved for your shipment. If you’re unsure, choose Help me plan.",
                 options: [
                   "Shared-capacity freight (LTL)",
                   "Full truckload (FTL)",
@@ -132,13 +133,17 @@ export function fieldsFor(
           name: "Weight",
           label: "Total weight (include kg or lb)",
           max: 100,
-          help: "Approximate is fine, or enter Not sure.",
+          help: freight
+            ? "Include the weight of pallets and packaging. An estimate is fine, or enter Not sure."
+            : "Approximate is fine, or enter Not sure.",
         },
         {
-          help: "Approximate is fine, or enter Not sure.",
+          help: freight
+            ? "Measure the loaded pallet or piece at its widest points, including any overhang. An estimate is fine."
+            : "Approximate is fine, or enter Not sure.",
           name: "Dimensions",
           label: freight
-            ? "Dimensions per pallet / piece (include units)"
+            ? "Loaded length × width × height per pallet or piece (cm or in)"
             : "Package dimensions (L × W × H, include cm or in)",
           max: 300,
         },
